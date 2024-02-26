@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DOCUMENT Type="Advanced Installer" CreateVersion="21.1" version="21.1" PreviousModules="simple" Modules="professional" RootPath="." Language="nl" Id="{047607C9-C88F-4D04-8D64-408633DA42BF}">
+  <COMPONENT cid="caphyon.advinst.msicomp.ProjectOptionsComponent">
+    <ROW Name="HiddenItems" Value="ActSyncAppComponent;CPLAppletComponent;AppXAppDetailsComponent;FixupComponent;AppXCapabilitiesComponent;AppXDependenciesComponent;AppXProductDetailsComponent;AppXVisualAssetsComponent;AppXAppDeclarationsComponent;AppXUriRulesComponent;MsiXDiffComponent;MsixManifestEditorComponent"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
+    <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
+    <ROW Property="AI_FINDEXE_TITLE" Value="Selecteer het installatiepakket voor [|ProductName]" ValueLocId="AI.Property.FindExeTitle"/>
+    <ROW Property="AI_PREDEF_LCONDS_PROPS" Value="AI_DETECTED_INTERNET_CONNECTION"/>
+    <ROW Property="ALLUSERS" Value="1"/>
+    <ROW Property="ARPCOMMENTS" Value="Deze database bevat de logica en de data benodigd om [|ProductName] te installeren." ValueLocId="*"/>
+    <ROW Property="ARPNOREPAIR" MultiBuildValue="AnyCPU_Release:1"/>
+    <ROW Property="ARPPRODUCTICON" Value="EvolveSettings.exe" Type="8"/>
+    <ROW Property="Manufacturer" Value="Evolve"/>
+    <ROW Property="ProductCode" Value="1043:{3786591C-7D63-41AB-AC82-C74A14CDF7A3} " Type="16"/>
+    <ROW Property="ProductLanguage" Value="1033"/>
+    <ROW Property="ProductName" Value="EvolveSettings"/>
+    <ROW Property="ProductVersion" Value="1.0.0" Options="32"/>
+    <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND;AI_SETUPEXEPATH;SETUPEXEDIR"/>
+    <ROW Property="UpgradeCode" Value="{CE01DEA9-DCE8-404A-9ECB-B24FB63168E6}"/>
+    <ROW Property="WindowsType9X" MultiBuildValue="AnyCPU_Release:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsType9XDisplay" MultiBuildValue="AnyCPU_Release:Windows 9x/ME" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40" MultiBuildValue="AnyCPU_Release:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT40Display" MultiBuildValue="AnyCPU_Release:Windows NT 4.0" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50" MultiBuildValue="AnyCPU_Release:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT50Display" MultiBuildValue="AnyCPU_Release:Windows 2000" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5X" MultiBuildValue="AnyCPU_Release:Windows XP/2003" ValueLocId="-"/>
+    <ROW Property="WindowsTypeNT5XDisplay" MultiBuildValue="AnyCPU_Release:Windows XP/2003" ValueLocId="-"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiDirsComponent">
+    <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
+    <ROW Directory="DesktopFolder" Directory_Parent="TARGETDIR" DefaultDir="DESKTO~1|DesktopFolder" IsPseudoRoot="1"/>
+    <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
+    <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
+    <ROW Component="A4C9A7823894F87B7A09893D2359F6B" ComponentId="{79B0218F-D5A8-445D-930E-CF046A68A62F}" Directory_="APPDIR" Attributes="4" KeyPath="A4C9A7823894F87B7A09893D2359F6B" Options="2"/>
+    <ROW Component="AI_ExePath" ComponentId="{94824D2D-CEFD-4DB1-B0BA-B4C32D870E99}" Directory_="APPDIR" Attributes="4" KeyPath="AI_ExePath"/>
+    <ROW Component="APPDIR" ComponentId="{645C51D7-1A99-48B8-90C2-F9BD724FD459}" Directory_="APPDIR" Attributes="0"/>
+    <ROW Component="EvolveSettings.exe" ComponentId="{4D07E412-DFC0-49F4-A36B-76D8C9117EFB}" Directory_="APPDIR" Attributes="0" KeyPath="EvolveSettings.exe"/>
+    <ROW Component="EvolveSettingsDb_log.ldf" ComponentId="{C1984C67-A365-438B-8EBA-F9493B91167E}" Directory_="APPDIR" Attributes="0" KeyPath="EvolveSettingsDb_log.ldf" Type="0"/>
+    <ROW Component="ProductInformation" ComponentId="{1C56DB5F-6E77-4998-B75D-CE430EEB0240}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
+    <ROW Component="SHORTCUTDIR" ComponentId="{1E3F570C-DABB-4842-8E53-39E465FF7D68}" Directory_="SHORTCUTDIR" Attributes="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatsComponent">
+    <ROW Feature="A4C9A7823894F87B7A09893D2359F6B" Title="SQL Server Express LocalDB 2019" Description="SQL Server Express LocalDB 2019" Display="3" Level="1" Attributes="0"/>
+    <ROW Feature="MainFeature" Title="MainFeature" Description="Description" Display="1" Level="1" Directory_="APPDIR" Attributes="0"/>
+    <ATTRIBUTE name="CurrentFeature" value="MainFeature"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
+    <ROW File="EvolveSettings.exe" Component_="EvolveSettings.exe" FileName="LOGINR~1.EXE|EvolveSettings.exe" Attributes="0" SourcePath="..\EvolveSettings\bin\Release\EvolveSettings.exe" SelfReg="false" DigSign="true"/>
+    <ROW File="EvolveSettingsDb_log.ldf" Component_="EvolveSettingsDb_log.ldf" FileName="EVOLVE~1.LDF|EvolveSettingsDb_log.ldf" Attributes="0" SourcePath="..\EvolveSettings\bin\Release\EvolveSettingsDb_log.ldf" SelfReg="false"/>
+    <ROW File="EvolveSettingsDb.mdf" Component_="EvolveSettingsDb_log.ldf" FileName="EVOLVE~1.MDF|EvolveSettingsDb.mdf" Attributes="0" SourcePath="..\EvolveSettings\bin\Release\EvolveSettingsDb.mdf" SelfReg="false"/>
+    <ROW File="passdatabase.db" Component_="EvolveSettingsDb_log.ldf" FileName="PASSDA~1.DB|passdatabase.db" Attributes="0" SourcePath="..\EvolveSettings\passdatabase.db" SelfReg="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
+    <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BootstrapperUISequenceComponent">
+    <ROW Action="AI_DownloadPrereq" Condition="AI_BOOTSTRAPPER AND (NOT AI_PrereqsFulfilled)" Sequence="647"/>
+    <ROW Action="AI_ExtractPrereq" Condition="AI_BOOTSTRAPPER AND (NOT AI_PrereqsFulfilled)" Sequence="648"/>
+    <ROW Action="AI_InstallPrePrerequisite" Condition="AI_BOOTSTRAPPER AND (NOT AI_PrereqsFulfilled)" Sequence="649"/>
+    <ROW Action="AI_VerifyPrePrereq" Condition="AI_BOOTSTRAPPER AND (NOT AI_PrereqsFulfilled)" Sequence="651"/>
+    <ROW Action="AI_CleanPrePrereq" Condition="AI_BOOTSTRAPPER AND (NOT AI_PrereqsFulfilled)" Sequence="652"/>
+    <ROW Action="AI_DetectSoftware" Sequence="151"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.BuildComponent">
+    <ROW BuildKey="AnyCPU_Release" BuildName="AnyCPU_Release" BuildOrder="1" BuildType="0" Languages="nl" InstallationType="4" CabsLocation="1" PackageType="1" FilesInsideExe="true" ExeIconPath="..\EvolveSettings\EvolveSettings.ico" ExtractionFolder="[AppDataFolder][|Manufacturer]\[|ProductName] [|ProductVersion]\install" UseLargeSchema="true"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.DictionaryComponent">
+    <ROW Path="&lt;AI_DICTS&gt;ui.ail"/>
+    <ROW Path="&lt;AI_DICTS&gt;ui_nl.ail"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.FragmentComponent">
+    <ROW Fragment="CommonUI.aip" Path="&lt;AI_FRAGS&gt;CommonUI.aip"/>
+    <ROW Fragment="FolderDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\FolderDlg.aip"/>
+    <ROW Fragment="MaintenanceTypeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceTypeDlg.aip"/>
+    <ROW Fragment="MaintenanceWelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\MaintenanceWelcomeDlg.aip"/>
+    <ROW Fragment="SequenceDialogs.aip" Path="&lt;AI_THEMES&gt;classic\fragments\SequenceDialogs.aip"/>
+    <ROW Fragment="Sequences.aip" Path="&lt;AI_FRAGS&gt;Sequences.aip"/>
+    <ROW Fragment="StaticUIStrings.aip" Path="&lt;AI_FRAGS&gt;StaticUIStrings.aip"/>
+    <ROW Fragment="Themes.aip" Path="&lt;AI_FRAGS&gt;Themes.aip"/>
+    <ROW Fragment="UI.aip" Path="&lt;AI_THEMES&gt;classic\fragments\UI.aip"/>
+    <ROW Fragment="Validation.aip" Path="&lt;AI_FRAGS&gt;Validation.aip"/>
+    <ROW Fragment="VerifyRemoveDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRemoveDlg.aip"/>
+    <ROW Fragment="VerifyRepairDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\VerifyRepairDlg.aip"/>
+    <ROW Fragment="WelcomeDlg.aip" Path="&lt;AI_THEMES&gt;classic\fragments\WelcomeDlg.aip"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiActionTextComponent">
+    <ROW Action="AI_DeleteLzma" Description="Verwijdert bestanden uit het archief" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
+    <ROW Action="AI_DeleteRLzma" Description="Verwijdert bestanden uit het archief" DescriptionLocId="ActionText.Description.AI_DeleteLzma" TemplateLocId="-"/>
+    <ROW Action="AI_DownloadPrereq" Description="Downloaden van vereiste software" DescriptionLocId="ActionText.Description.AI_DownloadPrereq" Template="[1]" TemplateLocId="ActionText.Template.AI_DownloadPrereq"/>
+    <ROW Action="AI_ExtractFiles" Description="Haalt bestanden uit het archief" DescriptionLocId="ActionText.Description.AI_ExtractLzma" TemplateLocId="-"/>
+    <ROW Action="AI_ExtractLzma" Description="Haalt bestanden uit het archief" DescriptionLocId="ActionText.Description.AI_ExtractLzma" TemplateLocId="-"/>
+    <ROW Action="AI_ExtractPrereq" Description="Uitpakken van vereiste software" DescriptionLocId="ActionText.Description.AI_ExtractPrereq" Template="[1]" TemplateLocId="ActionText.Template.AI_ExtractPrereq"/>
+    <ROW Action="AI_InstallPostPrerequisite" Description="Installatie vereiste software" DescriptionLocId="ActionText.Description.AI_InstallPrerequisite" Template="[1]" TemplateLocId="ActionText.Template.AI_InstallPrerequisite"/>
+    <ROW Action="AI_InstallPrePrerequisite" Description="Installatie vereiste software" DescriptionLocId="ActionText.Description.AI_InstallPrerequisite" Template="[1]" TemplateLocId="ActionText.Template.AI_InstallPrerequisite"/>
+    <ROW Action="AI_InstallPrerequisite" Description="Installatie vereiste software" DescriptionLocId="ActionText.Description.AI_InstallPrerequisite" Template="[1]" TemplateLocId="ActionText.Template.AI_InstallPrerequisite"/>
+    <ROW Action="AI_VerifyPrePrereq" Description="Verifiëren van vereisten" DescriptionLocId="ActionText.Description.AI_VerifyPrereq" Template="[1] was niet correct geinstalleerd" TemplateLocId="ActionText.Template.AI_VerifyPrereq"/>
+    <ROW Action="AI_VerifyPrereq" Description="Verifiëren van vereisten" DescriptionLocId="ActionText.Description.AI_VerifyPrereq" Template="[1] was niet correct geinstalleerd" TemplateLocId="ActionText.Template.AI_VerifyPrereq"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiAppSearchComponent">
+    <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_LM" Builds="AnyCPU_Release"/>
+    <ROW Property="AI_SETUPEXEPATH" Signature_="AI_EXE_PATH_CU" Builds="AnyCPU_Release"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiBinaryComponent">
+    <ROW Name="Prereq.dll" SourcePath="&lt;AI_CUSTACTS&gt;Prereq.dll"/>
+    <ROW Name="SoftwareDetector.dll" SourcePath="&lt;AI_CUSTACTS&gt;SoftwareDetector.dll"/>
+    <ROW Name="aicustact.dll" SourcePath="&lt;AI_CUSTACTS&gt;aicustact.dll"/>
+    <ROW Name="file_deleter.ps1" SourcePath="&lt;AI_SCRIPTS&gt;file_deleter.ps1"/>
+    <ROW Name="lzmaextractor.dll" SourcePath="&lt;AI_CUSTACTS&gt;lzmaextractor.dll"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiControlEventComponent">
+    <ROW Dialog_="WelcomeDlg" Control_="Next" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="FolderDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="FolderDlg" Control_="Back" Event="NewDialog" Argument="WelcomeDlg" Condition="AI_INSTALL" Ordering="1"/>
+    <ROW Dialog_="MaintenanceWelcomeDlg" Control_="Next" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="99"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_MAINT" Ordering="198"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="202"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_INSTALL" Ordering="197"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="FolderDlg" Condition="AI_INSTALL" Ordering="201"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_MAINT" Ordering="101"/>
+    <ROW Dialog_="CustomizeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="ChangeButton" Event="NewDialog" Argument="CustomizeDlg" Condition="AI_MAINT" Ordering="501"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceWelcomeDlg" Condition="AI_MAINT" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RemoveButton" Event="NewDialog" Argument="VerifyRemoveDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="1"/>
+    <ROW Dialog_="MaintenanceTypeDlg" Control_="RepairButton" Event="NewDialog" Argument="VerifyRepairDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="601"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Back" Event="NewDialog" Argument="MaintenanceTypeDlg" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="1"/>
+    <ROW Dialog_="VerifyRepairDlg" Control_="Repair" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Repair&quot;" Ordering="399" Options="1"/>
+    <ROW Dialog_="VerifyRemoveDlg" Control_="Remove" Event="EndDialog" Argument="Return" Condition="AI_MAINT AND InstallMode=&quot;Remove&quot;" Ordering="299" Options="1"/>
+    <ROW Dialog_="PatchWelcomeDlg" Control_="Next" Event="NewDialog" Argument="VerifyReadyDlg" Condition="AI_PATCH" Ordering="201"/>
+    <ROW Dialog_="ResumeDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_RESUME" Ordering="299"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Install" Event="EndDialog" Argument="Return" Condition="AI_PATCH" Ordering="199"/>
+    <ROW Dialog_="VerifyReadyDlg" Control_="Back" Event="NewDialog" Argument="PatchWelcomeDlg" Condition="AI_PATCH" Ordering="203"/>
+    <ROW Dialog_="FatalError" Control_="Finish" Event="DoAction" Argument="AI_RollbackPrereq" Condition="1" Ordering="102"/>
+    <ROW Dialog_="ExitDialog" Control_="Finish" Event="DoAction" Argument="AI_CleanPrereq" Condition="1" Ordering="301"/>
+    <ROW Dialog_="FatalError" Control_="Finish" Event="DoAction" Argument="AI_CleanPrereq" Condition="1" Ordering="103"/>
+    <ROW Dialog_="UserExit" Control_="Finish" Event="DoAction" Argument="AI_CleanPrereq" Condition="1" Ordering="101"/>
+    <ROW Dialog_="FatalError" Control_="Finish" Event="DoAction" Argument="AI_RollbackPrePrereq" Condition="1" Ordering="104"/>
+    <ROW Dialog_="ExitDialog" Control_="Finish" Event="DoAction" Argument="AI_CleanPrePrereq" Condition="1" Ordering="302"/>
+    <ROW Dialog_="FatalError" Control_="Finish" Event="DoAction" Argument="AI_CleanPrePrereq" Condition="1" Ordering="105"/>
+    <ROW Dialog_="UserExit" Control_="Finish" Event="DoAction" Argument="AI_CleanPrePrereq" Condition="1" Ordering="102"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCreateFolderComponent">
+    <ROW Directory_="APPDIR" Component_="APPDIR" ManualDelete="true"/>
+    <ROW Directory_="SHORTCUTDIR" Component_="SHORTCUTDIR" ManualDelete="false"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiCustActComponent">
+    <ROW Action="AI_AppSearchEx" Type="1" Source="Prereq.dll" Target="DoAppSearchEx"/>
+    <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Type="51" Source="AI_SETUPEXEPATH_ORIGINAL" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_CleanPrePrereq" Type="65" Source="Prereq.dll" Target="CleanPrereq" WithoutSeq="true"/>
+    <ROW Action="AI_CleanPrereq" Type="65" Source="Prereq.dll" Target="CleanPrereq" WithoutSeq="true"/>
+    <ROW Action="AI_DATA_SETTER" Type="51" Source="CustomActionData" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DOWNGRADE" Type="19" Target="4010"/>
+    <ROW Action="AI_DeleteCadLzma" Type="51" Source="AI_DeleteLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DeleteLzma" Type="1025" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
+    <ROW Action="AI_DeleteRCadLzma" Type="51" Source="AI_DeleteRLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_DeleteRLzma" Type="1281" Source="lzmaextractor.dll" Target="DeleteLZMAFiles"/>
+    <ROW Action="AI_DetectSoftware" Type="257" Source="SoftwareDetector.dll" Target="OnDetectSoftware"/>
+    <ROW Action="AI_DownloadPrereq" Type="1" Source="Prereq.dll" Target="DownloadPrereq"/>
+    <ROW Action="AI_DpiContentScale" Type="1" Source="aicustact.dll" Target="DpiContentScale"/>
+    <ROW Action="AI_EnableDebugLog" Type="321" Source="aicustact.dll" Target="EnableDebugLog"/>
+    <ROW Action="AI_ExtractCadLzma" Type="51" Source="AI_ExtractLzma" Target="[AI_SETUPEXEPATH]"/>
+    <ROW Action="AI_ExtractFiles" Type="1" Source="Prereq.dll" Target="ExtractSourceFiles" AdditionalSeq="AI_DATA_SETTER"/>
+    <ROW Action="AI_ExtractLzma" Type="1025" Source="lzmaextractor.dll" Target="ExtractLZMAFiles"/>
+    <ROW Action="AI_ExtractPrereq" Type="65" Source="Prereq.dll" Target="ExtractPrereq"/>
+    <ROW Action="AI_FindExeLzma" Type="1" Source="lzmaextractor.dll" Target="FindEXE"/>
+    <ROW Action="AI_InstallModeCheck" Type="1" Source="aicustact.dll" Target="UpdateInstallMode" WithoutSeq="true"/>
+    <ROW Action="AI_InstallPostPrerequisite" Type="1" Source="Prereq.dll" Target="InstallPostPrereq"/>
+    <ROW Action="AI_InstallPrePrerequisite" Type="65" Source="Prereq.dll" Target="InstallPrePrereq"/>
+    <ROW Action="AI_InstallPrerequisite" Type="1" Source="Prereq.dll" Target="InstallPrereq"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Type="65" Source="aicustact.dll" Target="PrepareUpgrade"/>
+    <ROW Action="AI_PRESERVE_INSTALL_TYPE" Type="65" Source="aicustact.dll" Target="PreserveInstallType"/>
+    <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Type="51" Source="AI_SETUPEXEPATH" Target="[AI_SETUPEXEPATH_ORIGINAL]"/>
+    <ROW Action="AI_RESTORE_LOCATION" Type="65" Source="aicustact.dll" Target="RestoreLocation"/>
+    <ROW Action="AI_ResolveKnownFolders" Type="1" Source="aicustact.dll" Target="AI_ResolveKnownFolders"/>
+    <ROW Action="AI_ResolveLocalizedCredentials" Type="1" Source="aicustact.dll" Target="GetLocalizedCredentials"/>
+    <ROW Action="AI_RollbackPrePrereq" Type="65" Source="Prereq.dll" Target="RollbackPrePrereq" WithoutSeq="true"/>
+    <ROW Action="AI_RollbackPrereq" Type="65" Source="Prereq.dll" Target="RollbackPrereq" WithoutSeq="true"/>
+    <ROW Action="AI_SHOW_LOG" Type="65" Source="aicustact.dll" Target="LaunchLogFile" WithoutSeq="true"/>
+    <ROW Action="AI_STORE_LOCATION" Type="51" Source="ARPINSTALLLOCATION" Target="[APPDIR]"/>
+    <ROW Action="AI_VerifyPrePrereq" Type="1" Source="Prereq.dll" Target="VerifyPrePrereq"/>
+    <ROW Action="AI_VerifyPrereq" Type="1" Source="Prereq.dll" Target="VerifyPrereq"/>
+    <ROW Action="SET_APPDIR" Type="307" Source="APPDIR" Target="[ProgramFilesFolder][Manufacturer]\[ProductName]"/>
+    <ROW Action="SET_SHORTCUTDIR" Type="307" Source="SHORTCUTDIR" Target="[ProgramMenuFolder][ProductName]"/>
+    <ROW Action="SET_TARGETDIR_TO_APPDIR" Type="51" Source="TARGETDIR" Target="[APPDIR]"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiFeatCompsComponent">
+    <ROW Feature_="MainFeature" Component_="APPDIR"/>
+    <ROW Feature_="MainFeature" Component_="ProductInformation"/>
+    <ROW Feature_="MainFeature" Component_="EvolveSettings.exe"/>
+    <ROW Feature_="MainFeature" Component_="EvolveSettingsDb_log.ldf"/>
+    <ROW Feature_="MainFeature" Component_="SHORTCUTDIR"/>
+    <ROW Feature_="A4C9A7823894F87B7A09893D2359F6B" Component_="A4C9A7823894F87B7A09893D2359F6B"/>
+    <ROW Feature_="MainFeature" Component_="AI_ExePath"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="EvolveSettings.exe" SourcePath="..\EvolveSettings\EvolveSettings.ico" Index="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
+    <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_STORE_LOCATION" Condition="(Not Installed) OR REINSTALL" Sequence="1501"/>
+    <ROW Action="AI_PREPARE_UPGRADE" Condition="AI_UPGRADE=&quot;No&quot; AND (Not Installed)" Sequence="1397"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="53"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="52"/>
+    <ROW Action="AI_DETECT_MODERNWIN" Condition="(VersionNT &gt;= 603)" Sequence="54" MsiKey="AI_DETECT_MODERNWIN"/>
+    <ROW Action="AI_DETECT_WINTHEME" Condition="(VersionNT &gt;= 603)" Sequence="55" MsiKey="AI_DETECT_WINTHEME"/>
+    <ROW Action="AI_VerifyPrereq" Sequence="1101"/>
+    <ROW Action="AI_AppSearchEx" Sequence="103"/>
+    <ROW Action="AI_DetectSoftware" Sequence="102"/>
+    <ROW Action="AI_ResolveLocalizedCredentials" Sequence="51"/>
+    <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Sequence="99" Builds="AnyCPU_Release"/>
+    <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Condition="AI_SETUPEXEPATH_ORIGINAL" Sequence="101" Builds="AnyCPU_Release"/>
+    <ROW Action="AI_DeleteCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="199" Builds="AnyCPU_Release"/>
+    <ROW Action="AI_DeleteRCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="198" Builds="AnyCPU_Release"/>
+    <ROW Action="AI_ExtractCadLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="197" Builds="AnyCPU_Release"/>
+    <ROW Action="AI_FindExeLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="196" Builds="AnyCPU_Release"/>
+    <ROW Action="AI_ExtractLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="1549" Builds="AnyCPU_Release"/>
+    <ROW Action="AI_DeleteRLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="1548" Builds="AnyCPU_Release"/>
+    <ROW Action="AI_DeleteLzma" Condition="SETUPEXEDIR=&quot;&quot; AND Installed AND (REMOVE&lt;&gt;&quot;ALL&quot;) AND (AI_INSTALL_MODE&lt;&gt;&quot;Remove&quot;) AND (NOT PATCH)" Sequence="6599" Builds="AnyCPU_Release"/>
+    <ROW Action="AI_ExtractFiles" Sequence="1399" Builds="AnyCPU_Release"/>
+    <ROW Action="AI_DATA_SETTER" Sequence="1398"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiInstallUISequenceComponent">
+    <ROW Action="AI_PRESERVE_INSTALL_TYPE" Sequence="199"/>
+    <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
+    <ROW Action="AI_ResolveKnownFolders" Sequence="54"/>
+    <ROW Action="AI_DpiContentScale" Sequence="53"/>
+    <ROW Action="AI_EnableDebugLog" Sequence="52"/>
+    <ROW Action="AI_DownloadPrereq" Sequence="1296"/>
+    <ROW Action="AI_ExtractPrereq" Sequence="1297"/>
+    <ROW Action="AI_InstallPrerequisite" Sequence="1298"/>
+    <ROW Action="AI_InstallPostPrerequisite" Sequence="1301"/>
+    <ROW Action="AI_CleanPrereq" Sequence="1302"/>
+    <ROW Action="AI_InstallPrePrerequisite" Condition="Installed" Sequence="1299"/>
+    <ROW Action="AI_AppSearchEx" Sequence="103"/>
+    <ROW Action="AI_DetectSoftware" Sequence="102"/>
+    <ROW Action="AI_ResolveLocalizedCredentials" Sequence="51"/>
+    <ROW Action="AI_BACKUP_AI_SETUPEXEPATH" Sequence="99"/>
+    <ROW Action="AI_RESTORE_AI_SETUPEXEPATH" Condition="AI_SETUPEXEPATH_ORIGINAL" Sequence="101"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLaunchConditionsComponent">
+    <ROW Condition="((VersionNT &lt;&gt; 501) AND (VersionNT &lt;&gt; 502))" Description="[ProductName] kan niet worden geïnstalleerd op [WindowsTypeNT5XDisplay]." DescriptionLocId="AI.LaunchCondition.NoNT5X" IsPredefined="true" Builds="AnyCPU_Release"/>
+    <ROW Condition="(VersionNT &lt;&gt; 400)" Description="[ProductName] kan niet worden geïnstalleerd op [WindowsTypeNT40Display]." DescriptionLocId="AI.LaunchCondition.NoNT40" IsPredefined="true" Builds="AnyCPU_Release"/>
+    <ROW Condition="(VersionNT &lt;&gt; 500)" Description="[ProductName] kan niet worden geïnstalleerd op [WindowsTypeNT50Display]." DescriptionLocId="AI.LaunchCondition.NoNT50" IsPredefined="true" Builds="AnyCPU_Release"/>
+    <ROW Condition="AI_DETECTED_INTERNET_CONNECTION" Description="Installatie van [ProductName] vereist een actieve Internetverbinding. Controleer uw netwerkconfiguratie en proxy instellingen." DescriptionLocId="AI.LaunchCondition.Internet" IsPredefined="true" Builds="AnyCPU_Release"/>
+    <ROW Condition="SETUPEXEDIR OR (REMOVE=&quot;ALL&quot;)" Description="This package can only be run from a bootstrapper." DescriptionLocId="AI.LaunchCondition.RequireBootstrapper" IsPredefined="true" Builds="AnyCPU_Release"/>
+    <ROW Condition="VersionNT" Description="[ProductName] kan niet worden geïnstalleerd op [WindowsType9XDisplay]." DescriptionLocId="AI.LaunchCondition.No9X" IsPredefined="true" Builds="AnyCPU_Release"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiLockPermComponent">
+    <ROW LockObject="EvolveSettingsDb.mdf" Table="File" User="[GRP_EVERYONE]" Permission="2032127" Flags="0"/>
+    <ROW LockObject="EvolveSettingsDb_log.ldf" Table="File" User="[GRP_EVERYONE]" Permission="2032127" Flags="0"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegLocatorComponent">
+    <ROW Signature_="AI_EXE_PATH_CU" Root="1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Type="2"/>
+    <ROW Signature_="AI_EXE_PATH_LM" Root="2" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Type="2"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiRegsComponent">
+    <ROW Registry="A4C9A7823894F87B7A09893D2359F6B" Root="-1" Key="Software\Caphyon\Advanced Installer\Prereqs\[ProductCode]\[ProductVersion]" Name="A4C9A7823894F87B7A09893D2359F6B" Value="1" Component_="A4C9A7823894F87B7A09893D2359F6B"/>
+    <ROW Registry="AI_ExePath" Root="-1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="AI_ExePath" Value="[AI_SETUPEXEPATH]" Component_="AI_ExePath"/>
+    <ROW Registry="AdvancedInstaller" Root="-1" Key="Software\Caphyon\Advanced Installer" Name="\"/>
+    <ROW Registry="Caphyon" Root="-1" Key="Software\Caphyon" Name="\"/>
+    <ROW Registry="LZMA" Root="-1" Key="Software\Caphyon\Advanced Installer\LZMA" Name="\"/>
+    <ROW Registry="Manufacturer" Root="-1" Key="Software\[Manufacturer]" Name="\"/>
+    <ROW Registry="Path" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Path" Value="[APPDIR]" Component_="ProductInformation"/>
+    <ROW Registry="Prereqs" Root="-1" Key="Software\Caphyon\Advanced Installer\Prereqs" Name="\"/>
+    <ROW Registry="ProductCode" Root="-1" Key="Software\Caphyon\Advanced Installer\Prereqs\[ProductCode]" Name="\"/>
+    <ROW Registry="ProductCode_1" Root="-1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]" Name="\"/>
+    <ROW Registry="ProductName" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="\"/>
+    <ROW Registry="ProductVersion" Root="-1" Key="Software\Caphyon\Advanced Installer\Prereqs\[ProductCode]\[ProductVersion]" Name="\"/>
+    <ROW Registry="ProductVersion_1" Root="-1" Key="Software\Caphyon\Advanced Installer\LZMA\[ProductCode]\[ProductVersion]" Name="\"/>
+    <ROW Registry="Software" Root="-1" Key="Software" Name="\"/>
+    <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
+    <ROW Shortcut="EvolveSettings.exe" Directory_="SHORTCUTDIR" Name="LOGINR~1.EXE|EvolveSettings.exe" Component_="EvolveSettings.exe" Target="[#EvolveSettings.exe]" Description="EvolveSettings.exe" Hotkey="0" Icon_="EvolveSettings.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+    <ROW Shortcut="EvolveSettings.exe_1" Directory_="DesktopFolder" Name="LOGINR~1.EXE|EvolveSettings.exe" Component_="EvolveSettings.exe" Target="[#EvolveSettings.exe]" Description="EvolveSettings.exe" Hotkey="0" Icon_="EvolveSettings.exe" IconIndex="0" ShowCmd="1" WkDir="APPDIR"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
+    <ATTRIBUTE name="UsedTheme" value="classic"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiUpgradeComponent">
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="0.0.1" VersionMax="[|ProductVersion]" Attributes="257" ActionProperty="OLDPRODUCTS"/>
+    <ROW UpgradeCode="[|UpgradeCode]" VersionMin="[|ProductVersion]" Attributes="2" ActionProperty="AI_NEWERPRODUCTFOUND"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.PreReqComponent">
+    <ROW PrereqKey="A4C9A7823894F87B7A09893D2359F6B" DisplayName="SQL Server Express LocalDB 2019" VersionMin="15.0" SetupFileUrl="https://download.microsoft.com/download/8/4/c/84c6c430-e0f5-476d-bf43-eaaa222a72e0/SqlLocalDB.msi" Location="1" ExactSize="55762944" WinNTVersions="Windows 9x/ME/NT/2000/XP/Vista/Windows 7/Windows 8 x86/Windows 8.1 x86/Windows 10 x86" WinNT64Versions="Windows Vista x64, Windows Server 2008 x64, Windows 7 x64, Windows Server 2008 R2 x64, Windows 8 x64, Windows Server 2012 x64, Windows 8.1 x64, Windows Server 2012 R2 x64" Operator="1" BasicUiComLine="/qb IACCEPTSQLLOCALDBLICENSETERMS=YES" NoUiComLine="/qn IACCEPTSQLLOCALDBLICENSETERMS=YES" Options="xp" MD5="c89cb901353cb76a1e8f89b9c44cf5c7" TargetName="SQL Server Express LocalDB 2019" Feature="A4C9A7823894F87B7A09893D2359F6B"/>
+    <ATTRIBUTE name="PrereqsOrder" value="A4C9A7823894F87B7A09893D2359F6B"/>
+  </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.PreReqSearchComponent">
+    <ROW SearchKey="A4C9A7823894F87B7A09893D2359F6BVers" Prereq="A4C9A7823894F87B7A09893D2359F6B" SearchType="2" SearchString="HKLM\SOFTWARE\Microsoft\Microsoft SQL Server 2019 Redist\SqlLocalDB\CurrentVersion\Version" VerMin="15.0.2000.5" Order="1" Property="PreReqSearch_A4C9A7823894F87B7A0989"/>
+  </COMPONENT>
+</DOCUMENT>
