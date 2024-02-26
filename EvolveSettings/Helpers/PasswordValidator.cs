@@ -24,8 +24,8 @@ namespace EvolveSettings.Helpers
             Suggestions.Add(PasswordStrength.LowerCase, "Add Lowercase Character.");
             Suggestions.Add(PasswordStrength.Symbol, "Add Special Character.");
             Suggestions.Add(PasswordStrength.Digit, "Add Number.");
-            Suggestions.Add(PasswordStrength.Length, "Password must have a minimum length of 8 characters.");
-            Suggestions.Add(PasswordStrength.NotCommon, "Password found in the common database list. Try a more complicated password.");
+            Suggestions.Add(PasswordStrength.Length, "Password must have a minimum length of atleast 8 characters.");
+            Suggestions.Add(PasswordStrength.NotCommon, "Password is found in the common database list. Try a more complicated password.");
         }
 
         public bool IsStrong(string password, out string message)
@@ -38,7 +38,7 @@ namespace EvolveSettings.Helpers
         private void setPasswordStrengths(string password)
         {
             Conditions.Clear();
-            setPasswordStrength(PasswordStrength.Length, password.Length > 8);
+            setPasswordStrength(PasswordStrength.Length, password.Length > 7);
             setPasswordStrength(PasswordStrength.UpperCase, password.Any(char.IsUpper));
             setPasswordStrength(PasswordStrength.LowerCase, password.Any(char.IsLower));
             setPasswordStrength(PasswordStrength.Symbol, password.Any(c => !char.IsLetterOrDigit(c)));

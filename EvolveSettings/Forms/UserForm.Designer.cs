@@ -54,7 +54,7 @@
             // dgvUser
             // 
             this.dgvUser.AllowUserToAddRows = false;
-            this.dgvUser.BackgroundColor = System.Drawing.Color.White;
+            this.dgvUser.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvUser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvUser.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;

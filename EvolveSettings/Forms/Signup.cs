@@ -42,7 +42,7 @@ namespace EvolveSettings
         {
             if (signup_password.Text != signup_repassword.Text)
             {
-                MessageBox.Show("Passwords do not Match!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Password & Confirm Password do not match!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (signup_email.Text == "" || signup_username.Text == ""
@@ -99,7 +99,7 @@ namespace EvolveSettings
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Error connecting Database: " + ex, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Error connecting to Database: " + ex, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     finally
                     {

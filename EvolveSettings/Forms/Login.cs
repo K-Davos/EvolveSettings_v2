@@ -109,5 +109,13 @@ namespace EvolveSettings
                 btnLogin.Enabled = true;
             }
         }
+
+        private void lblForgotPass_Click(object sender, EventArgs e)
+        {
+            Forms.ForgotPassForm sendcode = new Forms.ForgotPassForm();
+            this.Hide();
+            sendcode.Show();
+
+        }
     }
 }

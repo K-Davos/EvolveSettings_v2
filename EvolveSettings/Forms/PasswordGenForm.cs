@@ -46,7 +46,10 @@ namespace EvolveSettings.Forms
 
         private void btnPassGenCopy_Click(object sender, EventArgs e)
         {
-            Clipboard.SetText(txtGenPassword.Text);
+            if (txtGenPassword.Text.Trim().Length > 0)
+            {
+                Clipboard.SetText(txtGenPassword.Text);
+            }
         }
     }
 }

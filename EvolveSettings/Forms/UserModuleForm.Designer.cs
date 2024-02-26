@@ -106,9 +106,9 @@
             this.label6.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(304, 250);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(124, 17);
+            this.label6.Size = new System.Drawing.Size(125, 17);
             this.label6.TabIndex = 26;
-            this.label6.Text = "Re-type Password : ";
+            this.label6.Text = "Confirm Password : ";
             // 
             // label5
             // 
@@ -161,7 +161,7 @@
             // 
             // txtDateCreated
             // 
-            this.txtDateCreated.BackColor = System.Drawing.Color.White;
+            this.txtDateCreated.BackColor = System.Drawing.SystemColors.Control;
             this.txtDateCreated.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDateCreated.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDateCreated.Location = new System.Drawing.Point(308, 369);
@@ -472,7 +472,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(636, 454);
             this.Controls.Add(this.btnPassGen);
             this.Controls.Add(this.panel2);

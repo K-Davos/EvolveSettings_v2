@@ -234,6 +234,12 @@
     <Compile Include="Controls\EvolveToggleButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Forms\ForgotPassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ForgotPassForm.Designer.cs">
+      <DependentUpon>ForgotPassForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -251,6 +257,12 @@
     </Compile>
     <Compile Include="Forms\PasswordGenForm.Designer.cs">
       <DependentUpon>PasswordGenForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ResetPassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ResetPassForm.Designer.cs">
+      <DependentUpon>ResetPassForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\SplashForm.cs">
       <SubType>Form</SubType>
@@ -283,6 +295,9 @@
       <DependentUpon>Signup.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\SqlConnectionHelper.cs" />
+    <EmbeddedResource Include="Forms\ForgotPassForm.resx">
+      <DependentUpon>ForgotPassForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -291,6 +306,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PasswordGenForm.resx">
       <DependentUpon>PasswordGenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ResetPassForm.resx">
+      <DependentUpon>ResetPassForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SplashForm.resx">
       <DependentUpon>SplashForm.cs</DependentUpon>

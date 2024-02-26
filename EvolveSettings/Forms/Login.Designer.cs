@@ -43,10 +43,11 @@ namespace EvolveSettings
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.frmLogin = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblForgotPass = new System.Windows.Forms.Label();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -54,7 +55,8 @@ namespace EvolveSettings
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Controls.Add(this.lblForgotPass);
             this.panel1.Controls.Add(this.login_password);
             this.panel1.Controls.Add(this.login_username);
             this.panel1.Controls.Add(this.chkLoginShowPass);
@@ -66,6 +68,7 @@ namespace EvolveSettings
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel2);
+            this.panel1.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(-1, -1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(636, 412);
@@ -152,7 +155,7 @@ namespace EvolveSettings
             this.btnLogin.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(306, 259);
+            this.btnLogin.Location = new System.Drawing.Point(306, 269);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(96, 32);
             this.btnLogin.TabIndex = 1003;
@@ -164,7 +167,7 @@ namespace EvolveSettings
             this.login_close.AutoSize = true;
             this.login_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.login_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.login_close.Location = new System.Drawing.Point(609, 10);
+            this.login_close.Location = new System.Drawing.Point(609, 9);
             this.login_close.Name = "login_close";
             this.login_close.Size = new System.Drawing.Size(18, 18);
             this.login_close.TabIndex = 10;
@@ -219,7 +222,7 @@ namespace EvolveSettings
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(301, 53);
+            this.label1.Location = new System.Drawing.Point(303, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(147, 25);
             this.label1.TabIndex = 1;
@@ -234,20 +237,6 @@ namespace EvolveSettings
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(284, 412);
             this.panel2.TabIndex = 0;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = global::EvolveSettings.Properties.Resources.evolve_settings;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(92, 82);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(99, 91);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 2;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.UseTransparentBackground = true;
             // 
             // label6
             // 
@@ -274,6 +263,33 @@ namespace EvolveSettings
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lblForgotPass
+            // 
+            this.lblForgotPass.AutoSize = true;
+            this.lblForgotPass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblForgotPass.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblForgotPass.ForeColor = System.Drawing.Color.Gray;
+            this.lblForgotPass.Location = new System.Drawing.Point(303, 243);
+            this.lblForgotPass.Name = "lblForgotPass";
+            this.lblForgotPass.Size = new System.Drawing.Size(95, 15);
+            this.lblForgotPass.TabIndex = 1009;
+            this.lblForgotPass.Text = "Forgot Password";
+            this.lblForgotPass.Click += new System.EventHandler(this.lblForgotPass_Click);
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = global::EvolveSettings.Properties.Resources.evolve_settings;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(92, 82);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(99, 91);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 2;
+            this.guna2PictureBox1.TabStop = false;
+            this.guna2PictureBox1.UseTransparentBackground = true;
             // 
             // Login
             // 
@@ -313,6 +329,7 @@ namespace EvolveSettings
         private Guna.UI2.WinForms.Guna2TextBox login_username;
         private Guna.UI2.WinForms.Guna2TextBox login_password;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lblForgotPass;
     }
 }
 
