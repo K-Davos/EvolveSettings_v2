@@ -50,6 +50,9 @@ namespace EvolveSettings
             this.panelMain = new EvolveSettings.Controls.EvolvePanel();
             this.txtAppVersion = new System.Windows.Forms.Label();
             this.lblversion = new System.Windows.Forms.Label();
+            this.txtNetFw = new System.Windows.Forms.Label();
+            this.txtBitness = new System.Windows.Forms.Label();
+            this.txtOS = new System.Windows.Forms.Label();
             this.panel_header.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -76,7 +79,7 @@ namespace EvolveSettings
             this.btnUserManagement.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnUserManagement.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnUserManagement.ForeColor = System.Drawing.Color.White;
-            this.btnUserManagement.Location = new System.Drawing.Point(40, 457);
+            this.btnUserManagement.Location = new System.Drawing.Point(40, 425);
             this.btnUserManagement.Name = "btnUserManagement";
             this.btnUserManagement.Size = new System.Drawing.Size(89, 30);
             this.btnUserManagement.TabIndex = 1;
@@ -137,6 +140,9 @@ namespace EvolveSettings
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panel1.Controls.Add(this.txtNetFw);
+            this.panel1.Controls.Add(this.txtBitness);
+            this.panel1.Controls.Add(this.txtOS);
             this.panel1.Controls.Add(this.lblversion);
             this.panel1.Controls.Add(this.txtAppVersion);
             this.panel1.Controls.Add(this.lblUserMode);
@@ -325,6 +331,42 @@ namespace EvolveSettings
             this.lblversion.TabIndex = 83;
             this.lblversion.Text = "Version";
             // 
+            // txtNetFw
+            // 
+            this.txtNetFw.AutoSize = true;
+            this.txtNetFw.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNetFw.ForeColor = System.Drawing.Color.Gray;
+            this.txtNetFw.Location = new System.Drawing.Point(12, 495);
+            this.txtNetFw.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtNetFw.Name = "txtNetFw";
+            this.txtNetFw.Size = new System.Drawing.Size(37, 13);
+            this.txtNetFw.TabIndex = 86;
+            this.txtNetFw.Text = "netfw";
+            // 
+            // txtBitness
+            // 
+            this.txtBitness.AutoSize = true;
+            this.txtBitness.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBitness.ForeColor = System.Drawing.Color.Gray;
+            this.txtBitness.Location = new System.Drawing.Point(12, 478);
+            this.txtBitness.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtBitness.Name = "txtBitness";
+            this.txtBitness.Size = new System.Drawing.Size(44, 13);
+            this.txtBitness.TabIndex = 85;
+            this.txtBitness.Text = "bitness";
+            // 
+            // txtOS
+            // 
+            this.txtOS.AutoSize = true;
+            this.txtOS.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOS.ForeColor = System.Drawing.Color.Gray;
+            this.txtOS.Location = new System.Drawing.Point(12, 461);
+            this.txtOS.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtOS.Name = "txtOS";
+            this.txtOS.Size = new System.Drawing.Size(19, 13);
+            this.txtOS.TabIndex = 84;
+            this.txtOS.Text = "os";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -369,5 +411,8 @@ namespace EvolveSettings
         private System.Windows.Forms.Label lblUserMode;
         private System.Windows.Forms.Label txtAppVersion;
         private System.Windows.Forms.Label lblversion;
+        private System.Windows.Forms.Label txtNetFw;
+        private System.Windows.Forms.Label txtBitness;
+        private System.Windows.Forms.Label txtOS;
     }
 }

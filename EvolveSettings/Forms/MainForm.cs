@@ -19,6 +19,9 @@ namespace EvolveSettings
         {
             InitializeComponent();
 
+            txtOS.Text = EvolveUtilities.GetOS();
+            txtBitness.Text = EvolveUtilities.GetBitness();
+            txtNetFw.Text = ".NET Framework " + EvolveUtilities.GetNETFramework();
             txtAppVersion.Text = Program.GetCurrentVersionTostring();
             label1.Text = usrname;
             if (label1.Text == "Welcome: admin" )
