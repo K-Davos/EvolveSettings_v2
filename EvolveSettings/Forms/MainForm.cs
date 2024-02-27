@@ -9,6 +9,7 @@ namespace EvolveSettings
     {
         public Point mouseLocation;
 
+
         public MainForm()
         {
             InitializeComponent();
@@ -19,6 +20,19 @@ namespace EvolveSettings
             InitializeComponent();
 
             label1.Text = usrname;
+            if (label1.Text == "Welcome: admin" )
+            {
+                btnUserManagement.Visible = true;
+                lblUserMode.Text = "UserMode: Admin";
+                OptionsHelper.CurrentOptions.CurrentUser = "Admin";
+            }
+            else
+            {
+                btnUserManagement.Visible = false;
+                lblUserMode.Text = "UserMode: Guest";
+                OptionsHelper.CurrentOptions.CurrentUser = "Guest";
+            }
+            OptionsHelper.SaveSettings();
             openChildForm(new HomePageForm());
         }
 
@@ -61,7 +75,7 @@ namespace EvolveSettings
             //openChildForm(new Form());
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void btnUserManagement_Click(object sender, EventArgs e)
         {
             openChildForm(new UserForm());
         }
@@ -102,6 +116,11 @@ namespace EvolveSettings
                 mousePos.Offset(mouseLocation.X, mouseLocation.Y);
                 Location = mousePos;
             }
+        }
+
+        private void GetUser()
+        {
+
         }
     }
 }

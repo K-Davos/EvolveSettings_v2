@@ -5,6 +5,7 @@ namespace EvolveSettings.Models
     [Serializable]
     public sealed class Options
     {
+        public string CurrentUser { get; set; }
         public bool AutoStart { get; set; }
         public bool WinTheme { get; set; }
     }

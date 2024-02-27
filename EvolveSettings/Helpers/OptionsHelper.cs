@@ -38,6 +38,7 @@ namespace EvolveSettings
             if (!File.Exists(SettingsFile) || File.ReadAllText(SettingsFile).Contains("\"Evolve\":"))
             {
                 // DEFAULT OPTIONS
+                CurrentOptions.CurrentUser = string.Empty;
                 CurrentOptions.AutoStart = false;
                 CurrentOptions.WinTheme = true;
 
