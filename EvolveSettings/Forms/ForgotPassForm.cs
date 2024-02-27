@@ -37,7 +37,7 @@ namespace EvolveSettings.Forms
             MailMessage message = new MailMessage();
             to = (txtEmail.Text).ToString();
             from = "ENTER_EMAIL";
-            pass = "ENTER_CODE";
+            pass = "ENTER_PASS";
             messageBody = "Your verification code is " + randomCode;
             message.To.Add(to);
             message.From = new MailAddress(from);

@@ -240,6 +240,12 @@
     <Compile Include="Forms\ForgotPassForm.Designer.cs">
       <DependentUpon>ForgotPassForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\HomePageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HomePageForm.Designer.cs">
+      <DependentUpon>HomePageForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -297,6 +303,9 @@
     <Compile Include="Helpers\SqlConnectionHelper.cs" />
     <EmbeddedResource Include="Forms\ForgotPassForm.resx">
       <DependentUpon>ForgotPassForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HomePageForm.resx">
+      <DependentUpon>HomePageForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

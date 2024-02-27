@@ -9,13 +9,15 @@ namespace EvolveSettings
     {
         public Point mouseLocation;
 
+        public MainForm()
+        {
+            InitializeComponent();
+            openChildForm(new HomePageForm());
+        }
+
         public MainForm(String usrname)
         {
             InitializeComponent();
-
-            pnlNav.Height = btnDashboard.Height;
-            pnlNav.Top = btnDashboard.Top;
-            pnlNav.Left = btnDashboard.Left;
 
             label1.Text = usrname;
         }
@@ -24,7 +26,7 @@ namespace EvolveSettings
         private void openChildForm(Form childForm)
         {
             if (activeForm != null)
-                activeForm.Close();
+                //activeForm.Close();
             activeForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
@@ -33,46 +35,29 @@ namespace EvolveSettings
             panelMain.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-
         }
 
-        private void BtnDashboard_Click(object sender, EventArgs e)
+        private void BtnHome_Click(object sender, EventArgs e)
         {
-            pnlNav.Height = btnDashboard.Height;
-            pnlNav.Top = btnDashboard.Top;
-            pnlNav.Left = btnDashboard.Left;
-
-            //openChildForm(new Form());
+            openChildForm(new HomePageForm());
         }
 
         private void btnWin11Tweaks_Click(object sender, EventArgs e)
         {
-            pnlNav.Height = btnCat1.Height;
-            pnlNav.Top = btnCat1.Top;
-
             //openChildForm(new Form());
         }
         private void btnNetwork_Click(object sender, EventArgs e)
         {
-            pnlNav.Height = btnCat2.Height;
-            pnlNav.Top = btnCat2.Top;
-
             //openChildForm(new Form());
         }
 
         private void btnMaintenance_Click(object sender, EventArgs e)
         {
-            pnlNav.Height = btnCat3.Height;
-            pnlNav.Top = btnCat3.Top;
-
             //openChildForm(new Form());
         }
 
         private void BtnSettings_Click(object sender, EventArgs e)
         {
-            pnlNav.Height = btnCat4.Height;
-            pnlNav.Top = btnCat4.Top;
-
             //openChildForm(new Form());
         }
 
