@@ -38,6 +38,7 @@ namespace EvolveSettings
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnCloseApp = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblUserMode = new System.Windows.Forms.Label();
             this.btnCat4 = new Guna.UI2.WinForms.Guna2Button();
             this.btnCat3 = new Guna.UI2.WinForms.Guna2Button();
             this.btnCat2 = new Guna.UI2.WinForms.Guna2Button();
@@ -47,7 +48,8 @@ namespace EvolveSettings
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.pnlRadius = new System.Windows.Forms.Panel();
             this.panelMain = new EvolveSettings.Controls.EvolvePanel();
-            this.lblUserMode = new System.Windows.Forms.Label();
+            this.txtAppVersion = new System.Windows.Forms.Label();
+            this.lblversion = new System.Windows.Forms.Label();
             this.panel_header.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -74,7 +76,7 @@ namespace EvolveSettings
             this.btnUserManagement.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnUserManagement.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnUserManagement.ForeColor = System.Drawing.Color.White;
-            this.btnUserManagement.Location = new System.Drawing.Point(45, 489);
+            this.btnUserManagement.Location = new System.Drawing.Point(40, 457);
             this.btnUserManagement.Name = "btnUserManagement";
             this.btnUserManagement.Size = new System.Drawing.Size(89, 30);
             this.btnUserManagement.TabIndex = 1;
@@ -135,6 +137,8 @@ namespace EvolveSettings
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.panel1.Controls.Add(this.lblversion);
+            this.panel1.Controls.Add(this.txtAppVersion);
             this.panel1.Controls.Add(this.lblUserMode);
             this.panel1.Controls.Add(this.btnCat4);
             this.panel1.Controls.Add(this.btnCat3);
@@ -148,6 +152,17 @@ namespace EvolveSettings
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(187, 559);
             this.panel1.TabIndex = 6;
+            // 
+            // lblUserMode
+            // 
+            this.lblUserMode.AutoSize = true;
+            this.lblUserMode.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserMode.ForeColor = System.Drawing.Color.Tomato;
+            this.lblUserMode.Location = new System.Drawing.Point(12, 534);
+            this.lblUserMode.Name = "lblUserMode";
+            this.lblUserMode.Size = new System.Drawing.Size(60, 13);
+            this.lblUserMode.TabIndex = 81;
+            this.lblUserMode.Text = "UserMode";
             // 
             // btnCat4
             // 
@@ -288,16 +303,27 @@ namespace EvolveSettings
             this.panelMain.TabIndex = 9;
             this.panelMain.Thickness = 0F;
             // 
-            // lblUserMode
+            // txtAppVersion
             // 
-            this.lblUserMode.AutoSize = true;
-            this.lblUserMode.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserMode.ForeColor = System.Drawing.Color.Tomato;
-            this.lblUserMode.Location = new System.Drawing.Point(12, 534);
-            this.lblUserMode.Name = "lblUserMode";
-            this.lblUserMode.Size = new System.Drawing.Size(60, 13);
-            this.lblUserMode.TabIndex = 81;
-            this.lblUserMode.Text = "UserMode";
+            this.txtAppVersion.AutoSize = true;
+            this.txtAppVersion.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAppVersion.ForeColor = System.Drawing.Color.Gray;
+            this.txtAppVersion.Location = new System.Drawing.Point(55, 512);
+            this.txtAppVersion.Name = "txtAppVersion";
+            this.txtAppVersion.Size = new System.Drawing.Size(21, 13);
+            this.txtAppVersion.TabIndex = 82;
+            this.txtAppVersion.Text = "1.x";
+            // 
+            // lblversion
+            // 
+            this.lblversion.AutoSize = true;
+            this.lblversion.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblversion.ForeColor = System.Drawing.Color.Gray;
+            this.lblversion.Location = new System.Drawing.Point(12, 512);
+            this.lblversion.Name = "lblversion";
+            this.lblversion.Size = new System.Drawing.Size(45, 13);
+            this.lblversion.TabIndex = 83;
+            this.lblversion.Text = "Version";
             // 
             // MainForm
             // 
@@ -341,5 +367,7 @@ namespace EvolveSettings
         private Guna.UI2.WinForms.Guna2Button btnCat2;
         private Guna.UI2.WinForms.Guna2Button btnCat1;
         private System.Windows.Forms.Label lblUserMode;
+        private System.Windows.Forms.Label txtAppVersion;
+        private System.Windows.Forms.Label lblversion;
     }
 }

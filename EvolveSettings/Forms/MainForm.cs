@@ -19,6 +19,7 @@ namespace EvolveSettings
         {
             InitializeComponent();
 
+            txtAppVersion.Text = Program.GetCurrentVersionTostring();
             label1.Text = usrname;
             if (label1.Text == "Welcome: admin" )
             {
