@@ -1,26 +1,35 @@
 ﻿using EvolveSettings.Helpers;
+using Guna.UI2.WinForms;
+using Microsoft.Win32;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.UI.WebControls;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace EvolveSettings.Forms
 {
     public partial class ResetPassForm : Form
     {
+        //WinTheme
+        private UserPreferenceChangedEventHandler UserPreferenceChanged;
+
+        SqlConnection connect = new SqlConnection(SqlConnectionHelper.connectReturn());
+        SqlCommand cmd = new SqlCommand();
+        string email = ForgotPassForm.to;
+
         PasswordValidator passwordValidator = new PasswordValidator();
 
         public ResetPassForm()
         {
             InitializeComponent();
+
+            //WinTheme
+            UserPreferenceChanged = new UserPreferenceChangedEventHandler(SystemEvents_UserPreferenceChanged);
+            SystemEvents.UserPreferenceChanged += UserPreferenceChanged;
+            this.Disposed += new EventHandler(Form_Disposed);
+            LoadTheme();
+
             btnReset.Enabled = false;
             btnLogin.Enabled = false;
             if (txtResetPass.Text.Length < 1)
@@ -30,9 +39,81 @@ namespace EvolveSettings.Forms
             }
         }
 
-        SqlConnection connect = new SqlConnection(SqlConnectionHelper.connectReturn());
-        SqlCommand cmd = new SqlCommand();
-        string email = ForgotPassForm.to;
+        #region wintheme
+        public bool IsDarkTheme()
+        {
+            bool is_light_mode = true;
+            try
+            {
+                var v = Microsoft.Win32.Registry.GetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize", "AppsUseLightTheme", "1");
+                if (v != null && v.ToString() == "0")
+                    is_light_mode = false;
+            }
+            catch { }
+            return is_light_mode;
+        }
+        private void LoadTheme()
+        {
+            var themeColor = WinTheme.GetAccentColor();//Windows Accent Color
+            var lightColor = ControlPaint.Light(themeColor);
+            var darkColor = ControlPaint.Dark(themeColor);
+
+            var isDarkorLight = IsDarkTheme();
+            if (isDarkorLight)
+            {
+                //light
+                this.BackColor = SystemColors.Control;
+                panel2.BackColor = themeColor;
+                foreach (Guna2TextBox txtbox in this.Controls.OfType<Guna2TextBox>())
+                {
+                    txtbox.BackColor = Color.Transparent;
+                    txtbox.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
+                    txtbox.BorderColor = themeColor;
+                    txtbox.ForeColor = Color.White;
+                }
+                lblResetPassword.ForeColor = Color.Black;
+                btnResetPassClose.ForeColor = Color.Black;
+                lblNewPassword.ForeColor = Color.Black;
+                lblConfirmPassword.ForeColor = Color.Black;
+            }
+            else
+            {
+                //dark
+                this.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
+                panel2.BackColor = themeColor;
+                foreach (Guna2TextBox txtbox in this.Controls.OfType<Guna2TextBox>())
+                {
+                    txtbox.BackColor = Color.Transparent;
+                    txtbox.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
+                    txtbox.BorderColor = themeColor;
+                    txtbox.ForeColor = Color.White;
+                }
+                lblResetPassword.ForeColor = Color.White;
+                btnResetPassClose.ForeColor = Color.White;
+                lblNewPassword.ForeColor = Color.White;
+                lblConfirmPassword.ForeColor = Color.White;
+            }
+            chkResetShowPass.CheckedState.FillColor = themeColor;
+            foreach (Guna2Button button in this.Controls.OfType<Guna2Button>())
+            {
+                button.FillColor = themeColor;
+                button.ForeColor = Color.White;
+            }
+        }
+
+        private void SystemEvents_UserPreferenceChanged(object sender, UserPreferenceChangedEventArgs e)
+        {
+            if (e.Category == UserPreferenceCategory.General || e.Category == UserPreferenceCategory.VisualStyle)
+            {
+                LoadTheme();
+            }
+        }
+
+        private void Form_Disposed(object sender, EventArgs e)
+        {
+            SystemEvents.UserPreferenceChanged -= UserPreferenceChanged;
+        }
+        #endregion wintheme
 
         private void btnReset_Click(object sender, EventArgs e)
         {

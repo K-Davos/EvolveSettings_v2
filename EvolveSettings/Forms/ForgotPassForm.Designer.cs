@@ -35,9 +35,9 @@
             this.btnSendCode = new Guna.UI2.WinForms.Guna2Button();
             this.txtVerifyCode = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnVerify = new Guna.UI2.WinForms.Guna2Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblVerifyCode = new System.Windows.Forms.Label();
+            this.lblResetPassword = new System.Windows.Forms.Label();
             this.btnResetPassClose = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -119,6 +119,7 @@
             this.txtVerifyCode.Name = "txtVerifyCode";
             this.txtVerifyCode.PasswordChar = '\0';
             this.txtVerifyCode.PlaceholderText = "";
+            this.txtVerifyCode.ReadOnly = true;
             this.txtVerifyCode.SelectedText = "";
             this.txtVerifyCode.Size = new System.Drawing.Size(304, 34);
             this.txtVerifyCode.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
@@ -143,35 +144,35 @@
             this.btnVerify.Text = "Verify";
             this.btnVerify.Click += new System.EventHandler(this.btnVerify_Click);
             // 
-            // label2
+            // lblEmail
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(302, 120);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 17);
-            this.label2.TabIndex = 1012;
-            this.label2.Text = "Email:";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(302, 120);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(42, 17);
+            this.lblEmail.TabIndex = 1012;
+            this.lblEmail.Text = "Email:";
             // 
-            // label1
+            // lblVerifyCode
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(302, 236);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(144, 17);
-            this.label1.TabIndex = 1013;
-            this.label1.Text = "Enter Verification Code:";
+            this.lblVerifyCode.AutoSize = true;
+            this.lblVerifyCode.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVerifyCode.Location = new System.Drawing.Point(302, 236);
+            this.lblVerifyCode.Name = "lblVerifyCode";
+            this.lblVerifyCode.Size = new System.Drawing.Size(144, 17);
+            this.lblVerifyCode.TabIndex = 1013;
+            this.lblVerifyCode.Text = "Enter Verification Code:";
             // 
-            // label3
+            // lblResetPassword
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(302, 16);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(147, 25);
-            this.label3.TabIndex = 1028;
-            this.label3.Text = "Reset Password";
+            this.lblResetPassword.AutoSize = true;
+            this.lblResetPassword.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResetPassword.Location = new System.Drawing.Point(302, 16);
+            this.lblResetPassword.Name = "lblResetPassword";
+            this.lblResetPassword.Size = new System.Drawing.Size(147, 25);
+            this.lblResetPassword.TabIndex = 1028;
+            this.lblResetPassword.Text = "Reset Password";
             // 
             // btnResetPassClose
             // 
@@ -230,11 +231,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 411);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.lblResetPassword);
             this.Controls.Add(this.btnResetPassClose);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblVerifyCode);
+            this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.txtVerifyCode);
             this.Controls.Add(this.btnVerify);
             this.Controls.Add(this.txtEmail);
@@ -259,9 +260,9 @@
         private Guna.UI2.WinForms.Guna2Button btnVerify;
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private Guna.UI2.WinForms.Guna2Button btnSendCode;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblVerifyCode;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblResetPassword;
         private System.Windows.Forms.Label btnResetPassClose;
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;

@@ -35,17 +35,15 @@
             this.btnGenerate = new Guna.UI2.WinForms.Guna2Button();
             this.btnPassGenCopy = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.lblLength = new System.Windows.Forms.Label();
+            this.guna2TrackBar1 = new Guna.UI2.WinForms.Guna2TrackBar();
             this.chkSymbols = new Guna.UI2.WinForms.Guna2CheckBox();
             this.chkDigits = new Guna.UI2.WinForms.Guna2CheckBox();
             this.chkUppercase = new Guna.UI2.WinForms.Guna2CheckBox();
             this.chkLowercase = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblAddUpdateUser = new System.Windows.Forms.Label();
-            this.guna2TrackBar1 = new Guna.UI2.WinForms.Guna2TrackBar();
-            this.lblLength = new System.Windows.Forms.Label();
+            this.lblPasswordGen = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Label();
             this.guna2GroupBox1.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -140,6 +138,28 @@
             this.guna2GroupBox1.TabIndex = 1016;
             this.guna2GroupBox1.Text = "Options";
             // 
+            // lblLength
+            // 
+            this.lblLength.AutoSize = true;
+            this.lblLength.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLength.ForeColor = System.Drawing.Color.Black;
+            this.lblLength.Location = new System.Drawing.Point(490, 58);
+            this.lblLength.Name = "lblLength";
+            this.lblLength.Size = new System.Drawing.Size(16, 18);
+            this.lblLength.TabIndex = 1013;
+            this.lblLength.Text = "8";
+            // 
+            // guna2TrackBar1
+            // 
+            this.guna2TrackBar1.Location = new System.Drawing.Point(32, 58);
+            this.guna2TrackBar1.Maximum = 64;
+            this.guna2TrackBar1.Name = "guna2TrackBar1";
+            this.guna2TrackBar1.Size = new System.Drawing.Size(451, 23);
+            this.guna2TrackBar1.TabIndex = 1012;
+            this.guna2TrackBar1.ThumbColor = System.Drawing.Color.MidnightBlue;
+            this.guna2TrackBar1.Value = 8;
+            this.guna2TrackBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.guna2TrackBar1_Scroll);
+            // 
             // chkSymbols
             // 
             this.chkSymbols.Animated = true;
@@ -229,73 +249,37 @@
             this.chkLowercase.UncheckedState.BorderThickness = 0;
             this.chkLowercase.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             // 
+            // lblPasswordGen
+            // 
+            this.lblPasswordGen.AutoSize = true;
+            this.lblPasswordGen.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPasswordGen.ForeColor = System.Drawing.Color.Black;
+            this.lblPasswordGen.Location = new System.Drawing.Point(19, 9);
+            this.lblPasswordGen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPasswordGen.Name = "lblPasswordGen";
+            this.lblPasswordGen.Size = new System.Drawing.Size(161, 21);
+            this.lblPasswordGen.TabIndex = 1;
+            this.lblPasswordGen.Text = "Password Generator";
+            // 
             // btnClose
             // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Image = global::EvolveSettings.Properties.Resources.shutdown;
-            this.btnClose.Location = new System.Drawing.Point(517, 0);
+            this.btnClose.AutoSize = true;
+            this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.Location = new System.Drawing.Point(537, 7);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(48, 42);
-            this.btnClose.TabIndex = 17;
-            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Size = new System.Drawing.Size(18, 18);
+            this.btnClose.TabIndex = 1017;
+            this.btnClose.Text = "X";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel1.Controls.Add(this.btnClose);
-            this.panel1.Controls.Add(this.lblAddUpdateUser);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(565, 42);
-            this.panel1.TabIndex = 1017;
-            // 
-            // lblAddUpdateUser
-            // 
-            this.lblAddUpdateUser.AutoSize = true;
-            this.lblAddUpdateUser.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddUpdateUser.ForeColor = System.Drawing.Color.White;
-            this.lblAddUpdateUser.Location = new System.Drawing.Point(14, 10);
-            this.lblAddUpdateUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblAddUpdateUser.Name = "lblAddUpdateUser";
-            this.lblAddUpdateUser.Size = new System.Drawing.Size(161, 21);
-            this.lblAddUpdateUser.TabIndex = 1;
-            this.lblAddUpdateUser.Text = "Password Generator";
-            // 
-            // guna2TrackBar1
-            // 
-            this.guna2TrackBar1.Location = new System.Drawing.Point(32, 58);
-            this.guna2TrackBar1.Maximum = 64;
-            this.guna2TrackBar1.Name = "guna2TrackBar1";
-            this.guna2TrackBar1.Size = new System.Drawing.Size(451, 23);
-            this.guna2TrackBar1.TabIndex = 1012;
-            this.guna2TrackBar1.ThumbColor = System.Drawing.Color.MidnightBlue;
-            this.guna2TrackBar1.Value = 8;
-            this.guna2TrackBar1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.guna2TrackBar1_Scroll);
-            // 
-            // lblLength
-            // 
-            this.lblLength.AutoSize = true;
-            this.lblLength.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLength.ForeColor = System.Drawing.Color.Black;
-            this.lblLength.Location = new System.Drawing.Point(490, 58);
-            this.lblLength.Name = "lblLength";
-            this.lblLength.Size = new System.Drawing.Size(16, 18);
-            this.lblLength.TabIndex = 1013;
-            this.lblLength.Text = "8";
             // 
             // PasswordGenForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(565, 262);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.lblPasswordGen);
             this.Controls.Add(this.guna2GroupBox1);
             this.Controls.Add(this.btnPassGenCopy);
             this.Controls.Add(this.txtGenPassword);
@@ -308,9 +292,8 @@
             this.TopMost = true;
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -321,14 +304,13 @@
         public Guna.UI2.WinForms.Guna2TextBox txtGenPassword;
         public Guna.UI2.WinForms.Guna2Button btnGenerate;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnClose;
-        public System.Windows.Forms.Label lblAddUpdateUser;
+        public System.Windows.Forms.Label lblPasswordGen;
         private Guna.UI2.WinForms.Guna2CheckBox chkSymbols;
         private Guna.UI2.WinForms.Guna2CheckBox chkDigits;
         private Guna.UI2.WinForms.Guna2CheckBox chkUppercase;
         private Guna.UI2.WinForms.Guna2CheckBox chkLowercase;
         private Guna.UI2.WinForms.Guna2TrackBar guna2TrackBar1;
         private System.Windows.Forms.Label lblLength;
+        private System.Windows.Forms.Label btnClose;
     }
 }

@@ -31,12 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ResetPassForm));
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblNewPassword = new System.Windows.Forms.Label();
             this.txtResetRePass = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
             this.txtResetPass = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnReset = new Guna.UI2.WinForms.Guna2Button();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblConfirmPassword = new System.Windows.Forms.Label();
             this.btnResetPassClose = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -44,7 +44,7 @@
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnPassGen = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblResetPassword = new System.Windows.Forms.Label();
             this.chkResetShowPass = new Guna.UI2.WinForms.Guna2CheckBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2.SuspendLayout();
@@ -61,15 +61,15 @@
             this.guna2BorderlessForm1.DragForm = false;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
-            // label2
+            // lblNewPassword
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(302, 120);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 17);
-            this.label2.TabIndex = 1018;
-            this.label2.Text = "New Password:";
+            this.lblNewPassword.AutoSize = true;
+            this.lblNewPassword.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNewPassword.Location = new System.Drawing.Point(302, 120);
+            this.lblNewPassword.Name = "lblNewPassword";
+            this.lblNewPassword.Size = new System.Drawing.Size(97, 17);
+            this.lblNewPassword.TabIndex = 1018;
+            this.lblNewPassword.Text = "New Password:";
             // 
             // txtResetRePass
             // 
@@ -157,15 +157,15 @@
             this.btnReset.Text = "Reset";
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
-            // label5
+            // lblConfirmPassword
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(302, 182);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(117, 17);
-            this.label5.TabIndex = 1020;
-            this.label5.Text = "Confirm Password:";
+            this.lblConfirmPassword.AutoSize = true;
+            this.lblConfirmPassword.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmPassword.Location = new System.Drawing.Point(302, 182);
+            this.lblConfirmPassword.Name = "lblConfirmPassword";
+            this.lblConfirmPassword.Size = new System.Drawing.Size(117, 17);
+            this.lblConfirmPassword.TabIndex = 1020;
+            this.lblConfirmPassword.Text = "Confirm Password:";
             // 
             // btnResetPassClose
             // 
@@ -258,15 +258,15 @@
             this.btnPassGen.Text = "Password Generator";
             this.btnPassGen.Click += new System.EventHandler(this.btnPassGen_Click);
             // 
-            // label1
+            // lblResetPassword
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(302, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 25);
-            this.label1.TabIndex = 1024;
-            this.label1.Text = "Reset Password";
+            this.lblResetPassword.AutoSize = true;
+            this.lblResetPassword.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResetPassword.Location = new System.Drawing.Point(302, 16);
+            this.lblResetPassword.Name = "lblResetPassword";
+            this.lblResetPassword.Size = new System.Drawing.Size(147, 25);
+            this.lblResetPassword.TabIndex = 1024;
+            this.lblResetPassword.Text = "Reset Password";
             // 
             // chkResetShowPass
             // 
@@ -299,12 +299,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 411);
             this.Controls.Add(this.chkResetShowPass);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblResetPassword);
             this.Controls.Add(this.btnPassGen);
             this.Controls.Add(this.btnResetPassClose);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblConfirmPassword);
+            this.Controls.Add(this.lblNewPassword);
             this.Controls.Add(this.txtResetRePass);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtResetPass);
@@ -325,12 +325,12 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblNewPassword;
         private Guna.UI2.WinForms.Guna2TextBox txtResetRePass;
         private Guna.UI2.WinForms.Guna2Button btnLogin;
         private Guna.UI2.WinForms.Guna2TextBox txtResetPass;
         private Guna.UI2.WinForms.Guna2Button btnReset;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblConfirmPassword;
         private System.Windows.Forms.Label btnResetPassClose;
         private System.Windows.Forms.Panel panel2;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
@@ -338,7 +338,7 @@
         public Guna.UI2.WinForms.Guna2Button btnPassGen;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblPassValidationInfo;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblResetPassword;
         private Guna.UI2.WinForms.Guna2CheckBox chkResetShowPass;
         private System.Windows.Forms.Timer timer1;
     }

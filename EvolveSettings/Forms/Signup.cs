@@ -1,22 +1,34 @@
 ﻿using EvolveSettings.Forms;
 using EvolveSettings.Helpers;
+using Guna.UI2.WinForms;
+using Microsoft.Win32;
 using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace EvolveSettings
 {
     public partial class Signup : Form
     {
+        //WinTheme
+        private UserPreferenceChangedEventHandler UserPreferenceChanged;
+
         SqlConnection connect = new SqlConnection(SqlConnectionHelper.connectReturn());
         PasswordValidator passwordValidator = new PasswordValidator();
 
         public Signup()
         {
             InitializeComponent();
+
+            //WinTheme
+            UserPreferenceChanged = new UserPreferenceChangedEventHandler(SystemEvents_UserPreferenceChanged);
+            SystemEvents.UserPreferenceChanged += UserPreferenceChanged;
+            this.Disposed += new EventHandler(Form_Disposed);
+            LoadTheme();
+
             btnSignup.Enabled = false;
             if (signup_password.Text.Length < 1)
             {
@@ -24,6 +36,93 @@ namespace EvolveSettings
                 timer1.Start();
             }
         }
+
+        #region wintheme
+        public bool IsDarkTheme()
+        {
+            bool is_light_mode = true;
+            try
+            {
+                var v = Microsoft.Win32.Registry.GetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize", "AppsUseLightTheme", "1");
+                if (v != null && v.ToString() == "0")
+                    is_light_mode = false;
+            }
+            catch { }
+            return is_light_mode;
+        }
+        private void LoadTheme()
+        {
+            var themeColor = WinTheme.GetAccentColor();//Windows Accent Color
+            var lightColor = ControlPaint.Light(themeColor);
+            var darkColor = ControlPaint.Dark(themeColor);
+
+            var isDarkorLight = IsDarkTheme();
+            if (isDarkorLight)
+            {
+                //light
+                this.BackColor = SystemColors.Control;
+                panel1.BackColor = SystemColors.Control;
+                panel2.BackColor = themeColor;
+                foreach (Guna2TextBox txtbox in this.panel1.Controls.OfType<Guna2TextBox>())
+                {
+                    txtbox.BackColor = Color.Transparent;
+                    txtbox.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
+                    txtbox.BorderColor = themeColor;
+                    txtbox.ForeColor = Color.White;
+                }
+                lblGetStarted.ForeColor = Color.Black;
+                lblAlreadyAccount.ForeColor = ColorTranslator.FromHtml("#212121");
+                txtLoginHere.ForeColor = ColorTranslator.FromHtml("#212121");
+                signup_close.ForeColor = Color.Black;
+                lblEmail.ForeColor = Color.Black;
+                lblUserName.ForeColor = Color.Black;
+                lblPassword.ForeColor = Color.Black;
+                lblConfirmPassword.ForeColor = Color.Black;
+
+            }
+            else
+            {
+                //dark
+                this.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
+                panel1.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
+                panel2.BackColor = themeColor;
+                foreach (Guna2TextBox txtbox in this.panel1.Controls.OfType<Guna2TextBox>())
+                {
+                    txtbox.BackColor = Color.Transparent;
+                    txtbox.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
+                    txtbox.BorderColor = themeColor;
+                    txtbox.ForeColor = Color.White;
+                }
+                lblGetStarted.ForeColor = Color.White;
+                lblAlreadyAccount.ForeColor = ColorTranslator.FromHtml("#A2A4A5");
+                txtLoginHere.ForeColor = ColorTranslator.FromHtml("#A2A4A5");
+                signup_close.ForeColor = Color.White;
+                lblEmail.ForeColor = Color.White;
+                lblUserName.ForeColor = Color.White;
+                lblPassword.ForeColor = Color.White;
+                lblConfirmPassword.ForeColor = Color.White;
+            }
+            chkSignupShowPass.CheckedState.FillColor = themeColor;
+            foreach (Guna2Button button in this.panel1.Controls.OfType<Guna2Button>())
+            {
+                button.FillColor = themeColor;
+                button.ForeColor = Color.White;
+            }
+        }
+
+        private void SystemEvents_UserPreferenceChanged(object sender, UserPreferenceChangedEventArgs e)
+        {
+            if (e.Category == UserPreferenceCategory.General || e.Category == UserPreferenceCategory.VisualStyle)
+            {
+                LoadTheme();
+            }
+        }
+
+        private void Form_Disposed(object sender, EventArgs e)
+        {
+            SystemEvents.UserPreferenceChanged -= UserPreferenceChanged;
+        }
+        #endregion wintheme
 
         private void txtLoginHere_Click(object sender, EventArgs e)
         {
@@ -138,7 +237,7 @@ namespace EvolveSettings
             if (passwordValidator.IsStrong(signup_password.Text, out message))
             {
                 if (string.IsNullOrEmpty(message))
-                lblPassValidationInfo.Text = "Password validation accepted.";
+                    lblPassValidationInfo.Text = "Password validation accepted.";
                 else
                     lblPassValidationInfo.Text = message;
             }

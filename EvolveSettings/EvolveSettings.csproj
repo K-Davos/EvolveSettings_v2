@@ -301,6 +301,7 @@
       <DependentUpon>Signup.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\SqlConnectionHelper.cs" />
+    <Compile Include="WinTheme.cs" />
     <EmbeddedResource Include="Forms\ForgotPassForm.resx">
       <DependentUpon>ForgotPassForm.cs</DependentUpon>
     </EmbeddedResource>

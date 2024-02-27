@@ -27,7 +27,7 @@ namespace EvolveSettings
         {
             if (activeForm != null)
                 //activeForm.Close();
-            activeForm = childForm;
+                activeForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;

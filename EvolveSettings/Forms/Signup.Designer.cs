@@ -39,15 +39,15 @@ namespace EvolveSettings
             this.signup_email = new Guna.UI2.WinForms.Guna2TextBox();
             this.chkSignupShowPass = new Guna.UI2.WinForms.Guna2CheckBox();
             this.btnSignup = new Guna.UI2.WinForms.Guna2Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblConfirmPassword = new System.Windows.Forms.Label();
+            this.lblPassword = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.signup_close = new System.Windows.Forms.Label();
             this.txtLoginHere = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblAlreadyAccount = new System.Windows.Forms.Label();
+            this.lblUserName = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblGetStarted = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.lblPassValidationInfo = new System.Windows.Forms.Label();
@@ -70,15 +70,15 @@ namespace EvolveSettings
             this.panel1.Controls.Add(this.signup_email);
             this.panel1.Controls.Add(this.chkSignupShowPass);
             this.panel1.Controls.Add(this.btnSignup);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.lblConfirmPassword);
+            this.panel1.Controls.Add(this.lblPassword);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.signup_close);
             this.panel1.Controls.Add(this.txtLoginHere);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lblAlreadyAccount);
+            this.panel1.Controls.Add(this.lblUserName);
+            this.panel1.Controls.Add(this.lblEmail);
+            this.panel1.Controls.Add(this.lblGetStarted);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(-1, -1);
             this.panel1.Name = "panel1";
@@ -240,25 +240,25 @@ namespace EvolveSettings
             this.btnSignup.Text = "Sign Up";
             this.btnSignup.Click += new System.EventHandler(this.btnSignup_Click);
             // 
-            // label5
+            // lblConfirmPassword
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(305, 255);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(117, 17);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Confirm Password:";
+            this.lblConfirmPassword.AutoSize = true;
+            this.lblConfirmPassword.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConfirmPassword.Location = new System.Drawing.Point(305, 255);
+            this.lblConfirmPassword.Name = "lblConfirmPassword";
+            this.lblConfirmPassword.Size = new System.Drawing.Size(117, 17);
+            this.lblConfirmPassword.TabIndex = 15;
+            this.lblConfirmPassword.Text = "Confirm Password:";
             // 
-            // label9
+            // lblPassword
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(305, 190);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(67, 17);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "Password:";
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.Location = new System.Drawing.Point(305, 190);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(67, 17);
+            this.lblPassword.TabIndex = 13;
+            this.lblPassword.Text = "Password:";
             // 
             // label8
             // 
@@ -294,46 +294,46 @@ namespace EvolveSettings
             this.txtLoginHere.Text = "Login here";
             this.txtLoginHere.Click += new System.EventHandler(this.txtLoginHere_Click);
             // 
-            // label4
+            // lblAlreadyAccount
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(340, 383);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(142, 15);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Already have an account?";
+            this.lblAlreadyAccount.AutoSize = true;
+            this.lblAlreadyAccount.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlreadyAccount.ForeColor = System.Drawing.Color.DimGray;
+            this.lblAlreadyAccount.Location = new System.Drawing.Point(340, 383);
+            this.lblAlreadyAccount.Name = "lblAlreadyAccount";
+            this.lblAlreadyAccount.Size = new System.Drawing.Size(142, 15);
+            this.lblAlreadyAccount.TabIndex = 10;
+            this.lblAlreadyAccount.Text = "Already have an account?";
             // 
-            // label3
+            // lblUserName
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(304, 124);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 17);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Username:";
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.Location = new System.Drawing.Point(304, 124);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(70, 17);
+            this.lblUserName.TabIndex = 4;
+            this.lblUserName.Text = "Username:";
             // 
-            // label2
+            // lblEmail
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(304, 62);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Email Address:";
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(304, 62);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(94, 17);
+            this.lblEmail.TabIndex = 2;
+            this.lblEmail.Text = "Email Address:";
             // 
-            // label1
+            // lblGetStarted
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(303, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Get Started";
+            this.lblGetStarted.AutoSize = true;
+            this.lblGetStarted.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGetStarted.Location = new System.Drawing.Point(303, 17);
+            this.lblGetStarted.Name = "lblGetStarted";
+            this.lblGetStarted.Size = new System.Drawing.Size(113, 25);
+            this.lblGetStarted.TabIndex = 1;
+            this.lblGetStarted.Text = "Get Started";
             // 
             // panel2
             // 
@@ -434,15 +434,15 @@ namespace EvolveSettings
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label signup_close;
         private System.Windows.Forms.Label txtLoginHere;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblAlreadyAccount;
+        private System.Windows.Forms.Label lblUserName;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblGetStarted;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblConfirmPassword;
         private Guna.UI2.WinForms.Guna2CheckBox chkSignupShowPass;
         private Guna.UI2.WinForms.Guna2BorderlessForm frmSignUp;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;

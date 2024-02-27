@@ -36,6 +36,8 @@
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblLoading = new System.Windows.Forms.Label();
+            this.progressBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,8 +55,11 @@
             // progressBar
             // 
             this.progressBar.Animated = true;
+            this.progressBar.AnimationSpeed = 1F;
+            this.progressBar.BackColor = System.Drawing.Color.Transparent;
+            this.progressBar.Controls.Add(this.lblLoading);
             this.progressBar.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(213)))), ((int)(((byte)(218)))), ((int)(((byte)(223)))));
-            this.progressBar.FillThickness = 15;
+            this.progressBar.FillThickness = 12;
             this.progressBar.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.progressBar.ForeColor = System.Drawing.Color.Black;
             this.progressBar.Location = new System.Drawing.Point(115, 302);
@@ -62,12 +67,11 @@
             this.progressBar.Name = "progressBar";
             this.progressBar.ProgressColor = System.Drawing.Color.MidnightBlue;
             this.progressBar.ProgressColor2 = System.Drawing.Color.Red;
-            this.progressBar.ProgressThickness = 15;
+            this.progressBar.ProgressThickness = 12;
             this.progressBar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.progressBar.ShowText = true;
             this.progressBar.Size = new System.Drawing.Size(120, 120);
             this.progressBar.TabIndex = 0;
-            this.progressBar.Text = "Loading";
             this.progressBar.TextMode = Guna.UI2.WinForms.Enums.ProgressBarTextMode.Custom;
             // 
             // timer1
@@ -112,6 +116,15 @@
             this.label1.Text = "Evolve Settings";
             this.label1.UseWaitCursor = true;
             // 
+            // lblLoading
+            // 
+            this.lblLoading.AutoSize = true;
+            this.lblLoading.Location = new System.Drawing.Point(33, 50);
+            this.lblLoading.Name = "lblLoading";
+            this.lblLoading.Size = new System.Drawing.Size(55, 17);
+            this.lblLoading.TabIndex = 9;
+            this.lblLoading.Text = "Loading";
+            // 
             // SplashForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -126,6 +139,8 @@
             this.Name = "SplashForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SplashForm";
+            this.progressBar.ResumeLayout(false);
+            this.progressBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -140,5 +155,6 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblLoading;
     }
 }

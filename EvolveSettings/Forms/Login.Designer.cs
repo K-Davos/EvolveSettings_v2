@@ -32,22 +32,22 @@ namespace EvolveSettings
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblForgotPass = new System.Windows.Forms.Label();
             this.login_password = new Guna.UI2.WinForms.Guna2TextBox();
             this.login_username = new Guna.UI2.WinForms.Guna2TextBox();
             this.chkLoginShowPass = new Guna.UI2.WinForms.Guna2CheckBox();
             this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
             this.login_close = new System.Windows.Forms.Label();
-            this.txtRegister = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblRegister = new System.Windows.Forms.Label();
+            this.lblNoAccount = new System.Windows.Forms.Label();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.lblUserName = new System.Windows.Forms.Label();
+            this.lblWelcomeBack = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.frmLogin = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lblForgotPass = new System.Windows.Forms.Label();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -62,17 +62,30 @@ namespace EvolveSettings
             this.panel1.Controls.Add(this.chkLoginShowPass);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.login_close);
-            this.panel1.Controls.Add(this.txtRegister);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lblRegister);
+            this.panel1.Controls.Add(this.lblNoAccount);
+            this.panel1.Controls.Add(this.lblPassword);
+            this.panel1.Controls.Add(this.lblUserName);
+            this.panel1.Controls.Add(this.lblWelcomeBack);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(-1, -1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(636, 412);
             this.panel1.TabIndex = 0;
+            // 
+            // lblForgotPass
+            // 
+            this.lblForgotPass.AutoSize = true;
+            this.lblForgotPass.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblForgotPass.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblForgotPass.ForeColor = System.Drawing.Color.Gray;
+            this.lblForgotPass.Location = new System.Drawing.Point(303, 243);
+            this.lblForgotPass.Name = "lblForgotPass";
+            this.lblForgotPass.Size = new System.Drawing.Size(95, 15);
+            this.lblForgotPass.TabIndex = 1009;
+            this.lblForgotPass.Text = "Forgot Password";
+            this.lblForgotPass.Click += new System.EventHandler(this.lblForgotPass_Click);
             // 
             // login_password
             // 
@@ -174,59 +187,59 @@ namespace EvolveSettings
             this.login_close.Text = "X";
             this.login_close.Click += new System.EventHandler(this.login_close_Click);
             // 
-            // txtRegister
+            // lblRegister
             // 
-            this.txtRegister.AutoSize = true;
-            this.txtRegister.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.txtRegister.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRegister.ForeColor = System.Drawing.Color.DimGray;
-            this.txtRegister.Location = new System.Drawing.Point(485, 384);
-            this.txtRegister.Name = "txtRegister";
-            this.txtRegister.Size = new System.Drawing.Size(83, 15);
-            this.txtRegister.TabIndex = 9;
-            this.txtRegister.Text = "Register here";
-            this.txtRegister.Click += new System.EventHandler(this.txtRegister_Click);
+            this.lblRegister.AutoSize = true;
+            this.lblRegister.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblRegister.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegister.ForeColor = System.Drawing.Color.DimGray;
+            this.lblRegister.Location = new System.Drawing.Point(485, 384);
+            this.lblRegister.Name = "lblRegister";
+            this.lblRegister.Size = new System.Drawing.Size(83, 15);
+            this.lblRegister.TabIndex = 9;
+            this.lblRegister.Text = "Register here";
+            this.lblRegister.Click += new System.EventHandler(this.txtRegister_Click);
             // 
-            // label4
+            // lblNoAccount
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(340, 383);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(135, 15);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Don\'t have an account?";
+            this.lblNoAccount.AutoSize = true;
+            this.lblNoAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNoAccount.ForeColor = System.Drawing.Color.DimGray;
+            this.lblNoAccount.Location = new System.Drawing.Point(340, 383);
+            this.lblNoAccount.Name = "lblNoAccount";
+            this.lblNoAccount.Size = new System.Drawing.Size(135, 15);
+            this.lblNoAccount.TabIndex = 8;
+            this.lblNoAccount.Text = "Don\'t have an account?";
             // 
-            // label3
+            // lblPassword
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(303, 183);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 17);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Password:";
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.Location = new System.Drawing.Point(303, 183);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(67, 17);
+            this.lblPassword.TabIndex = 4;
+            this.lblPassword.Text = "Password:";
             // 
-            // label2
+            // lblUserName
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(303, 121);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 17);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Username:";
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.Location = new System.Drawing.Point(303, 121);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(70, 17);
+            this.lblUserName.TabIndex = 2;
+            this.lblUserName.Text = "Username:";
             // 
-            // label1
+            // lblWelcomeBack
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(303, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Welcome back!";
+            this.lblWelcomeBack.AutoSize = true;
+            this.lblWelcomeBack.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcomeBack.Location = new System.Drawing.Point(303, 17);
+            this.lblWelcomeBack.Name = "lblWelcomeBack";
+            this.lblWelcomeBack.Size = new System.Drawing.Size(147, 25);
+            this.lblWelcomeBack.TabIndex = 1;
+            this.lblWelcomeBack.Text = "Welcome back!";
             // 
             // panel2
             // 
@@ -237,6 +250,20 @@ namespace EvolveSettings
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(284, 412);
             this.panel2.TabIndex = 0;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = global::EvolveSettings.Properties.Resources.evolve_settings;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(92, 82);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(99, 91);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 2;
+            this.guna2PictureBox1.TabStop = false;
+            this.guna2PictureBox1.UseTransparentBackground = true;
             // 
             // label6
             // 
@@ -264,33 +291,6 @@ namespace EvolveSettings
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // lblForgotPass
-            // 
-            this.lblForgotPass.AutoSize = true;
-            this.lblForgotPass.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblForgotPass.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblForgotPass.ForeColor = System.Drawing.Color.Gray;
-            this.lblForgotPass.Location = new System.Drawing.Point(303, 243);
-            this.lblForgotPass.Name = "lblForgotPass";
-            this.lblForgotPass.Size = new System.Drawing.Size(95, 15);
-            this.lblForgotPass.TabIndex = 1009;
-            this.lblForgotPass.Text = "Forgot Password";
-            this.lblForgotPass.Click += new System.EventHandler(this.lblForgotPass_Click);
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = global::EvolveSettings.Properties.Resources.evolve_settings;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(92, 82);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(99, 91);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 2;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.UseTransparentBackground = true;
-            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -314,12 +314,12 @@ namespace EvolveSettings
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.Label lblUserName;
+        private System.Windows.Forms.Label lblWelcomeBack;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label txtRegister;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblRegister;
+        private System.Windows.Forms.Label lblNoAccount;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label login_close;
         private Guna.UI2.WinForms.Guna2Button btnLogin;
