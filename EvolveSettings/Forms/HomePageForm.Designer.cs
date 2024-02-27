@@ -37,14 +37,18 @@
             this.evolvePanel5 = new EvolveSettings.Controls.EvolvePanel();
             this.evolvePanel4 = new EvolveSettings.Controls.EvolvePanel();
             this.evolvePanel3 = new EvolveSettings.Controls.EvolvePanel();
+            this.btnDefaultSettings = new Guna.UI2.WinForms.Guna2Button();
+            this.lblDefaultSettings = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.evolvePanel2 = new EvolveSettings.Controls.EvolvePanel();
+            this.lblWinTheme = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.toggleWinTheme = new EvolveSettings.Controls.EvolveToggleButton();
             this.evolvePanel1 = new EvolveSettings.Controls.EvolvePanel();
             this.lblAutoStart = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.btnAutoStart = new EvolveSettings.Controls.EvolveToggleButton();
-            this.lblWinTheme = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.toggleWinTheme = new EvolveSettings.Controls.EvolveToggleButton();
+            this.evolvePanel3.SuspendLayout();
             this.evolvePanel2.SuspendLayout();
             this.evolvePanel1.SuspendLayout();
             this.SuspendLayout();
@@ -131,12 +135,56 @@
             // 
             this.evolvePanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
             this.evolvePanel3.BorderColor = System.Drawing.Color.Transparent;
+            this.evolvePanel3.Controls.Add(this.btnDefaultSettings);
+            this.evolvePanel3.Controls.Add(this.lblDefaultSettings);
+            this.evolvePanel3.Controls.Add(this.label4);
             this.evolvePanel3.Location = new System.Drawing.Point(20, 392);
             this.evolvePanel3.Name = "evolvePanel3";
             this.evolvePanel3.Radius = 10;
             this.evolvePanel3.Size = new System.Drawing.Size(258, 130);
             this.evolvePanel3.TabIndex = 2;
             this.evolvePanel3.Thickness = 3F;
+            // 
+            // btnDefaultSettings
+            // 
+            this.btnDefaultSettings.Animated = true;
+            this.btnDefaultSettings.BackColor = System.Drawing.Color.Transparent;
+            this.btnDefaultSettings.BorderRadius = 15;
+            this.btnDefaultSettings.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDefaultSettings.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDefaultSettings.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDefaultSettings.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDefaultSettings.FillColor = System.Drawing.Color.MidnightBlue;
+            this.btnDefaultSettings.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDefaultSettings.ForeColor = System.Drawing.Color.White;
+            this.btnDefaultSettings.Location = new System.Drawing.Point(22, 86);
+            this.btnDefaultSettings.Name = "btnDefaultSettings";
+            this.btnDefaultSettings.Size = new System.Drawing.Size(96, 32);
+            this.btnDefaultSettings.TabIndex = 1004;
+            this.btnDefaultSettings.Text = "Reset";
+            this.btnDefaultSettings.Click += new System.EventHandler(this.btnDefaultSettings_Click);
+            // 
+            // lblDefaultSettings
+            // 
+            this.lblDefaultSettings.AutoSize = true;
+            this.lblDefaultSettings.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDefaultSettings.ForeColor = System.Drawing.Color.White;
+            this.lblDefaultSettings.Location = new System.Drawing.Point(18, 10);
+            this.lblDefaultSettings.Name = "lblDefaultSettings";
+            this.lblDefaultSettings.Size = new System.Drawing.Size(145, 25);
+            this.lblDefaultSettings.TabIndex = 14;
+            this.lblDefaultSettings.Text = "Default Settings";
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
+            this.label4.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.label4.Location = new System.Drawing.Point(20, 35);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(218, 39);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Reset application configuration to default settings";
             // 
             // evolvePanel2
             // 
@@ -151,6 +199,43 @@
             this.evolvePanel2.Size = new System.Drawing.Size(258, 130);
             this.evolvePanel2.TabIndex = 1;
             this.evolvePanel2.Thickness = 3F;
+            // 
+            // lblWinTheme
+            // 
+            this.lblWinTheme.AutoSize = true;
+            this.lblWinTheme.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWinTheme.ForeColor = System.Drawing.Color.White;
+            this.lblWinTheme.Location = new System.Drawing.Point(19, 11);
+            this.lblWinTheme.Name = "lblWinTheme";
+            this.lblWinTheme.Size = new System.Drawing.Size(69, 25);
+            this.lblWinTheme.TabIndex = 15;
+            this.lblWinTheme.Text = "Theme";
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.label2.Location = new System.Drawing.Point(21, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(218, 58);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Enable to use windows selected light/dark mode and accent colors";
+            // 
+            // toggleWinTheme
+            // 
+            this.toggleWinTheme.AutoSize = true;
+            this.toggleWinTheme.Location = new System.Drawing.Point(23, 97);
+            this.toggleWinTheme.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleWinTheme.Name = "toggleWinTheme";
+            this.toggleWinTheme.OffBackColor = System.Drawing.Color.Gray;
+            this.toggleWinTheme.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.toggleWinTheme.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.toggleWinTheme.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.toggleWinTheme.Size = new System.Drawing.Size(45, 22);
+            this.toggleWinTheme.TabIndex = 14;
+            this.toggleWinTheme.UseVisualStyleBackColor = true;
+            this.toggleWinTheme.CheckedChanged += new System.EventHandler(this.ToggleWinTheme_CheckedChanged);
             // 
             // evolvePanel1
             // 
@@ -203,43 +288,6 @@
             this.btnAutoStart.UseVisualStyleBackColor = true;
             this.btnAutoStart.CheckedChanged += new System.EventHandler(this.BtnAutoStart_CheckedChanged);
             // 
-            // lblWinTheme
-            // 
-            this.lblWinTheme.AutoSize = true;
-            this.lblWinTheme.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWinTheme.ForeColor = System.Drawing.Color.White;
-            this.lblWinTheme.Location = new System.Drawing.Point(19, 11);
-            this.lblWinTheme.Name = "lblWinTheme";
-            this.lblWinTheme.Size = new System.Drawing.Size(69, 25);
-            this.lblWinTheme.TabIndex = 15;
-            this.lblWinTheme.Text = "Theme";
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
-            this.label2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label2.Location = new System.Drawing.Point(21, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(218, 58);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Enable to use windows selected light/dark mode and accent colors";
-            // 
-            // toggleWinTheme
-            // 
-            this.toggleWinTheme.AutoSize = true;
-            this.toggleWinTheme.Location = new System.Drawing.Point(23, 97);
-            this.toggleWinTheme.MinimumSize = new System.Drawing.Size(45, 22);
-            this.toggleWinTheme.Name = "toggleWinTheme";
-            this.toggleWinTheme.OffBackColor = System.Drawing.Color.Gray;
-            this.toggleWinTheme.OffToggleColor = System.Drawing.Color.Gainsboro;
-            this.toggleWinTheme.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.toggleWinTheme.OnToggleColor = System.Drawing.Color.WhiteSmoke;
-            this.toggleWinTheme.Size = new System.Drawing.Size(45, 22);
-            this.toggleWinTheme.TabIndex = 14;
-            this.toggleWinTheme.UseVisualStyleBackColor = true;
-            this.toggleWinTheme.CheckedChanged += new System.EventHandler(this.ToggleWinTheme_CheckedChanged);
-            // 
             // HomePageForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -260,6 +308,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HomePageForm";
             this.Text = "HomePageForm";
+            this.evolvePanel3.ResumeLayout(false);
+            this.evolvePanel3.PerformLayout();
             this.evolvePanel2.ResumeLayout(false);
             this.evolvePanel2.PerformLayout();
             this.evolvePanel1.ResumeLayout(false);
@@ -287,5 +337,8 @@
         private System.Windows.Forms.Label lblWinTheme;
         private System.Windows.Forms.Label label2;
         public Controls.EvolveToggleButton toggleWinTheme;
+        private System.Windows.Forms.Label lblDefaultSettings;
+        private System.Windows.Forms.Label label4;
+        private Guna.UI2.WinForms.Guna2Button btnDefaultSettings;
     }
 }

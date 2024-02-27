@@ -1,4 +1,5 @@
 ﻿using EvolveSettings.Controls;
+using Guna.UI2.WinForms;
 using Microsoft.Win32;
 using System;
 using System.Drawing;
@@ -12,6 +13,9 @@ namespace EvolveSettings.Forms
     {
         //WinTheme
         private UserPreferenceChangedEventHandler UserPreferenceChanged;
+        public static bool UseWinTheme { get; set; }
+
+        string resetConfigMessage = "Are you sure you want to reset to default configuration?";
 
         public HomePageForm()
         {
@@ -71,8 +75,13 @@ namespace EvolveSettings.Forms
                 {
                     label.ForeColor = ColorTranslator.FromHtml("#212121");
                 }
+                foreach (Label label in this.evolvePanel3.Controls.OfType<Label>())
+                {
+                    label.ForeColor = ColorTranslator.FromHtml("#212121");
+                }
                 lblAutoStart.ForeColor = Color.Black;
                 lblWinTheme.ForeColor = Color.Black;
+                lblDefaultSettings.ForeColor = Color.Black;
             }
             else
             {
@@ -96,8 +105,13 @@ namespace EvolveSettings.Forms
                 {
                     label.ForeColor = ColorTranslator.FromHtml("#A2A4A5");
                 }
+                foreach (Label label in this.evolvePanel3.Controls.OfType<Label>())
+                {
+                    label.ForeColor = ColorTranslator.FromHtml("#A2A4A5");
+                }
                 lblAutoStart.ForeColor = Color.White;
                 lblWinTheme.ForeColor = Color.White;
+                lblDefaultSettings.ForeColor = Color.White;
             }
             //Buttons
             foreach (EvolveToggleButton button in this.evolvePanel1.Controls.OfType<EvolveToggleButton>())
@@ -109,6 +123,11 @@ namespace EvolveSettings.Forms
             {
                 button.OnBackColor = themeColor;
                 button.OffBackColor = this.BackColor;
+            }
+            foreach (Guna2Button button in this.evolvePanel3.Controls.OfType<Guna2Button>())
+            {
+                button.FillColor = themeColor;
+                button.ForeColor = Color.White;
             }
         }
 
@@ -159,6 +178,14 @@ namespace EvolveSettings.Forms
                 Application.Restart();
             }
             OptionsHelper.CurrentOptions.WinTheme = toggleWinTheme.Checked;
+        }
+
+        private void btnDefaultSettings_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show(resetConfigMessage, "EvolveSettings", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                EvolveUtilities.ResetAppConfig();
+            }
         }
     }
 }
