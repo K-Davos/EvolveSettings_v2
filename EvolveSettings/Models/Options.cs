@@ -1,7 +1,12 @@
-﻿namespace EvolveSettings.Models
+﻿using System;
+
+namespace EvolveSettings.Models
 {
+    [Serializable]
     public sealed class Options
     {
+        public bool AutoStart { get; set; }
+        public bool WinTheme { get; set; }
     }
     public class GenerateConfig
     {

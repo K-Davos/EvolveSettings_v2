@@ -12,7 +12,6 @@ namespace EvolveSettings
         public MainForm()
         {
             InitializeComponent();
-            openChildForm(new HomePageForm());
         }
 
         public MainForm(String usrname)
@@ -20,6 +19,7 @@ namespace EvolveSettings
             InitializeComponent();
 
             label1.Text = usrname;
+            openChildForm(new HomePageForm());
         }
 
         private Form activeForm = null;

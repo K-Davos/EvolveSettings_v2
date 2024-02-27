@@ -16,7 +16,10 @@ namespace EvolveSettings.Forms
             UserPreferenceChanged = new UserPreferenceChangedEventHandler(SystemEvents_UserPreferenceChanged);
             SystemEvents.UserPreferenceChanged += UserPreferenceChanged;
             this.Disposed += new EventHandler(Form_Disposed);
-            LoadTheme();
+            if (OptionsHelper.CurrentOptions.WinTheme == true)
+            {
+                LoadTheme();
+            }
             timer1.Start();
         }
 

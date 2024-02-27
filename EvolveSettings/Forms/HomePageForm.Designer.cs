@@ -29,116 +29,25 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePageForm));
-            this.evolvePanel1 = new EvolveSettings.Controls.EvolvePanel();
-            this.evolvePanel2 = new EvolveSettings.Controls.EvolvePanel();
-            this.evolvePanel3 = new EvolveSettings.Controls.EvolvePanel();
-            this.evolvePanel4 = new EvolveSettings.Controls.EvolvePanel();
-            this.evolvePanel5 = new EvolveSettings.Controls.EvolvePanel();
-            this.evolvePanel6 = new EvolveSettings.Controls.EvolvePanel();
-            this.evolvePanel7 = new EvolveSettings.Controls.EvolvePanel();
-            this.evolvePanel8 = new EvolveSettings.Controls.EvolvePanel();
-            this.evolvePanel9 = new EvolveSettings.Controls.EvolvePanel();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.evolvePanel9 = new EvolveSettings.Controls.EvolvePanel();
+            this.evolvePanel8 = new EvolveSettings.Controls.EvolvePanel();
+            this.evolvePanel7 = new EvolveSettings.Controls.EvolvePanel();
+            this.evolvePanel6 = new EvolveSettings.Controls.EvolvePanel();
+            this.evolvePanel5 = new EvolveSettings.Controls.EvolvePanel();
+            this.evolvePanel4 = new EvolveSettings.Controls.EvolvePanel();
+            this.evolvePanel3 = new EvolveSettings.Controls.EvolvePanel();
+            this.evolvePanel2 = new EvolveSettings.Controls.EvolvePanel();
+            this.evolvePanel1 = new EvolveSettings.Controls.EvolvePanel();
+            this.lblAutoStart = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.btnAutoStart = new EvolveSettings.Controls.EvolveToggleButton();
+            this.lblWinTheme = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.toggleWinTheme = new EvolveSettings.Controls.EvolveToggleButton();
+            this.evolvePanel2.SuspendLayout();
+            this.evolvePanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // evolvePanel1
-            // 
-            this.evolvePanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.evolvePanel1.BorderColor = System.Drawing.Color.Transparent;
-            this.evolvePanel1.Location = new System.Drawing.Point(20, 86);
-            this.evolvePanel1.Name = "evolvePanel1";
-            this.evolvePanel1.Radius = 10;
-            this.evolvePanel1.Size = new System.Drawing.Size(258, 130);
-            this.evolvePanel1.TabIndex = 0;
-            this.evolvePanel1.Thickness = 3F;
-            // 
-            // evolvePanel2
-            // 
-            this.evolvePanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.evolvePanel2.BorderColor = System.Drawing.Color.Transparent;
-            this.evolvePanel2.Location = new System.Drawing.Point(20, 239);
-            this.evolvePanel2.Name = "evolvePanel2";
-            this.evolvePanel2.Radius = 10;
-            this.evolvePanel2.Size = new System.Drawing.Size(258, 130);
-            this.evolvePanel2.TabIndex = 1;
-            this.evolvePanel2.Thickness = 3F;
-            // 
-            // evolvePanel3
-            // 
-            this.evolvePanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.evolvePanel3.BorderColor = System.Drawing.Color.Transparent;
-            this.evolvePanel3.Location = new System.Drawing.Point(20, 392);
-            this.evolvePanel3.Name = "evolvePanel3";
-            this.evolvePanel3.Radius = 10;
-            this.evolvePanel3.Size = new System.Drawing.Size(258, 130);
-            this.evolvePanel3.TabIndex = 2;
-            this.evolvePanel3.Thickness = 3F;
-            // 
-            // evolvePanel4
-            // 
-            this.evolvePanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.evolvePanel4.BorderColor = System.Drawing.Color.Transparent;
-            this.evolvePanel4.Location = new System.Drawing.Point(297, 86);
-            this.evolvePanel4.Name = "evolvePanel4";
-            this.evolvePanel4.Radius = 10;
-            this.evolvePanel4.Size = new System.Drawing.Size(258, 130);
-            this.evolvePanel4.TabIndex = 1;
-            this.evolvePanel4.Thickness = 3F;
-            // 
-            // evolvePanel5
-            // 
-            this.evolvePanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.evolvePanel5.BorderColor = System.Drawing.Color.Transparent;
-            this.evolvePanel5.Location = new System.Drawing.Point(574, 86);
-            this.evolvePanel5.Name = "evolvePanel5";
-            this.evolvePanel5.Radius = 10;
-            this.evolvePanel5.Size = new System.Drawing.Size(258, 130);
-            this.evolvePanel5.TabIndex = 2;
-            this.evolvePanel5.Thickness = 3F;
-            // 
-            // evolvePanel6
-            // 
-            this.evolvePanel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.evolvePanel6.BorderColor = System.Drawing.Color.Transparent;
-            this.evolvePanel6.Location = new System.Drawing.Point(297, 239);
-            this.evolvePanel6.Name = "evolvePanel6";
-            this.evolvePanel6.Radius = 10;
-            this.evolvePanel6.Size = new System.Drawing.Size(258, 130);
-            this.evolvePanel6.TabIndex = 3;
-            this.evolvePanel6.Thickness = 3F;
-            // 
-            // evolvePanel7
-            // 
-            this.evolvePanel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.evolvePanel7.BorderColor = System.Drawing.Color.Transparent;
-            this.evolvePanel7.Location = new System.Drawing.Point(297, 392);
-            this.evolvePanel7.Name = "evolvePanel7";
-            this.evolvePanel7.Radius = 10;
-            this.evolvePanel7.Size = new System.Drawing.Size(258, 130);
-            this.evolvePanel7.TabIndex = 4;
-            this.evolvePanel7.Thickness = 3F;
-            // 
-            // evolvePanel8
-            // 
-            this.evolvePanel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.evolvePanel8.BorderColor = System.Drawing.Color.Transparent;
-            this.evolvePanel8.Location = new System.Drawing.Point(574, 239);
-            this.evolvePanel8.Name = "evolvePanel8";
-            this.evolvePanel8.Radius = 10;
-            this.evolvePanel8.Size = new System.Drawing.Size(258, 130);
-            this.evolvePanel8.TabIndex = 4;
-            this.evolvePanel8.Thickness = 3F;
-            // 
-            // evolvePanel9
-            // 
-            this.evolvePanel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.evolvePanel9.BorderColor = System.Drawing.Color.Transparent;
-            this.evolvePanel9.Location = new System.Drawing.Point(574, 392);
-            this.evolvePanel9.Name = "evolvePanel9";
-            this.evolvePanel9.Radius = 10;
-            this.evolvePanel9.Size = new System.Drawing.Size(258, 130);
-            this.evolvePanel9.TabIndex = 4;
-            this.evolvePanel9.Thickness = 3F;
             // 
             // lblTitle
             // 
@@ -151,6 +60,185 @@
             this.lblTitle.TabIndex = 13;
             this.lblTitle.Text = "Home";
             this.lblTitle.UseCompatibleTextRendering = true;
+            // 
+            // evolvePanel9
+            // 
+            this.evolvePanel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.evolvePanel9.BorderColor = System.Drawing.Color.Transparent;
+            this.evolvePanel9.Location = new System.Drawing.Point(574, 392);
+            this.evolvePanel9.Name = "evolvePanel9";
+            this.evolvePanel9.Radius = 10;
+            this.evolvePanel9.Size = new System.Drawing.Size(258, 130);
+            this.evolvePanel9.TabIndex = 4;
+            this.evolvePanel9.Thickness = 3F;
+            // 
+            // evolvePanel8
+            // 
+            this.evolvePanel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.evolvePanel8.BorderColor = System.Drawing.Color.Transparent;
+            this.evolvePanel8.Location = new System.Drawing.Point(574, 239);
+            this.evolvePanel8.Name = "evolvePanel8";
+            this.evolvePanel8.Radius = 10;
+            this.evolvePanel8.Size = new System.Drawing.Size(258, 130);
+            this.evolvePanel8.TabIndex = 4;
+            this.evolvePanel8.Thickness = 3F;
+            // 
+            // evolvePanel7
+            // 
+            this.evolvePanel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.evolvePanel7.BorderColor = System.Drawing.Color.Transparent;
+            this.evolvePanel7.Location = new System.Drawing.Point(297, 392);
+            this.evolvePanel7.Name = "evolvePanel7";
+            this.evolvePanel7.Radius = 10;
+            this.evolvePanel7.Size = new System.Drawing.Size(258, 130);
+            this.evolvePanel7.TabIndex = 4;
+            this.evolvePanel7.Thickness = 3F;
+            // 
+            // evolvePanel6
+            // 
+            this.evolvePanel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.evolvePanel6.BorderColor = System.Drawing.Color.Transparent;
+            this.evolvePanel6.Location = new System.Drawing.Point(297, 239);
+            this.evolvePanel6.Name = "evolvePanel6";
+            this.evolvePanel6.Radius = 10;
+            this.evolvePanel6.Size = new System.Drawing.Size(258, 130);
+            this.evolvePanel6.TabIndex = 3;
+            this.evolvePanel6.Thickness = 3F;
+            // 
+            // evolvePanel5
+            // 
+            this.evolvePanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.evolvePanel5.BorderColor = System.Drawing.Color.Transparent;
+            this.evolvePanel5.Location = new System.Drawing.Point(574, 86);
+            this.evolvePanel5.Name = "evolvePanel5";
+            this.evolvePanel5.Radius = 10;
+            this.evolvePanel5.Size = new System.Drawing.Size(258, 130);
+            this.evolvePanel5.TabIndex = 2;
+            this.evolvePanel5.Thickness = 3F;
+            // 
+            // evolvePanel4
+            // 
+            this.evolvePanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.evolvePanel4.BorderColor = System.Drawing.Color.Transparent;
+            this.evolvePanel4.Location = new System.Drawing.Point(297, 86);
+            this.evolvePanel4.Name = "evolvePanel4";
+            this.evolvePanel4.Radius = 10;
+            this.evolvePanel4.Size = new System.Drawing.Size(258, 130);
+            this.evolvePanel4.TabIndex = 1;
+            this.evolvePanel4.Thickness = 3F;
+            // 
+            // evolvePanel3
+            // 
+            this.evolvePanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.evolvePanel3.BorderColor = System.Drawing.Color.Transparent;
+            this.evolvePanel3.Location = new System.Drawing.Point(20, 392);
+            this.evolvePanel3.Name = "evolvePanel3";
+            this.evolvePanel3.Radius = 10;
+            this.evolvePanel3.Size = new System.Drawing.Size(258, 130);
+            this.evolvePanel3.TabIndex = 2;
+            this.evolvePanel3.Thickness = 3F;
+            // 
+            // evolvePanel2
+            // 
+            this.evolvePanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.evolvePanel2.BorderColor = System.Drawing.Color.Transparent;
+            this.evolvePanel2.Controls.Add(this.lblWinTheme);
+            this.evolvePanel2.Controls.Add(this.label2);
+            this.evolvePanel2.Controls.Add(this.toggleWinTheme);
+            this.evolvePanel2.Location = new System.Drawing.Point(20, 239);
+            this.evolvePanel2.Name = "evolvePanel2";
+            this.evolvePanel2.Radius = 10;
+            this.evolvePanel2.Size = new System.Drawing.Size(258, 130);
+            this.evolvePanel2.TabIndex = 1;
+            this.evolvePanel2.Thickness = 3F;
+            // 
+            // evolvePanel1
+            // 
+            this.evolvePanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.evolvePanel1.BorderColor = System.Drawing.Color.Transparent;
+            this.evolvePanel1.Controls.Add(this.lblAutoStart);
+            this.evolvePanel1.Controls.Add(this.label14);
+            this.evolvePanel1.Controls.Add(this.btnAutoStart);
+            this.evolvePanel1.Location = new System.Drawing.Point(20, 86);
+            this.evolvePanel1.Name = "evolvePanel1";
+            this.evolvePanel1.Radius = 10;
+            this.evolvePanel1.Size = new System.Drawing.Size(258, 130);
+            this.evolvePanel1.TabIndex = 0;
+            this.evolvePanel1.Thickness = 3F;
+            // 
+            // lblAutoStart
+            // 
+            this.lblAutoStart.AutoSize = true;
+            this.lblAutoStart.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAutoStart.ForeColor = System.Drawing.Color.White;
+            this.lblAutoStart.Location = new System.Drawing.Point(19, 11);
+            this.lblAutoStart.Name = "lblAutoStart";
+            this.lblAutoStart.Size = new System.Drawing.Size(91, 25);
+            this.lblAutoStart.TabIndex = 12;
+            this.lblAutoStart.Text = "AutoStart";
+            // 
+            // label14
+            // 
+            this.label14.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
+            this.label14.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.label14.Location = new System.Drawing.Point(21, 36);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(218, 39);
+            this.label14.TabIndex = 13;
+            this.label14.Text = "Start Evolve Dashboard with windows";
+            // 
+            // btnAutoStart
+            // 
+            this.btnAutoStart.AutoSize = true;
+            this.btnAutoStart.Location = new System.Drawing.Point(24, 98);
+            this.btnAutoStart.MinimumSize = new System.Drawing.Size(45, 22);
+            this.btnAutoStart.Name = "btnAutoStart";
+            this.btnAutoStart.OffBackColor = System.Drawing.Color.Gray;
+            this.btnAutoStart.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.btnAutoStart.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnAutoStart.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.btnAutoStart.Size = new System.Drawing.Size(45, 22);
+            this.btnAutoStart.TabIndex = 14;
+            this.btnAutoStart.UseVisualStyleBackColor = true;
+            this.btnAutoStart.CheckedChanged += new System.EventHandler(this.BtnAutoStart_CheckedChanged);
+            // 
+            // lblWinTheme
+            // 
+            this.lblWinTheme.AutoSize = true;
+            this.lblWinTheme.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWinTheme.ForeColor = System.Drawing.Color.White;
+            this.lblWinTheme.Location = new System.Drawing.Point(19, 11);
+            this.lblWinTheme.Name = "lblWinTheme";
+            this.lblWinTheme.Size = new System.Drawing.Size(69, 25);
+            this.lblWinTheme.TabIndex = 15;
+            this.lblWinTheme.Text = "Theme";
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
+            this.label2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.label2.Location = new System.Drawing.Point(21, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(218, 58);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Enable to use windows selected light/dark mode and accent colors";
+            // 
+            // toggleWinTheme
+            // 
+            this.toggleWinTheme.AutoSize = true;
+            this.toggleWinTheme.Location = new System.Drawing.Point(23, 97);
+            this.toggleWinTheme.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleWinTheme.Name = "toggleWinTheme";
+            this.toggleWinTheme.OffBackColor = System.Drawing.Color.Gray;
+            this.toggleWinTheme.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.toggleWinTheme.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.toggleWinTheme.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.toggleWinTheme.Size = new System.Drawing.Size(45, 22);
+            this.toggleWinTheme.TabIndex = 14;
+            this.toggleWinTheme.UseVisualStyleBackColor = true;
+            this.toggleWinTheme.CheckedChanged += new System.EventHandler(this.ToggleWinTheme_CheckedChanged);
             // 
             // HomePageForm
             // 
@@ -172,6 +260,10 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "HomePageForm";
             this.Text = "HomePageForm";
+            this.evolvePanel2.ResumeLayout(false);
+            this.evolvePanel2.PerformLayout();
+            this.evolvePanel1.ResumeLayout(false);
+            this.evolvePanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,5 +281,11 @@
         private Controls.EvolvePanel evolvePanel8;
         private Controls.EvolvePanel evolvePanel9;
         private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Label lblAutoStart;
+        private System.Windows.Forms.Label label14;
+        private Controls.EvolveToggleButton btnAutoStart;
+        private System.Windows.Forms.Label lblWinTheme;
+        private System.Windows.Forms.Label label2;
+        public Controls.EvolveToggleButton toggleWinTheme;
     }
 }

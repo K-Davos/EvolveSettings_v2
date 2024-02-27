@@ -1,12 +1,164 @@
-﻿using System.Windows.Forms;
+﻿using EvolveSettings.Controls;
+using Microsoft.Win32;
+using System;
+using System.Drawing;
+using System.Linq;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace EvolveSettings.Forms
 {
     public partial class HomePageForm : Form
     {
+        //WinTheme
+        private UserPreferenceChangedEventHandler UserPreferenceChanged;
+
         public HomePageForm()
         {
             InitializeComponent();
+
+            //WinTheme
+            if (OptionsHelper.CurrentOptions.WinTheme == true)
+            {
+                LoadTheme();
+            }
+            UserPreferenceChanged = new UserPreferenceChangedEventHandler(SystemEvents_UserPreferenceChanged);
+            SystemEvents.UserPreferenceChanged += UserPreferenceChanged;
+            this.Disposed += new EventHandler(Form_Disposed);
+
+            LoadOptions();
+        }
+
+        #region wintheme
+        public bool IsDarkTheme()
+        {
+            bool is_light_mode = true;
+            try
+            {
+                var v = Microsoft.Win32.Registry.GetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize", "AppsUseLightTheme", "1");
+                if (v != null && v.ToString() == "0")
+                    is_light_mode = false;
+            }
+            catch { }
+            return is_light_mode;
+        }
+        private void LoadTheme()
+        {
+            var themeColor = WinTheme.GetAccentColor();//Windows Accent Color
+            var lightColor = ControlPaint.Light(themeColor);
+            var darkColor = ControlPaint.Dark(themeColor);
+
+            var isDarkorLight = IsDarkTheme();
+            if (isDarkorLight)
+            {
+                //light
+                this.BackColor = SystemColors.Control;
+                evolvePanel1.BackColor = Color.White;
+                evolvePanel2.BackColor = Color.White;
+                evolvePanel3.BackColor = Color.White;
+                evolvePanel4.BackColor = Color.White;
+                evolvePanel5.BackColor = Color.White;
+                evolvePanel6.BackColor = Color.White;
+                evolvePanel7.BackColor = Color.White;
+                evolvePanel8.BackColor = Color.White;
+                evolvePanel9.BackColor = Color.White;
+                lblTitle.ForeColor = Color.Black;
+                foreach (Label label in this.evolvePanel1.Controls.OfType<Label>())
+                {
+                    label.ForeColor = ColorTranslator.FromHtml("#212121");
+                }
+                foreach (Label label in this.evolvePanel2.Controls.OfType<Label>())
+                {
+                    label.ForeColor = ColorTranslator.FromHtml("#212121");
+                }
+                lblAutoStart.ForeColor = Color.Black;
+                lblWinTheme.ForeColor = Color.Black;
+            }
+            else
+            {
+                //dark
+                this.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
+                evolvePanel1.BackColor = ColorTranslator.FromHtml("#FF2D2D30");
+                evolvePanel2.BackColor = ColorTranslator.FromHtml("#FF2D2D30");
+                evolvePanel3.BackColor = ColorTranslator.FromHtml("#FF2D2D30");
+                evolvePanel4.BackColor = ColorTranslator.FromHtml("#FF2D2D30");
+                evolvePanel5.BackColor = ColorTranslator.FromHtml("#FF2D2D30");
+                evolvePanel6.BackColor = ColorTranslator.FromHtml("#FF2D2D30");
+                evolvePanel7.BackColor = ColorTranslator.FromHtml("#FF2D2D30");
+                evolvePanel8.BackColor = ColorTranslator.FromHtml("#FF2D2D30");
+                evolvePanel9.BackColor = ColorTranslator.FromHtml("#FF2D2D30");
+                lblTitle.ForeColor = Color.White;
+                foreach (Label label in this.evolvePanel1.Controls.OfType<Label>())
+                {
+                    label.ForeColor = ColorTranslator.FromHtml("#A2A4A5");
+                }
+                foreach (Label label in this.evolvePanel2.Controls.OfType<Label>())
+                {
+                    label.ForeColor = ColorTranslator.FromHtml("#A2A4A5");
+                }
+                lblAutoStart.ForeColor = Color.White;
+                lblWinTheme.ForeColor = Color.White;
+            }
+            //Buttons
+            foreach (EvolveToggleButton button in this.evolvePanel1.Controls.OfType<EvolveToggleButton>())
+            {
+                button.OnBackColor = themeColor;
+                button.OffBackColor = this.BackColor;
+            }
+            foreach (EvolveToggleButton button in this.evolvePanel2.Controls.OfType<EvolveToggleButton>())
+            {
+                button.OnBackColor = themeColor;
+                button.OffBackColor = this.BackColor;
+            }
+        }
+
+        private void SystemEvents_UserPreferenceChanged(object sender, UserPreferenceChangedEventArgs e)
+        {
+            if (e.Category == UserPreferenceCategory.General || e.Category == UserPreferenceCategory.VisualStyle)
+            {
+                LoadTheme();
+            }
+        }
+
+        private void Form_Disposed(object sender, EventArgs e)
+        {
+            SystemEvents.UserPreferenceChanged -= UserPreferenceChanged;
+            OptionsHelper.SaveSettings();
+        }
+        #endregion wintheme
+
+        private void LoadOptions()
+        {
+            //Load saved settings
+            btnAutoStart.Checked = OptionsHelper.CurrentOptions.AutoStart;
+            toggleWinTheme.Checked = OptionsHelper.CurrentOptions.WinTheme;
+        }
+
+        private void BtnAutoStart_CheckedChanged(object sender, System.EventArgs e)
+        {
+            if (btnAutoStart.Checked)
+            {
+                EvolveUtilities.RegisterAutoStart();
+            }
+            else
+            {
+                EvolveUtilities.UnregisterAutoStart();
+            }
+            OptionsHelper.CurrentOptions.AutoStart = btnAutoStart.Checked;
+        }
+
+        private void ToggleWinTheme_CheckedChanged(object sender, EventArgs e)
+        {
+            if (toggleWinTheme.Checked)
+            {
+                //UseWinTheme = true;
+                LoadTheme();
+            }
+            else
+            {
+                Application.Restart();
+            }
+            OptionsHelper.CurrentOptions.WinTheme = toggleWinTheme.Checked;
         }
     }
 }

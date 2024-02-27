@@ -95,6 +95,9 @@
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Diagnostics.DiagnosticSource.8.0.0\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
+    <Reference Include="System.Diagnostics.EventLog, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.EventLog.8.0.0\lib\net462\System.Diagnostics.EventLog.dll</HintPath>
+    </Reference>
     <Reference Include="System.Diagnostics.Tracing, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Diagnostics.Tracing.4.3.0\lib\net462\System.Diagnostics.Tracing.dll</HintPath>
       <Private>True</Private>
@@ -207,6 +210,13 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.ServiceProcess.ServiceController, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ServiceProcess.ServiceController.8.0.0\lib\net462\System.ServiceProcess.ServiceController.dll</HintPath>
+    </Reference>
     <Reference Include="System.Text.RegularExpressions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Text.RegularExpressions.4.3.1\lib\net463\System.Text.RegularExpressions.dll</HintPath>
       <Private>True</Private>
@@ -228,12 +238,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ByteSize\BinaryByteSize.cs" />
+    <Compile Include="ByteSize\ByteSize.cs" />
+    <Compile Include="ByteSize\DecimalByteSize.cs" />
     <Compile Include="Controls\EvolvePanel.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controls\EvolveToggleButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="EmbeddedAssembly.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="ErrorLogger.cs" />
+    <Compile Include="EvolveUtilities.cs" />
     <Compile Include="Forms\ForgotPassForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -288,8 +305,12 @@
     <Compile Include="Forms\UserModuleForm.Designer.cs">
       <DependentUpon>UserModuleForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\CleanHelper.cs" />
+    <Compile Include="Helpers\CoreHelper.cs" />
+    <Compile Include="Helpers\OptionsHelper.cs" />
     <Compile Include="Helpers\PasswordGenerator.cs" />
     <Compile Include="Helpers\PasswordValidator.cs" />
+    <Compile Include="Helpers\TokenPrivilegeHelper.cs" />
     <Compile Include="Models\Options.cs" />
     <Compile Include="Models\Random.cs" />
     <Compile Include="Program.cs" />

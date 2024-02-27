@@ -27,7 +27,10 @@ namespace EvolveSettings
             UserPreferenceChanged = new UserPreferenceChangedEventHandler(SystemEvents_UserPreferenceChanged);
             SystemEvents.UserPreferenceChanged += UserPreferenceChanged;
             this.Disposed += new EventHandler(Form_Disposed);
-            LoadTheme();
+            if (OptionsHelper.CurrentOptions.WinTheme == true)
+            {
+                LoadTheme();
+            }
 
             btnSignup.Enabled = false;
             if (signup_password.Text.Length < 1)
