@@ -329,6 +329,8 @@ namespace EvolveSettings
                 }
             }
 
+            if (netRelease >= 533320)
+                return "4.8.1";
             if (netRelease >= 528040)
                 return "4.8";
             if (netRelease >= 461808)
