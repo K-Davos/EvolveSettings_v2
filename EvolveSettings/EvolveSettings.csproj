@@ -263,6 +263,18 @@
     <Compile Include="Forms\HomeForm.Designer.cs">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\PasswordManagerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PasswordManagerForm.Designer.cs">
+      <DependentUpon>PasswordManagerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PWManagerModuleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PWManagerModuleForm.Designer.cs">
+      <DependentUpon>PWManagerModuleForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\SettingsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -335,6 +347,12 @@
     <EmbeddedResource Include="Forms\HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PasswordManagerForm.resx">
+      <DependentUpon>PasswordManagerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PWManagerModuleForm.resx">
+      <DependentUpon>PWManagerModuleForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\SettingsForm.resx">
       <DependentUpon>SettingsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -392,6 +410,7 @@
   <ItemGroup>
     <Content Include="Resources\maintenance.png" />
     <Content Include="Resources\network.png" />
+    <Content Include="Resources\pwmanager.png" />
     <Content Include="Resources\settings.png" />
     <Content Include="Resources\usersm.png" />
     <Content Include="Resources\win11tweaks.png" />

@@ -34,12 +34,14 @@ namespace EvolveSettings
             if (label1.Text == "Welcome: admin" )
             {
                 btnUserManagement.Visible = true;
+                btnPassManager.Visible = true;
                 lblUserMode.Text = "UserMode: Admin";
                 OptionsHelper.CurrentOptions.CurrentUser = "Admin";
             }
             else
             {
                 btnUserManagement.Visible = false;
+                btnPassManager.Visible = false;
                 lblUserMode.Text = "UserMode: Guest";
                 OptionsHelper.CurrentOptions.CurrentUser = "Guest";
             }
@@ -149,6 +151,11 @@ namespace EvolveSettings
         private void btnUserManagement_Click(object sender, EventArgs e)
         {
             openChildForm(new UserForm());
+        }
+
+        private void btnPassManager_Click(object sender, EventArgs e)
+        {
+            openChildForm(new PasswordManagerForm());
         }
 
         private void btnCloseApp_Click(object sender, EventArgs e)
