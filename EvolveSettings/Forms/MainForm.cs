@@ -104,8 +104,12 @@ namespace EvolveSettings
 
         private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            Show();
-            WindowState = FormWindowState.Normal;
+            if (WindowState == FormWindowState.Minimized)
+                WindowState = FormWindowState.Normal;
+                TopMost = true;
+                Focus();
+                BringToFront();
+                TopMost = false;
         }
 
         private void panel_header_MouseDown(object sender, MouseEventArgs e)
@@ -120,11 +124,6 @@ namespace EvolveSettings
                 mousePos.Offset(mouseLocation.X, mouseLocation.Y);
                 Location = mousePos;
             }
-        }
-
-        private void GetUser()
-        {
-
         }
     }
 }

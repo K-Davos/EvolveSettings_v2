@@ -308,6 +308,7 @@ namespace EvolveSettings
             this.panelMain.Size = new System.Drawing.Size(871, 573);
             this.panelMain.TabIndex = 9;
             this.panelMain.Thickness = 0F;
+            this.panelMain.Resize += new System.EventHandler(this.btnMinimize_Click);
             // 
             // txtAppVersion
             // 
