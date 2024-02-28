@@ -1,8 +1,10 @@
-﻿using EvolveSettings.Forms;
+﻿using EvolveSettings.Controls;
+using EvolveSettings.Forms;
 using Guna.UI2.WinForms;
 using Microsoft.Win32;
 using System;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -100,14 +102,10 @@ namespace EvolveSettings
             pnlNav.BackColor = themeColor;
             pnlHeader.BackColor = themeColor;
             pnlRadius.BackColor = themeColor;
-            btnHome.FillColor = themeColor;
-
-            btnWin11Tweaks.FillColor = themeColor;
-            btnNetwork.FillColor = themeColor;
-            btnMaintenance.FillColor = themeColor;
-            btnSettings.FillColor = themeColor;
-            btnUserManagement.FillColor = themeColor;
-
+            foreach (Guna2Button button in this.pnlNav.Controls.OfType<Guna2Button>())
+            {
+                button.FillColor = themeColor;
+            }
         }
 
         private void SystemEvents_UserPreferenceChanged(object sender, UserPreferenceChangedEventArgs e)

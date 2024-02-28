@@ -216,6 +216,7 @@ namespace EvolveSettings
             this.btnSettings.Animated = true;
             this.btnSettings.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnSettings.CheckedState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
+            this.btnSettings.CheckedState.FillColor = System.Drawing.Color.Transparent;
             this.btnSettings.CustomBorderThickness = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.btnSettings.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSettings.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -240,6 +241,7 @@ namespace EvolveSettings
             this.btnMaintenance.Animated = true;
             this.btnMaintenance.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnMaintenance.CheckedState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
+            this.btnMaintenance.CheckedState.FillColor = System.Drawing.Color.Transparent;
             this.btnMaintenance.CustomBorderThickness = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.btnMaintenance.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnMaintenance.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -264,6 +266,7 @@ namespace EvolveSettings
             this.btnNetwork.Animated = true;
             this.btnNetwork.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnNetwork.CheckedState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
+            this.btnNetwork.CheckedState.FillColor = System.Drawing.Color.Transparent;
             this.btnNetwork.CustomBorderThickness = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.btnNetwork.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnNetwork.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -288,6 +291,7 @@ namespace EvolveSettings
             this.btnWin11Tweaks.Animated = true;
             this.btnWin11Tweaks.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnWin11Tweaks.CheckedState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
+            this.btnWin11Tweaks.CheckedState.FillColor = System.Drawing.Color.Transparent;
             this.btnWin11Tweaks.CustomBorderThickness = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.btnWin11Tweaks.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnWin11Tweaks.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -312,6 +316,7 @@ namespace EvolveSettings
             this.btnHome.Animated = true;
             this.btnHome.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnHome.CheckedState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
+            this.btnHome.CheckedState.FillColor = System.Drawing.Color.Transparent;
             this.btnHome.CustomBorderThickness = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.btnHome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnHome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -350,6 +355,7 @@ namespace EvolveSettings
             this.btnUserManagement.Animated = true;
             this.btnUserManagement.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnUserManagement.CheckedState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
+            this.btnUserManagement.CheckedState.FillColor = System.Drawing.Color.Transparent;
             this.btnUserManagement.CustomBorderThickness = new System.Windows.Forms.Padding(3, 0, 0, 0);
             this.btnUserManagement.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnUserManagement.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
