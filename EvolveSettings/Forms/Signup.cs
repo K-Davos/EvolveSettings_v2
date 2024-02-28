@@ -6,6 +6,8 @@ using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -174,10 +176,16 @@ namespace EvolveSettings
                             }
                             else
                             {
-                                string insertData = "INSERT INTO admin (email, username, password, date_created) " +
-                                    "VALUES(@email, @username, @pass, @date)";
+                                string insertData = "INSERT INTO admin (email, username, password, date_created, image) " +
+                                    "VALUES(@email, @username, @pass, @date, @image)";
 
                                 DateTime date = DateTime.Today;
+
+                                Image image = pictureBoxProfile.Image;
+                                MemoryStream memoryStream = new MemoryStream();
+                                image.Save(memoryStream, ImageFormat.Png);
+
+                                byte[] imageBt = memoryStream.ToArray();
 
                                 using (SqlCommand cmd = new SqlCommand(insertData, connect))
                                 {
@@ -185,6 +193,7 @@ namespace EvolveSettings
                                     cmd.Parameters.AddWithValue("@username", signup_username.Text.Trim());
                                     cmd.Parameters.AddWithValue("@pass", signup_password.Text.Trim());
                                     cmd.Parameters.AddWithValue("@date", date);
+                                    cmd.Parameters.AddWithValue("@image", imageBt);
 
                                     cmd.ExecuteNonQuery();
 
