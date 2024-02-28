@@ -51,13 +51,13 @@ namespace EvolveSettings
             this.panel2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.lblPassValidationInfo = new System.Windows.Forms.Label();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pictureBoxProfile = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.frmSignUp = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -340,7 +340,7 @@ namespace EvolveSettings
             this.panel2.BackColor = System.Drawing.Color.MidnightBlue;
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.lblPassValidationInfo);
-            this.panel2.Controls.Add(this.guna2PictureBox1);
+            this.panel2.Controls.Add(this.pictureBoxProfile);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -369,19 +369,19 @@ namespace EvolveSettings
             this.lblPassValidationInfo.TabIndex = 1012;
             this.lblPassValidationInfo.Text = "Password not entered";
             // 
-            // guna2PictureBox1
+            // pictureBoxProfile
             // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = global::EvolveSettings.Properties.Resources.evolve_settings;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(92, 82);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(99, 91);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 1;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.UseTransparentBackground = true;
+            this.pictureBoxProfile.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxProfile.FillColor = System.Drawing.Color.Transparent;
+            this.pictureBoxProfile.Image = global::EvolveSettings.Properties.Resources.evolve_settings;
+            this.pictureBoxProfile.ImageRotate = 0F;
+            this.pictureBoxProfile.Location = new System.Drawing.Point(92, 82);
+            this.pictureBoxProfile.Name = "pictureBoxProfile";
+            this.pictureBoxProfile.Size = new System.Drawing.Size(99, 91);
+            this.pictureBoxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxProfile.TabIndex = 1;
+            this.pictureBoxProfile.TabStop = false;
+            this.pictureBoxProfile.UseTransparentBackground = true;
             // 
             // label6
             // 
@@ -424,7 +424,7 @@ namespace EvolveSettings
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -445,7 +445,7 @@ namespace EvolveSettings
         private System.Windows.Forms.Label lblConfirmPassword;
         private Guna.UI2.WinForms.Guna2CheckBox chkSignupShowPass;
         private Guna.UI2.WinForms.Guna2BorderlessForm frmSignUp;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox pictureBoxProfile;
         private Guna.UI2.WinForms.Guna2TextBox signup_repassword;
         private Guna.UI2.WinForms.Guna2TextBox signup_password;
         private Guna.UI2.WinForms.Guna2TextBox signup_username;

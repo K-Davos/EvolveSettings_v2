@@ -51,15 +51,19 @@
             this.txtRepass = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.btnBrowse = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnViewImage = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblPassValidationInfo = new System.Windows.Forms.Label();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pictureBoxProfile = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblCurrentUser = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnPassGen = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBrowse)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -136,9 +140,9 @@
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(304, 133);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 17);
+            this.label3.Size = new System.Drawing.Size(78, 17);
             this.label3.TabIndex = 17;
-            this.label3.Text = "User Name : ";
+            this.label3.Text = "Username : ";
             // 
             // txtID
             // 
@@ -389,14 +393,63 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.btnBrowse);
+            this.panel2.Controls.Add(this.btnViewImage);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.lblPassValidationInfo);
-            this.panel2.Controls.Add(this.guna2PictureBox1);
+            this.panel2.Controls.Add(this.pictureBoxProfile);
             this.panel2.Controls.Add(this.lblCurrentUser);
             this.panel2.Location = new System.Drawing.Point(0, 42);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(284, 412);
             this.panel2.TabIndex = 1017;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(165, 14);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(79, 13);
+            this.label8.TabIndex = 1019;
+            this.label8.Text = "Profile picture";
+            // 
+            // btnBrowse
+            // 
+            this.btnBrowse.BackColor = System.Drawing.Color.Transparent;
+            this.btnBrowse.BorderRadius = 10;
+            this.btnBrowse.FillColor = System.Drawing.Color.Transparent;
+            this.btnBrowse.Image = global::EvolveSettings.Properties.Resources.add;
+            this.btnBrowse.ImageRotate = 0F;
+            this.btnBrowse.Location = new System.Drawing.Point(249, 9);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.Size = new System.Drawing.Size(26, 26);
+            this.btnBrowse.TabIndex = 1022;
+            this.btnBrowse.TabStop = false;
+            this.btnBrowse.UseTransparentBackground = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            // 
+            // btnViewImage
+            // 
+            this.btnViewImage.Animated = true;
+            this.btnViewImage.BackColor = System.Drawing.Color.Transparent;
+            this.btnViewImage.BorderRadius = 15;
+            this.btnViewImage.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnViewImage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnViewImage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnViewImage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnViewImage.FillColor = System.Drawing.Color.MidnightBlue;
+            this.btnViewImage.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnViewImage.ForeColor = System.Drawing.Color.White;
+            this.btnViewImage.Location = new System.Drawing.Point(88, 208);
+            this.btnViewImage.Name = "btnViewImage";
+            this.btnViewImage.Size = new System.Drawing.Size(104, 32);
+            this.btnViewImage.TabIndex = 1021;
+            this.btnViewImage.Text = "View Image";
+            this.btnViewImage.Visible = false;
+            this.btnViewImage.Click += new System.EventHandler(this.btnViewImage_Click);
             // 
             // label1
             // 
@@ -420,19 +473,21 @@
             this.lblPassValidationInfo.TabIndex = 1012;
             this.lblPassValidationInfo.Text = "Password not entered";
             // 
-            // guna2PictureBox1
+            // pictureBoxProfile
             // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = global::EvolveSettings.Properties.Resources.user;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(92, 82);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(99, 91);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 1;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.UseTransparentBackground = true;
+            this.pictureBoxProfile.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBoxProfile.BorderRadius = 15;
+            this.pictureBoxProfile.FillColor = System.Drawing.Color.Transparent;
+            this.pictureBoxProfile.Image = global::EvolveSettings.Properties.Resources.user;
+            this.pictureBoxProfile.ImageRotate = 0F;
+            this.pictureBoxProfile.Location = new System.Drawing.Point(92, 82);
+            this.pictureBoxProfile.Name = "pictureBoxProfile";
+            this.pictureBoxProfile.Size = new System.Drawing.Size(99, 91);
+            this.pictureBoxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxProfile.TabIndex = 1;
+            this.pictureBoxProfile.TabStop = false;
+            this.pictureBoxProfile.UseTransparentBackground = true;
             // 
             // lblCurrentUser
             // 
@@ -498,11 +553,13 @@
             this.Name = "UserModuleForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserModuleForm";
+            this.Load += new System.EventHandler(this.btnViewImage_Click);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBrowse)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -534,9 +591,12 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblPassValidationInfo;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox pictureBoxProfile;
         private System.Windows.Forms.Label lblCurrentUser;
         private System.Windows.Forms.Timer timer1;
         public Guna.UI2.WinForms.Guna2Button btnPassGen;
+        public Guna.UI2.WinForms.Guna2Button btnViewImage;
+        private Guna.UI2.WinForms.Guna2PictureBox btnBrowse;
+        private System.Windows.Forms.Label label8;
     }
 }
