@@ -381,6 +381,11 @@
     <EmbeddedResource Include="Newtonsoft.Json.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\maintenance.png" />
+    <Content Include="Resources\network.png" />
+    <Content Include="Resources\settings.png" />
+    <Content Include="Resources\usersm.png" />
+    <Content Include="Resources\win11tweaks.png" />
     <EmbeddedResource Include="EvolveSettingsDb.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
