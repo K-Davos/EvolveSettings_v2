@@ -93,7 +93,7 @@
             this.txtResetRePass.SelectedText = "";
             this.txtResetRePass.Size = new System.Drawing.Size(304, 34);
             this.txtResetRePass.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.txtResetRePass.TabIndex = 1017;
+            this.txtResetRePass.TabIndex = 17;
             // 
             // btnLogin
             // 
@@ -110,7 +110,7 @@
             this.btnLogin.Location = new System.Drawing.Point(305, 269);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(96, 32);
-            this.btnLogin.TabIndex = 1016;
+            this.btnLogin.TabIndex = 19;
             this.btnLogin.Text = "Login";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
@@ -136,7 +136,7 @@
             this.txtResetPass.SelectedText = "";
             this.txtResetPass.Size = new System.Drawing.Size(304, 34);
             this.txtResetPass.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.txtResetPass.TabIndex = 1015;
+            this.txtResetPass.TabIndex = 16;
             // 
             // btnReset
             // 
@@ -153,7 +153,7 @@
             this.btnReset.Location = new System.Drawing.Point(407, 269);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(96, 32);
-            this.btnReset.TabIndex = 1014;
+            this.btnReset.TabIndex = 18;
             this.btnReset.Text = "Reset";
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 

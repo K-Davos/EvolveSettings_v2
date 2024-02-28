@@ -100,7 +100,7 @@ namespace EvolveSettings
             this.btnSignupPassGen.Location = new System.Drawing.Point(409, 331);
             this.btnSignupPassGen.Name = "btnSignupPassGen";
             this.btnSignupPassGen.Size = new System.Drawing.Size(96, 32);
-            this.btnSignupPassGen.TabIndex = 1019;
+            this.btnSignupPassGen.TabIndex = 10;
             this.btnSignupPassGen.Text = "Password Generator";
             this.btnSignupPassGen.Click += new System.EventHandler(this.btnSignupPassGen_Click);
             // 
@@ -126,7 +126,7 @@ namespace EvolveSettings
             this.signup_repassword.SelectedText = "";
             this.signup_repassword.Size = new System.Drawing.Size(304, 34);
             this.signup_repassword.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.signup_repassword.TabIndex = 1011;
+            this.signup_repassword.TabIndex = 8;
             // 
             // signup_password
             // 
@@ -150,7 +150,7 @@ namespace EvolveSettings
             this.signup_password.SelectedText = "";
             this.signup_password.Size = new System.Drawing.Size(304, 34);
             this.signup_password.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.signup_password.TabIndex = 1010;
+            this.signup_password.TabIndex = 7;
             // 
             // signup_username
             // 
@@ -174,7 +174,7 @@ namespace EvolveSettings
             this.signup_username.SelectedText = "";
             this.signup_username.Size = new System.Drawing.Size(304, 34);
             this.signup_username.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.signup_username.TabIndex = 1009;
+            this.signup_username.TabIndex = 6;
             // 
             // signup_email
             // 
@@ -198,7 +198,7 @@ namespace EvolveSettings
             this.signup_email.SelectedText = "";
             this.signup_email.Size = new System.Drawing.Size(304, 34);
             this.signup_email.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.signup_email.TabIndex = 1008;
+            this.signup_email.TabIndex = 5;
             // 
             // chkSignupShowPass
             // 
@@ -213,7 +213,7 @@ namespace EvolveSettings
             this.chkSignupShowPass.Location = new System.Drawing.Point(511, 315);
             this.chkSignupShowPass.Name = "chkSignupShowPass";
             this.chkSignupShowPass.Size = new System.Drawing.Size(107, 17);
-            this.chkSignupShowPass.TabIndex = 1007;
+            this.chkSignupShowPass.TabIndex = 11;
             this.chkSignupShowPass.Text = "Show Password";
             this.chkSignupShowPass.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.chkSignupShowPass.UncheckedState.BorderRadius = 0;
@@ -236,7 +236,7 @@ namespace EvolveSettings
             this.btnSignup.Location = new System.Drawing.Point(307, 331);
             this.btnSignup.Name = "btnSignup";
             this.btnSignup.Size = new System.Drawing.Size(96, 32);
-            this.btnSignup.TabIndex = 1004;
+            this.btnSignup.TabIndex = 9;
             this.btnSignup.Text = "Sign Up";
             this.btnSignup.Click += new System.EventHandler(this.btnSignup_Click);
             // 

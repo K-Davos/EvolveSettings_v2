@@ -1,6 +1,6 @@
 ﻿namespace EvolveSettings.Forms
 {
-    partial class HomePageForm
+    partial class SettingsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePageForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsForm));
             this.lblTitle = new System.Windows.Forms.Label();
             this.evolvePanel9 = new EvolveSettings.Controls.EvolvePanel();
             this.evolvePanel8 = new EvolveSettings.Controls.EvolvePanel();
@@ -56,13 +56,13 @@
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI Black", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Font = new System.Drawing.Font("Nirmala UI", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(179)))));
             this.lblTitle.Location = new System.Drawing.Point(20, 17);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(95, 44);
+            this.lblTitle.Size = new System.Drawing.Size(120, 44);
             this.lblTitle.TabIndex = 13;
-            this.lblTitle.Text = "Home";
+            this.lblTitle.Text = "Settings";
             this.lblTitle.UseCompatibleTextRendering = true;
             // 
             // evolvePanel9
@@ -288,7 +288,7 @@
             this.btnAutoStart.UseVisualStyleBackColor = true;
             this.btnAutoStart.CheckedChanged += new System.EventHandler(this.BtnAutoStart_CheckedChanged);
             // 
-            // HomePageForm
+            // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -306,8 +306,7 @@
             this.Controls.Add(this.evolvePanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "HomePageForm";
-            this.Text = "HomePageForm";
+            this.Name = "SettingsForm";
             this.evolvePanel3.ResumeLayout(false);
             this.evolvePanel3.PerformLayout();
             this.evolvePanel2.ResumeLayout(false);

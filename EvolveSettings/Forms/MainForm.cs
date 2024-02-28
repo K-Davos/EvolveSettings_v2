@@ -1,13 +1,18 @@
 ﻿using EvolveSettings.Forms;
 using Guna.UI2.WinForms;
+using Microsoft.Win32;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace EvolveSettings
 {
     public partial class MainForm : Form
     {
+        //WinTheme
+        private UserPreferenceChangedEventHandler UserPreferenceChanged;
+
         public Point mouseLocation;
 
         public MainForm()
@@ -36,8 +41,15 @@ namespace EvolveSettings
                 lblUserMode.Text = "UserMode: Guest";
                 OptionsHelper.CurrentOptions.CurrentUser = "Guest";
             }
+            UserPreferenceChanged = new UserPreferenceChangedEventHandler(SystemEvents_UserPreferenceChanged);
+            SystemEvents.UserPreferenceChanged += UserPreferenceChanged;
+            this.Disposed += new EventHandler(Form_Disposed);
+            if (OptionsHelper.CurrentOptions.WinTheme == true)
+            {
+                LoadTheme();
+            }
             OptionsHelper.SaveSettings();
-            openChildForm(new HomePageForm());
+            openChildForm(new HomeForm());
         }
 
         private Form activeForm = null;
@@ -55,9 +67,66 @@ namespace EvolveSettings
             childForm.Show();
         }
 
+        #region wintheme
+        public bool IsDarkTheme()
+        {
+            bool is_light_mode = true;
+            try
+            {
+                var v = Microsoft.Win32.Registry.GetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize", "AppsUseLightTheme", "1");
+                if (v != null && v.ToString() == "0")
+                    is_light_mode = false;
+            }
+            catch { }
+            return is_light_mode;
+        }
+        public void LoadTheme()
+        {
+            var themeColor = WinTheme.GetAccentColor();//Windows Accent Color
+            var lightColor = ControlPaint.Light(themeColor);
+            var darkColor = ControlPaint.Dark(themeColor);
+
+            var isDarkorLight = IsDarkTheme();
+            if (isDarkorLight)
+            {
+                //light
+                this.BackColor = SystemColors.Control;
+            }
+            else
+            {
+                //dark
+                this.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
+            }
+            pnlNav.BackColor = themeColor;
+            pnlHeader.BackColor = themeColor;
+            pnlRadius.BackColor = themeColor;
+            btnHome.FillColor = themeColor;
+
+            btnWin11Tweaks.FillColor = themeColor;
+            btnNetwork.FillColor = themeColor;
+            btnMaintenance.FillColor = themeColor;
+            btnSettings.FillColor = themeColor;
+            btnUserManagement.FillColor = themeColor;
+
+        }
+
+        private void SystemEvents_UserPreferenceChanged(object sender, UserPreferenceChangedEventArgs e)
+        {
+            if (e.Category == UserPreferenceCategory.General || e.Category == UserPreferenceCategory.VisualStyle)
+            {
+                LoadTheme();
+            }
+        }
+
+        private void Form_Disposed(object sender, EventArgs e)
+        {
+            SystemEvents.UserPreferenceChanged -= UserPreferenceChanged;
+        }
+        #endregion wintheme
+
         private void BtnHome_Click(object sender, EventArgs e)
         {
-            openChildForm(new HomePageForm());
+            openChildForm(new HomeForm());
         }
 
         private void btnWin11Tweaks_Click(object sender, EventArgs e)
@@ -74,9 +143,9 @@ namespace EvolveSettings
             //openChildForm(new Form());
         }
 
-        private void BtnSettings_Click(object sender, EventArgs e)
+        private void btnSettings_Click(object sender, EventArgs e)
         {
-            //openChildForm(new Form());
+            openChildForm(new SettingsForm());
         }
 
         private void btnUserManagement_Click(object sender, EventArgs e)

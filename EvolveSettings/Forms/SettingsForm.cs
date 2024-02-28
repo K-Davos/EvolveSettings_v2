@@ -9,7 +9,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace EvolveSettings.Forms
 {
-    public partial class HomePageForm : Form
+    public partial class SettingsForm : Form
     {
         //WinTheme
         private UserPreferenceChangedEventHandler UserPreferenceChanged;
@@ -17,7 +17,7 @@ namespace EvolveSettings.Forms
 
         string resetConfigMessage = "Are you sure you want to reset to default configuration?";
 
-        public HomePageForm()
+        public SettingsForm()
         {
             InitializeComponent();
 
@@ -57,16 +57,11 @@ namespace EvolveSettings.Forms
             {
                 //light
                 this.BackColor = SystemColors.Control;
-                evolvePanel1.BackColor = Color.White;
-                evolvePanel2.BackColor = Color.White;
-                evolvePanel3.BackColor = Color.White;
-                evolvePanel4.BackColor = Color.White;
-                evolvePanel5.BackColor = Color.White;
-                evolvePanel6.BackColor = Color.White;
-                evolvePanel7.BackColor = Color.White;
-                evolvePanel8.BackColor = Color.White;
-                evolvePanel9.BackColor = Color.White;
                 lblTitle.ForeColor = Color.Black;
+                foreach (EvolvePanel panel in this.Controls.OfType<EvolvePanel>())
+                {
+                    panel.BackColor = Color.White;
+                }
                 foreach (Label label in this.evolvePanel1.Controls.OfType<Label>())
                 {
                     label.ForeColor = ColorTranslator.FromHtml("#212121");
@@ -87,16 +82,11 @@ namespace EvolveSettings.Forms
             {
                 //dark
                 this.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
-                evolvePanel1.BackColor = ColorTranslator.FromHtml("#FF2D2D30");
-                evolvePanel2.BackColor = ColorTranslator.FromHtml("#FF2D2D30");
-                evolvePanel3.BackColor = ColorTranslator.FromHtml("#FF2D2D30");
-                evolvePanel4.BackColor = ColorTranslator.FromHtml("#FF2D2D30");
-                evolvePanel5.BackColor = ColorTranslator.FromHtml("#FF2D2D30");
-                evolvePanel6.BackColor = ColorTranslator.FromHtml("#FF2D2D30");
-                evolvePanel7.BackColor = ColorTranslator.FromHtml("#FF2D2D30");
-                evolvePanel8.BackColor = ColorTranslator.FromHtml("#FF2D2D30");
-                evolvePanel9.BackColor = ColorTranslator.FromHtml("#FF2D2D30");
                 lblTitle.ForeColor = Color.White;
+                foreach (EvolvePanel panel in this.Controls.OfType<EvolvePanel>())
+                {
+                    panel.BackColor = ColorTranslator.FromHtml("#FF2D2D30");
+                }
                 foreach (Label label in this.evolvePanel1.Controls.OfType<Label>())
                 {
                     label.ForeColor = ColorTranslator.FromHtml("#A2A4A5");
@@ -175,7 +165,7 @@ namespace EvolveSettings.Forms
             }
             else
             {
-                Application.Restart();
+                EvolveUtilities.Restart();
             }
             OptionsHelper.CurrentOptions.WinTheme = toggleWinTheme.Checked;
         }

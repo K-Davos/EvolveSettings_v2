@@ -79,7 +79,7 @@
             this.txtEmail.SelectedText = "";
             this.txtEmail.Size = new System.Drawing.Size(304, 34);
             this.txtEmail.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.txtEmail.TabIndex = 1009;
+            this.txtEmail.TabIndex = 12;
             // 
             // btnSendCode
             // 
@@ -96,7 +96,7 @@
             this.btnSendCode.Location = new System.Drawing.Point(305, 188);
             this.btnSendCode.Name = "btnSendCode";
             this.btnSendCode.Size = new System.Drawing.Size(96, 32);
-            this.btnSendCode.TabIndex = 1008;
+            this.btnSendCode.TabIndex = 13;
             this.btnSendCode.Text = "Send";
             this.btnSendCode.Click += new System.EventHandler(this.btnSendCode_Click);
             // 
@@ -123,7 +123,7 @@
             this.txtVerifyCode.SelectedText = "";
             this.txtVerifyCode.Size = new System.Drawing.Size(304, 34);
             this.txtVerifyCode.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.txtVerifyCode.TabIndex = 1011;
+            this.txtVerifyCode.TabIndex = 14;
             // 
             // btnVerify
             // 
@@ -140,7 +140,7 @@
             this.btnVerify.Location = new System.Drawing.Point(305, 304);
             this.btnVerify.Name = "btnVerify";
             this.btnVerify.Size = new System.Drawing.Size(96, 32);
-            this.btnVerify.TabIndex = 1010;
+            this.btnVerify.TabIndex = 15;
             this.btnVerify.Text = "Verify";
             this.btnVerify.Click += new System.EventHandler(this.btnVerify_Click);
             // 

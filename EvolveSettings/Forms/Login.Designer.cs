@@ -109,7 +109,7 @@ namespace EvolveSettings
             this.login_password.SelectedText = "";
             this.login_password.Size = new System.Drawing.Size(304, 34);
             this.login_password.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.login_password.TabIndex = 1008;
+            this.login_password.TabIndex = 2;
             // 
             // login_username
             // 
@@ -133,7 +133,7 @@ namespace EvolveSettings
             this.login_username.SelectedText = "";
             this.login_username.Size = new System.Drawing.Size(304, 34);
             this.login_username.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.login_username.TabIndex = 1007;
+            this.login_username.TabIndex = 1;
             // 
             // chkLoginShowPass
             // 
@@ -148,7 +148,7 @@ namespace EvolveSettings
             this.chkLoginShowPass.Location = new System.Drawing.Point(510, 243);
             this.chkLoginShowPass.Name = "chkLoginShowPass";
             this.chkLoginShowPass.Size = new System.Drawing.Size(107, 17);
-            this.chkLoginShowPass.TabIndex = 1006;
+            this.chkLoginShowPass.TabIndex = 4;
             this.chkLoginShowPass.Text = "Show Password";
             this.chkLoginShowPass.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
             this.chkLoginShowPass.UncheckedState.BorderRadius = 0;
@@ -171,7 +171,7 @@ namespace EvolveSettings
             this.btnLogin.Location = new System.Drawing.Point(306, 269);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(96, 32);
-            this.btnLogin.TabIndex = 1003;
+            this.btnLogin.TabIndex = 3;
             this.btnLogin.Text = "Login";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 

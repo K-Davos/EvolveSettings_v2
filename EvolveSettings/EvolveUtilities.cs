@@ -434,7 +434,24 @@ namespace EvolveSettings
         {
             RunCommand("ipconfig /flushdns");
         }
-        internal static void ResetAppConfig(bool withoutRestart = false)
+
+        internal static void Restart(bool withoutRestart = false)
+        {
+            if (!withoutRestart)
+            {
+                // BYPASS SINGLE-INSTANCE MECHANISM
+                if (Program.MUTEX != null)
+                {
+                    Program.MUTEX.ReleaseMutex();
+                    Program.MUTEX.Dispose();
+                    Program.MUTEX = null;
+                }
+
+                Application.Restart();
+            }
+        }
+
+            internal static void ResetAppConfig(bool withoutRestart = false)
         {
             try
             {
