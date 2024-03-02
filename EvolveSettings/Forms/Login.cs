@@ -188,15 +188,8 @@ namespace EvolveSettings
                                 reader.Read();
                                 login_username.Text = reader[0].ToString();
                                 byte[] img = (byte[])(reader[1]);
-                                if (img == null)
-                                {
-                                    mForm.pictureBoxProfile.Image = null;
-                                }
-                                else
-                                {
-                                    MemoryStream memstream = new MemoryStream(img);
-                                    mForm.pictureBoxProfile.Image = Image.FromStream(memstream);
-                                }
+                                MemoryStream memstream = new MemoryStream(img);
+                                mForm.pictureBoxProfile.Image = Image.FromStream(memstream);
                                 mForm.Show();
                                 connect.Close();
                                 this.Hide();
