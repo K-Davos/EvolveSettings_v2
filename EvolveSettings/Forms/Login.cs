@@ -4,6 +4,7 @@ using System;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -15,6 +16,7 @@ namespace EvolveSettings
         private UserPreferenceChangedEventHandler UserPreferenceChanged;
 
         SqlConnection connect = new SqlConnection(SqlConnectionHelper.connectReturn());
+        SqlCommand cmdR = new SqlCommand();
 
         public Login()
         {
@@ -179,6 +181,22 @@ namespace EvolveSettings
 
                                 usrname = "Welcome: " + login_username.Text;
                                 MainForm mForm = new MainForm(usrname);
+                                string sql = "Select username, image FROM admin WHERE username='" + login_username.Text + "'";
+                                cmdR = new SqlCommand(sql, connect);
+
+                                SqlDataReader reader = cmdR.ExecuteReader();
+                                reader.Read();
+                                login_username.Text = reader[0].ToString();
+                                byte[] img = (byte[])(reader[1]);
+                                if (img == null)
+                                {
+                                    mForm.pictureBoxProfile.Image = null;
+                                }
+                                else
+                                {
+                                    MemoryStream memstream = new MemoryStream(img);
+                                    mForm.pictureBoxProfile.Image = Image.FromStream(memstream);
+                                }
                                 mForm.Show();
                                 connect.Close();
                                 this.Hide();

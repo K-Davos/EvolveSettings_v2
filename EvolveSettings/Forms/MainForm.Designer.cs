@@ -50,13 +50,13 @@ namespace EvolveSettings
             this.btnNetwork = new Guna.UI2.WinForms.Guna2Button();
             this.btnWin11Tweaks = new Guna.UI2.WinForms.Guna2Button();
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pictureBoxProfile = new Guna.UI2.WinForms.Guna2PictureBox();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.pnlRadius = new System.Windows.Forms.Panel();
             this.panelMain = new EvolveSettings.Controls.EvolvePanel();
             this.pnlHeader.SuspendLayout();
             this.pnlNav.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -137,7 +137,7 @@ namespace EvolveSettings
             this.pnlNav.Controls.Add(this.btnNetwork);
             this.pnlNav.Controls.Add(this.btnWin11Tweaks);
             this.pnlNav.Controls.Add(this.btnHome);
-            this.pnlNav.Controls.Add(this.guna2PictureBox1);
+            this.pnlNav.Controls.Add(this.pictureBoxProfile);
             this.pnlNav.Controls.Add(this.label1);
             this.pnlNav.Location = new System.Drawing.Point(0, 38);
             this.pnlNav.Name = "pnlNav";
@@ -381,19 +381,19 @@ namespace EvolveSettings
             this.btnHome.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnHome.Click += new System.EventHandler(this.BtnHome_Click);
             // 
-            // guna2PictureBox1
+            // pictureBoxProfile
             // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(40, 9);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(103, 89);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 76;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.UseTransparentBackground = true;
+            this.pictureBoxProfile.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxProfile.FillColor = System.Drawing.Color.Transparent;
+            this.pictureBoxProfile.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxProfile.Image")));
+            this.pictureBoxProfile.ImageRotate = 0F;
+            this.pictureBoxProfile.Location = new System.Drawing.Point(40, 9);
+            this.pictureBoxProfile.Name = "pictureBoxProfile";
+            this.pictureBoxProfile.Size = new System.Drawing.Size(103, 89);
+            this.pictureBoxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxProfile.TabIndex = 76;
+            this.pictureBoxProfile.TabStop = false;
+            this.pictureBoxProfile.UseTransparentBackground = true;
             // 
             // notifyIcon1
             // 
@@ -439,7 +439,7 @@ namespace EvolveSettings
             this.pnlHeader.ResumeLayout(false);
             this.pnlNav.ResumeLayout(false);
             this.pnlNav.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -451,7 +451,6 @@ namespace EvolveSettings
         private Guna.UI2.WinForms.Guna2BorderlessForm frmMain;
         private System.Windows.Forms.Panel pnlHeader;
         private System.Windows.Forms.Panel pnlNav;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Button btnCloseApp;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
@@ -469,5 +468,6 @@ namespace EvolveSettings
         private System.Windows.Forms.Label txtOS;
         private Controls.EvolvePanel panelMain;
         private Guna.UI2.WinForms.Guna2Button btnPassManager;
+        public Guna.UI2.WinForms.Guna2PictureBox pictureBoxProfile;
     }
 }

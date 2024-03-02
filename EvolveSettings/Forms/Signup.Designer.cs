@@ -373,7 +373,7 @@ namespace EvolveSettings
             // 
             this.pictureBoxProfile.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxProfile.FillColor = System.Drawing.Color.Transparent;
-            this.pictureBoxProfile.Image = global::EvolveSettings.Properties.Resources.evolve_settings;
+            this.pictureBoxProfile.Image = global::EvolveSettings.Properties.Resources.user;
             this.pictureBoxProfile.ImageRotate = 0F;
             this.pictureBoxProfile.Location = new System.Drawing.Point(92, 82);
             this.pictureBoxProfile.Name = "pictureBoxProfile";
