@@ -26,6 +26,10 @@ namespace EvolveSettings
         internal static bool SILENT_MODE = false;
         internal static bool UNSAFE_MODE = false;
 
+        internal static int DPI_PREFERENCE;
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        private static extern bool SetProcessDPIAware();
+
         const string _jsonAssembly = @"EvolveSettings.Newtonsoft.Json.dll";
 
         const string MUTEX_GUID = "{EVOLVE-66EE744A-FF65-40BC-985B-1EF2234027E4-EVOLVE}";
@@ -44,6 +48,13 @@ namespace EvolveSettings
             AppDomain.CurrentDomain.AssemblyResolve += CurrentDomain_AssemblyResolve;
             EmbeddedAssembly.Load(_jsonAssembly, _jsonAssembly.Replace("EvolveSettings.", string.Empty));
 
+            DPI_PREFERENCE = Convert.ToInt32(Microsoft.Win32.Registry.GetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\ThemeManager", "LastLoadedDPI", "96"));
+            if (DPI_PREFERENCE <= 0)
+            {
+                DPI_PREFERENCE = 96;
+            }
+
+            if (Environment.OSVersion.Version.Major >= 6) SetProcessDPIAware();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
