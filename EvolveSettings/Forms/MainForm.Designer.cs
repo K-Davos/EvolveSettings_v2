@@ -32,8 +32,7 @@ namespace EvolveSettings
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.lblCurrentUser = new System.Windows.Forms.Label();
-            this.frmMain = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.pnlHeader = new System.Windows.Forms.Panel();
+            this.btnMaximize = new System.Windows.Forms.Button();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnCloseApp = new System.Windows.Forms.Button();
             this.pnlNav = new System.Windows.Forms.Panel();
@@ -53,13 +52,14 @@ namespace EvolveSettings
             this.btnNetwork = new Guna.UI2.WinForms.Guna2Button();
             this.btnWin11Tweaks = new Guna.UI2.WinForms.Guna2Button();
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.pnlRadius = new System.Windows.Forms.Panel();
-            this.panelMain = new EvolveSettings.Controls.EvolvePanel();
-            this.pnlHeader.SuspendLayout();
+            this.panelMain = new Guna.UI2.WinForms.Guna2Panel();
+            this.ShadowForm = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.pnlHeader = new System.Windows.Forms.Panel();
             this.pnlNav.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
+            this.panelMain.SuspendLayout();
+            this.pnlHeader.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblCurrentUser
@@ -67,57 +67,49 @@ namespace EvolveSettings
             this.lblCurrentUser.AutoSize = true;
             this.lblCurrentUser.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCurrentUser.ForeColor = System.Drawing.Color.White;
-            this.lblCurrentUser.Location = new System.Drawing.Point(25, 101);
+            this.lblCurrentUser.Location = new System.Drawing.Point(25, 115);
             this.lblCurrentUser.Name = "lblCurrentUser";
             this.lblCurrentUser.Size = new System.Drawing.Size(133, 21);
             this.lblCurrentUser.TabIndex = 0;
             this.lblCurrentUser.Text = "Welcome, Admin!";
             // 
-            // frmMain
+            // btnMaximize
             // 
-            this.frmMain.AnimateWindow = true;
-            this.frmMain.AnimationInterval = 400;
-            this.frmMain.BorderRadius = 5;
-            this.frmMain.ContainerControl = this;
-            this.frmMain.DockIndicatorTransparencyValue = 0.6D;
-            this.frmMain.DragForm = false;
-            this.frmMain.ResizeForm = false;
-            this.frmMain.TransparentWhileDrag = true;
-            // 
-            // pnlHeader
-            // 
-            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.pnlHeader.Controls.Add(this.btnMinimize);
-            this.pnlHeader.Controls.Add(this.btnCloseApp);
-            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1041, 42);
-            this.pnlHeader.TabIndex = 7;
-            this.pnlHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_header_MouseDown);
-            this.pnlHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel_header_MouseMove);
+            this.btnMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMaximize.FlatAppearance.BorderSize = 0;
+            this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaximize.ForeColor = System.Drawing.Color.White;
+            this.btnMaximize.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximize.Image")));
+            this.btnMaximize.Location = new System.Drawing.Point(754, 0);
+            this.btnMaximize.Name = "btnMaximize";
+            this.btnMaximize.Size = new System.Drawing.Size(48, 42);
+            this.btnMaximize.TabIndex = 18;
+            this.btnMaximize.UseVisualStyleBackColor = true;
+            this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
             // 
             // btnMinimize
             // 
+            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinimize.FlatAppearance.BorderSize = 0;
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.ForeColor = System.Drawing.Color.White;
-            this.btnMinimize.Image = global::EvolveSettings.Properties.Resources.minimize;
-            this.btnMinimize.Location = new System.Drawing.Point(949, 0);
+            this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
+            this.btnMinimize.Location = new System.Drawing.Point(703, 0);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(42, 42);
+            this.btnMinimize.Size = new System.Drawing.Size(48, 42);
             this.btnMinimize.TabIndex = 17;
             this.btnMinimize.UseVisualStyleBackColor = true;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
             // btnCloseApp
             // 
+            this.btnCloseApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCloseApp.FlatAppearance.BorderSize = 0;
             this.btnCloseApp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btnCloseApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCloseApp.ForeColor = System.Drawing.Color.White;
-            this.btnCloseApp.Image = global::EvolveSettings.Properties.Resources.shutdown;
-            this.btnCloseApp.Location = new System.Drawing.Point(993, 0);
+            this.btnCloseApp.Image = ((System.Drawing.Image)(resources.GetObject("btnCloseApp.Image")));
+            this.btnCloseApp.Location = new System.Drawing.Point(805, 0);
             this.btnCloseApp.Name = "btnCloseApp";
             this.btnCloseApp.Size = new System.Drawing.Size(48, 42);
             this.btnCloseApp.TabIndex = 16;
@@ -145,18 +137,18 @@ namespace EvolveSettings
             this.pnlNav.Controls.Add(this.btnHome);
             this.pnlNav.Controls.Add(this.lblCurrentUser);
             this.pnlNav.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlNav.Location = new System.Drawing.Point(0, 42);
+            this.pnlNav.Location = new System.Drawing.Point(0, 0);
             this.pnlNav.Name = "pnlNav";
-            this.pnlNav.Size = new System.Drawing.Size(187, 555);
+            this.pnlNav.Size = new System.Drawing.Size(187, 597);
             this.pnlNav.TabIndex = 6;
             // 
             // btnMenu
             // 
             this.btnMenu.BackColor = System.Drawing.Color.Transparent;
             this.btnMenu.FillColor = System.Drawing.Color.Transparent;
-            this.btnMenu.Image = global::EvolveSettings.Properties.Resources.menu;
+            this.btnMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu.Image")));
             this.btnMenu.ImageRotate = 0F;
-            this.btnMenu.Location = new System.Drawing.Point(155, 5);
+            this.btnMenu.Location = new System.Drawing.Point(155, 19);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(25, 25);
             this.btnMenu.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -167,6 +159,7 @@ namespace EvolveSettings
             // 
             // btnLogout
             // 
+            this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnLogout.Animated = true;
             this.btnLogout.BackColor = System.Drawing.Color.Transparent;
             this.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -176,9 +169,9 @@ namespace EvolveSettings
             this.btnLogout.FillColor = System.Drawing.Color.Transparent;
             this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Image = global::EvolveSettings.Properties.Resources.logout;
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
             this.btnLogout.ImageOffset = new System.Drawing.Point(2, 0);
-            this.btnLogout.Location = new System.Drawing.Point(144, 516);
+            this.btnLogout.Location = new System.Drawing.Point(144, 558);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnLogout.Size = new System.Drawing.Size(40, 40);
@@ -190,9 +183,9 @@ namespace EvolveSettings
             // 
             this.pictureBoxProfile.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxProfile.FillColor = System.Drawing.Color.Transparent;
-            this.pictureBoxProfile.Image = global::EvolveSettings.Properties.Resources.user;
+            this.pictureBoxProfile.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxProfile.Image")));
             this.pictureBoxProfile.ImageRotate = 0F;
-            this.pictureBoxProfile.Location = new System.Drawing.Point(46, 9);
+            this.pictureBoxProfile.Location = new System.Drawing.Point(46, 23);
             this.pictureBoxProfile.Name = "pictureBoxProfile";
             this.pictureBoxProfile.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.pictureBoxProfile.Size = new System.Drawing.Size(89, 89);
@@ -203,6 +196,7 @@ namespace EvolveSettings
             // 
             // btnUserManagement
             // 
+            this.btnUserManagement.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnUserManagement.Animated = true;
             this.btnUserManagement.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnUserManagement.CheckedState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
@@ -215,19 +209,20 @@ namespace EvolveSettings
             this.btnUserManagement.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.btnUserManagement.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnUserManagement.ForeColor = System.Drawing.Color.White;
-            this.btnUserManagement.Image = global::EvolveSettings.Properties.Resources.usersm;
+            this.btnUserManagement.Image = ((System.Drawing.Image)(resources.GetObject("btnUserManagement.Image")));
             this.btnUserManagement.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnUserManagement.Location = new System.Drawing.Point(0, 407);
+            this.btnUserManagement.Location = new System.Drawing.Point(0, 428);
             this.btnUserManagement.Name = "btnUserManagement";
             this.btnUserManagement.Size = new System.Drawing.Size(186, 42);
             this.btnUserManagement.TabIndex = 1;
-            this.btnUserManagement.Tag = "  Users Management";
+            this.btnUserManagement.Tag = "Users Management";
             this.btnUserManagement.Text = "  Users Management";
             this.btnUserManagement.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnUserManagement.Click += new System.EventHandler(this.btnUserManagement_Click);
             // 
             // btnPassManager
             // 
+            this.btnPassManager.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnPassManager.Animated = true;
             this.btnPassManager.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnPassManager.CheckedState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
@@ -240,23 +235,24 @@ namespace EvolveSettings
             this.btnPassManager.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.btnPassManager.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.btnPassManager.ForeColor = System.Drawing.Color.White;
-            this.btnPassManager.Image = global::EvolveSettings.Properties.Resources.pwmanager;
+            this.btnPassManager.Image = ((System.Drawing.Image)(resources.GetObject("btnPassManager.Image")));
             this.btnPassManager.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnPassManager.Location = new System.Drawing.Point(0, 365);
+            this.btnPassManager.Location = new System.Drawing.Point(0, 386);
             this.btnPassManager.Name = "btnPassManager";
             this.btnPassManager.Size = new System.Drawing.Size(186, 42);
             this.btnPassManager.TabIndex = 87;
-            this.btnPassManager.Tag = "  Password Manager";
+            this.btnPassManager.Tag = "Password Manager";
             this.btnPassManager.Text = "  Password Manager";
             this.btnPassManager.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnPassManager.Click += new System.EventHandler(this.btnPassManager_Click);
             // 
             // txtNetFw
             // 
+            this.txtNetFw.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtNetFw.AutoSize = true;
             this.txtNetFw.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNetFw.ForeColor = System.Drawing.Color.Gray;
-            this.txtNetFw.Location = new System.Drawing.Point(12, 495);
+            this.txtNetFw.Location = new System.Drawing.Point(12, 537);
             this.txtNetFw.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtNetFw.Name = "txtNetFw";
             this.txtNetFw.Size = new System.Drawing.Size(37, 13);
@@ -265,10 +261,11 @@ namespace EvolveSettings
             // 
             // txtBitness
             // 
+            this.txtBitness.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtBitness.AutoSize = true;
             this.txtBitness.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBitness.ForeColor = System.Drawing.Color.Gray;
-            this.txtBitness.Location = new System.Drawing.Point(12, 478);
+            this.txtBitness.Location = new System.Drawing.Point(12, 520);
             this.txtBitness.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtBitness.Name = "txtBitness";
             this.txtBitness.Size = new System.Drawing.Size(44, 13);
@@ -277,10 +274,11 @@ namespace EvolveSettings
             // 
             // txtOS
             // 
+            this.txtOS.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtOS.AutoSize = true;
             this.txtOS.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOS.ForeColor = System.Drawing.Color.Gray;
-            this.txtOS.Location = new System.Drawing.Point(12, 461);
+            this.txtOS.Location = new System.Drawing.Point(12, 503);
             this.txtOS.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtOS.Name = "txtOS";
             this.txtOS.Size = new System.Drawing.Size(19, 13);
@@ -289,10 +287,11 @@ namespace EvolveSettings
             // 
             // lblversion
             // 
+            this.lblversion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblversion.AutoSize = true;
             this.lblversion.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblversion.ForeColor = System.Drawing.Color.Gray;
-            this.lblversion.Location = new System.Drawing.Point(12, 512);
+            this.lblversion.Location = new System.Drawing.Point(12, 554);
             this.lblversion.Name = "lblversion";
             this.lblversion.Size = new System.Drawing.Size(45, 13);
             this.lblversion.TabIndex = 83;
@@ -300,10 +299,11 @@ namespace EvolveSettings
             // 
             // txtAppVersion
             // 
+            this.txtAppVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtAppVersion.AutoSize = true;
             this.txtAppVersion.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAppVersion.ForeColor = System.Drawing.Color.Gray;
-            this.txtAppVersion.Location = new System.Drawing.Point(55, 512);
+            this.txtAppVersion.Location = new System.Drawing.Point(55, 554);
             this.txtAppVersion.Name = "txtAppVersion";
             this.txtAppVersion.Size = new System.Drawing.Size(21, 13);
             this.txtAppVersion.TabIndex = 82;
@@ -311,10 +311,11 @@ namespace EvolveSettings
             // 
             // lblUserMode
             // 
+            this.lblUserMode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblUserMode.AutoSize = true;
             this.lblUserMode.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserMode.ForeColor = System.Drawing.Color.Tomato;
-            this.lblUserMode.Location = new System.Drawing.Point(12, 534);
+            this.lblUserMode.Location = new System.Drawing.Point(12, 576);
             this.lblUserMode.Name = "lblUserMode";
             this.lblUserMode.Size = new System.Drawing.Size(60, 13);
             this.lblUserMode.TabIndex = 81;
@@ -322,6 +323,7 @@ namespace EvolveSettings
             // 
             // btnSettings
             // 
+            this.btnSettings.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnSettings.Animated = true;
             this.btnSettings.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnSettings.CheckedState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
@@ -334,19 +336,20 @@ namespace EvolveSettings
             this.btnSettings.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.btnSettings.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.Color.White;
-            this.btnSettings.Image = global::EvolveSettings.Properties.Resources.settings;
+            this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
             this.btnSettings.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSettings.Location = new System.Drawing.Point(0, 323);
+            this.btnSettings.Location = new System.Drawing.Point(0, 344);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(186, 42);
             this.btnSettings.TabIndex = 80;
-            this.btnSettings.Tag = "  Settings";
+            this.btnSettings.Tag = "Settings";
             this.btnSettings.Text = "  Settings";
             this.btnSettings.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // btnMaintenance
             // 
+            this.btnMaintenance.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnMaintenance.Animated = true;
             this.btnMaintenance.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnMaintenance.CheckedState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
@@ -359,19 +362,20 @@ namespace EvolveSettings
             this.btnMaintenance.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.btnMaintenance.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMaintenance.ForeColor = System.Drawing.Color.White;
-            this.btnMaintenance.Image = global::EvolveSettings.Properties.Resources.maintenance;
+            this.btnMaintenance.Image = ((System.Drawing.Image)(resources.GetObject("btnMaintenance.Image")));
             this.btnMaintenance.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnMaintenance.Location = new System.Drawing.Point(0, 281);
+            this.btnMaintenance.Location = new System.Drawing.Point(0, 302);
             this.btnMaintenance.Name = "btnMaintenance";
             this.btnMaintenance.Size = new System.Drawing.Size(186, 42);
             this.btnMaintenance.TabIndex = 79;
-            this.btnMaintenance.Tag = "  PC Cleaner";
+            this.btnMaintenance.Tag = "PC Cleaner";
             this.btnMaintenance.Text = "  PC Cleaner";
             this.btnMaintenance.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnMaintenance.Click += new System.EventHandler(this.btnMaintenance_Click);
             // 
             // btnNetwork
             // 
+            this.btnNetwork.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnNetwork.Animated = true;
             this.btnNetwork.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnNetwork.CheckedState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
@@ -384,19 +388,20 @@ namespace EvolveSettings
             this.btnNetwork.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.btnNetwork.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNetwork.ForeColor = System.Drawing.Color.White;
-            this.btnNetwork.Image = global::EvolveSettings.Properties.Resources.network;
+            this.btnNetwork.Image = ((System.Drawing.Image)(resources.GetObject("btnNetwork.Image")));
             this.btnNetwork.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnNetwork.Location = new System.Drawing.Point(0, 239);
+            this.btnNetwork.Location = new System.Drawing.Point(0, 260);
             this.btnNetwork.Name = "btnNetwork";
             this.btnNetwork.Size = new System.Drawing.Size(186, 42);
             this.btnNetwork.TabIndex = 78;
-            this.btnNetwork.Tag = "  Network";
+            this.btnNetwork.Tag = "Network";
             this.btnNetwork.Text = "  Network";
             this.btnNetwork.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnNetwork.Click += new System.EventHandler(this.btnNetwork_Click);
             // 
             // btnWin11Tweaks
             // 
+            this.btnWin11Tweaks.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnWin11Tweaks.Animated = true;
             this.btnWin11Tweaks.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnWin11Tweaks.CheckedState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
@@ -409,19 +414,20 @@ namespace EvolveSettings
             this.btnWin11Tweaks.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.btnWin11Tweaks.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnWin11Tweaks.ForeColor = System.Drawing.Color.White;
-            this.btnWin11Tweaks.Image = global::EvolveSettings.Properties.Resources.win11tweaks;
+            this.btnWin11Tweaks.Image = ((System.Drawing.Image)(resources.GetObject("btnWin11Tweaks.Image")));
             this.btnWin11Tweaks.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnWin11Tweaks.Location = new System.Drawing.Point(0, 197);
+            this.btnWin11Tweaks.Location = new System.Drawing.Point(0, 218);
             this.btnWin11Tweaks.Name = "btnWin11Tweaks";
             this.btnWin11Tweaks.Size = new System.Drawing.Size(186, 42);
             this.btnWin11Tweaks.TabIndex = 77;
-            this.btnWin11Tweaks.Tag = "  Privacy and Services";
+            this.btnWin11Tweaks.Tag = "Privacy and Services";
             this.btnWin11Tweaks.Text = "  Privacy and Services";
             this.btnWin11Tweaks.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnWin11Tweaks.Click += new System.EventHandler(this.btnWin11Tweaks_Click);
             // 
             // btnHome
             // 
+            this.btnHome.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnHome.Animated = true;
             this.btnHome.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnHome.CheckedState.CustomBorderColor = System.Drawing.Color.RoyalBlue;
@@ -434,43 +440,42 @@ namespace EvolveSettings
             this.btnHome.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.btnHome.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHome.ForeColor = System.Drawing.Color.White;
-            this.btnHome.Image = global::EvolveSettings.Properties.Resources.home;
+            this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
             this.btnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnHome.Location = new System.Drawing.Point(0, 155);
+            this.btnHome.Location = new System.Drawing.Point(0, 176);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(186, 42);
             this.btnHome.TabIndex = 0;
-            this.btnHome.Tag = "  Home";
+            this.btnHome.Tag = "Home";
             this.btnHome.Text = "  Home";
             this.btnHome.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnHome.Click += new System.EventHandler(this.BtnHome_Click);
             // 
-            // notifyIcon1
-            // 
-            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
-            this.notifyIcon1.Text = "Evolve Settings";
-            this.notifyIcon1.Visible = true;
-            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
-            // 
-            // pnlRadius
-            // 
-            this.pnlRadius.Location = new System.Drawing.Point(187, 41);
-            this.pnlRadius.Name = "pnlRadius";
-            this.pnlRadius.Size = new System.Drawing.Size(7, 5);
-            this.pnlRadius.TabIndex = 10;
-            // 
             // panelMain
             // 
-            this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.panelMain.BorderColor = System.Drawing.Color.Transparent;
-            this.panelMain.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panelMain.Location = new System.Drawing.Point(187, 42);
+            this.panelMain.Controls.Add(this.pnlHeader);
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain.Location = new System.Drawing.Point(187, 0);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Radius = 10;
-            this.panelMain.Size = new System.Drawing.Size(871, 555);
-            this.panelMain.TabIndex = 9;
-            this.panelMain.Thickness = 0F;
-            this.panelMain.Resize += new System.EventHandler(this.btnMinimize_Click);
+            this.panelMain.Size = new System.Drawing.Size(854, 597);
+            this.panelMain.TabIndex = 8;
+            // 
+            // ShadowForm
+            // 
+            this.ShadowForm.BorderRadius = 0;
+            this.ShadowForm.TargetForm = this;
+            // 
+            // pnlHeader
+            // 
+            this.pnlHeader.Controls.Add(this.btnMaximize);
+            this.pnlHeader.Controls.Add(this.btnCloseApp);
+            this.pnlHeader.Controls.Add(this.btnMinimize);
+            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Size = new System.Drawing.Size(854, 42);
+            this.pnlHeader.TabIndex = 20;
+            this.pnlHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_header_MouseDown);
             // 
             // MainForm
             // 
@@ -479,32 +484,28 @@ namespace EvolveSettings
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
             this.ClientSize = new System.Drawing.Size(1041, 597);
             this.Controls.Add(this.panelMain);
-            this.Controls.Add(this.pnlRadius);
             this.Controls.Add(this.pnlNav);
-            this.Controls.Add(this.pnlHeader);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
-            this.pnlHeader.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.MainForm_Load);
+            this.Resize += new System.EventHandler(this.MainForm_Resize);
             this.pnlNav.ResumeLayout(false);
             this.pnlNav.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
+            this.panelMain.ResumeLayout(false);
+            this.pnlHeader.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private Guna.UI2.WinForms.Guna2Button btnUserManagement;
-        private Guna.UI2.WinForms.Guna2BorderlessForm frmMain;
-        private System.Windows.Forms.Panel pnlHeader;
         private System.Windows.Forms.Panel pnlNav;
         private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.Button btnCloseApp;
-        private System.Windows.Forms.NotifyIcon notifyIcon1;
-        private System.Windows.Forms.Panel pnlRadius;
         private Guna.UI2.WinForms.Guna2Button btnHome;
         private Guna.UI2.WinForms.Guna2Button btnSettings;
         private Guna.UI2.WinForms.Guna2Button btnMaintenance;
@@ -516,11 +517,14 @@ namespace EvolveSettings
         private System.Windows.Forms.Label txtNetFw;
         private System.Windows.Forms.Label txtBitness;
         private System.Windows.Forms.Label txtOS;
-        private Controls.EvolvePanel panelMain;
         private Guna.UI2.WinForms.Guna2Button btnPassManager;
         public Guna.UI2.WinForms.Guna2CirclePictureBox pictureBoxProfile;
         public System.Windows.Forms.Label lblCurrentUser;
         private Guna.UI2.WinForms.Guna2CircleButton btnLogout;
         private Guna.UI2.WinForms.Guna2PictureBox btnMenu;
+        private System.Windows.Forms.Button btnMaximize;
+        private Guna.UI2.WinForms.Guna2Panel panelMain;
+        private Guna.UI2.WinForms.Guna2ShadowForm ShadowForm;
+        private System.Windows.Forms.Panel pnlHeader;
     }
 }

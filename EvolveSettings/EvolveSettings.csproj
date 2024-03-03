@@ -414,6 +414,7 @@
     <Content Include="Resources\menu.png" />
     <Content Include="Resources\network.png" />
     <Content Include="Resources\pwmanager.png" />
+    <Content Include="Resources\quit.png" />
     <Content Include="Resources\settings.png" />
     <Content Include="Resources\usersm.png" />
     <Content Include="Resources\win11tweaks.png" />

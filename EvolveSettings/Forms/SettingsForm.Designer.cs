@@ -337,7 +337,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(853, 574);
+            this.ClientSize = new System.Drawing.Size(854, 555);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.evolvePanel9);
             this.Controls.Add(this.evolvePanel8);
