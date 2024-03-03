@@ -212,5 +212,12 @@ namespace EvolveSettings
         {
             adminkey = false;
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Login logfrm = new Login();
+            this.Dispose();
+            logfrm.Show();
+        }
     }
 }

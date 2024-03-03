@@ -409,6 +409,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\add.png" />
+    <Content Include="Resources\logout.png" />
     <Content Include="Resources\maintenance.png" />
     <Content Include="Resources\network.png" />
     <Content Include="Resources\pwmanager.png" />
