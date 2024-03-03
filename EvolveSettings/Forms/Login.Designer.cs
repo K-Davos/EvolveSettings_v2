@@ -318,8 +318,6 @@ namespace EvolveSettings
         private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.Label lblWelcomeBack;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lblRegister;
-        private System.Windows.Forms.Label lblNoAccount;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label login_close;
         private Guna.UI2.WinForms.Guna2Button btnLogin;
@@ -330,6 +328,8 @@ namespace EvolveSettings
         private Guna.UI2.WinForms.Guna2TextBox login_password;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblForgotPass;
+        public System.Windows.Forms.Label lblRegister;
+        public System.Windows.Forms.Label lblNoAccount;
     }
 }
 

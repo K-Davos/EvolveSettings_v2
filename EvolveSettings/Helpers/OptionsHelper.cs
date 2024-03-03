@@ -41,6 +41,7 @@ namespace EvolveSettings
                 CurrentOptions.CurrentUser = string.Empty;
                 CurrentOptions.AutoStart = false;
                 CurrentOptions.WinTheme = true;
+                CurrentOptions.SignUp = false;
 
                 using (FileStream fs = File.Open(SettingsFile, FileMode.CreateNew))
                 using (StreamWriter sw = new StreamWriter(fs))

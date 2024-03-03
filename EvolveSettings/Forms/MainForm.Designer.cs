@@ -446,8 +446,6 @@ namespace EvolveSettings
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Button btnUserManagement;
         private Guna.UI2.WinForms.Guna2BorderlessForm frmMain;
         private System.Windows.Forms.Panel pnlHeader;
@@ -470,5 +468,6 @@ namespace EvolveSettings
         private Controls.EvolvePanel panelMain;
         private Guna.UI2.WinForms.Guna2Button btnPassManager;
         public Guna.UI2.WinForms.Guna2CirclePictureBox pictureBoxProfile;
+        public System.Windows.Forms.Label label1;
     }
 }

@@ -36,6 +36,9 @@
             this.evolvePanel6 = new EvolveSettings.Controls.EvolvePanel();
             this.evolvePanel5 = new EvolveSettings.Controls.EvolvePanel();
             this.evolvePanel4 = new EvolveSettings.Controls.EvolvePanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.toggleUserAccounts = new EvolveSettings.Controls.EvolveToggleButton();
             this.evolvePanel3 = new EvolveSettings.Controls.EvolvePanel();
             this.btnDefaultSettings = new Guna.UI2.WinForms.Guna2Button();
             this.lblDefaultSettings = new System.Windows.Forms.Label();
@@ -48,6 +51,7 @@
             this.lblAutoStart = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.btnAutoStart = new EvolveSettings.Controls.EvolveToggleButton();
+            this.evolvePanel4.SuspendLayout();
             this.evolvePanel3.SuspendLayout();
             this.evolvePanel2.SuspendLayout();
             this.evolvePanel1.SuspendLayout();
@@ -124,12 +128,52 @@
             // 
             this.evolvePanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
             this.evolvePanel4.BorderColor = System.Drawing.Color.Transparent;
+            this.evolvePanel4.Controls.Add(this.label1);
+            this.evolvePanel4.Controls.Add(this.label3);
+            this.evolvePanel4.Controls.Add(this.toggleUserAccounts);
             this.evolvePanel4.Location = new System.Drawing.Point(297, 86);
             this.evolvePanel4.Name = "evolvePanel4";
             this.evolvePanel4.Radius = 10;
             this.evolvePanel4.Size = new System.Drawing.Size(258, 130);
             this.evolvePanel4.TabIndex = 1;
             this.evolvePanel4.Thickness = 3F;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(19, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(132, 25);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "User Accounts";
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
+            this.label3.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.label3.Location = new System.Drawing.Point(21, 36);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(218, 26);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Disable register new user accounts.";
+            // 
+            // toggleUserAccounts
+            // 
+            this.toggleUserAccounts.AutoSize = true;
+            this.toggleUserAccounts.Location = new System.Drawing.Point(24, 98);
+            this.toggleUserAccounts.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleUserAccounts.Name = "toggleUserAccounts";
+            this.toggleUserAccounts.OffBackColor = System.Drawing.Color.Gray;
+            this.toggleUserAccounts.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.toggleUserAccounts.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.toggleUserAccounts.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.toggleUserAccounts.Size = new System.Drawing.Size(45, 22);
+            this.toggleUserAccounts.TabIndex = 17;
+            this.toggleUserAccounts.UseVisualStyleBackColor = true;
+            this.toggleUserAccounts.CheckedChanged += new System.EventHandler(this.toggleUserAccounts_CheckedChanged);
             // 
             // evolvePanel3
             // 
@@ -307,6 +351,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SettingsForm";
+            this.evolvePanel4.ResumeLayout(false);
+            this.evolvePanel4.PerformLayout();
             this.evolvePanel3.ResumeLayout(false);
             this.evolvePanel3.PerformLayout();
             this.evolvePanel2.ResumeLayout(false);
@@ -339,5 +385,8 @@
         private System.Windows.Forms.Label lblDefaultSettings;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2Button btnDefaultSettings;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private Controls.EvolveToggleButton toggleUserAccounts;
     }
 }

@@ -1,4 +1,5 @@
-﻿using Guna.UI2.WinForms;
+﻿using EvolveSettings.Forms;
+using Guna.UI2.WinForms;
 using Microsoft.Win32;
 using System;
 using System.Data;
@@ -29,6 +30,18 @@ namespace EvolveSettings
             if (OptionsHelper.CurrentOptions.WinTheme == true)
             {
                 LoadTheme();
+            }
+
+            var key = Microsoft.Win32.Registry.GetValue(@"HKEY_CURRENT_USER\SOFTWARE\Evolve\EvolveSettings", "Admin", "1");
+            if (key.ToString() == "1")
+            {
+                lblNoAccount.Visible = true;
+                lblRegister.Visible = true;
+            }
+            else if (key.ToString() == "0")
+            {
+                lblNoAccount.Visible = false;
+                lblRegister.Visible = false;
             }
 
             if (login_password.Text.Length < 5)

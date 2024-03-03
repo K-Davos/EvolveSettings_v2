@@ -16,6 +16,7 @@ namespace EvolveSettings
         private UserPreferenceChangedEventHandler UserPreferenceChanged;
 
         public Point mouseLocation;
+        public static bool adminkey { get; set; }
 
         public MainForm()
         {
@@ -35,6 +36,7 @@ namespace EvolveSettings
             {
                 btnUserManagement.Visible = true;
                 btnPassManager.Visible = true;
+                AdminKeyEnabled();
                 lblUserMode.Text = "UserMode: Admin";
                 OptionsHelper.CurrentOptions.CurrentUser = "Admin";
             }
@@ -42,6 +44,7 @@ namespace EvolveSettings
             {
                 btnUserManagement.Visible = false;
                 btnPassManager.Visible = false;
+                AdminKeyDisabled();
                 lblUserMode.Text = "UserMode: Guest";
                 OptionsHelper.CurrentOptions.CurrentUser = "Guest";
             }
@@ -198,6 +201,16 @@ namespace EvolveSettings
                 mousePos.Offset(mouseLocation.X, mouseLocation.Y);
                 Location = mousePos;
             }
+        }
+
+        public static void AdminKeyEnabled()
+        {
+            adminkey = true;
+        }
+
+        public static void AdminKeyDisabled()
+        {
+            adminkey = false;
         }
     }
 }

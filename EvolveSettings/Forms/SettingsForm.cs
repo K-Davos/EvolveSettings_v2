@@ -4,6 +4,7 @@ using Microsoft.Win32;
 using System;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -29,6 +30,16 @@ namespace EvolveSettings.Forms
             UserPreferenceChanged = new UserPreferenceChangedEventHandler(SystemEvents_UserPreferenceChanged);
             SystemEvents.UserPreferenceChanged += UserPreferenceChanged;
             this.Disposed += new EventHandler(Form_Disposed);
+
+            if (MainForm.adminkey == true)
+            {
+                toggleUserAccounts.Visible = true;
+            }
+            else
+            {
+                toggleUserAccounts.Visible = false;
+                label3.Text = "DISABLED: Option only available when admin!";
+            }
 
             LoadOptions();
         }
@@ -141,6 +152,7 @@ namespace EvolveSettings.Forms
             //Load saved settings
             btnAutoStart.Checked = OptionsHelper.CurrentOptions.AutoStart;
             toggleWinTheme.Checked = OptionsHelper.CurrentOptions.WinTheme;
+            toggleUserAccounts.Checked = OptionsHelper.CurrentOptions.SignUp;
         }
 
         private void BtnAutoStart_CheckedChanged(object sender, System.EventArgs e)
@@ -175,6 +187,49 @@ namespace EvolveSettings.Forms
             if (MessageBox.Show(resetConfigMessage, "EvolveSettings", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 EvolveUtilities.ResetAppConfig();
+            }
+        }
+
+        private void toggleUserAccounts_CheckedChanged(object sender, EventArgs e)
+        {
+            if (toggleUserAccounts.Checked)
+            {
+                SignUpDisabled();
+            }
+            else
+            {
+                SignUpEnabled();
+            }
+            OptionsHelper.CurrentOptions.SignUp = toggleUserAccounts.Checked;
+        }
+
+        public static void SignUpDisabled()
+        {
+            try
+            {
+                using (RegistryKey k = Registry.CurrentUser.CreateSubKey("SOFTWARE\\Evolve\\EvolveSettings", true))
+                {
+                    k.SetValue("Admin", 0);
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError("CoreHelper.SignUpDisabled", ex.Message, ex.StackTrace);
+            }
+        }
+
+        public static void SignUpEnabled()
+        {
+            try
+            {
+                using (RegistryKey k = Registry.CurrentUser.CreateSubKey("SOFTWARE\\Evolve\\EvolveSettings", true))
+                {
+                    k.SetValue("Admin", 1);
+                }
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError("CoreHelper.SignUpDisabled", ex.Message, ex.StackTrace);
             }
         }
     }

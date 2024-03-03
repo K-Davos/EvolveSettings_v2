@@ -8,6 +8,7 @@ namespace EvolveSettings.Models
         public string CurrentUser { get; set; }
         public bool AutoStart { get; set; }
         public bool WinTheme { get; set; }
+        public bool SignUp { get; set; }
     }
     public class GenerateConfig
     {
