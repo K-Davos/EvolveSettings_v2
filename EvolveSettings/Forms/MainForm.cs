@@ -1,12 +1,11 @@
-﻿using EvolveSettings.Controls;
-using EvolveSettings.Forms;
+﻿using EvolveSettings.Forms;
 using Guna.UI2.WinForms;
 using Microsoft.Win32;
 using System;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+//using System.Windows.Forms.VisualStyles;
 
 namespace EvolveSettings
 {
@@ -26,13 +25,14 @@ namespace EvolveSettings
         public MainForm(String usrname)
         {
             InitializeComponent();
+            CollapseMenu();
 
             txtOS.Text = EvolveUtilities.GetOS();
             txtBitness.Text = EvolveUtilities.GetBitness();
             txtNetFw.Text = ".NET Framework " + EvolveUtilities.GetNETFramework();
             txtAppVersion.Text = Program.GetCurrentVersionTostring();
-            label1.Text = usrname;
-            if (label1.Text == "Welcome: admin" )
+            lblCurrentUser.Text = usrname;
+            if (lblCurrentUser.Text == "Welcome: admin" )
             {
                 btnUserManagement.Visible = true;
                 btnPassManager.Visible = true;
@@ -218,6 +218,55 @@ namespace EvolveSettings
             Login logfrm = new Login();
             this.Dispose();
             logfrm.Show();
+        }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            CollapseMenu();
+        }
+
+        private void CollapseMenu()
+        {
+            if (this.pnlNav.Width > 180) //Collapse menu
+            {
+                pnlNav.Width = 75;
+                pictureBoxProfile.Visible = false;
+                lblCurrentUser.Visible = false;
+                txtOS.Visible = false;
+                txtBitness.Visible = false;
+                txtNetFw.Visible = false;
+                lblversion.Visible = false;
+                txtAppVersion.Visible = false;
+                lblUserMode.Visible = false;
+                btnLogout.Visible = false;
+                btnMenu.Dock = DockStyle.Top;
+                foreach (Guna2Button menuButton in pnlNav.Controls.OfType<Guna2Button>())
+                {
+                    menuButton.Text = "";
+                    menuButton.ImageOffset = new Point(17, 0);
+                    menuButton.Padding = new Padding(0);
+                }
+            }
+            else
+            { //Expand menu
+                pnlNav.Width = 187;
+                pictureBoxProfile.Visible = true;
+                lblCurrentUser.Visible = true;
+                txtOS.Visible = true;
+                txtBitness.Visible = true;
+                txtNetFw.Visible = true;
+                lblversion.Visible = true;
+                txtAppVersion.Visible = true;
+                lblUserMode.Visible = true;
+                btnLogout.Visible = true;
+                btnMenu.Dock = DockStyle.None;
+                foreach (Guna2Button menuButton in pnlNav.Controls.OfType<Guna2Button>())
+                {
+                    menuButton.Text = "" + menuButton.Tag.ToString();
+                    menuButton.ImageOffset = new Point(0, 0);
+                    menuButton.Padding = new Padding(10, 0, 0, 0);
+                }
+            }
         }
     }
 }
