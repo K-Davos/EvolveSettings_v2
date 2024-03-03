@@ -51,12 +51,11 @@
             this.txtRepass = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.btnBrowse = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnBrowse = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.pictureBoxProfile = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnViewImage = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblPassValidationInfo = new System.Windows.Forms.Label();
-            this.pictureBoxProfile = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblCurrentUser = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnPassGen = new Guna.UI2.WinForms.Guna2Button();
@@ -393,43 +392,46 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.btnBrowse);
+            this.panel2.Controls.Add(this.pictureBoxProfile);
             this.panel2.Controls.Add(this.btnViewImage);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.lblPassValidationInfo);
-            this.panel2.Controls.Add(this.pictureBoxProfile);
             this.panel2.Controls.Add(this.lblCurrentUser);
             this.panel2.Location = new System.Drawing.Point(0, 42);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(284, 412);
             this.panel2.TabIndex = 1017;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(165, 14);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(79, 13);
-            this.label8.TabIndex = 1019;
-            this.label8.Text = "Profile picture";
-            // 
             // btnBrowse
             // 
             this.btnBrowse.BackColor = System.Drawing.Color.Transparent;
-            this.btnBrowse.BorderRadius = 10;
             this.btnBrowse.FillColor = System.Drawing.Color.Transparent;
             this.btnBrowse.Image = global::EvolveSettings.Properties.Resources.add;
             this.btnBrowse.ImageRotate = 0F;
-            this.btnBrowse.Location = new System.Drawing.Point(249, 9);
+            this.btnBrowse.Location = new System.Drawing.Point(155, 86);
             this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnBrowse.Size = new System.Drawing.Size(26, 26);
-            this.btnBrowse.TabIndex = 1022;
+            this.btnBrowse.TabIndex = 1024;
             this.btnBrowse.TabStop = false;
             this.btnBrowse.UseTransparentBackground = true;
             this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            // 
+            // pictureBoxProfile
+            // 
+            this.pictureBoxProfile.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxProfile.FillColor = System.Drawing.Color.Transparent;
+            this.pictureBoxProfile.Image = global::EvolveSettings.Properties.Resources.user;
+            this.pictureBoxProfile.ImageRotate = 0F;
+            this.pictureBoxProfile.Location = new System.Drawing.Point(94, 82);
+            this.pictureBoxProfile.Name = "pictureBoxProfile";
+            this.pictureBoxProfile.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.pictureBoxProfile.Size = new System.Drawing.Size(91, 91);
+            this.pictureBoxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxProfile.TabIndex = 1023;
+            this.pictureBoxProfile.TabStop = false;
+            this.pictureBoxProfile.UseTransparentBackground = true;
             // 
             // btnViewImage
             // 
@@ -472,22 +474,6 @@
             this.lblPassValidationInfo.Size = new System.Drawing.Size(189, 113);
             this.lblPassValidationInfo.TabIndex = 1012;
             this.lblPassValidationInfo.Text = "Password not entered";
-            // 
-            // pictureBoxProfile
-            // 
-            this.pictureBoxProfile.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBoxProfile.BorderRadius = 15;
-            this.pictureBoxProfile.FillColor = System.Drawing.Color.Transparent;
-            this.pictureBoxProfile.Image = global::EvolveSettings.Properties.Resources.user;
-            this.pictureBoxProfile.ImageRotate = 0F;
-            this.pictureBoxProfile.Location = new System.Drawing.Point(92, 82);
-            this.pictureBoxProfile.Name = "pictureBoxProfile";
-            this.pictureBoxProfile.Size = new System.Drawing.Size(99, 91);
-            this.pictureBoxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxProfile.TabIndex = 1;
-            this.pictureBoxProfile.TabStop = false;
-            this.pictureBoxProfile.UseTransparentBackground = true;
             // 
             // lblCurrentUser
             // 
@@ -591,12 +577,11 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblPassValidationInfo;
-        private Guna.UI2.WinForms.Guna2PictureBox pictureBoxProfile;
         private System.Windows.Forms.Label lblCurrentUser;
         private System.Windows.Forms.Timer timer1;
         public Guna.UI2.WinForms.Guna2Button btnPassGen;
         public Guna.UI2.WinForms.Guna2Button btnViewImage;
-        private Guna.UI2.WinForms.Guna2PictureBox btnBrowse;
-        private System.Windows.Forms.Label label8;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox pictureBoxProfile;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox btnBrowse;
     }
 }

@@ -19,6 +19,9 @@ namespace EvolveSettings
         private UserPreferenceChangedEventHandler UserPreferenceChanged;
 
         SqlConnection connect = new SqlConnection(SqlConnectionHelper.connectReturn());
+
+        string imgLocation = "";
+
         PasswordValidator passwordValidator = new PasswordValidator();
 
         public Signup()
@@ -66,9 +69,8 @@ namespace EvolveSettings
             {
                 //light
                 this.BackColor = SystemColors.Control;
-                panel1.BackColor = SystemColors.Control;
-                panel2.BackColor = themeColor;
-                foreach (Guna2TextBox txtbox in this.panel1.Controls.OfType<Guna2TextBox>())
+                panel3.BackColor = themeColor;
+                foreach (Guna2TextBox txtbox in this.Controls.OfType<Guna2TextBox>())
                 {
                     txtbox.BackColor = Color.Transparent;
                     txtbox.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
@@ -89,9 +91,8 @@ namespace EvolveSettings
             {
                 //dark
                 this.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
-                panel1.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
-                panel2.BackColor = themeColor;
-                foreach (Guna2TextBox txtbox in this.panel1.Controls.OfType<Guna2TextBox>())
+                panel3.BackColor = themeColor;
+                foreach (Guna2TextBox txtbox in this.Controls.OfType<Guna2TextBox>())
                 {
                     txtbox.BackColor = Color.Transparent;
                     txtbox.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
@@ -108,7 +109,7 @@ namespace EvolveSettings
                 lblConfirmPassword.ForeColor = Color.White;
             }
             chkSignupShowPass.CheckedState.FillColor = themeColor;
-            foreach (Guna2Button button in this.panel1.Controls.OfType<Guna2Button>())
+            foreach (Guna2Button button in this.Controls.OfType<Guna2Button>())
             {
                 button.FillColor = themeColor;
                 button.ForeColor = Color.White;
@@ -271,6 +272,18 @@ namespace EvolveSettings
         {
             PasswordGenForm passgen = new PasswordGenForm();
             passgen.ShowDialog();
+        }
+
+        private void btnBrowse_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = " png files (*.png)|*.png|jpg files (*.jpg)|*.jpg|All files (*.*)|*.*";
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                imgLocation = dialog.FileName.ToString();
+                pictureBoxProfile.ImageLocation = imgLocation;
+            }
         }
     }
 }

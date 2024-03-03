@@ -278,7 +278,7 @@ namespace EvolveSettings.Forms
                     else
                     {
                         connect.Close();
-                        MessageBox.Show("No profile picture set. Image does not excist!");
+                        //MessageBox.Show("No profile picture set. Image does not excist!");
                     }
                 }
             }

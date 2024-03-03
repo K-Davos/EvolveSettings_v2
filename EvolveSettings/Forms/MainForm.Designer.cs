@@ -50,10 +50,10 @@ namespace EvolveSettings
             this.btnNetwork = new Guna.UI2.WinForms.Guna2Button();
             this.btnWin11Tweaks = new Guna.UI2.WinForms.Guna2Button();
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
-            this.pictureBoxProfile = new Guna.UI2.WinForms.Guna2PictureBox();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.pnlRadius = new System.Windows.Forms.Panel();
             this.panelMain = new EvolveSettings.Controls.EvolvePanel();
+            this.pictureBoxProfile = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.pnlHeader.SuspendLayout();
             this.pnlNav.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
@@ -124,6 +124,7 @@ namespace EvolveSettings
             // pnlNav
             // 
             this.pnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.pnlNav.Controls.Add(this.pictureBoxProfile);
             this.pnlNav.Controls.Add(this.btnUserManagement);
             this.pnlNav.Controls.Add(this.btnPassManager);
             this.pnlNav.Controls.Add(this.txtNetFw);
@@ -137,7 +138,6 @@ namespace EvolveSettings
             this.pnlNav.Controls.Add(this.btnNetwork);
             this.pnlNav.Controls.Add(this.btnWin11Tweaks);
             this.pnlNav.Controls.Add(this.btnHome);
-            this.pnlNav.Controls.Add(this.pictureBoxProfile);
             this.pnlNav.Controls.Add(this.label1);
             this.pnlNav.Location = new System.Drawing.Point(0, 38);
             this.pnlNav.Name = "pnlNav";
@@ -381,20 +381,6 @@ namespace EvolveSettings
             this.btnHome.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnHome.Click += new System.EventHandler(this.BtnHome_Click);
             // 
-            // pictureBoxProfile
-            // 
-            this.pictureBoxProfile.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxProfile.FillColor = System.Drawing.Color.Transparent;
-            this.pictureBoxProfile.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxProfile.Image")));
-            this.pictureBoxProfile.ImageRotate = 0F;
-            this.pictureBoxProfile.Location = new System.Drawing.Point(40, 9);
-            this.pictureBoxProfile.Name = "pictureBoxProfile";
-            this.pictureBoxProfile.Size = new System.Drawing.Size(103, 89);
-            this.pictureBoxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxProfile.TabIndex = 76;
-            this.pictureBoxProfile.TabStop = false;
-            this.pictureBoxProfile.UseTransparentBackground = true;
-            // 
             // notifyIcon1
             // 
             this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
@@ -420,6 +406,21 @@ namespace EvolveSettings
             this.panelMain.TabIndex = 9;
             this.panelMain.Thickness = 0F;
             this.panelMain.Resize += new System.EventHandler(this.btnMinimize_Click);
+            // 
+            // pictureBoxProfile
+            // 
+            this.pictureBoxProfile.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxProfile.FillColor = System.Drawing.Color.Transparent;
+            this.pictureBoxProfile.Image = global::EvolveSettings.Properties.Resources.user;
+            this.pictureBoxProfile.ImageRotate = 0F;
+            this.pictureBoxProfile.Location = new System.Drawing.Point(46, 9);
+            this.pictureBoxProfile.Name = "pictureBoxProfile";
+            this.pictureBoxProfile.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.pictureBoxProfile.Size = new System.Drawing.Size(89, 89);
+            this.pictureBoxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxProfile.TabIndex = 88;
+            this.pictureBoxProfile.TabStop = false;
+            this.pictureBoxProfile.UseTransparentBackground = true;
             // 
             // MainForm
             // 
@@ -468,6 +469,6 @@ namespace EvolveSettings
         private System.Windows.Forms.Label txtOS;
         private Controls.EvolvePanel panelMain;
         private Guna.UI2.WinForms.Guna2Button btnPassManager;
-        public Guna.UI2.WinForms.Guna2PictureBox pictureBoxProfile;
+        public Guna.UI2.WinForms.Guna2CirclePictureBox pictureBoxProfile;
     }
 }
