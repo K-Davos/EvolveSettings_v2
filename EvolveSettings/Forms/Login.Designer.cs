@@ -168,7 +168,7 @@ namespace EvolveSettings
             this.btnLogin.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(306, 269);
+            this.btnLogin.Location = new System.Drawing.Point(306, 273);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(96, 32);
             this.btnLogin.TabIndex = 3;

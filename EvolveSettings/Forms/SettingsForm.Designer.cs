@@ -30,167 +30,68 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsForm));
             this.lblTitle = new System.Windows.Forms.Label();
-            this.evolvePanel9 = new EvolveSettings.Controls.EvolvePanel();
-            this.evolvePanel8 = new EvolveSettings.Controls.EvolvePanel();
-            this.evolvePanel7 = new EvolveSettings.Controls.EvolvePanel();
-            this.evolvePanel6 = new EvolveSettings.Controls.EvolvePanel();
-            this.evolvePanel5 = new EvolveSettings.Controls.EvolvePanel();
-            this.evolvePanel4 = new EvolveSettings.Controls.EvolvePanel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblDisableAccSignup = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.toggleUserAccounts = new EvolveSettings.Controls.EvolveToggleButton();
-            this.evolvePanel3 = new EvolveSettings.Controls.EvolvePanel();
             this.btnDefaultSettings = new Guna.UI2.WinForms.Guna2Button();
             this.lblDefaultSettings = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.evolvePanel2 = new EvolveSettings.Controls.EvolvePanel();
             this.lblWinTheme = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.toggleWinTheme = new EvolveSettings.Controls.EvolveToggleButton();
-            this.evolvePanel1 = new EvolveSettings.Controls.EvolvePanel();
             this.lblAutoStart = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.pnlTheme = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.pnlAutoStart = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.pnlResetConfig = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.pnlDisableAccSignup = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.pnlHeader = new System.Windows.Forms.Panel();
+            this.toggleUserAccounts = new EvolveSettings.Controls.EvolveToggleButton();
             this.btnAutoStart = new EvolveSettings.Controls.EvolveToggleButton();
-            this.evolvePanel4.SuspendLayout();
-            this.evolvePanel3.SuspendLayout();
-            this.evolvePanel2.SuspendLayout();
-            this.evolvePanel1.SuspendLayout();
+            this.toggleWinTheme = new EvolveSettings.Controls.EvolveToggleButton();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.pnlTheme.SuspendLayout();
+            this.pnlAutoStart.SuspendLayout();
+            this.pnlResetConfig.SuspendLayout();
+            this.pnlDisableAccSignup.SuspendLayout();
+            this.pnlHeader.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitle
             // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Nirmala UI", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Bold);
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(179)))));
-            this.lblTitle.Location = new System.Drawing.Point(20, 17);
+            this.lblTitle.Location = new System.Drawing.Point(20, 3);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(120, 44);
+            this.lblTitle.Size = new System.Drawing.Size(120, 35);
             this.lblTitle.TabIndex = 13;
             this.lblTitle.Text = "Settings";
             this.lblTitle.UseCompatibleTextRendering = true;
             // 
-            // evolvePanel9
+            // lblDisableAccSignup
             // 
-            this.evolvePanel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.evolvePanel9.BorderColor = System.Drawing.Color.Transparent;
-            this.evolvePanel9.Location = new System.Drawing.Point(574, 392);
-            this.evolvePanel9.Name = "evolvePanel9";
-            this.evolvePanel9.Radius = 10;
-            this.evolvePanel9.Size = new System.Drawing.Size(258, 130);
-            this.evolvePanel9.TabIndex = 4;
-            this.evolvePanel9.Thickness = 3F;
-            // 
-            // evolvePanel8
-            // 
-            this.evolvePanel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.evolvePanel8.BorderColor = System.Drawing.Color.Transparent;
-            this.evolvePanel8.Location = new System.Drawing.Point(574, 239);
-            this.evolvePanel8.Name = "evolvePanel8";
-            this.evolvePanel8.Radius = 10;
-            this.evolvePanel8.Size = new System.Drawing.Size(258, 130);
-            this.evolvePanel8.TabIndex = 4;
-            this.evolvePanel8.Thickness = 3F;
-            // 
-            // evolvePanel7
-            // 
-            this.evolvePanel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.evolvePanel7.BorderColor = System.Drawing.Color.Transparent;
-            this.evolvePanel7.Location = new System.Drawing.Point(297, 392);
-            this.evolvePanel7.Name = "evolvePanel7";
-            this.evolvePanel7.Radius = 10;
-            this.evolvePanel7.Size = new System.Drawing.Size(258, 130);
-            this.evolvePanel7.TabIndex = 4;
-            this.evolvePanel7.Thickness = 3F;
-            // 
-            // evolvePanel6
-            // 
-            this.evolvePanel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.evolvePanel6.BorderColor = System.Drawing.Color.Transparent;
-            this.evolvePanel6.Location = new System.Drawing.Point(297, 239);
-            this.evolvePanel6.Name = "evolvePanel6";
-            this.evolvePanel6.Radius = 10;
-            this.evolvePanel6.Size = new System.Drawing.Size(258, 130);
-            this.evolvePanel6.TabIndex = 3;
-            this.evolvePanel6.Thickness = 3F;
-            // 
-            // evolvePanel5
-            // 
-            this.evolvePanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.evolvePanel5.BorderColor = System.Drawing.Color.Transparent;
-            this.evolvePanel5.Location = new System.Drawing.Point(574, 86);
-            this.evolvePanel5.Name = "evolvePanel5";
-            this.evolvePanel5.Radius = 10;
-            this.evolvePanel5.Size = new System.Drawing.Size(258, 130);
-            this.evolvePanel5.TabIndex = 2;
-            this.evolvePanel5.Thickness = 3F;
-            // 
-            // evolvePanel4
-            // 
-            this.evolvePanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.evolvePanel4.BorderColor = System.Drawing.Color.Transparent;
-            this.evolvePanel4.Controls.Add(this.label1);
-            this.evolvePanel4.Controls.Add(this.label3);
-            this.evolvePanel4.Controls.Add(this.toggleUserAccounts);
-            this.evolvePanel4.Location = new System.Drawing.Point(297, 86);
-            this.evolvePanel4.Name = "evolvePanel4";
-            this.evolvePanel4.Radius = 10;
-            this.evolvePanel4.Size = new System.Drawing.Size(258, 130);
-            this.evolvePanel4.TabIndex = 1;
-            this.evolvePanel4.Thickness = 3F;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(19, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 25);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "User Accounts";
+            this.lblDisableAccSignup.AutoSize = true;
+            this.lblDisableAccSignup.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDisableAccSignup.ForeColor = System.Drawing.Color.White;
+            this.lblDisableAccSignup.Location = new System.Drawing.Point(12, 11);
+            this.lblDisableAccSignup.Name = "lblDisableAccSignup";
+            this.lblDisableAccSignup.Size = new System.Drawing.Size(132, 25);
+            this.lblDisableAccSignup.TabIndex = 15;
+            this.lblDisableAccSignup.Text = "User Accounts";
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
             this.label3.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label3.Location = new System.Drawing.Point(21, 36);
+            this.label3.Location = new System.Drawing.Point(14, 36);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(218, 26);
             this.label3.TabIndex = 16;
             this.label3.Text = "Disable register new user accounts.";
             // 
-            // toggleUserAccounts
-            // 
-            this.toggleUserAccounts.AutoSize = true;
-            this.toggleUserAccounts.Location = new System.Drawing.Point(24, 98);
-            this.toggleUserAccounts.MinimumSize = new System.Drawing.Size(45, 22);
-            this.toggleUserAccounts.Name = "toggleUserAccounts";
-            this.toggleUserAccounts.OffBackColor = System.Drawing.Color.Gray;
-            this.toggleUserAccounts.OffToggleColor = System.Drawing.Color.Gainsboro;
-            this.toggleUserAccounts.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.toggleUserAccounts.OnToggleColor = System.Drawing.Color.WhiteSmoke;
-            this.toggleUserAccounts.Size = new System.Drawing.Size(45, 22);
-            this.toggleUserAccounts.TabIndex = 17;
-            this.toggleUserAccounts.UseVisualStyleBackColor = true;
-            this.toggleUserAccounts.CheckedChanged += new System.EventHandler(this.toggleUserAccounts_CheckedChanged);
-            // 
-            // evolvePanel3
-            // 
-            this.evolvePanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.evolvePanel3.BorderColor = System.Drawing.Color.Transparent;
-            this.evolvePanel3.Controls.Add(this.btnDefaultSettings);
-            this.evolvePanel3.Controls.Add(this.lblDefaultSettings);
-            this.evolvePanel3.Controls.Add(this.label4);
-            this.evolvePanel3.Location = new System.Drawing.Point(20, 392);
-            this.evolvePanel3.Name = "evolvePanel3";
-            this.evolvePanel3.Radius = 10;
-            this.evolvePanel3.Size = new System.Drawing.Size(258, 130);
-            this.evolvePanel3.TabIndex = 2;
-            this.evolvePanel3.Thickness = 3F;
-            // 
             // btnDefaultSettings
             // 
+            this.btnDefaultSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDefaultSettings.Animated = true;
             this.btnDefaultSettings.BackColor = System.Drawing.Color.Transparent;
             this.btnDefaultSettings.BorderRadius = 15;
@@ -201,7 +102,7 @@
             this.btnDefaultSettings.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnDefaultSettings.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDefaultSettings.ForeColor = System.Drawing.Color.White;
-            this.btnDefaultSettings.Location = new System.Drawing.Point(22, 86);
+            this.btnDefaultSettings.Location = new System.Drawing.Point(173, 71);
             this.btnDefaultSettings.Name = "btnDefaultSettings";
             this.btnDefaultSettings.Size = new System.Drawing.Size(96, 32);
             this.btnDefaultSettings.TabIndex = 1004;
@@ -213,7 +114,7 @@
             this.lblDefaultSettings.AutoSize = true;
             this.lblDefaultSettings.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDefaultSettings.ForeColor = System.Drawing.Color.White;
-            this.lblDefaultSettings.Location = new System.Drawing.Point(18, 10);
+            this.lblDefaultSettings.Location = new System.Drawing.Point(17, 11);
             this.lblDefaultSettings.Name = "lblDefaultSettings";
             this.lblDefaultSettings.Size = new System.Drawing.Size(145, 25);
             this.lblDefaultSettings.TabIndex = 14;
@@ -224,32 +125,18 @@
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
             this.label4.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label4.Location = new System.Drawing.Point(20, 35);
+            this.label4.Location = new System.Drawing.Point(19, 36);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(218, 39);
             this.label4.TabIndex = 13;
             this.label4.Text = "Reset application configuration to default settings";
-            // 
-            // evolvePanel2
-            // 
-            this.evolvePanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.evolvePanel2.BorderColor = System.Drawing.Color.Transparent;
-            this.evolvePanel2.Controls.Add(this.lblWinTheme);
-            this.evolvePanel2.Controls.Add(this.label2);
-            this.evolvePanel2.Controls.Add(this.toggleWinTheme);
-            this.evolvePanel2.Location = new System.Drawing.Point(20, 239);
-            this.evolvePanel2.Name = "evolvePanel2";
-            this.evolvePanel2.Radius = 10;
-            this.evolvePanel2.Size = new System.Drawing.Size(258, 130);
-            this.evolvePanel2.TabIndex = 1;
-            this.evolvePanel2.Thickness = 3F;
             // 
             // lblWinTheme
             // 
             this.lblWinTheme.AutoSize = true;
             this.lblWinTheme.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWinTheme.ForeColor = System.Drawing.Color.White;
-            this.lblWinTheme.Location = new System.Drawing.Point(19, 11);
+            this.lblWinTheme.Location = new System.Drawing.Point(12, 11);
             this.lblWinTheme.Name = "lblWinTheme";
             this.lblWinTheme.Size = new System.Drawing.Size(69, 25);
             this.lblWinTheme.TabIndex = 15;
@@ -260,47 +147,18 @@
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
             this.label2.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label2.Location = new System.Drawing.Point(21, 36);
+            this.label2.Location = new System.Drawing.Point(14, 36);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(218, 58);
+            this.label2.Size = new System.Drawing.Size(210, 42);
             this.label2.TabIndex = 13;
             this.label2.Text = "Enable to use windows selected light/dark mode and accent colors";
-            // 
-            // toggleWinTheme
-            // 
-            this.toggleWinTheme.AutoSize = true;
-            this.toggleWinTheme.Location = new System.Drawing.Point(23, 97);
-            this.toggleWinTheme.MinimumSize = new System.Drawing.Size(45, 22);
-            this.toggleWinTheme.Name = "toggleWinTheme";
-            this.toggleWinTheme.OffBackColor = System.Drawing.Color.Gray;
-            this.toggleWinTheme.OffToggleColor = System.Drawing.Color.Gainsboro;
-            this.toggleWinTheme.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.toggleWinTheme.OnToggleColor = System.Drawing.Color.WhiteSmoke;
-            this.toggleWinTheme.Size = new System.Drawing.Size(45, 22);
-            this.toggleWinTheme.TabIndex = 14;
-            this.toggleWinTheme.UseVisualStyleBackColor = true;
-            this.toggleWinTheme.CheckedChanged += new System.EventHandler(this.ToggleWinTheme_CheckedChanged);
-            // 
-            // evolvePanel1
-            // 
-            this.evolvePanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.evolvePanel1.BorderColor = System.Drawing.Color.Transparent;
-            this.evolvePanel1.Controls.Add(this.lblAutoStart);
-            this.evolvePanel1.Controls.Add(this.label14);
-            this.evolvePanel1.Controls.Add(this.btnAutoStart);
-            this.evolvePanel1.Location = new System.Drawing.Point(20, 86);
-            this.evolvePanel1.Name = "evolvePanel1";
-            this.evolvePanel1.Radius = 10;
-            this.evolvePanel1.Size = new System.Drawing.Size(258, 130);
-            this.evolvePanel1.TabIndex = 0;
-            this.evolvePanel1.Thickness = 3F;
             // 
             // lblAutoStart
             // 
             this.lblAutoStart.AutoSize = true;
             this.lblAutoStart.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAutoStart.ForeColor = System.Drawing.Color.White;
-            this.lblAutoStart.Location = new System.Drawing.Point(19, 11);
+            this.lblAutoStart.Location = new System.Drawing.Point(17, 11);
             this.lblAutoStart.Name = "lblAutoStart";
             this.lblAutoStart.Size = new System.Drawing.Size(91, 25);
             this.lblAutoStart.TabIndex = 12;
@@ -311,16 +169,130 @@
             this.label14.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
             this.label14.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label14.Location = new System.Drawing.Point(21, 36);
+            this.label14.Location = new System.Drawing.Point(19, 39);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(218, 39);
             this.label14.TabIndex = 13;
             this.label14.Text = "Start Evolve Dashboard with windows";
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 4;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.Controls.Add(this.pnlDisableAccSignup, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pnlResetConfig, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pnlAutoStart, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pnlTheme, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 49);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 130F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1185, 130);
+            this.tableLayoutPanel1.TabIndex = 15;
+            // 
+            // pnlTheme
+            // 
+            this.pnlTheme.BackColor = System.Drawing.Color.Transparent;
+            this.pnlTheme.Controls.Add(this.label2);
+            this.pnlTheme.Controls.Add(this.toggleWinTheme);
+            this.pnlTheme.Controls.Add(this.lblWinTheme);
+            this.pnlTheme.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlTheme.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.pnlTheme.Location = new System.Drawing.Point(3, 3);
+            this.pnlTheme.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
+            this.pnlTheme.Name = "pnlTheme";
+            this.pnlTheme.Radius = 5;
+            this.pnlTheme.ShadowColor = System.Drawing.Color.Black;
+            this.pnlTheme.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
+            this.pnlTheme.Size = new System.Drawing.Size(283, 124);
+            this.pnlTheme.TabIndex = 0;
+            // 
+            // pnlAutoStart
+            // 
+            this.pnlAutoStart.BackColor = System.Drawing.Color.Transparent;
+            this.pnlAutoStart.Controls.Add(this.btnAutoStart);
+            this.pnlAutoStart.Controls.Add(this.label14);
+            this.pnlAutoStart.Controls.Add(this.lblAutoStart);
+            this.pnlAutoStart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlAutoStart.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.pnlAutoStart.Location = new System.Drawing.Point(299, 3);
+            this.pnlAutoStart.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
+            this.pnlAutoStart.Name = "pnlAutoStart";
+            this.pnlAutoStart.Radius = 5;
+            this.pnlAutoStart.ShadowColor = System.Drawing.Color.Black;
+            this.pnlAutoStart.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
+            this.pnlAutoStart.Size = new System.Drawing.Size(283, 124);
+            this.pnlAutoStart.TabIndex = 1;
+            // 
+            // pnlResetConfig
+            // 
+            this.pnlResetConfig.BackColor = System.Drawing.Color.Transparent;
+            this.pnlResetConfig.Controls.Add(this.btnDefaultSettings);
+            this.pnlResetConfig.Controls.Add(this.lblDefaultSettings);
+            this.pnlResetConfig.Controls.Add(this.label4);
+            this.pnlResetConfig.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlResetConfig.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.pnlResetConfig.Location = new System.Drawing.Point(595, 3);
+            this.pnlResetConfig.Margin = new System.Windows.Forms.Padding(3, 3, 10, 3);
+            this.pnlResetConfig.Name = "pnlResetConfig";
+            this.pnlResetConfig.Radius = 5;
+            this.pnlResetConfig.ShadowColor = System.Drawing.Color.Black;
+            this.pnlResetConfig.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
+            this.pnlResetConfig.Size = new System.Drawing.Size(283, 124);
+            this.pnlResetConfig.TabIndex = 1;
+            // 
+            // pnlDisableAccSignup
+            // 
+            this.pnlDisableAccSignup.BackColor = System.Drawing.Color.Transparent;
+            this.pnlDisableAccSignup.Controls.Add(this.toggleUserAccounts);
+            this.pnlDisableAccSignup.Controls.Add(this.lblDisableAccSignup);
+            this.pnlDisableAccSignup.Controls.Add(this.label3);
+            this.pnlDisableAccSignup.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlDisableAccSignup.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.pnlDisableAccSignup.Location = new System.Drawing.Point(891, 3);
+            this.pnlDisableAccSignup.Name = "pnlDisableAccSignup";
+            this.pnlDisableAccSignup.Radius = 5;
+            this.pnlDisableAccSignup.ShadowColor = System.Drawing.Color.Black;
+            this.pnlDisableAccSignup.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
+            this.pnlDisableAccSignup.Size = new System.Drawing.Size(291, 124);
+            this.pnlDisableAccSignup.TabIndex = 1;
+            // 
+            // pnlHeader
+            // 
+            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.pnlHeader.Controls.Add(this.lblTitle);
+            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Size = new System.Drawing.Size(1185, 49);
+            this.pnlHeader.TabIndex = 16;
+            // 
+            // toggleUserAccounts
+            // 
+            this.toggleUserAccounts.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.toggleUserAccounts.AutoSize = true;
+            this.toggleUserAccounts.Location = new System.Drawing.Point(229, 81);
+            this.toggleUserAccounts.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleUserAccounts.Name = "toggleUserAccounts";
+            this.toggleUserAccounts.OffBackColor = System.Drawing.Color.Gray;
+            this.toggleUserAccounts.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.toggleUserAccounts.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.toggleUserAccounts.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.toggleUserAccounts.Size = new System.Drawing.Size(45, 22);
+            this.toggleUserAccounts.TabIndex = 17;
+            this.toggleUserAccounts.UseVisualStyleBackColor = true;
+            this.toggleUserAccounts.CheckedChanged += new System.EventHandler(this.toggleUserAccounts_CheckedChanged);
+            // 
             // btnAutoStart
             // 
+            this.btnAutoStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAutoStart.AutoSize = true;
-            this.btnAutoStart.Location = new System.Drawing.Point(24, 98);
+            this.btnAutoStart.Location = new System.Drawing.Point(221, 81);
             this.btnAutoStart.MinimumSize = new System.Drawing.Size(45, 22);
             this.btnAutoStart.Name = "btnAutoStart";
             this.btnAutoStart.OffBackColor = System.Drawing.Color.Gray;
@@ -332,49 +304,48 @@
             this.btnAutoStart.UseVisualStyleBackColor = true;
             this.btnAutoStart.CheckedChanged += new System.EventHandler(this.BtnAutoStart_CheckedChanged);
             // 
+            // toggleWinTheme
+            // 
+            this.toggleWinTheme.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.toggleWinTheme.AutoSize = true;
+            this.toggleWinTheme.Location = new System.Drawing.Point(222, 81);
+            this.toggleWinTheme.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleWinTheme.Name = "toggleWinTheme";
+            this.toggleWinTheme.OffBackColor = System.Drawing.Color.Gray;
+            this.toggleWinTheme.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.toggleWinTheme.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.toggleWinTheme.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.toggleWinTheme.Size = new System.Drawing.Size(45, 22);
+            this.toggleWinTheme.TabIndex = 14;
+            this.toggleWinTheme.UseVisualStyleBackColor = true;
+            this.toggleWinTheme.CheckedChanged += new System.EventHandler(this.ToggleWinTheme_CheckedChanged);
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(854, 555);
-            this.Controls.Add(this.lblTitle);
-            this.Controls.Add(this.evolvePanel9);
-            this.Controls.Add(this.evolvePanel8);
-            this.Controls.Add(this.evolvePanel7);
-            this.Controls.Add(this.evolvePanel6);
-            this.Controls.Add(this.evolvePanel5);
-            this.Controls.Add(this.evolvePanel4);
-            this.Controls.Add(this.evolvePanel3);
-            this.Controls.Add(this.evolvePanel2);
-            this.Controls.Add(this.evolvePanel1);
+            this.ClientSize = new System.Drawing.Size(1185, 741);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.pnlHeader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SettingsForm";
-            this.evolvePanel4.ResumeLayout(false);
-            this.evolvePanel4.PerformLayout();
-            this.evolvePanel3.ResumeLayout(false);
-            this.evolvePanel3.PerformLayout();
-            this.evolvePanel2.ResumeLayout(false);
-            this.evolvePanel2.PerformLayout();
-            this.evolvePanel1.ResumeLayout(false);
-            this.evolvePanel1.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.pnlTheme.ResumeLayout(false);
+            this.pnlTheme.PerformLayout();
+            this.pnlAutoStart.ResumeLayout(false);
+            this.pnlAutoStart.PerformLayout();
+            this.pnlResetConfig.ResumeLayout(false);
+            this.pnlResetConfig.PerformLayout();
+            this.pnlDisableAccSignup.ResumeLayout(false);
+            this.pnlDisableAccSignup.PerformLayout();
+            this.pnlHeader.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private Controls.EvolvePanel evolvePanel1;
-        private Controls.EvolvePanel evolvePanel2;
-        private Controls.EvolvePanel evolvePanel3;
-        private Controls.EvolvePanel evolvePanel4;
-        private Controls.EvolvePanel evolvePanel5;
-        private Controls.EvolvePanel evolvePanel6;
-        private Controls.EvolvePanel evolvePanel7;
-        private Controls.EvolvePanel evolvePanel8;
-        private Controls.EvolvePanel evolvePanel9;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Label lblAutoStart;
         private System.Windows.Forms.Label label14;
@@ -385,8 +356,14 @@
         private System.Windows.Forms.Label lblDefaultSettings;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2Button btnDefaultSettings;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblDisableAccSignup;
         private System.Windows.Forms.Label label3;
         private Controls.EvolveToggleButton toggleUserAccounts;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private Guna.UI2.WinForms.Guna2ShadowPanel pnlTheme;
+        private Guna.UI2.WinForms.Guna2ShadowPanel pnlDisableAccSignup;
+        private Guna.UI2.WinForms.Guna2ShadowPanel pnlResetConfig;
+        private Guna.UI2.WinForms.Guna2ShadowPanel pnlAutoStart;
+        private System.Windows.Forms.Panel pnlHeader;
     }
 }

@@ -68,64 +68,81 @@ namespace EvolveSettings.Forms
             {
                 //light
                 this.BackColor = SystemColors.Control;
+                pnlHeader.BackColor = SystemColors.Control;
                 lblTitle.ForeColor = Color.Black;
-                foreach (EvolvePanel panel in this.Controls.OfType<EvolvePanel>())
+                foreach (Guna2ShadowPanel panel in this.tableLayoutPanel1.Controls.OfType<Guna2ShadowPanel>())
                 {
-                    panel.BackColor = Color.White;
+                    panel.FillColor = Color.White;
                 }
-                foreach (Label label in this.evolvePanel1.Controls.OfType<Label>())
-                {
-                    label.ForeColor = ColorTranslator.FromHtml("#212121");
-                }
-                foreach (Label label in this.evolvePanel2.Controls.OfType<Label>())
+                foreach (Label label in this.pnlTheme.Controls.OfType<Label>())
                 {
                     label.ForeColor = ColorTranslator.FromHtml("#212121");
                 }
-                foreach (Label label in this.evolvePanel3.Controls.OfType<Label>())
+                foreach (Label label in this.pnlAutoStart.Controls.OfType<Label>())
+                {
+                    label.ForeColor = ColorTranslator.FromHtml("#212121");
+                }
+                foreach (Label label in this.pnlResetConfig.Controls.OfType<Label>())
+                {
+                    label.ForeColor = ColorTranslator.FromHtml("#212121");
+                }
+                foreach (Label label in this.pnlDisableAccSignup.Controls.OfType<Label>())
                 {
                     label.ForeColor = ColorTranslator.FromHtml("#212121");
                 }
                 lblAutoStart.ForeColor = Color.Black;
                 lblWinTheme.ForeColor = Color.Black;
                 lblDefaultSettings.ForeColor = Color.Black;
+                lblDisableAccSignup.ForeColor = Color.Black;
             }
             else
             {
                 //dark
                 this.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
+                pnlHeader.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
                 lblTitle.ForeColor = Color.White;
-                foreach (EvolvePanel panel in this.Controls.OfType<EvolvePanel>())
+                foreach (Guna2ShadowPanel panel in this.tableLayoutPanel1.Controls.OfType<Guna2ShadowPanel>())
                 {
-                    panel.BackColor = ColorTranslator.FromHtml("#FF2D2D30");
+                    panel.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
                 }
-                foreach (Label label in this.evolvePanel1.Controls.OfType<Label>())
-                {
-                    label.ForeColor = ColorTranslator.FromHtml("#A2A4A5");
-                }
-                foreach (Label label in this.evolvePanel2.Controls.OfType<Label>())
+                foreach (Label label in this.pnlTheme.Controls.OfType<Label>())
                 {
                     label.ForeColor = ColorTranslator.FromHtml("#A2A4A5");
                 }
-                foreach (Label label in this.evolvePanel3.Controls.OfType<Label>())
+                foreach (Label label in this.pnlAutoStart.Controls.OfType<Label>())
+                {
+                    label.ForeColor = ColorTranslator.FromHtml("#A2A4A5");
+                }
+                foreach (Label label in this.pnlResetConfig.Controls.OfType<Label>())
+                {
+                    label.ForeColor = ColorTranslator.FromHtml("#A2A4A5");
+                }
+                foreach (Label label in this.pnlDisableAccSignup.Controls.OfType<Label>())
                 {
                     label.ForeColor = ColorTranslator.FromHtml("#A2A4A5");
                 }
                 lblAutoStart.ForeColor = Color.White;
                 lblWinTheme.ForeColor = Color.White;
                 lblDefaultSettings.ForeColor = Color.White;
+                lblDisableAccSignup.ForeColor = Color.White;
             }
             //Buttons
-            foreach (EvolveToggleButton button in this.evolvePanel1.Controls.OfType<EvolveToggleButton>())
+            foreach (EvolveToggleButton button in this.pnlTheme.Controls.OfType<EvolveToggleButton>())
             {
                 button.OnBackColor = themeColor;
                 button.OffBackColor = this.BackColor;
             }
-            foreach (EvolveToggleButton button in this.evolvePanel2.Controls.OfType<EvolveToggleButton>())
+            foreach (EvolveToggleButton button in this.pnlAutoStart.Controls.OfType<EvolveToggleButton>())
             {
                 button.OnBackColor = themeColor;
                 button.OffBackColor = this.BackColor;
             }
-            foreach (Guna2Button button in this.evolvePanel3.Controls.OfType<Guna2Button>())
+            foreach (EvolveToggleButton button in this.pnlDisableAccSignup.Controls.OfType<EvolveToggleButton>())
+            {
+                button.OnBackColor = themeColor;
+                button.OffBackColor = this.BackColor;
+            }
+            foreach (Guna2Button button in this.pnlResetConfig.Controls.OfType<Guna2Button>())
             {
                 button.FillColor = themeColor;
                 button.ForeColor = Color.White;
