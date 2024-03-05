@@ -147,13 +147,13 @@ namespace EvolveSettings
         {
             if (signup_password.Text != signup_repassword.Text)
             {
-                MessageBox.Show("Password & Confirm Password do not match!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                EvolveMessageBox.Show("Passwords do not match!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             if (signup_email.Text == "" || signup_username.Text == ""
                 || signup_password.Text == "")
             {
-                MessageBox.Show("Please fill all the blank fields", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                EvolveMessageBox.Show("Please fill all the blank fields", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -173,7 +173,7 @@ namespace EvolveSettings
 
                             if (table.Rows.Count >= 1)
                             {
-                                MessageBox.Show(signup_username.Text + " is already exist", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                EvolveMessageBox.Show(signup_username.Text + " is already exist", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                             else
                             {
@@ -198,7 +198,7 @@ namespace EvolveSettings
 
                                     cmd.ExecuteNonQuery();
 
-                                    MessageBox.Show("Registered successfully", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    EvolveMessageBox.Show("Registered successfully", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                     // TO SWITCH THE FORM 
                                     Login lForm = new Login();
@@ -211,7 +211,7 @@ namespace EvolveSettings
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Error connecting to Database: " + ex, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        EvolveMessageBox.Show("Error connecting to Database: " + ex, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     finally
                     {

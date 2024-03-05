@@ -46,15 +46,15 @@ namespace EvolveSettings.Forms
             {
                 if (txtPass.Text != txtRepass.Text)
                 {
-                    MessageBox.Show("Passwords do not Match!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    EvolveMessageBox.Show("Passwords do not Match!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 if (txtPass.Text.Length < 7)
                 {
-                    MessageBox.Show("Password must be at least 8 characters!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    EvolveMessageBox.Show("Password must be at least 8 characters!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-                if (MessageBox.Show("Are you sure you want to save this user?", "Saving Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (EvolveMessageBox.Show("Are you sure you want to save this user?", "Saving Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     DateTime date = DateTime.Today;
 
@@ -92,7 +92,7 @@ namespace EvolveSettings.Forms
                     connect.Open();
                     cmd.ExecuteNonQuery();
                     connect.Close();
-                    MessageBox.Show("User has been successfully saved.");
+                    EvolveMessageBox.Show("User has been successfully saved.");
                     Clear();
                 }
 
@@ -126,15 +126,15 @@ namespace EvolveSettings.Forms
             {
                 if (txtPass.Text != txtRepass.Text)
                 {
-                    MessageBox.Show("Passwords do not Match!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    EvolveMessageBox.Show("Passwords do not Match!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
                 if (txtPass.Text.Length < 7)
                 {
-                    MessageBox.Show("Password must be at least 8 characters!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    EvolveMessageBox.Show("Password must be at least 8 characters!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
-                if (MessageBox.Show("Are you sure you want to update this user?", "Update Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (EvolveMessageBox.Show("Are you sure you want to update this user?", "Update Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
 
                     DateTime date = DateTime.Today;
@@ -170,7 +170,7 @@ namespace EvolveSettings.Forms
                     connect.Open();
                     cmd.ExecuteNonQuery();
                     connect.Close();
-                    MessageBox.Show("User has been successfully updated!");
+                    EvolveMessageBox.Show("User has been successfully updated!");
                     this.Dispose();
                 }
 

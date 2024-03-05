@@ -69,7 +69,7 @@ namespace EvolveSettings
 
             if (!_notRunning)
             {
-                MessageBox.Show(_alreadyRunning, "EvolveSettings", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                EvolveMessageBox.Show(_alreadyRunning, "EvolveSettings", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Environment.Exit(0);
                 return;
             }

@@ -250,6 +250,7 @@
     <Compile Include="EmbeddedAssembly.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="ErrorLogger.cs" />
+    <Compile Include="EvolveMessageBox.cs" />
     <Compile Include="EvolveUtilities.cs" />
     <Compile Include="Forms\ForgotPassForm.cs">
       <SubType>Form</SubType>
@@ -262,6 +263,12 @@
     </Compile>
     <Compile Include="Forms\HomeForm.Designer.cs">
       <DependentUpon>HomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MessageBoxForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MessageBoxForm.Designer.cs">
+      <DependentUpon>MessageBoxForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\PasswordManagerForm.cs">
       <SubType>Form</SubType>
@@ -347,6 +354,9 @@
     <EmbeddedResource Include="Forms\HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MessageBoxForm.resx">
+      <DependentUpon>MessageBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\PasswordManagerForm.resx">
       <DependentUpon>PasswordManagerForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -409,11 +419,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\add.png" />
+    <None Include="Resources\chat.png" />
+    <None Include="Resources\error.png" />
+    <None Include="Resources\exclamation.png" />
+    <None Include="Resources\information.png" />
     <Content Include="Resources\logout.png" />
     <Content Include="Resources\maintenance.png" />
     <Content Include="Resources\menu.png" />
     <Content Include="Resources\network.png" />
     <Content Include="Resources\pwmanager.png" />
+    <None Include="Resources\question.png" />
     <Content Include="Resources\quit.png" />
     <Content Include="Resources\settings.png" />
     <Content Include="Resources\usersm.png" />

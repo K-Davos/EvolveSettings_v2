@@ -65,13 +65,13 @@ namespace EvolveSettings.Forms
             }
             else if (colName == "Delete")
             {
-                if (MessageBox.Show("Are you sure you want to delete this user?", "Delete Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (EvolveMessageBox.Show("Are you sure you want to delete this user?", "Delete Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     connect.Open();
                     cmd = new SqlCommand("DELETE FROM admin WHERE id LIKE '" + dgvUser.Rows[e.RowIndex].Cells[1].Value.ToString() + "'", connect);
                     cmd.ExecuteNonQuery();
                     connect.Close();
-                    MessageBox.Show("Record has been successfully deleted!");
+                    EvolveMessageBox.Show("Record has been successfully deleted!");
                 }
             }
             LoadUser();

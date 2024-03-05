@@ -39,16 +39,18 @@
             this.lblConfirmPassword = new System.Windows.Forms.Label();
             this.btnResetPassClose = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lblPassValidationInfo = new System.Windows.Forms.Label();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnPassGen = new Guna.UI2.WinForms.Guna2Button();
             this.lblResetPassword = new System.Windows.Forms.Label();
             this.chkResetShowPass = new Guna.UI2.WinForms.Guna2CheckBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblPassValidationInfo = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.guna2ShadowPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -182,8 +184,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.lblPassValidationInfo);
+            this.panel2.Controls.Add(this.guna2ShadowPanel1);
             this.panel2.Controls.Add(this.guna2PictureBox1);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
@@ -191,28 +192,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(283, 411);
             this.panel2.TabIndex = 1021;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(22, 263);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(137, 17);
-            this.label7.TabIndex = 1025;
-            this.label7.Text = "Password Validation:";
-            // 
-            // lblPassValidationInfo
-            // 
-            this.lblPassValidationInfo.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassValidationInfo.ForeColor = System.Drawing.Color.White;
-            this.lblPassValidationInfo.Location = new System.Drawing.Point(22, 291);
-            this.lblPassValidationInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPassValidationInfo.Name = "lblPassValidationInfo";
-            this.lblPassValidationInfo.Size = new System.Drawing.Size(189, 113);
-            this.lblPassValidationInfo.TabIndex = 1024;
-            this.lblPassValidationInfo.Text = "Password not entered";
             // 
             // guna2PictureBox1
             // 
@@ -251,9 +230,9 @@
             this.btnPassGen.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnPassGen.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPassGen.ForeColor = System.Drawing.Color.White;
-            this.btnPassGen.Location = new System.Drawing.Point(511, 269);
+            this.btnPassGen.Location = new System.Drawing.Point(305, 368);
             this.btnPassGen.Name = "btnPassGen";
-            this.btnPassGen.Size = new System.Drawing.Size(96, 32);
+            this.btnPassGen.Size = new System.Drawing.Size(131, 32);
             this.btnPassGen.TabIndex = 1023;
             this.btnPassGen.Text = "Password Generator";
             this.btnPassGen.Click += new System.EventHandler(this.btnPassGen_Click);
@@ -293,6 +272,42 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // guna2ShadowPanel1
+            // 
+            this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel1.Controls.Add(this.label2);
+            this.guna2ShadowPanel1.Controls.Add(this.lblPassValidationInfo);
+            this.guna2ShadowPanel1.FillColor = System.Drawing.Color.MidnightBlue;
+            this.guna2ShadowPanel1.Location = new System.Drawing.Point(24, 226);
+            this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
+            this.guna2ShadowPanel1.Radius = 5;
+            this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
+            this.guna2ShadowPanel1.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(236, 174);
+            this.guna2ShadowPanel1.TabIndex = 1027;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(25, 11);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(137, 17);
+            this.label2.TabIndex = 1013;
+            this.label2.Text = "Password Validation:";
+            // 
+            // lblPassValidationInfo
+            // 
+            this.lblPassValidationInfo.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassValidationInfo.ForeColor = System.Drawing.Color.White;
+            this.lblPassValidationInfo.Location = new System.Drawing.Point(25, 39);
+            this.lblPassValidationInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPassValidationInfo.Name = "lblPassValidationInfo";
+            this.lblPassValidationInfo.Size = new System.Drawing.Size(189, 113);
+            this.lblPassValidationInfo.TabIndex = 1012;
+            this.lblPassValidationInfo.Text = "Password not entered";
+            // 
             // ResetPassForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -317,6 +332,8 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.guna2ShadowPanel1.ResumeLayout(false);
+            this.guna2ShadowPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -336,10 +353,11 @@
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Label label6;
         public Guna.UI2.WinForms.Guna2Button btnPassGen;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label lblPassValidationInfo;
         private System.Windows.Forms.Label lblResetPassword;
         private Guna.UI2.WinForms.Guna2CheckBox chkResetShowPass;
         private System.Windows.Forms.Timer timer1;
+        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblPassValidationInfo;
     }
 }

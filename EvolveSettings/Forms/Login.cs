@@ -169,7 +169,7 @@ namespace EvolveSettings
         {
             if (login_username.Text == "" || login_password.Text == "")
             {
-                MessageBox.Show("Please fil all blank fields", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                EvolveMessageBox.Show("Please fil all blank fields", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -190,7 +190,7 @@ namespace EvolveSettings
 
                             if (table.Rows.Count >= 1)
                             {
-                                MessageBox.Show("Logged In successfully", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                EvolveMessageBox.Show("Logged In successfully", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                                 usrname = "Welcome: " + login_username.Text;
                                 MainForm mForm = new MainForm(usrname);
@@ -210,13 +210,13 @@ namespace EvolveSettings
                             }
                             else
                             {
-                                MessageBox.Show("Incorrect Username/Password", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                EvolveMessageBox.Show("Incorrect Username/Password", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Error Connecting: " + ex, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        EvolveMessageBox.Show("Error Connecting: " + ex, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     finally
                     {

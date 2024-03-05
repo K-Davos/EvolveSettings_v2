@@ -126,7 +126,7 @@ namespace EvolveSettings.Forms
                 connect.Open();
                 cmd.ExecuteNonQuery();
                 connect.Close();
-                MessageBox.Show("Password has been reset successfully", "Reset password", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                EvolveMessageBox.Show("Password has been reset successfully", "Reset password", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtResetPass.Text = String.Empty;
                 txtResetPass.Enabled = false;
                 txtResetRePass.Text = String.Empty;
@@ -137,7 +137,7 @@ namespace EvolveSettings.Forms
             }
             else
             {
-                MessageBox.Show("Password & Confirm Password do not match!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                EvolveMessageBox.Show("Passwords do not match!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

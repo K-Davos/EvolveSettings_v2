@@ -54,15 +54,17 @@
             this.btnBrowse = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.pictureBoxProfile = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnViewImage = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblPassValidationInfo = new System.Windows.Forms.Label();
             this.lblCurrentUser = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnPassGen = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblPassValidationInfo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBrowse)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
+            this.guna2ShadowPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -107,7 +109,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(304, 250);
+            this.label6.Location = new System.Drawing.Point(304, 240);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(125, 17);
             this.label6.TabIndex = 26;
@@ -117,7 +119,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(304, 308);
+            this.label5.Location = new System.Drawing.Point(304, 298);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(46, 17);
             this.label5.TabIndex = 21;
@@ -127,7 +129,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(304, 191);
+            this.label4.Location = new System.Drawing.Point(304, 181);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 17);
             this.label4.TabIndex = 19;
@@ -137,7 +139,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(304, 133);
+            this.label3.Location = new System.Drawing.Point(304, 123);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 17);
             this.label3.TabIndex = 17;
@@ -145,7 +147,7 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(585, 61);
+            this.txtID.Location = new System.Drawing.Point(585, 51);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(16, 20);
             this.txtID.TabIndex = 1000;
@@ -155,7 +157,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 3.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(534, 70);
+            this.label2.Location = new System.Drawing.Point(534, 60);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 6);
             this.label2.TabIndex = 1001;
@@ -167,7 +169,7 @@
             this.txtDateCreated.BackColor = System.Drawing.SystemColors.Control;
             this.txtDateCreated.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDateCreated.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDateCreated.Location = new System.Drawing.Point(308, 369);
+            this.txtDateCreated.Location = new System.Drawing.Point(308, 359);
             this.txtDateCreated.Name = "txtDateCreated";
             this.txtDateCreated.ReadOnly = true;
             this.txtDateCreated.Size = new System.Drawing.Size(108, 15);
@@ -177,7 +179,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(304, 74);
+            this.label7.Location = new System.Drawing.Point(304, 64);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(73, 17);
             this.label7.TabIndex = 30;
@@ -204,7 +206,7 @@
             this.btnClear.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnClear.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(413, 404);
+            this.btnClear.Location = new System.Drawing.Point(516, 364);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(96, 32);
             this.btnClear.TabIndex = 1002;
@@ -258,7 +260,7 @@
             this.chkShowPass.CheckedState.FillColor = System.Drawing.Color.MidnightBlue;
             this.chkShowPass.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkShowPass.ForeColor = System.Drawing.Color.Gray;
-            this.chkShowPass.Location = new System.Drawing.Point(512, 309);
+            this.chkShowPass.Location = new System.Drawing.Point(512, 299);
             this.chkShowPass.Name = "chkShowPass";
             this.chkShowPass.Size = new System.Drawing.Size(107, 17);
             this.chkShowPass.TabIndex = 1005;
@@ -284,7 +286,7 @@
             this.txtFullName.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFullName.ForeColor = System.Drawing.Color.Black;
             this.txtFullName.HoverState.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.txtFullName.Location = new System.Drawing.Point(307, 94);
+            this.txtFullName.Location = new System.Drawing.Point(307, 84);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.PasswordChar = '\0';
             this.txtFullName.PlaceholderText = "";
@@ -308,7 +310,7 @@
             this.txtUserName.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserName.ForeColor = System.Drawing.Color.Black;
             this.txtUserName.HoverState.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.txtUserName.Location = new System.Drawing.Point(308, 153);
+            this.txtUserName.Location = new System.Drawing.Point(308, 143);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.PasswordChar = '\0';
             this.txtUserName.PlaceholderText = "";
@@ -332,7 +334,7 @@
             this.txtPass.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.ForeColor = System.Drawing.Color.Black;
             this.txtPass.HoverState.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.txtPass.Location = new System.Drawing.Point(307, 211);
+            this.txtPass.Location = new System.Drawing.Point(307, 201);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
             this.txtPass.PlaceholderText = "";
@@ -356,7 +358,7 @@
             this.txtRepass.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRepass.ForeColor = System.Drawing.Color.Black;
             this.txtRepass.HoverState.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.txtRepass.Location = new System.Drawing.Point(308, 270);
+            this.txtRepass.Location = new System.Drawing.Point(308, 260);
             this.txtRepass.Name = "txtRepass";
             this.txtRepass.PasswordChar = '*';
             this.txtRepass.PlaceholderText = "";
@@ -380,7 +382,7 @@
             this.txtEmail.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.Color.Black;
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.txtEmail.Location = new System.Drawing.Point(307, 328);
+            this.txtEmail.Location = new System.Drawing.Point(307, 318);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.PlaceholderText = "";
@@ -392,11 +394,10 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel2.Controls.Add(this.guna2ShadowPanel1);
             this.panel2.Controls.Add(this.btnBrowse);
             this.panel2.Controls.Add(this.pictureBoxProfile);
             this.panel2.Controls.Add(this.btnViewImage);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.lblPassValidationInfo);
             this.panel2.Controls.Add(this.lblCurrentUser);
             this.panel2.Location = new System.Drawing.Point(0, 42);
             this.panel2.Name = "panel2";
@@ -445,35 +446,13 @@
             this.btnViewImage.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnViewImage.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnViewImage.ForeColor = System.Drawing.Color.White;
-            this.btnViewImage.Location = new System.Drawing.Point(88, 208);
+            this.btnViewImage.Location = new System.Drawing.Point(12, 7);
             this.btnViewImage.Name = "btnViewImage";
             this.btnViewImage.Size = new System.Drawing.Size(104, 32);
             this.btnViewImage.TabIndex = 1021;
             this.btnViewImage.Text = "View Image";
             this.btnViewImage.Visible = false;
             this.btnViewImage.Click += new System.EventHandler(this.btnViewImage_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(23, 264);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 17);
-            this.label1.TabIndex = 1013;
-            this.label1.Text = "Password Validation:";
-            // 
-            // lblPassValidationInfo
-            // 
-            this.lblPassValidationInfo.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassValidationInfo.ForeColor = System.Drawing.Color.White;
-            this.lblPassValidationInfo.Location = new System.Drawing.Point(23, 292);
-            this.lblPassValidationInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPassValidationInfo.Name = "lblPassValidationInfo";
-            this.lblPassValidationInfo.Size = new System.Drawing.Size(189, 113);
-            this.lblPassValidationInfo.TabIndex = 1012;
-            this.lblPassValidationInfo.Text = "Password not entered";
             // 
             // lblCurrentUser
             // 
@@ -502,12 +481,48 @@
             this.btnPassGen.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnPassGen.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPassGen.ForeColor = System.Drawing.Color.White;
-            this.btnPassGen.Location = new System.Drawing.Point(307, 404);
+            this.btnPassGen.Location = new System.Drawing.Point(308, 404);
             this.btnPassGen.Name = "btnPassGen";
-            this.btnPassGen.Size = new System.Drawing.Size(96, 32);
+            this.btnPassGen.Size = new System.Drawing.Size(131, 32);
             this.btnPassGen.TabIndex = 1018;
             this.btnPassGen.Text = "Password Generator";
             this.btnPassGen.Click += new System.EventHandler(this.btnPassGen_Click);
+            // 
+            // guna2ShadowPanel1
+            // 
+            this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel1.Controls.Add(this.label1);
+            this.guna2ShadowPanel1.Controls.Add(this.lblPassValidationInfo);
+            this.guna2ShadowPanel1.FillColor = System.Drawing.Color.MidnightBlue;
+            this.guna2ShadowPanel1.Location = new System.Drawing.Point(24, 226);
+            this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
+            this.guna2ShadowPanel1.Radius = 5;
+            this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
+            this.guna2ShadowPanel1.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(236, 174);
+            this.guna2ShadowPanel1.TabIndex = 1027;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(25, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(137, 17);
+            this.label1.TabIndex = 1013;
+            this.label1.Text = "Password Validation:";
+            // 
+            // lblPassValidationInfo
+            // 
+            this.lblPassValidationInfo.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassValidationInfo.ForeColor = System.Drawing.Color.White;
+            this.lblPassValidationInfo.Location = new System.Drawing.Point(25, 39);
+            this.lblPassValidationInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPassValidationInfo.Name = "lblPassValidationInfo";
+            this.lblPassValidationInfo.Size = new System.Drawing.Size(189, 113);
+            this.lblPassValidationInfo.TabIndex = 1012;
+            this.lblPassValidationInfo.Text = "Password not entered";
             // 
             // UserModuleForm
             // 
@@ -546,6 +561,8 @@
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBrowse)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
+            this.guna2ShadowPanel1.ResumeLayout(false);
+            this.guna2ShadowPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -575,13 +592,14 @@
         public Guna.UI2.WinForms.Guna2TextBox txtUserName;
         public Guna.UI2.WinForms.Guna2TextBox txtFullName;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblPassValidationInfo;
         private System.Windows.Forms.Label lblCurrentUser;
         private System.Windows.Forms.Timer timer1;
         public Guna.UI2.WinForms.Guna2Button btnPassGen;
         public Guna.UI2.WinForms.Guna2Button btnViewImage;
         private Guna.UI2.WinForms.Guna2CirclePictureBox pictureBoxProfile;
         private Guna.UI2.WinForms.Guna2CirclePictureBox btnBrowse;
+        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblPassValidationInfo;
     }
 }
