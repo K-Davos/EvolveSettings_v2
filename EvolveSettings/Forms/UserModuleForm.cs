@@ -145,12 +145,13 @@ namespace EvolveSettings.Forms
                         BinaryReader reader = new BinaryReader(stream);
                         images = reader.ReadBytes((int)stream.Length);
 
-                        cmd = new SqlCommand("UPDATE admin SET image = @image, password=@password, email=@email, fullname=@fullname, date_created=@date WHERE username LIKE '" + txtUserName.Text + "' ", connect);
+                        cmd = new SqlCommand("UPDATE admin SET image = @image, password=@password, email=@email, fullname=@fullname, date_created=@date, usertype=@usertype WHERE username LIKE '" + txtUserName.Text + "' ", connect);
                         cmd.Parameters.AddWithValue("@image", images);
                         cmd.Parameters.AddWithValue("@password", txtPass.Text.Trim());
                         cmd.Parameters.AddWithValue("@email", txtEmail.Text.Trim());
                         cmd.Parameters.AddWithValue("@fullname", txtFullName.Text.Trim());
                         cmd.Parameters.AddWithValue("@date", date);
+                        cmd.Parameters.AddWithValue("@usertype", lblAdminUserType.Text.Trim());
                     }
                     else
                     {
@@ -160,12 +161,13 @@ namespace EvolveSettings.Forms
 
                         byte[] imageBt = memoryStream.ToArray();
 
-                        cmd = new SqlCommand("UPDATE admin SET image = @image, password=@password, email=@email, fullname=@fullname, date_created=@date WHERE username LIKE '" + txtUserName.Text + "' ", connect);
+                        cmd = new SqlCommand("UPDATE admin SET image = @image, password=@password, email=@email, fullname=@fullname, date_created=@date, usertype=@usertype WHERE username LIKE '" + txtUserName.Text + "' ", connect);
                         cmd.Parameters.AddWithValue("@image", imageBt);
                         cmd.Parameters.AddWithValue("@password", txtPass.Text.Trim());
                         cmd.Parameters.AddWithValue("@email", txtEmail.Text.Trim());
                         cmd.Parameters.AddWithValue("@fullname", txtFullName.Text.Trim());
                         cmd.Parameters.AddWithValue("@date", date);
+                        cmd.Parameters.AddWithValue("@usertype", lblAdminUserType.Text.Trim());
                     }
                     connect.Open();
                     cmd.ExecuteNonQuery();
@@ -286,6 +288,16 @@ namespace EvolveSettings.Forms
             {
                 MessageBox.Show(ee.Message);
             }
+        }
+
+        private void btnUserTypeAdmin_Click(object sender, EventArgs e)
+        {
+            lblAdminUserType.Text = "admin";
+        }
+
+        private void btnUserTypeGuest_Click(object sender, EventArgs e)
+        {
+            lblAdminUserType.Text = "";
         }
     }
 }

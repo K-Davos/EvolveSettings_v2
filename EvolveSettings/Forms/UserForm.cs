@@ -75,7 +75,7 @@ namespace EvolveSettings.Forms
                     gridview.BackgroundColor = ColorTranslator.FromHtml("#FF2D2D30");
                     gridview.ColumnHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#FF2D2D30");
                     gridview.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-                    gridview.DefaultCellStyle.ForeColor = Color.Gray;
+                    gridview.DefaultCellStyle.ForeColor = Color.White;
                     gridview.DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
                     gridview.DefaultCellStyle.SelectionBackColor = themeColor;
                     gridview.GridColor = themeColor;
@@ -113,7 +113,7 @@ namespace EvolveSettings.Forms
             while (dr.Read())
             {
                 i++;
-                dgvUser.Rows.Add(i, dr[0].ToString(), dr[1], dr[2].ToString(), dr[3].ToString(), dr[4].ToString(), dr[5].ToString(), dr[6].ToString());
+                dgvUser.Rows.Add(i, dr[0].ToString(), dr[1], dr[2].ToString(), dr[3].ToString(), dr[4].ToString(), dr[5].ToString(), dr[6].ToString(), dr[7].ToString());
             }
             dr.Close();
             connect.Close();
@@ -143,6 +143,7 @@ namespace EvolveSettings.Forms
                 userModule.txtEmail.Text = dgvUser.Rows[e.RowIndex].Cells[5].Value.ToString();
                 userModule.txtFullName.Text = dgvUser.Rows[e.RowIndex].Cells[6].Value.ToString();
                 userModule.txtDateCreated.Text = dgvUser.Rows[e.RowIndex].Cells[7].Value.ToString();
+                userModule.lblAdminUserType.Text = dgvUser.Rows[e.RowIndex].Cells[8].Value.ToString();
 
                 userModule.lblAddUpdateUser.Text = "Update User";
                 userModule.btnSave.Visible = false;
