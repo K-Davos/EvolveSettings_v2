@@ -163,7 +163,7 @@ namespace EvolveSettings
             // 
             // btnLogout
             // 
-            this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnLogout.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnLogout.Animated = true;
             this.btnLogout.BackColor = System.Drawing.Color.Transparent;
             this.btnLogout.DisabledState.BorderColor = System.Drawing.Color.DarkGray;

@@ -65,13 +65,13 @@ namespace EvolveSettings.Forms
                         BinaryReader reader = new BinaryReader(stream);
                         images = reader.ReadBytes((int)stream.Length);
 
-                        cmd = new SqlCommand("INSERT INTO admin (email, username, password, date_created, fullname, image) " + "VALUES(@email, @username, @pass, @date, @fullname, @image)", connect);
-                        cmd.Parameters.AddWithValue("@email", txtEmail.Text.Trim());
+                        cmd = new SqlCommand("INSERT INTO admin (image, username, password, email, fullname, date_created) " + "VALUES(@image, @username, @pass, @email, @fullname, @date)", connect);
+                        cmd.Parameters.AddWithValue("@image", images);
                         cmd.Parameters.AddWithValue("@username", txtUserName.Text.Trim());
                         cmd.Parameters.AddWithValue("@pass", txtPass.Text.Trim());
-                        cmd.Parameters.AddWithValue("@date", date);
+                        cmd.Parameters.AddWithValue("@email", txtEmail.Text.Trim());
                         cmd.Parameters.AddWithValue("@fullname", txtFullName.Text.Trim());
-                        cmd.Parameters.AddWithValue("@image", images);
+                        cmd.Parameters.AddWithValue("@date", date);
                     }
                     else
                     {
@@ -81,13 +81,13 @@ namespace EvolveSettings.Forms
 
                         byte[] imageBt = memoryStream.ToArray();
 
-                        cmd = new SqlCommand("INSERT INTO admin (email, username, password, date_created, fullname, image) " + "VALUES(@email, @username, @pass, @date, @fullname, @image)", connect);
-                        cmd.Parameters.AddWithValue("@email", txtEmail.Text.Trim());
+                        cmd = new SqlCommand("INSERT INTO admin (image, username, password, email, fullname, date_created) " + "VALUES(@image, @username, @pass, @email, @fullname, @date)", connect);
+                        cmd.Parameters.AddWithValue("@image", imageBt);
                         cmd.Parameters.AddWithValue("@username", txtUserName.Text.Trim());
                         cmd.Parameters.AddWithValue("@pass", txtPass.Text.Trim());
-                        cmd.Parameters.AddWithValue("@date", date);
+                        cmd.Parameters.AddWithValue("@email", txtEmail.Text.Trim());
                         cmd.Parameters.AddWithValue("@fullname", txtFullName.Text.Trim());
-                        cmd.Parameters.AddWithValue("@image", imageBt);
+                        cmd.Parameters.AddWithValue("@date", date);
                    }
                     connect.Open();
                     cmd.ExecuteNonQuery();
@@ -145,12 +145,12 @@ namespace EvolveSettings.Forms
                         BinaryReader reader = new BinaryReader(stream);
                         images = reader.ReadBytes((int)stream.Length);
 
-                        cmd = new SqlCommand("UPDATE admin SET image = @image, password=@password, email=@email, date_created=@date, fullname=@fullname WHERE username LIKE '" + txtUserName.Text + "' ", connect);
+                        cmd = new SqlCommand("UPDATE admin SET image = @image, password=@password, email=@email, fullname=@fullname, date_created=@date WHERE username LIKE '" + txtUserName.Text + "' ", connect);
+                        cmd.Parameters.AddWithValue("@image", images);
                         cmd.Parameters.AddWithValue("@password", txtPass.Text.Trim());
                         cmd.Parameters.AddWithValue("@email", txtEmail.Text.Trim());
-                        cmd.Parameters.AddWithValue("@date", date);
                         cmd.Parameters.AddWithValue("@fullname", txtFullName.Text.Trim());
-                        cmd.Parameters.AddWithValue("@image", images);
+                        cmd.Parameters.AddWithValue("@date", date);
                     }
                     else
                     {
@@ -160,12 +160,12 @@ namespace EvolveSettings.Forms
 
                         byte[] imageBt = memoryStream.ToArray();
 
-                        cmd = new SqlCommand("UPDATE admin SET image = @image, password=@password, email=@email, date_created=@date, fullname=@fullname WHERE username LIKE '" + txtUserName.Text + "' ", connect);
+                        cmd = new SqlCommand("UPDATE admin SET image = @image, password=@password, email=@email, fullname=@fullname, date_created=@date WHERE username LIKE '" + txtUserName.Text + "' ", connect);
+                        cmd.Parameters.AddWithValue("@image", imageBt);
                         cmd.Parameters.AddWithValue("@password", txtPass.Text.Trim());
                         cmd.Parameters.AddWithValue("@email", txtEmail.Text.Trim());
-                        cmd.Parameters.AddWithValue("@date", date);
                         cmd.Parameters.AddWithValue("@fullname", txtFullName.Text.Trim());
-                        cmd.Parameters.AddWithValue("@image", imageBt);
+                        cmd.Parameters.AddWithValue("@date", date);
                     }
                     connect.Open();
                     cmd.ExecuteNonQuery();
