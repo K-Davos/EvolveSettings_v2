@@ -43,7 +43,7 @@ namespace EvolveSettings
             txtBitness.Text = EvolveUtilities.GetBitness();
             txtNetFw.Text = ".NET Framework " + EvolveUtilities.GetNETFramework();
             txtAppVersion.Text = Program.GetCurrentVersionTostring();
-            btnLogout.Location = new Point(15, 641);
+            //btnLogout.Location = new Point(15, 641);
             lblCurrentUser.Text = usrname;
             if (lblCurrentUser.Text == "Welcome: admin" )
             {
@@ -363,7 +363,7 @@ namespace EvolveSettings
                 lblUserMode.Visible = false;
                 circleProgressBar1.Visible = false;
                 circleProgressBar2.Visible = false;
-                btnLogout.Location = new Point(15, 681);
+                //btnLogout.Location = new Point(15, 681);
                 btnMenu.Location = new Point (25, 19);
                 foreach (Guna2Button menuButton in pnlNav.Controls.OfType<Guna2Button>())
                 {
@@ -385,7 +385,7 @@ namespace EvolveSettings
                 lblUserMode.Visible = true;
                 circleProgressBar1.Visible = true;
                 circleProgressBar2.Visible = true;
-                btnLogout.Location = new Point(144, 681);
+                //btnLogout.Location = new Point(144, 681);
                 btnMenu.Location = new Point(155, 19);
                 foreach (Guna2Button menuButton in pnlNav.Controls.OfType<Guna2Button>())
                 {

@@ -48,17 +48,17 @@ namespace EvolveSettings
             this.lblUserName = new System.Windows.Forms.Label();
             this.lblGetStarted = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.btnBrowse = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.pnlPwValidation = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.lblPassValidationInfo = new System.Windows.Forms.Label();
+            this.btnBrowse = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBoxProfile = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.panel3.SuspendLayout();
+            this.pnlPwValidation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBrowse)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
-            this.guna2ShadowPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // frmSignUp
@@ -310,7 +310,7 @@ namespace EvolveSettings
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel3.Controls.Add(this.guna2ShadowPanel1);
+            this.panel3.Controls.Add(this.pnlPwValidation);
             this.panel3.Controls.Add(this.btnBrowse);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.pictureBoxProfile);
@@ -319,21 +319,20 @@ namespace EvolveSettings
             this.panel3.Size = new System.Drawing.Size(284, 412);
             this.panel3.TabIndex = 16;
             // 
-            // btnBrowse
+            // pnlPwValidation
             // 
-            this.btnBrowse.BackColor = System.Drawing.Color.Transparent;
-            this.btnBrowse.FillColor = System.Drawing.Color.Transparent;
-            this.btnBrowse.Image = global::EvolveSettings.Properties.Resources.add;
-            this.btnBrowse.ImageRotate = 0F;
-            this.btnBrowse.Location = new System.Drawing.Point(155, 86);
-            this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnBrowse.Size = new System.Drawing.Size(26, 26);
-            this.btnBrowse.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnBrowse.TabIndex = 1025;
-            this.btnBrowse.TabStop = false;
-            this.btnBrowse.UseTransparentBackground = true;
-            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            this.pnlPwValidation.BackColor = System.Drawing.Color.Transparent;
+            this.pnlPwValidation.Controls.Add(this.label2);
+            this.pnlPwValidation.Controls.Add(this.lblPassValidationInfo);
+            this.pnlPwValidation.FillColor = System.Drawing.Color.MidnightBlue;
+            this.pnlPwValidation.Location = new System.Drawing.Point(24, 226);
+            this.pnlPwValidation.Name = "pnlPwValidation";
+            this.pnlPwValidation.Radius = 5;
+            this.pnlPwValidation.ShadowColor = System.Drawing.Color.Black;
+            this.pnlPwValidation.ShadowDepth = 250;
+            this.pnlPwValidation.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
+            this.pnlPwValidation.Size = new System.Drawing.Size(236, 174);
+            this.pnlPwValidation.TabIndex = 1026;
             // 
             // label2
             // 
@@ -356,6 +355,22 @@ namespace EvolveSettings
             this.lblPassValidationInfo.Size = new System.Drawing.Size(189, 113);
             this.lblPassValidationInfo.TabIndex = 1012;
             this.lblPassValidationInfo.Text = "Password not entered";
+            // 
+            // btnBrowse
+            // 
+            this.btnBrowse.BackColor = System.Drawing.Color.Transparent;
+            this.btnBrowse.FillColor = System.Drawing.Color.Transparent;
+            this.btnBrowse.Image = global::EvolveSettings.Properties.Resources.add;
+            this.btnBrowse.ImageRotate = 0F;
+            this.btnBrowse.Location = new System.Drawing.Point(155, 86);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnBrowse.Size = new System.Drawing.Size(26, 26);
+            this.btnBrowse.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnBrowse.TabIndex = 1025;
+            this.btnBrowse.TabStop = false;
+            this.btnBrowse.UseTransparentBackground = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
             // label6
             // 
@@ -393,20 +408,6 @@ namespace EvolveSettings
             this.lblEmail.TabIndex = 18;
             this.lblEmail.Text = "Email Address:";
             // 
-            // guna2ShadowPanel1
-            // 
-            this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel1.Controls.Add(this.label2);
-            this.guna2ShadowPanel1.Controls.Add(this.lblPassValidationInfo);
-            this.guna2ShadowPanel1.FillColor = System.Drawing.Color.MidnightBlue;
-            this.guna2ShadowPanel1.Location = new System.Drawing.Point(24, 226);
-            this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
-            this.guna2ShadowPanel1.Radius = 5;
-            this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
-            this.guna2ShadowPanel1.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(236, 174);
-            this.guna2ShadowPanel1.TabIndex = 1026;
-            // 
             // Signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -435,10 +436,10 @@ namespace EvolveSettings
             this.Text = "Signup";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.pnlPwValidation.ResumeLayout(false);
+            this.pnlPwValidation.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBrowse)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
-            this.guna2ShadowPanel1.ResumeLayout(false);
-            this.guna2ShadowPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -468,6 +469,6 @@ namespace EvolveSettings
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2CirclePictureBox pictureBoxProfile;
         private System.Windows.Forms.Label lblEmail;
-        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
+        private Guna.UI2.WinForms.Guna2ShadowPanel pnlPwValidation;
     }
 }

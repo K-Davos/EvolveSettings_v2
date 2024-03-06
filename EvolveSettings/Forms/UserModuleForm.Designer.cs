@@ -51,20 +51,23 @@
             this.txtRepass = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblPassValidationInfo = new System.Windows.Forms.Label();
             this.btnBrowse = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.pictureBoxProfile = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnViewImage = new Guna.UI2.WinForms.Guna2Button();
             this.lblCurrentUser = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnPassGen = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblPassValidationInfo = new System.Windows.Forms.Label();
+            this.lblAdminUserType = new System.Windows.Forms.Label();
+            this.btnUserTypeAdmin = new Guna.UI2.WinForms.Guna2Button();
+            this.btnUserTypeGuest = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.guna2ShadowPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBrowse)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
-            this.guna2ShadowPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -404,6 +407,42 @@
             this.panel2.Size = new System.Drawing.Size(284, 412);
             this.panel2.TabIndex = 1017;
             // 
+            // guna2ShadowPanel1
+            // 
+            this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel1.Controls.Add(this.label1);
+            this.guna2ShadowPanel1.Controls.Add(this.lblPassValidationInfo);
+            this.guna2ShadowPanel1.FillColor = System.Drawing.Color.MidnightBlue;
+            this.guna2ShadowPanel1.Location = new System.Drawing.Point(24, 226);
+            this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
+            this.guna2ShadowPanel1.Radius = 5;
+            this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
+            this.guna2ShadowPanel1.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(236, 174);
+            this.guna2ShadowPanel1.TabIndex = 1027;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(25, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(137, 17);
+            this.label1.TabIndex = 1013;
+            this.label1.Text = "Password Validation:";
+            // 
+            // lblPassValidationInfo
+            // 
+            this.lblPassValidationInfo.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassValidationInfo.ForeColor = System.Drawing.Color.White;
+            this.lblPassValidationInfo.Location = new System.Drawing.Point(25, 39);
+            this.lblPassValidationInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPassValidationInfo.Name = "lblPassValidationInfo";
+            this.lblPassValidationInfo.Size = new System.Drawing.Size(189, 113);
+            this.lblPassValidationInfo.TabIndex = 1012;
+            this.lblPassValidationInfo.Text = "Password not entered";
+            // 
             // btnBrowse
             // 
             this.btnBrowse.BackColor = System.Drawing.Color.Transparent;
@@ -481,48 +520,59 @@
             this.btnPassGen.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnPassGen.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPassGen.ForeColor = System.Drawing.Color.White;
-            this.btnPassGen.Location = new System.Drawing.Point(308, 404);
+            this.btnPassGen.Location = new System.Drawing.Point(379, 404);
             this.btnPassGen.Name = "btnPassGen";
             this.btnPassGen.Size = new System.Drawing.Size(131, 32);
             this.btnPassGen.TabIndex = 1018;
             this.btnPassGen.Text = "Password Generator";
             this.btnPassGen.Click += new System.EventHandler(this.btnPassGen_Click);
             // 
-            // guna2ShadowPanel1
+            // lblAdminUserType
             // 
-            this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel1.Controls.Add(this.label1);
-            this.guna2ShadowPanel1.Controls.Add(this.lblPassValidationInfo);
-            this.guna2ShadowPanel1.FillColor = System.Drawing.Color.MidnightBlue;
-            this.guna2ShadowPanel1.Location = new System.Drawing.Point(24, 226);
-            this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
-            this.guna2ShadowPanel1.Radius = 5;
-            this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
-            this.guna2ShadowPanel1.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(236, 174);
-            this.guna2ShadowPanel1.TabIndex = 1027;
+            this.lblAdminUserType.AutoSize = true;
+            this.lblAdminUserType.Location = new System.Drawing.Point(394, 383);
+            this.lblAdminUserType.Name = "lblAdminUserType";
+            this.lblAdminUserType.Size = new System.Drawing.Size(35, 13);
+            this.lblAdminUserType.TabIndex = 1020;
+            this.lblAdminUserType.Text = "admin";
             // 
-            // label1
+            // btnUserTypeAdmin
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(25, 11);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(137, 17);
-            this.label1.TabIndex = 1013;
-            this.label1.Text = "Password Validation:";
+            this.btnUserTypeAdmin.Animated = true;
+            this.btnUserTypeAdmin.BackColor = System.Drawing.Color.Transparent;
+            this.btnUserTypeAdmin.BorderRadius = 15;
+            this.btnUserTypeAdmin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUserTypeAdmin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUserTypeAdmin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUserTypeAdmin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUserTypeAdmin.FillColor = System.Drawing.Color.MidnightBlue;
+            this.btnUserTypeAdmin.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnUserTypeAdmin.ForeColor = System.Drawing.Color.White;
+            this.btnUserTypeAdmin.Location = new System.Drawing.Point(286, 370);
+            this.btnUserTypeAdmin.Name = "btnUserTypeAdmin";
+            this.btnUserTypeAdmin.Size = new System.Drawing.Size(96, 32);
+            this.btnUserTypeAdmin.TabIndex = 1021;
+            this.btnUserTypeAdmin.Text = "Admin";
+            this.btnUserTypeAdmin.Click += new System.EventHandler(this.btnUserTypeAdmin_Click);
             // 
-            // lblPassValidationInfo
+            // btnUserTypeGuest
             // 
-            this.lblPassValidationInfo.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassValidationInfo.ForeColor = System.Drawing.Color.White;
-            this.lblPassValidationInfo.Location = new System.Drawing.Point(25, 39);
-            this.lblPassValidationInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPassValidationInfo.Name = "lblPassValidationInfo";
-            this.lblPassValidationInfo.Size = new System.Drawing.Size(189, 113);
-            this.lblPassValidationInfo.TabIndex = 1012;
-            this.lblPassValidationInfo.Text = "Password not entered";
+            this.btnUserTypeGuest.Animated = true;
+            this.btnUserTypeGuest.BackColor = System.Drawing.Color.Transparent;
+            this.btnUserTypeGuest.BorderRadius = 15;
+            this.btnUserTypeGuest.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUserTypeGuest.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUserTypeGuest.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUserTypeGuest.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUserTypeGuest.FillColor = System.Drawing.Color.MidnightBlue;
+            this.btnUserTypeGuest.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnUserTypeGuest.ForeColor = System.Drawing.Color.White;
+            this.btnUserTypeGuest.Location = new System.Drawing.Point(286, 404);
+            this.btnUserTypeGuest.Name = "btnUserTypeGuest";
+            this.btnUserTypeGuest.Size = new System.Drawing.Size(96, 32);
+            this.btnUserTypeGuest.TabIndex = 1022;
+            this.btnUserTypeGuest.Text = "Guest";
+            this.btnUserTypeGuest.Click += new System.EventHandler(this.btnUserTypeGuest_Click);
             // 
             // UserModuleForm
             // 
@@ -530,6 +580,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(636, 454);
+            this.Controls.Add(this.btnUserTypeGuest);
+            this.Controls.Add(this.btnUserTypeAdmin);
+            this.Controls.Add(this.lblAdminUserType);
             this.Controls.Add(this.btnPassGen);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.txtEmail);
@@ -559,10 +612,10 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBrowse)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
             this.guna2ShadowPanel1.ResumeLayout(false);
             this.guna2ShadowPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBrowse)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -601,5 +654,8 @@
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblPassValidationInfo;
+        public System.Windows.Forms.Label lblAdminUserType;
+        public Guna.UI2.WinForms.Guna2Button btnUserTypeGuest;
+        public Guna.UI2.WinForms.Guna2Button btnUserTypeAdmin;
     }
 }

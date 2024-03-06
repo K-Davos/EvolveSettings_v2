@@ -92,6 +92,7 @@ namespace EvolveSettings
                 //dark
                 this.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
                 panel3.BackColor = themeColor;
+                pnlPwValidation.FillColor = themeColor;
                 foreach (Guna2TextBox txtbox in this.Controls.OfType<Guna2TextBox>())
                 {
                     txtbox.BackColor = Color.Transparent;
@@ -177,8 +178,8 @@ namespace EvolveSettings
                             }
                             else
                             {
-                                string insertData = "INSERT INTO admin (email, username, password, date_created, image) " +
-                                    "VALUES(@email, @username, @pass, @date, @image)";
+                                string insertData = "INSERT INTO admin (image, username, password, email, date_created) " +
+                                    "VALUES(@image, @username, @pass, @email, @date)";
 
                                 DateTime date = DateTime.Today;
 
@@ -190,11 +191,11 @@ namespace EvolveSettings
 
                                 using (SqlCommand cmd = new SqlCommand(insertData, connect))
                                 {
-                                    cmd.Parameters.AddWithValue("@email", signup_email.Text.Trim());
+                                    cmd.Parameters.AddWithValue("@image", imageBt);
                                     cmd.Parameters.AddWithValue("@username", signup_username.Text.Trim());
                                     cmd.Parameters.AddWithValue("@pass", signup_password.Text.Trim());
+                                    cmd.Parameters.AddWithValue("@email", signup_email.Text.Trim());
                                     cmd.Parameters.AddWithValue("@date", date);
-                                    cmd.Parameters.AddWithValue("@image", imageBt);
 
                                     cmd.ExecuteNonQuery();
 
