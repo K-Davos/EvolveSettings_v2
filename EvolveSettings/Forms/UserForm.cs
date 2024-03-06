@@ -77,6 +77,7 @@ namespace EvolveSettings.Forms
                     gridview.DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
                     gridview.DefaultCellStyle.SelectionBackColor = themeColor;
                     gridview.GridColor = themeColor;
+                    gridview.AlternatingRowsDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
                 }
             }
             foreach (Guna2Button button in this.Controls.OfType<Guna2Button>())

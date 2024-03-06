@@ -251,7 +251,7 @@ namespace EvolveSettings.Forms
         {
             try
             {
-                string sql = "Select username, image FROM admin WHERE email='" + txtEmail.Text + "'";
+                string sql = "Select email, image FROM admin WHERE username ='" + txtUserName.Text + "'";
                 if (connect.State != ConnectionState.Open)
                 {
                     connect.Open();
