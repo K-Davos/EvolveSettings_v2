@@ -1,10 +1,12 @@
 ﻿using Guna.UI2.WinForms;
 using Microsoft.Win32;
 using System;
+using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
-using System.Web.UI.WebControls;
+//using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace EvolveSettings.Forms
@@ -161,6 +163,48 @@ namespace EvolveSettings.Forms
                 }
             }
             LoadUser();
+        }
+
+        private void dgvUser_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtUserName.Text = dgvUser.Rows[e.RowIndex].Cells[3].Value.ToString();
+            try
+            {
+                string sql = "Select username, image FROM admin WHERE username ='" + txtUserName.Text + "'";
+                if (connect.State != ConnectionState.Open)
+                {
+                    connect.Open();
+                    cmd = new SqlCommand(sql, connect);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    reader.Read();
+
+                    if (reader.HasRows)
+                    {
+                        txtUserName.Text = reader[0].ToString();
+                        byte[] img = (byte[])(reader[1]);
+                        if (img == null)
+                        {
+                            pictureBoxProfile.Image = null;
+                        }
+                        else
+                        {
+                            MemoryStream memstream = new MemoryStream(img);
+                            pictureBoxProfile.Image = Image.FromStream(memstream);
+                            connect.Close();
+                        }
+                    }
+                    else
+                    {
+                        connect.Close();
+                        //MessageBox.Show("No profile picture set. Image does not excist!");
+                    }
+                }
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show(ee.Message);
+            }
         }
     }
 }
