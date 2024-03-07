@@ -1,5 +1,6 @@
 ﻿using EvolveSettings.Helpers;
 using Guna.UI2.WinForms;
+using Microsoft.Win32;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -7,6 +8,8 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
+using System.Linq;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Windows.Forms;
 
@@ -14,6 +17,8 @@ namespace EvolveSettings.Forms
 {
     public partial class UserModuleForm : Form
     {
+        //WinTheme
+        private UserPreferenceChangedEventHandler UserPreferenceChanged;
 
         SqlConnection connect = new SqlConnection(SqlConnectionHelper.connectReturn());
         SqlCommand cmd = new SqlCommand();
@@ -22,22 +27,137 @@ namespace EvolveSettings.Forms
 
         PasswordValidator passwordValidator = new PasswordValidator();
 
+        //Drag Form
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
         public UserModuleForm()
         {
             InitializeComponent();
             txtDateCreated.Text = DateTime.Now.ToString();
 
+            //WinTheme
+            UserPreferenceChanged = new UserPreferenceChangedEventHandler(SystemEvents_UserPreferenceChanged);
+            SystemEvents.UserPreferenceChanged += UserPreferenceChanged;
+            this.Disposed += new EventHandler(Form_Disposed);
+            if (OptionsHelper.CurrentOptions.WinTheme == true)
+            {
+                LoadTheme();
+            }
+
             if (txtPass.Text.Length < 1)
             {
+                txtPass.Enabled = false;
+                txtRepass.Enabled = false;
                 lblPassValidationInfo.Visible = false;
-                timer1.Start();
+                //timer1.Start();
             }
         }
+
+        #region wintheme
+        public bool IsDarkTheme()
+        {
+            bool is_light_mode = true;
+            try
+            {
+                var v = Microsoft.Win32.Registry.GetValue(@"HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Themes\Personalize", "AppsUseLightTheme", "1");
+                if (v != null && v.ToString() == "0")
+                    is_light_mode = false;
+            }
+            catch { }
+            return is_light_mode;
+        }
+        private void LoadTheme()
+        {
+            var themeColor = WinTheme.GetAccentColor();//Windows Accent Color
+            var lightColor = ControlPaint.Light(themeColor);
+            var darkColor = ControlPaint.Dark(themeColor);
+
+            var isDarkorLight = IsDarkTheme();
+            if (isDarkorLight)
+            {
+                //light
+                this.BackColor = SystemColors.Control;
+                pnlHeader.BackColor = SystemColors.Control;
+                panel2.BackColor = themeColor;
+                foreach (Guna2TextBox txtbox in this.Controls.OfType<Guna2TextBox>())
+                {
+                    txtbox.BackColor = Color.Transparent;
+                    txtbox.FillColor = SystemColors.Control;
+                    txtbox.BorderColor = themeColor;
+                    txtbox.ForeColor = Color.Black;
+                }
+                foreach (Label lbl in this.Controls.OfType<Label>())
+                {
+                    lbl.ForeColor = Color.Black;
+                }
+                label1.ForeColor = Color.Black;
+                lblPassValidationInfo.ForeColor = Color.Black;
+                lblCurrentUser.ForeColor = Color.Black;
+                pictureBoxClose.ForeColor = Color.Black;
+                txtDateCreated.BackColor = SystemColors.Control;
+                txtDateCreated.ForeColor = Color.Black;
+            }
+            else
+            {
+                //dark
+                this.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
+                pnlHeader.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
+                panel2.BackColor = themeColor;
+                pnlPwValidation.FillColor = themeColor;
+                foreach (Guna2TextBox txtbox in this.Controls.OfType<Guna2TextBox>())
+                {
+                    txtbox.BackColor = Color.Transparent;
+                    txtbox.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
+                    txtbox.BorderColor = themeColor;
+                    txtbox.ForeColor = Color.White;
+                    txtbox.DisabledState.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
+                }
+                foreach (Label lbl in this.Controls.OfType<Label>())
+                {
+                    lbl.ForeColor = Color.White;
+                }
+                label1.ForeColor = Color.White;
+                lblPassValidationInfo.ForeColor = Color.White;
+                lblCurrentUser.ForeColor = Color.White;
+                pictureBoxClose.ForeColor = Color.White;
+                txtDateCreated.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
+                txtDateCreated.ForeColor = Color.White;
+            }
+            chkShowPass.CheckedState.FillColor = themeColor;
+            foreach (Guna2Button button in this.Controls.OfType<Guna2Button>())
+            {
+                button.FillColor = themeColor;
+                button.ForeColor = Color.White;
+            }
+        }
+
+        private void SystemEvents_UserPreferenceChanged(object sender, UserPreferenceChangedEventArgs e)
+        {
+            if (e.Category == UserPreferenceCategory.General || e.Category == UserPreferenceCategory.VisualStyle)
+            {
+                LoadTheme();
+            }
+        }
+
+        private void Form_Disposed(object sender, EventArgs e)
+        {
+            SystemEvents.UserPreferenceChanged -= UserPreferenceChanged;
+        }
+        #endregion wintheme
 
         private void pictureBoxClose_Click(object sender, EventArgs e)
         {
             this.Dispose();
             timer1.Stop();
+        }
+
+        private void pnlHeader_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -94,6 +214,7 @@ namespace EvolveSettings.Forms
                     connect.Close();
                     EvolveMessageBox.Show("User has been successfully saved.");
                     Clear();
+                    timer1.Stop();
                 }
 
             }
@@ -122,7 +243,7 @@ namespace EvolveSettings.Forms
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            try
+            /*try
             {
                 if (txtPass.Text != txtRepass.Text)
                 {
@@ -181,7 +302,7 @@ namespace EvolveSettings.Forms
             {
 
                 MessageBox.Show(ex.Message);
-            }
+            }*/
         }
         private void chkShowPass_CheckedChanged(object sender, EventArgs e)
         {
@@ -298,6 +419,22 @@ namespace EvolveSettings.Forms
         private void btnUserTypeGuest_Click(object sender, EventArgs e)
         {
             lblAdminUserType.Text = "";
+        }
+
+        private void txtUserName_TextChanged(object sender, EventArgs e)
+        {
+            if (txtUserName.Text.Length > 1)
+            {
+                txtPass.Enabled = true;
+                txtRepass.Enabled = true;
+                timer1.Start();
+            }
+            if (txtUserName.Text.Length < 1)
+            {
+                txtPass.Enabled = false;
+                txtRepass.Enabled = false;
+                timer1.Stop();
+            }
         }
     }
 }
