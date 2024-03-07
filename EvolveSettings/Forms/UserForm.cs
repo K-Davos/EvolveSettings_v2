@@ -34,7 +34,6 @@ namespace EvolveSettings.Forms
             if (txtPass.Text.Length < 1)
             {
                 lblPassValidationInfo.Visible = false;
-                timer1.Start();
             }
 
             //WinTheme
@@ -222,6 +221,7 @@ namespace EvolveSettings.Forms
 
         private void dgvUser_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            timer1.Start();
             //User information
             lblFullName.Text = dgvUser.Rows[e.RowIndex].Cells[6].Value.ToString();
             lblUser.Text = dgvUser.Rows[e.RowIndex].Cells[3].Value.ToString();
@@ -327,6 +327,12 @@ namespace EvolveSettings.Forms
                     cmd.ExecuteNonQuery();
                     connect.Close();
                     EvolveMessageBox.Show("User has been successfully updated!");
+                    foreach (Guna2TextBox txtbox in this.pnlEditUser.Controls.OfType<Guna2TextBox>())
+                    {
+                        txtbox.Clear();
+                    }
+                    lblPassValidationInfo.Visible = false;
+                    timer1.Stop();
                 }
 
             }
