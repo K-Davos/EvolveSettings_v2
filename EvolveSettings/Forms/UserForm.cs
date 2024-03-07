@@ -69,6 +69,26 @@ namespace EvolveSettings.Forms
                 this.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
                 pnlHeader.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
                 pnlGridView.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
+                pnlUserInfo.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
+                pnlUserPerms.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
+                pnlPasswordValidation.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
+                pnlEditUser.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
+                txtDateCreated.BackColor = ColorTranslator.FromHtml("#FF2D2D30");
+                txtDateCreated.ForeColor = Color.White;
+                lblEditFullName.ForeColor = Color.White;
+                lblEditUserName.ForeColor = Color.White;
+                lblEditPassword.ForeColor = Color.White;
+                lblEditRePass.ForeColor = Color.White;
+                lblEditEmail.ForeColor = Color.White;
+                lblUserInfo.ForeColor = Color.White;
+                lblFullName.ForeColor = Color.White;
+                lblUserPerms.ForeColor = Color.White;
+                lblPasswordValidation.ForeColor = Color.White;
+                lblEditUser.ForeColor = Color.White;
+                lblUser.ForeColor = Color.White;
+                lblEmail.ForeColor = Color.White;
+                lblDateCreate.ForeColor = Color.White;
+                lblUserType.ForeColor = Color.Red;
                 lblTitle.ForeColor = Color.White;
                 foreach (Guna2DataGridView gridview in this.pnlGridView.Controls.OfType<Guna2DataGridView>())
                 {
@@ -80,6 +100,13 @@ namespace EvolveSettings.Forms
                     gridview.DefaultCellStyle.SelectionBackColor = themeColor;
                     gridview.GridColor = themeColor;
                     gridview.AlternatingRowsDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
+                }
+                foreach (Guna2TextBox txtbox in this.pnlEditUser.Controls.OfType<Guna2TextBox>())
+                {
+                    txtbox.BackColor = Color.Transparent;
+                    txtbox.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
+                    txtbox.BorderColor = themeColor;
+                    txtbox.ForeColor = Color.White;
                 }
             }
             foreach (Guna2Button button in this.Controls.OfType<Guna2Button>())
@@ -168,7 +195,10 @@ namespace EvolveSettings.Forms
 
         private void dgvUser_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txtUserName.Text = dgvUser.Rows[e.RowIndex].Cells[3].Value.ToString();
+            lblFullName.Text = dgvUser.Rows[e.RowIndex].Cells[6].Value.ToString();
+            lblUser.Text = dgvUser.Rows[e.RowIndex].Cells[3].Value.ToString();
+            lblEmail.Text = dgvUser.Rows[e.RowIndex].Cells[5].Value.ToString();
+            lblUserType.Text = dgvUser.Rows[e.RowIndex].Cells[8].Value.ToString();
             try
             {
                 string sql = "Select username, image FROM admin WHERE username ='" + txtUserName.Text + "'";

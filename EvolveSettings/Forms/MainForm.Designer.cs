@@ -83,7 +83,7 @@ namespace EvolveSettings
             this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMaximize.ForeColor = System.Drawing.Color.White;
             this.btnMaximize.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximize.Image")));
-            this.btnMaximize.Location = new System.Drawing.Point(852, 0);
+            this.btnMaximize.Location = new System.Drawing.Point(1062, 0);
             this.btnMaximize.Name = "btnMaximize";
             this.btnMaximize.Size = new System.Drawing.Size(48, 42);
             this.btnMaximize.TabIndex = 18;
@@ -97,7 +97,7 @@ namespace EvolveSettings
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.ForeColor = System.Drawing.Color.White;
             this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
-            this.btnMinimize.Location = new System.Drawing.Point(801, 0);
+            this.btnMinimize.Location = new System.Drawing.Point(1011, 0);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(48, 42);
             this.btnMinimize.TabIndex = 17;
@@ -112,7 +112,7 @@ namespace EvolveSettings
             this.btnCloseApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCloseApp.ForeColor = System.Drawing.Color.White;
             this.btnCloseApp.Image = ((System.Drawing.Image)(resources.GetObject("btnCloseApp.Image")));
-            this.btnCloseApp.Location = new System.Drawing.Point(903, 0);
+            this.btnCloseApp.Location = new System.Drawing.Point(1113, 0);
             this.btnCloseApp.Name = "btnCloseApp";
             this.btnCloseApp.Size = new System.Drawing.Size(48, 42);
             this.btnCloseApp.TabIndex = 16;
@@ -143,7 +143,7 @@ namespace EvolveSettings
             this.pnlNav.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlNav.Location = new System.Drawing.Point(0, 0);
             this.pnlNav.Name = "pnlNav";
-            this.pnlNav.Size = new System.Drawing.Size(187, 685);
+            this.pnlNav.Size = new System.Drawing.Size(187, 782);
             this.pnlNav.TabIndex = 6;
             // 
             // btnMenu
@@ -175,7 +175,7 @@ namespace EvolveSettings
             this.btnLogout.ForeColor = System.Drawing.Color.White;
             this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
             this.btnLogout.ImageOffset = new System.Drawing.Point(2, 0);
-            this.btnLogout.Location = new System.Drawing.Point(144, 646);
+            this.btnLogout.Location = new System.Drawing.Point(144, 743);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnLogout.Size = new System.Drawing.Size(40, 40);
@@ -200,7 +200,7 @@ namespace EvolveSettings
             this.btnUserManagement.ForeColor = System.Drawing.Color.White;
             this.btnUserManagement.Image = ((System.Drawing.Image)(resources.GetObject("btnUserManagement.Image")));
             this.btnUserManagement.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnUserManagement.Location = new System.Drawing.Point(0, 472);
+            this.btnUserManagement.Location = new System.Drawing.Point(0, 521);
             this.btnUserManagement.Name = "btnUserManagement";
             this.btnUserManagement.Size = new System.Drawing.Size(186, 42);
             this.btnUserManagement.TabIndex = 1;
@@ -226,7 +226,7 @@ namespace EvolveSettings
             this.btnPassManager.ForeColor = System.Drawing.Color.White;
             this.btnPassManager.Image = ((System.Drawing.Image)(resources.GetObject("btnPassManager.Image")));
             this.btnPassManager.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnPassManager.Location = new System.Drawing.Point(0, 430);
+            this.btnPassManager.Location = new System.Drawing.Point(0, 479);
             this.btnPassManager.Name = "btnPassManager";
             this.btnPassManager.Size = new System.Drawing.Size(186, 42);
             this.btnPassManager.TabIndex = 87;
@@ -241,7 +241,7 @@ namespace EvolveSettings
             this.txtNetFw.AutoSize = true;
             this.txtNetFw.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNetFw.ForeColor = System.Drawing.Color.Gray;
-            this.txtNetFw.Location = new System.Drawing.Point(12, 625);
+            this.txtNetFw.Location = new System.Drawing.Point(12, 722);
             this.txtNetFw.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtNetFw.Name = "txtNetFw";
             this.txtNetFw.Size = new System.Drawing.Size(37, 13);
@@ -254,7 +254,7 @@ namespace EvolveSettings
             this.txtBitness.AutoSize = true;
             this.txtBitness.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBitness.ForeColor = System.Drawing.Color.Gray;
-            this.txtBitness.Location = new System.Drawing.Point(12, 608);
+            this.txtBitness.Location = new System.Drawing.Point(12, 705);
             this.txtBitness.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtBitness.Name = "txtBitness";
             this.txtBitness.Size = new System.Drawing.Size(44, 13);
@@ -267,7 +267,7 @@ namespace EvolveSettings
             this.txtOS.AutoSize = true;
             this.txtOS.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOS.ForeColor = System.Drawing.Color.Gray;
-            this.txtOS.Location = new System.Drawing.Point(12, 591);
+            this.txtOS.Location = new System.Drawing.Point(12, 688);
             this.txtOS.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtOS.Name = "txtOS";
             this.txtOS.Size = new System.Drawing.Size(19, 13);
@@ -280,7 +280,7 @@ namespace EvolveSettings
             this.lblversion.AutoSize = true;
             this.lblversion.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblversion.ForeColor = System.Drawing.Color.Gray;
-            this.lblversion.Location = new System.Drawing.Point(12, 642);
+            this.lblversion.Location = new System.Drawing.Point(12, 739);
             this.lblversion.Name = "lblversion";
             this.lblversion.Size = new System.Drawing.Size(45, 13);
             this.lblversion.TabIndex = 83;
@@ -292,7 +292,7 @@ namespace EvolveSettings
             this.txtAppVersion.AutoSize = true;
             this.txtAppVersion.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAppVersion.ForeColor = System.Drawing.Color.Gray;
-            this.txtAppVersion.Location = new System.Drawing.Point(55, 642);
+            this.txtAppVersion.Location = new System.Drawing.Point(55, 739);
             this.txtAppVersion.Name = "txtAppVersion";
             this.txtAppVersion.Size = new System.Drawing.Size(21, 13);
             this.txtAppVersion.TabIndex = 82;
@@ -304,7 +304,7 @@ namespace EvolveSettings
             this.lblUserMode.AutoSize = true;
             this.lblUserMode.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserMode.ForeColor = System.Drawing.Color.Tomato;
-            this.lblUserMode.Location = new System.Drawing.Point(12, 664);
+            this.lblUserMode.Location = new System.Drawing.Point(12, 761);
             this.lblUserMode.Name = "lblUserMode";
             this.lblUserMode.Size = new System.Drawing.Size(60, 13);
             this.lblUserMode.TabIndex = 81;
@@ -327,7 +327,7 @@ namespace EvolveSettings
             this.btnSettings.ForeColor = System.Drawing.Color.White;
             this.btnSettings.Image = ((System.Drawing.Image)(resources.GetObject("btnSettings.Image")));
             this.btnSettings.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSettings.Location = new System.Drawing.Point(0, 388);
+            this.btnSettings.Location = new System.Drawing.Point(0, 437);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(186, 42);
             this.btnSettings.TabIndex = 80;
@@ -353,7 +353,7 @@ namespace EvolveSettings
             this.btnMaintenance.ForeColor = System.Drawing.Color.White;
             this.btnMaintenance.Image = ((System.Drawing.Image)(resources.GetObject("btnMaintenance.Image")));
             this.btnMaintenance.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnMaintenance.Location = new System.Drawing.Point(0, 346);
+            this.btnMaintenance.Location = new System.Drawing.Point(0, 395);
             this.btnMaintenance.Name = "btnMaintenance";
             this.btnMaintenance.Size = new System.Drawing.Size(186, 42);
             this.btnMaintenance.TabIndex = 79;
@@ -379,7 +379,7 @@ namespace EvolveSettings
             this.btnNetwork.ForeColor = System.Drawing.Color.White;
             this.btnNetwork.Image = ((System.Drawing.Image)(resources.GetObject("btnNetwork.Image")));
             this.btnNetwork.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnNetwork.Location = new System.Drawing.Point(0, 304);
+            this.btnNetwork.Location = new System.Drawing.Point(0, 353);
             this.btnNetwork.Name = "btnNetwork";
             this.btnNetwork.Size = new System.Drawing.Size(186, 42);
             this.btnNetwork.TabIndex = 78;
@@ -405,7 +405,7 @@ namespace EvolveSettings
             this.btnWin11Tweaks.ForeColor = System.Drawing.Color.White;
             this.btnWin11Tweaks.Image = ((System.Drawing.Image)(resources.GetObject("btnWin11Tweaks.Image")));
             this.btnWin11Tweaks.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnWin11Tweaks.Location = new System.Drawing.Point(0, 262);
+            this.btnWin11Tweaks.Location = new System.Drawing.Point(0, 311);
             this.btnWin11Tweaks.Name = "btnWin11Tweaks";
             this.btnWin11Tweaks.Size = new System.Drawing.Size(186, 42);
             this.btnWin11Tweaks.TabIndex = 77;
@@ -431,7 +431,7 @@ namespace EvolveSettings
             this.btnHome.ForeColor = System.Drawing.Color.White;
             this.btnHome.Image = ((System.Drawing.Image)(resources.GetObject("btnHome.Image")));
             this.btnHome.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnHome.Location = new System.Drawing.Point(0, 220);
+            this.btnHome.Location = new System.Drawing.Point(0, 269);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(186, 42);
             this.btnHome.TabIndex = 0;
@@ -504,7 +504,7 @@ namespace EvolveSettings
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(187, 0);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(952, 685);
+            this.panelMain.Size = new System.Drawing.Size(1162, 782);
             this.panelMain.TabIndex = 8;
             // 
             // pnlHeader
@@ -515,7 +515,7 @@ namespace EvolveSettings
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(952, 42);
+            this.pnlHeader.Size = new System.Drawing.Size(1162, 42);
             this.pnlHeader.TabIndex = 20;
             this.pnlHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_header_MouseDown);
             // 
@@ -529,7 +529,7 @@ namespace EvolveSettings
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.ClientSize = new System.Drawing.Size(1139, 685);
+            this.ClientSize = new System.Drawing.Size(1349, 782);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.pnlNav);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
