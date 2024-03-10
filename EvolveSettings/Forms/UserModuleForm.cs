@@ -178,6 +178,8 @@ namespace EvolveSettings.Forms
                 {
                     DateTime date = DateTime.Today;
 
+                    cmd = new SqlCommand("INSERT INTO admin (image, username, password, email, fullname, date_created) " + "VALUES(@image, @username, @pass, @email, @fullname, @date)", connect);
+
                     if (!String.IsNullOrEmpty(imgLocation) && System.IO.File.Exists(imgLocation))
                     {
                         byte[] images = null;
@@ -185,30 +187,23 @@ namespace EvolveSettings.Forms
                         BinaryReader reader = new BinaryReader(stream);
                         images = reader.ReadBytes((int)stream.Length);
 
-                        cmd = new SqlCommand("INSERT INTO admin (image, username, password, email, fullname, date_created) " + "VALUES(@image, @username, @pass, @email, @fullname, @date)", connect);
                         cmd.Parameters.AddWithValue("@image", images);
-                        cmd.Parameters.AddWithValue("@username", txtUserName.Text.Trim());
-                        cmd.Parameters.AddWithValue("@pass", txtPass.Text.Trim());
-                        cmd.Parameters.AddWithValue("@email", txtEmail.Text.Trim());
-                        cmd.Parameters.AddWithValue("@fullname", txtFullName.Text.Trim());
-                        cmd.Parameters.AddWithValue("@date", date);
                     }
                     else
                     {
                         Image image = pictureBoxProfile.Image;
                         MemoryStream memoryStream = new MemoryStream();
                         image.Save(memoryStream, ImageFormat.Png);
-
                         byte[] imageBt = memoryStream.ToArray();
 
-                        cmd = new SqlCommand("INSERT INTO admin (image, username, password, email, fullname, date_created) " + "VALUES(@image, @username, @pass, @email, @fullname, @date)", connect);
                         cmd.Parameters.AddWithValue("@image", imageBt);
-                        cmd.Parameters.AddWithValue("@username", txtUserName.Text.Trim());
-                        cmd.Parameters.AddWithValue("@pass", txtPass.Text.Trim());
-                        cmd.Parameters.AddWithValue("@email", txtEmail.Text.Trim());
-                        cmd.Parameters.AddWithValue("@fullname", txtFullName.Text.Trim());
-                        cmd.Parameters.AddWithValue("@date", date);
-                   }
+                    }
+                    cmd.Parameters.AddWithValue("@username", txtUserName.Text.Trim());
+                    cmd.Parameters.AddWithValue("@pass", txtPass.Text.Trim());
+                    cmd.Parameters.AddWithValue("@email", txtEmail.Text.Trim());
+                    cmd.Parameters.AddWithValue("@fullname", txtFullName.Text.Trim());
+                    cmd.Parameters.AddWithValue("@date", date);
+
                     connect.Open();
                     cmd.ExecuteNonQuery();
                     connect.Close();
