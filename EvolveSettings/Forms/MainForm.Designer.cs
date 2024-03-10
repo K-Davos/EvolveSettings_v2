@@ -57,6 +57,7 @@ namespace EvolveSettings
             this.panelMain = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.ShadowForm = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.lblUserType = new System.Windows.Forms.Label();
             this.pnlNav.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
             this.circleProgressBar2.SuspendLayout();
@@ -67,13 +68,15 @@ namespace EvolveSettings
             // 
             // lblCurrentUser
             // 
+            this.lblCurrentUser.AutoSize = true;
             this.lblCurrentUser.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCurrentUser.ForeColor = System.Drawing.Color.White;
-            this.lblCurrentUser.Location = new System.Drawing.Point(40, 137);
+            this.lblCurrentUser.Location = new System.Drawing.Point(70, 139);
             this.lblCurrentUser.Name = "lblCurrentUser";
-            this.lblCurrentUser.Size = new System.Drawing.Size(133, 43);
+            this.lblCurrentUser.Size = new System.Drawing.Size(45, 17);
             this.lblCurrentUser.TabIndex = 0;
-            this.lblCurrentUser.Text = "Welcome, Admin!";
+            this.lblCurrentUser.Text = "Admin";
+            this.lblCurrentUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnMaximize
             // 
@@ -121,6 +124,7 @@ namespace EvolveSettings
             // pnlNav
             // 
             this.pnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
+            this.pnlNav.Controls.Add(this.lblUserType);
             this.pnlNav.Controls.Add(this.btnMenu);
             this.pnlNav.Controls.Add(this.btnLogout);
             this.pnlNav.Controls.Add(this.btnUserManagement);
@@ -523,6 +527,19 @@ namespace EvolveSettings
             this.ShadowForm.BorderRadius = 0;
             this.ShadowForm.TargetForm = this;
             // 
+            // lblUserType
+            // 
+            this.lblUserType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblUserType.AutoSize = true;
+            this.lblUserType.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserType.ForeColor = System.Drawing.Color.Tomato;
+            this.lblUserType.Location = new System.Drawing.Point(66, 160);
+            this.lblUserType.Name = "lblUserType";
+            this.lblUserType.Size = new System.Drawing.Size(52, 13);
+            this.lblUserType.TabIndex = 93;
+            this.lblUserType.Text = "UserType";
+            this.lblUserType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -576,5 +593,6 @@ namespace EvolveSettings
         private System.Windows.Forms.Panel pnlHeader;
         private Guna.UI2.WinForms.Guna2CircleProgressBar circleProgressBar1;
         private Guna.UI2.WinForms.Guna2CircleProgressBar circleProgressBar2;
+        private System.Windows.Forms.Label lblUserType;
     }
 }

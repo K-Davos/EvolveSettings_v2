@@ -192,7 +192,7 @@ namespace EvolveSettings
                             {
                                 EvolveMessageBox.Show("Logged In successfully", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                                usrname = "Welcome: " + login_username.Text;
+                                usrname = login_username.Text;
                                 MainForm mForm = new MainForm(usrname);
                                 string sql = "Select username, image FROM admin WHERE username='" + login_username.Text + "'";
                                 cmdR = new SqlCommand(sql, connect);

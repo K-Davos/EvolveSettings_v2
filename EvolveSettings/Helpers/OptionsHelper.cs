@@ -39,6 +39,7 @@ namespace EvolveSettings
             {
                 // DEFAULT OPTIONS
                 CurrentOptions.CurrentUser = string.Empty;
+                CurrentOptions.UserName = string.Empty;
                 CurrentOptions.AutoStart = false;
                 CurrentOptions.WinTheme = true;
                 CurrentOptions.SignUp = false;

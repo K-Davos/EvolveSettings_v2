@@ -2,9 +2,13 @@
 using Guna.UI2.WinForms;
 using Microsoft.Win32;
 using System;
+using System.Data;
+using System.Data.SqlClient;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Web.UI;
 using System.Windows.Forms;
 
 namespace EvolveSettings
@@ -17,6 +21,8 @@ namespace EvolveSettings
 
         //WinTheme
         private UserPreferenceChangedEventHandler UserPreferenceChanged;
+
+        SqlConnection connect = new SqlConnection(SqlConnectionHelper.connectReturn());
 
         public static bool adminkey { get; set; }
 
@@ -34,6 +40,48 @@ namespace EvolveSettings
         public MainForm(String usrname)
         {
             InitializeComponent();
+            lblCurrentUser.Text = usrname;
+
+            string sql = "select * from admin where username='" + lblCurrentUser.Text + "'";
+
+            SqlCommand cmd = new SqlCommand(sql, connect);
+            connect.Open();
+            using (SqlDataReader dr = cmd.ExecuteReader())
+            {
+                if (dr.Read())
+                {
+                    lblUserType.Text = dr["usertype"].ToString();
+                }
+            }
+
+            if (lblCurrentUser.Text == "admin")
+            {
+                btnUserManagement.Visible = true;
+                btnPassManager.Visible = true;
+                AdminKeyEnabled();
+                lblUserMode.Text = "UserMode: Admin";
+                OptionsHelper.CurrentOptions.CurrentUser = "Admin";
+                OptionsHelper.CurrentOptions.UserName = string.Empty;
+            }
+            else if (lblUserType.Text == "admin")
+            {
+                btnUserManagement.Visible = true;
+                btnPassManager.Visible = true;
+                AdminKeyDisabled();
+                lblUserMode.Text = "UserMode: Admin";
+                OptionsHelper.CurrentOptions.CurrentUser = "Admin";
+                OptionsHelper.CurrentOptions.UserName = lblCurrentUser.Text;
+            }
+            else
+            {
+                btnUserManagement.Visible = false;
+                btnPassManager.Visible = false;
+                AdminKeyDisabled();
+                lblUserMode.Text = "UserMode: Guest";
+                OptionsHelper.CurrentOptions.CurrentUser = "Guest";
+                OptionsHelper.CurrentOptions.UserName = lblCurrentUser.Text;
+            }
+            lblUserType.Visible = false;
 
             CollapseMenu();
             this.Padding = new Padding(borderSize);//Border size
@@ -44,23 +92,6 @@ namespace EvolveSettings
             txtNetFw.Text = ".NET Framework " + EvolveUtilities.GetNETFramework();
             txtAppVersion.Text = Program.GetCurrentVersionTostring();
             //btnLogout.Location = new Point(15, 641);
-            lblCurrentUser.Text = usrname;
-            if (lblCurrentUser.Text == "Welcome: admin" )
-            {
-                btnUserManagement.Visible = true;
-                btnPassManager.Visible = true;
-                AdminKeyEnabled();
-                lblUserMode.Text = "UserMode: Admin";
-                OptionsHelper.CurrentOptions.CurrentUser = "Admin";
-            }
-            else
-            {
-                btnUserManagement.Visible = false;
-                btnPassManager.Visible = false;
-                AdminKeyDisabled();
-                lblUserMode.Text = "UserMode: Guest";
-                OptionsHelper.CurrentOptions.CurrentUser = "Guest";
-            }
             UserPreferenceChanged = new UserPreferenceChangedEventHandler(SystemEvents_UserPreferenceChanged);
             SystemEvents.UserPreferenceChanged += UserPreferenceChanged;
             this.Disposed += new EventHandler(Form_Disposed);
@@ -74,6 +105,7 @@ namespace EvolveSettings
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            //resize form
             formSize = this.ClientSize;
         }
 
