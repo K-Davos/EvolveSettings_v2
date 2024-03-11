@@ -34,10 +34,10 @@ namespace EvolveSettings
             this.frmSignUp = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnSignupPassGen = new Guna.UI2.WinForms.Guna2Button();
-            this.signup_repassword = new Guna.UI2.WinForms.Guna2TextBox();
-            this.signup_password = new Guna.UI2.WinForms.Guna2TextBox();
-            this.signup_username = new Guna.UI2.WinForms.Guna2TextBox();
-            this.signup_email = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtRepass = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtPass = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtUserName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.chkSignupShowPass = new Guna.UI2.WinForms.Guna2CheckBox();
             this.btnSignup = new Guna.UI2.WinForms.Guna2Button();
             this.lblConfirmPassword = new System.Windows.Forms.Label();
@@ -95,101 +95,102 @@ namespace EvolveSettings
             this.btnSignupPassGen.Text = "Password Generator";
             this.btnSignupPassGen.Click += new System.EventHandler(this.btnSignupPassGen_Click);
             // 
-            // signup_repassword
+            // txtRepass
             // 
-            this.signup_repassword.Animated = true;
-            this.signup_repassword.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.signup_repassword.BorderRadius = 15;
-            this.signup_repassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.signup_repassword.DefaultText = "";
-            this.signup_repassword.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.signup_repassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.signup_repassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.signup_repassword.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.signup_repassword.FocusedState.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.signup_repassword.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signup_repassword.ForeColor = System.Drawing.Color.Black;
-            this.signup_repassword.HoverState.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.signup_repassword.Location = new System.Drawing.Point(306, 274);
-            this.signup_repassword.Name = "signup_repassword";
-            this.signup_repassword.PasswordChar = '*';
-            this.signup_repassword.PlaceholderText = "";
-            this.signup_repassword.SelectedText = "";
-            this.signup_repassword.Size = new System.Drawing.Size(304, 34);
-            this.signup_repassword.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.signup_repassword.TabIndex = 23;
+            this.txtRepass.Animated = true;
+            this.txtRepass.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.txtRepass.BorderRadius = 15;
+            this.txtRepass.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtRepass.DefaultText = "";
+            this.txtRepass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtRepass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtRepass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRepass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtRepass.FocusedState.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.txtRepass.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRepass.ForeColor = System.Drawing.Color.Black;
+            this.txtRepass.HoverState.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.txtRepass.Location = new System.Drawing.Point(306, 274);
+            this.txtRepass.Name = "txtRepass";
+            this.txtRepass.PasswordChar = '*';
+            this.txtRepass.PlaceholderText = "";
+            this.txtRepass.SelectedText = "";
+            this.txtRepass.Size = new System.Drawing.Size(304, 34);
+            this.txtRepass.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.txtRepass.TabIndex = 23;
             // 
-            // signup_password
+            // txtPass
             // 
-            this.signup_password.Animated = true;
-            this.signup_password.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.signup_password.BorderRadius = 15;
-            this.signup_password.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.signup_password.DefaultText = "";
-            this.signup_password.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.signup_password.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.signup_password.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.signup_password.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.signup_password.FocusedState.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.signup_password.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signup_password.ForeColor = System.Drawing.Color.Black;
-            this.signup_password.HoverState.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.signup_password.Location = new System.Drawing.Point(306, 209);
-            this.signup_password.Name = "signup_password";
-            this.signup_password.PasswordChar = '*';
-            this.signup_password.PlaceholderText = "";
-            this.signup_password.SelectedText = "";
-            this.signup_password.Size = new System.Drawing.Size(304, 34);
-            this.signup_password.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.signup_password.TabIndex = 22;
+            this.txtPass.Animated = true;
+            this.txtPass.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.txtPass.BorderRadius = 15;
+            this.txtPass.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPass.DefaultText = "";
+            this.txtPass.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPass.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPass.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPass.FocusedState.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.txtPass.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass.ForeColor = System.Drawing.Color.Black;
+            this.txtPass.HoverState.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.txtPass.Location = new System.Drawing.Point(306, 209);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
+            this.txtPass.PlaceholderText = "";
+            this.txtPass.SelectedText = "";
+            this.txtPass.Size = new System.Drawing.Size(304, 34);
+            this.txtPass.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.txtPass.TabIndex = 22;
             // 
-            // signup_username
+            // txtUserName
             // 
-            this.signup_username.Animated = true;
-            this.signup_username.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.signup_username.BorderRadius = 15;
-            this.signup_username.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.signup_username.DefaultText = "";
-            this.signup_username.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.signup_username.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.signup_username.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.signup_username.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.signup_username.FocusedState.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.signup_username.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signup_username.ForeColor = System.Drawing.Color.Black;
-            this.signup_username.HoverState.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.signup_username.Location = new System.Drawing.Point(306, 143);
-            this.signup_username.Name = "signup_username";
-            this.signup_username.PasswordChar = '\0';
-            this.signup_username.PlaceholderText = "";
-            this.signup_username.SelectedText = "";
-            this.signup_username.Size = new System.Drawing.Size(304, 34);
-            this.signup_username.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.signup_username.TabIndex = 21;
+            this.txtUserName.Animated = true;
+            this.txtUserName.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.txtUserName.BorderRadius = 15;
+            this.txtUserName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtUserName.DefaultText = "";
+            this.txtUserName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtUserName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtUserName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUserName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtUserName.FocusedState.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.txtUserName.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserName.ForeColor = System.Drawing.Color.Black;
+            this.txtUserName.HoverState.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.txtUserName.Location = new System.Drawing.Point(306, 143);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.PasswordChar = '\0';
+            this.txtUserName.PlaceholderText = "";
+            this.txtUserName.SelectedText = "";
+            this.txtUserName.Size = new System.Drawing.Size(304, 34);
+            this.txtUserName.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.txtUserName.TabIndex = 21;
+            this.txtUserName.TextChanged += new System.EventHandler(this.txtUserName_TextChanged);
             // 
-            // signup_email
+            // txtEmail
             // 
-            this.signup_email.Animated = true;
-            this.signup_email.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.signup_email.BorderRadius = 15;
-            this.signup_email.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.signup_email.DefaultText = "";
-            this.signup_email.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.signup_email.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.signup_email.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.signup_email.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.signup_email.FocusedState.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.signup_email.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signup_email.ForeColor = System.Drawing.Color.Black;
-            this.signup_email.HoverState.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.signup_email.Location = new System.Drawing.Point(306, 81);
-            this.signup_email.Name = "signup_email";
-            this.signup_email.PasswordChar = '\0';
-            this.signup_email.PlaceholderText = "";
-            this.signup_email.SelectedText = "";
-            this.signup_email.Size = new System.Drawing.Size(304, 34);
-            this.signup_email.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.signup_email.TabIndex = 20;
+            this.txtEmail.Animated = true;
+            this.txtEmail.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.txtEmail.BorderRadius = 15;
+            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmail.DefaultText = "";
+            this.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.txtEmail.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.ForeColor = System.Drawing.Color.Black;
+            this.txtEmail.HoverState.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.txtEmail.Location = new System.Drawing.Point(306, 81);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.PasswordChar = '\0';
+            this.txtEmail.PlaceholderText = "";
+            this.txtEmail.SelectedText = "";
+            this.txtEmail.Size = new System.Drawing.Size(304, 34);
+            this.txtEmail.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.txtEmail.TabIndex = 20;
             // 
             // chkSignupShowPass
             // 
@@ -414,10 +415,10 @@ namespace EvolveSettings
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 411);
             this.Controls.Add(this.btnSignupPassGen);
-            this.Controls.Add(this.signup_repassword);
-            this.Controls.Add(this.signup_password);
-            this.Controls.Add(this.signup_username);
-            this.Controls.Add(this.signup_email);
+            this.Controls.Add(this.txtRepass);
+            this.Controls.Add(this.txtPass);
+            this.Controls.Add(this.txtUserName);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.chkSignupShowPass);
             this.Controls.Add(this.btnSignup);
             this.Controls.Add(this.lblConfirmPassword);
@@ -449,10 +450,10 @@ namespace EvolveSettings
         private Guna.UI2.WinForms.Guna2BorderlessForm frmSignUp;
         private System.Windows.Forms.Timer timer1;
         public Guna.UI2.WinForms.Guna2Button btnSignupPassGen;
-        private Guna.UI2.WinForms.Guna2TextBox signup_repassword;
-        private Guna.UI2.WinForms.Guna2TextBox signup_password;
-        private Guna.UI2.WinForms.Guna2TextBox signup_username;
-        private Guna.UI2.WinForms.Guna2TextBox signup_email;
+        private Guna.UI2.WinForms.Guna2TextBox txtRepass;
+        private Guna.UI2.WinForms.Guna2TextBox txtPass;
+        private Guna.UI2.WinForms.Guna2TextBox txtUserName;
+        private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private Guna.UI2.WinForms.Guna2CheckBox chkSignupShowPass;
         public Guna.UI2.WinForms.Guna2Button btnSignup;
         private System.Windows.Forms.Label lblConfirmPassword;

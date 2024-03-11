@@ -47,12 +47,12 @@ namespace EvolveSettings.Forms
                 LoadTheme();
             }
 
+            btnSave.Enabled = false;
+            txtPass.Enabled = false;
+            txtRepass.Enabled = false;
             if (txtPass.Text.Length < 1)
             {
-                txtPass.Enabled = false;
-                txtRepass.Enabled = false;
                 lblPassValidationInfo.Visible = false;
-                //timer1.Start();
             }
         }
 
@@ -174,11 +174,16 @@ namespace EvolveSettings.Forms
                     EvolveMessageBox.Show("Password must be at least 8 characters!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
+                if (txtEmail.Text == "" || txtUserName.Text == "" || txtPass.Text == "")
+                {
+                    EvolveMessageBox.Show("Please fill all the blank fields", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 if (EvolveMessageBox.Show("Are you sure you want to save this user?", "Saving Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     DateTime date = DateTime.Today;
 
-                    cmd = new SqlCommand("INSERT INTO admin (image, username, password, email, fullname, date_created) " + "VALUES(@image, @username, @pass, @email, @fullname, @date)", connect);
+                    cmd = new SqlCommand("INSERT INTO admin (image, username, password, email, fullname, date_created, usertype) " + "VALUES(@image, @username, @pass, @email, @fullname, @date, @usertype)", connect);
 
                     if (!String.IsNullOrEmpty(imgLocation) && System.IO.File.Exists(imgLocation))
                     {
@@ -203,6 +208,7 @@ namespace EvolveSettings.Forms
                     cmd.Parameters.AddWithValue("@email", txtEmail.Text.Trim());
                     cmd.Parameters.AddWithValue("@fullname", txtFullName.Text.Trim());
                     cmd.Parameters.AddWithValue("@date", date);
+                    cmd.Parameters.AddWithValue("@usertype", lblAdminUserType.Text.Trim());
 
                     connect.Open();
                     cmd.ExecuteNonQuery();
@@ -223,8 +229,6 @@ namespace EvolveSettings.Forms
         private void btnClear_Click(object sender, EventArgs e)
         {
             Clear();
-            btnSave.Enabled = true;
-            btnUpdate.Enabled = false;
         }
 
         public void Clear()
@@ -234,71 +238,13 @@ namespace EvolveSettings.Forms
             txtRepass.Clear();
             txtPass.Clear();
             txtFullName.Clear();
+            lblAdminUserType.Text = "";
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            /*try
-            {
-                if (txtPass.Text != txtRepass.Text)
-                {
-                    EvolveMessageBox.Show("Passwords do not Match!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-                if (txtPass.Text.Length < 7)
-                {
-                    EvolveMessageBox.Show("Password must be at least 8 characters!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-                if (EvolveMessageBox.Show("Are you sure you want to update this user?", "Update Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-
-                    DateTime date = DateTime.Today;
-                    if (!String.IsNullOrEmpty(imgLocation) && System.IO.File.Exists(imgLocation))
-                    {
-                        byte[] images = null;
-                        FileStream stream = new FileStream(imgLocation, FileMode.Open, FileAccess.Read);
-                        BinaryReader reader = new BinaryReader(stream);
-                        images = reader.ReadBytes((int)stream.Length);
-
-                        cmd = new SqlCommand("UPDATE admin SET image = @image, password=@password, email=@email, fullname=@fullname, date_created=@date, usertype=@usertype WHERE username LIKE '" + txtUserName.Text + "' ", connect);
-                        cmd.Parameters.AddWithValue("@image", images);
-                        cmd.Parameters.AddWithValue("@password", txtPass.Text.Trim());
-                        cmd.Parameters.AddWithValue("@email", txtEmail.Text.Trim());
-                        cmd.Parameters.AddWithValue("@fullname", txtFullName.Text.Trim());
-                        cmd.Parameters.AddWithValue("@date", date);
-                        cmd.Parameters.AddWithValue("@usertype", lblAdminUserType.Text.Trim());
-                    }
-                    else
-                    {
-                        Image image = pictureBoxProfile.Image;
-                        MemoryStream memoryStream = new MemoryStream();
-                        image.Save(memoryStream, ImageFormat.Png);
-
-                        byte[] imageBt = memoryStream.ToArray();
-
-                        cmd = new SqlCommand("UPDATE admin SET image = @image, password=@password, email=@email, fullname=@fullname, date_created=@date, usertype=@usertype WHERE username LIKE '" + txtUserName.Text + "' ", connect);
-                        cmd.Parameters.AddWithValue("@image", imageBt);
-                        cmd.Parameters.AddWithValue("@password", txtPass.Text.Trim());
-                        cmd.Parameters.AddWithValue("@email", txtEmail.Text.Trim());
-                        cmd.Parameters.AddWithValue("@fullname", txtFullName.Text.Trim());
-                        cmd.Parameters.AddWithValue("@date", date);
-                        cmd.Parameters.AddWithValue("@usertype", lblAdminUserType.Text.Trim());
-                    }
-                    connect.Open();
-                    cmd.ExecuteNonQuery();
-                    connect.Close();
-                    EvolveMessageBox.Show("User has been successfully updated!");
-                    this.Dispose();
-                }
-
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-            }*/
         }
+
         private void chkShowPass_CheckedChanged(object sender, EventArgs e)
         {
             if (chkShowPass.Checked)
@@ -337,8 +283,16 @@ namespace EvolveSettings.Forms
             }
             if (string.IsNullOrEmpty(message))
             {
-                btnSave.Enabled = true;
-                btnUpdate.Enabled = true;
+                if (txtPass.Text != txtRepass.Text)
+                {
+                    btnSave.Enabled = false;
+                    btnUpdate.Enabled = false;
+                }
+                else
+                {
+                    btnSave.Enabled = true;
+                    btnUpdate.Enabled = true;
+                }
             }
             else
             {
@@ -356,7 +310,7 @@ namespace EvolveSettings.Forms
         private void btnBrowse_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter = " png files (*.png)|*.png|jpg files (*.jpg)|*.jpg|All files (*.*)|*.*";
+            dialog.Filter = " png files (*.png)|*.png| jpg files (*.jpg)|*.jpg| bmp files (*.bmp)|*.bmp";
 
             if (dialog.ShowDialog() == DialogResult.OK)
             {
@@ -396,7 +350,7 @@ namespace EvolveSettings.Forms
                     else
                     {
                         connect.Close();
-                        //MessageBox.Show("No profile picture set. Image does not excist!");
+                        //EvolveMessageBox.Show("No profile picture set. Image does not excist!");
                     }
                 }
             }

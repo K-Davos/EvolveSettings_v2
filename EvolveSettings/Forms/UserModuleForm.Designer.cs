@@ -52,17 +52,17 @@
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblAdminUserType = new System.Windows.Forms.Label();
-            this.btnUserTypeGuest = new Guna.UI2.WinForms.Guna2Button();
             this.pnlPwValidation = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.lblPassValidationInfo = new System.Windows.Forms.Label();
-            this.btnUserTypeAdmin = new Guna.UI2.WinForms.Guna2Button();
             this.btnBrowse = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.pictureBoxProfile = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.btnViewImage = new Guna.UI2.WinForms.Guna2Button();
             this.lblCurrentUser = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnPassGen = new Guna.UI2.WinForms.Guna2Button();
+            this.btnUserTypeGuest = new Guna.UI2.WinForms.Guna2Button();
+            this.btnUserTypeAdmin = new Guna.UI2.WinForms.Guna2Button();
             this.pnlHeader.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlPwValidation.SuspendLayout();
@@ -111,7 +111,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(304, 255);
+            this.label6.Location = new System.Drawing.Point(304, 250);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(125, 17);
             this.label6.TabIndex = 26;
@@ -121,7 +121,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(304, 318);
+            this.label5.Location = new System.Drawing.Point(304, 308);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(46, 17);
             this.label5.TabIndex = 21;
@@ -141,7 +141,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(304, 128);
+            this.label3.Location = new System.Drawing.Point(304, 133);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 17);
             this.label3.TabIndex = 17;
@@ -149,7 +149,7 @@
             // 
             // txtID
             // 
-            this.txtID.Location = new System.Drawing.Point(585, 51);
+            this.txtID.Location = new System.Drawing.Point(624, 49);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(16, 20);
             this.txtID.TabIndex = 1000;
@@ -159,7 +159,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 3.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(534, 60);
+            this.label2.Location = new System.Drawing.Point(573, 58);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 6);
             this.label2.TabIndex = 1001;
@@ -171,7 +171,7 @@
             this.txtDateCreated.BackColor = System.Drawing.SystemColors.Control;
             this.txtDateCreated.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDateCreated.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDateCreated.Location = new System.Drawing.Point(308, 379);
+            this.txtDateCreated.Location = new System.Drawing.Point(308, 375);
             this.txtDateCreated.Name = "txtDateCreated";
             this.txtDateCreated.ReadOnly = true;
             this.txtDateCreated.Size = new System.Drawing.Size(108, 15);
@@ -181,7 +181,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(304, 64);
+            this.label7.Location = new System.Drawing.Point(304, 74);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(73, 17);
             this.label7.TabIndex = 30;
@@ -194,6 +194,7 @@
             this.UserModule.BorderRadius = 5;
             this.UserModule.ContainerControl = this;
             this.UserModule.DockIndicatorTransparencyValue = 0.6D;
+            this.UserModule.DragForm = false;
             this.UserModule.TransparentWhileDrag = true;
             // 
             // btnClear
@@ -208,7 +209,7 @@
             this.btnClear.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnClear.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnClear.ForeColor = System.Drawing.Color.White;
-            this.btnClear.Location = new System.Drawing.Point(443, 417);
+            this.btnClear.Location = new System.Drawing.Point(444, 416);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(96, 32);
             this.btnClear.TabIndex = 1019;
@@ -226,7 +227,7 @@
             this.btnUpdate.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(545, 417);
+            this.btnUpdate.Location = new System.Drawing.Point(545, 416);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(96, 32);
             this.btnUpdate.TabIndex = 1003;
@@ -245,7 +246,7 @@
             this.btnSave.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(544, 417);
+            this.btnSave.Location = new System.Drawing.Point(544, 416);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(96, 32);
             this.btnSave.TabIndex = 1017;
@@ -262,7 +263,7 @@
             this.chkShowPass.CheckedState.FillColor = System.Drawing.Color.MidnightBlue;
             this.chkShowPass.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkShowPass.ForeColor = System.Drawing.Color.Gray;
-            this.chkShowPass.Location = new System.Drawing.Point(540, 314);
+            this.chkShowPass.Location = new System.Drawing.Point(540, 308);
             this.chkShowPass.Name = "chkShowPass";
             this.chkShowPass.Size = new System.Drawing.Size(107, 17);
             this.chkShowPass.TabIndex = 1018;
@@ -288,7 +289,7 @@
             this.txtFullName.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFullName.ForeColor = System.Drawing.Color.Black;
             this.txtFullName.HoverState.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.txtFullName.Location = new System.Drawing.Point(307, 84);
+            this.txtFullName.Location = new System.Drawing.Point(307, 94);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.PasswordChar = '\0';
             this.txtFullName.PlaceholderText = "";
@@ -312,7 +313,7 @@
             this.txtUserName.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserName.ForeColor = System.Drawing.Color.Black;
             this.txtUserName.HoverState.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.txtUserName.Location = new System.Drawing.Point(308, 148);
+            this.txtUserName.Location = new System.Drawing.Point(308, 153);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.PasswordChar = '\0';
             this.txtUserName.PlaceholderText = "";
@@ -361,7 +362,7 @@
             this.txtRepass.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRepass.ForeColor = System.Drawing.Color.Black;
             this.txtRepass.HoverState.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.txtRepass.Location = new System.Drawing.Point(308, 275);
+            this.txtRepass.Location = new System.Drawing.Point(308, 270);
             this.txtRepass.Name = "txtRepass";
             this.txtRepass.PasswordChar = '*';
             this.txtRepass.PlaceholderText = "";
@@ -385,7 +386,7 @@
             this.txtEmail.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.Color.Black;
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.txtEmail.Location = new System.Drawing.Point(307, 338);
+            this.txtEmail.Location = new System.Drawing.Point(307, 328);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.PlaceholderText = "";
@@ -397,10 +398,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel2.Controls.Add(this.lblAdminUserType);
-            this.panel2.Controls.Add(this.btnUserTypeGuest);
             this.panel2.Controls.Add(this.pnlPwValidation);
-            this.panel2.Controls.Add(this.btnUserTypeAdmin);
             this.panel2.Controls.Add(this.btnBrowse);
             this.panel2.Controls.Add(this.pictureBoxProfile);
             this.panel2.Controls.Add(this.btnViewImage);
@@ -414,32 +412,11 @@
             // lblAdminUserType
             // 
             this.lblAdminUserType.AutoSize = true;
-            this.lblAdminUserType.Location = new System.Drawing.Point(237, 81);
+            this.lblAdminUserType.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdminUserType.Location = new System.Drawing.Point(305, 395);
             this.lblAdminUserType.Name = "lblAdminUserType";
-            this.lblAdminUserType.Size = new System.Drawing.Size(35, 13);
+            this.lblAdminUserType.Size = new System.Drawing.Size(0, 13);
             this.lblAdminUserType.TabIndex = 1020;
-            this.lblAdminUserType.Text = "admin";
-            this.lblAdminUserType.Visible = false;
-            // 
-            // btnUserTypeGuest
-            // 
-            this.btnUserTypeGuest.Animated = true;
-            this.btnUserTypeGuest.BackColor = System.Drawing.Color.Transparent;
-            this.btnUserTypeGuest.BorderRadius = 15;
-            this.btnUserTypeGuest.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnUserTypeGuest.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnUserTypeGuest.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnUserTypeGuest.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnUserTypeGuest.FillColor = System.Drawing.Color.MidnightBlue;
-            this.btnUserTypeGuest.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnUserTypeGuest.ForeColor = System.Drawing.Color.White;
-            this.btnUserTypeGuest.Location = new System.Drawing.Point(176, 41);
-            this.btnUserTypeGuest.Name = "btnUserTypeGuest";
-            this.btnUserTypeGuest.Size = new System.Drawing.Size(96, 32);
-            this.btnUserTypeGuest.TabIndex = 1022;
-            this.btnUserTypeGuest.Text = "Guest";
-            this.btnUserTypeGuest.Visible = false;
-            this.btnUserTypeGuest.Click += new System.EventHandler(this.btnUserTypeGuest_Click);
             // 
             // pnlPwValidation
             // 
@@ -477,26 +454,6 @@
             this.lblPassValidationInfo.Size = new System.Drawing.Size(189, 113);
             this.lblPassValidationInfo.TabIndex = 1012;
             this.lblPassValidationInfo.Text = "Password not entered";
-            // 
-            // btnUserTypeAdmin
-            // 
-            this.btnUserTypeAdmin.Animated = true;
-            this.btnUserTypeAdmin.BackColor = System.Drawing.Color.Transparent;
-            this.btnUserTypeAdmin.BorderRadius = 15;
-            this.btnUserTypeAdmin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnUserTypeAdmin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnUserTypeAdmin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnUserTypeAdmin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnUserTypeAdmin.FillColor = System.Drawing.Color.MidnightBlue;
-            this.btnUserTypeAdmin.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnUserTypeAdmin.ForeColor = System.Drawing.Color.White;
-            this.btnUserTypeAdmin.Location = new System.Drawing.Point(176, 7);
-            this.btnUserTypeAdmin.Name = "btnUserTypeAdmin";
-            this.btnUserTypeAdmin.Size = new System.Drawing.Size(96, 32);
-            this.btnUserTypeAdmin.TabIndex = 1021;
-            this.btnUserTypeAdmin.Text = "Admin";
-            this.btnUserTypeAdmin.Visible = false;
-            this.btnUserTypeAdmin.Click += new System.EventHandler(this.btnUserTypeAdmin_Click);
             // 
             // btnBrowse
             // 
@@ -575,12 +532,50 @@
             this.btnPassGen.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnPassGen.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPassGen.ForeColor = System.Drawing.Color.White;
-            this.btnPassGen.Location = new System.Drawing.Point(307, 417);
+            this.btnPassGen.Location = new System.Drawing.Point(307, 416);
             this.btnPassGen.Name = "btnPassGen";
             this.btnPassGen.Size = new System.Drawing.Size(133, 32);
             this.btnPassGen.TabIndex = 1020;
             this.btnPassGen.Text = "Password Generator";
             this.btnPassGen.Click += new System.EventHandler(this.btnPassGen_Click);
+            // 
+            // btnUserTypeGuest
+            // 
+            this.btnUserTypeGuest.Animated = true;
+            this.btnUserTypeGuest.BackColor = System.Drawing.Color.Transparent;
+            this.btnUserTypeGuest.BorderRadius = 15;
+            this.btnUserTypeGuest.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUserTypeGuest.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUserTypeGuest.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUserTypeGuest.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUserTypeGuest.FillColor = System.Drawing.Color.MidnightBlue;
+            this.btnUserTypeGuest.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnUserTypeGuest.ForeColor = System.Drawing.Color.White;
+            this.btnUserTypeGuest.Location = new System.Drawing.Point(443, 376);
+            this.btnUserTypeGuest.Name = "btnUserTypeGuest";
+            this.btnUserTypeGuest.Size = new System.Drawing.Size(96, 32);
+            this.btnUserTypeGuest.TabIndex = 1022;
+            this.btnUserTypeGuest.Text = "Guest";
+            this.btnUserTypeGuest.Click += new System.EventHandler(this.btnUserTypeGuest_Click);
+            // 
+            // btnUserTypeAdmin
+            // 
+            this.btnUserTypeAdmin.Animated = true;
+            this.btnUserTypeAdmin.BackColor = System.Drawing.Color.Transparent;
+            this.btnUserTypeAdmin.BorderRadius = 15;
+            this.btnUserTypeAdmin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUserTypeAdmin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUserTypeAdmin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUserTypeAdmin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUserTypeAdmin.FillColor = System.Drawing.Color.MidnightBlue;
+            this.btnUserTypeAdmin.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnUserTypeAdmin.ForeColor = System.Drawing.Color.White;
+            this.btnUserTypeAdmin.Location = new System.Drawing.Point(545, 376);
+            this.btnUserTypeAdmin.Name = "btnUserTypeAdmin";
+            this.btnUserTypeAdmin.Size = new System.Drawing.Size(96, 32);
+            this.btnUserTypeAdmin.TabIndex = 1021;
+            this.btnUserTypeAdmin.Text = "Admin";
+            this.btnUserTypeAdmin.Click += new System.EventHandler(this.btnUserTypeAdmin_Click);
             // 
             // UserModuleForm
             // 
@@ -588,9 +583,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(662, 461);
+            this.Controls.Add(this.lblAdminUserType);
             this.Controls.Add(this.pnlHeader);
+            this.Controls.Add(this.btnUserTypeGuest);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.btnPassGen);
+            this.Controls.Add(this.btnUserTypeAdmin);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtRepass);
             this.Controls.Add(this.txtPass);
@@ -659,8 +657,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblPassValidationInfo;
         public System.Windows.Forms.Label lblAdminUserType;
+        private System.Windows.Forms.Label pictureBoxClose;
         public Guna.UI2.WinForms.Guna2Button btnUserTypeGuest;
         public Guna.UI2.WinForms.Guna2Button btnUserTypeAdmin;
-        private System.Windows.Forms.Label pictureBoxClose;
     }
 }

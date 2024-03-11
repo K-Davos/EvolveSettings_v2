@@ -41,13 +41,13 @@
             this.label14 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pnlDisableAccSignup = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.toggleUserAccounts = new EvolveSettings.Controls.EvolveToggleButton();
             this.pnlResetConfig = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.pnlAutoStart = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.btnAutoStart = new EvolveSettings.Controls.EvolveToggleButton();
             this.pnlTheme = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.toggleWinTheme = new EvolveSettings.Controls.EvolveToggleButton();
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.toggleUserAccounts = new EvolveSettings.Controls.EvolveToggleButton();
+            this.btnAutoStart = new EvolveSettings.Controls.EvolveToggleButton();
+            this.toggleWinTheme = new EvolveSettings.Controls.EvolveToggleButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.pnlDisableAccSignup.SuspendLayout();
             this.pnlResetConfig.SuspendLayout();
@@ -151,7 +151,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(210, 42);
             this.label2.TabIndex = 13;
-            this.label2.Text = "Enable to use windows selected light/dark mode and accent colors";
+            this.label2.Text = "Use windows system light/dark mode and accent colors";
             // 
             // lblAutoStart
             // 
@@ -212,22 +212,6 @@
             this.pnlDisableAccSignup.Size = new System.Drawing.Size(266, 124);
             this.pnlDisableAccSignup.TabIndex = 1;
             // 
-            // toggleUserAccounts
-            // 
-            this.toggleUserAccounts.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.toggleUserAccounts.AutoSize = true;
-            this.toggleUserAccounts.Location = new System.Drawing.Point(204, 81);
-            this.toggleUserAccounts.MinimumSize = new System.Drawing.Size(45, 22);
-            this.toggleUserAccounts.Name = "toggleUserAccounts";
-            this.toggleUserAccounts.OffBackColor = System.Drawing.Color.Gray;
-            this.toggleUserAccounts.OffToggleColor = System.Drawing.Color.Gainsboro;
-            this.toggleUserAccounts.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.toggleUserAccounts.OnToggleColor = System.Drawing.Color.WhiteSmoke;
-            this.toggleUserAccounts.Size = new System.Drawing.Size(45, 22);
-            this.toggleUserAccounts.TabIndex = 17;
-            this.toggleUserAccounts.UseVisualStyleBackColor = true;
-            this.toggleUserAccounts.CheckedChanged += new System.EventHandler(this.toggleUserAccounts_CheckedChanged);
-            // 
             // pnlResetConfig
             // 
             this.pnlResetConfig.BackColor = System.Drawing.Color.Transparent;
@@ -262,22 +246,6 @@
             this.pnlAutoStart.Size = new System.Drawing.Size(283, 124);
             this.pnlAutoStart.TabIndex = 1;
             // 
-            // btnAutoStart
-            // 
-            this.btnAutoStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAutoStart.AutoSize = true;
-            this.btnAutoStart.Location = new System.Drawing.Point(221, 81);
-            this.btnAutoStart.MinimumSize = new System.Drawing.Size(45, 22);
-            this.btnAutoStart.Name = "btnAutoStart";
-            this.btnAutoStart.OffBackColor = System.Drawing.Color.Gray;
-            this.btnAutoStart.OffToggleColor = System.Drawing.Color.Gainsboro;
-            this.btnAutoStart.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btnAutoStart.OnToggleColor = System.Drawing.Color.WhiteSmoke;
-            this.btnAutoStart.Size = new System.Drawing.Size(45, 22);
-            this.btnAutoStart.TabIndex = 14;
-            this.btnAutoStart.UseVisualStyleBackColor = true;
-            this.btnAutoStart.CheckedChanged += new System.EventHandler(this.BtnAutoStart_CheckedChanged);
-            // 
             // pnlTheme
             // 
             this.pnlTheme.BackColor = System.Drawing.Color.Transparent;
@@ -295,6 +263,48 @@
             this.pnlTheme.Size = new System.Drawing.Size(258, 124);
             this.pnlTheme.TabIndex = 0;
             // 
+            // pnlHeader
+            // 
+            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.pnlHeader.Controls.Add(this.lblTitle);
+            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Size = new System.Drawing.Size(1185, 49);
+            this.pnlHeader.TabIndex = 16;
+            // 
+            // toggleUserAccounts
+            // 
+            this.toggleUserAccounts.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.toggleUserAccounts.AutoSize = true;
+            this.toggleUserAccounts.Location = new System.Drawing.Point(204, 81);
+            this.toggleUserAccounts.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleUserAccounts.Name = "toggleUserAccounts";
+            this.toggleUserAccounts.OffBackColor = System.Drawing.Color.Gray;
+            this.toggleUserAccounts.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.toggleUserAccounts.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.toggleUserAccounts.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.toggleUserAccounts.Size = new System.Drawing.Size(45, 22);
+            this.toggleUserAccounts.TabIndex = 17;
+            this.toggleUserAccounts.UseVisualStyleBackColor = true;
+            this.toggleUserAccounts.CheckedChanged += new System.EventHandler(this.toggleUserAccounts_CheckedChanged);
+            // 
+            // btnAutoStart
+            // 
+            this.btnAutoStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAutoStart.AutoSize = true;
+            this.btnAutoStart.Location = new System.Drawing.Point(221, 81);
+            this.btnAutoStart.MinimumSize = new System.Drawing.Size(45, 22);
+            this.btnAutoStart.Name = "btnAutoStart";
+            this.btnAutoStart.OffBackColor = System.Drawing.Color.Gray;
+            this.btnAutoStart.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.btnAutoStart.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btnAutoStart.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.btnAutoStart.Size = new System.Drawing.Size(45, 22);
+            this.btnAutoStart.TabIndex = 14;
+            this.btnAutoStart.UseVisualStyleBackColor = true;
+            this.btnAutoStart.CheckedChanged += new System.EventHandler(this.BtnAutoStart_CheckedChanged);
+            // 
             // toggleWinTheme
             // 
             this.toggleWinTheme.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -310,16 +320,6 @@
             this.toggleWinTheme.TabIndex = 14;
             this.toggleWinTheme.UseVisualStyleBackColor = true;
             this.toggleWinTheme.CheckedChanged += new System.EventHandler(this.ToggleWinTheme_CheckedChanged);
-            // 
-            // pnlHeader
-            // 
-            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
-            this.pnlHeader.Controls.Add(this.lblTitle);
-            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1185, 49);
-            this.pnlHeader.TabIndex = 16;
             // 
             // SettingsForm
             // 

@@ -38,10 +38,11 @@ namespace EvolveSettings
             }
 
             btnSignup.Enabled = false;
-            if (signup_password.Text.Length < 1)
+            txtPass.Enabled = false;
+            txtRepass.Enabled = false;
+            if (txtPass.Text.Length < 1)
             {
                 lblPassValidationInfo.Visible = false;
-                timer1.Start();
             }
         }
 
@@ -99,6 +100,7 @@ namespace EvolveSettings
                     txtbox.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
                     txtbox.BorderColor = themeColor;
                     txtbox.ForeColor = Color.White;
+                    txtbox.DisabledState.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
                 }
                 lblGetStarted.ForeColor = Color.White;
                 lblAlreadyAccount.ForeColor = ColorTranslator.FromHtml("#A2A4A5");
@@ -146,13 +148,13 @@ namespace EvolveSettings
 
         private void btnSignup_Click(object sender, EventArgs e)
         {
-            if (signup_password.Text != signup_repassword.Text)
+            if (txtPass.Text != txtRepass.Text)
             {
                 EvolveMessageBox.Show("Passwords do not match!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            if (signup_email.Text == "" || signup_username.Text == ""
-                || signup_password.Text == "")
+            if (txtEmail.Text == "" || txtUserName.Text == ""
+                || txtPass.Text == "")
             {
                 EvolveMessageBox.Show("Please fill all the blank fields", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -164,7 +166,7 @@ namespace EvolveSettings
                     {
                         connect.Open();
                         String checkUsername = "SELECT * FROM admin WHERE username = '"
-                            + signup_username.Text.Trim() + "'"; // admin is the database table name
+                            + txtUserName.Text.Trim() + "'"; // admin is the database table name
 
                         using (SqlCommand checkUser = new SqlCommand(checkUsername, connect))
                         {
@@ -174,7 +176,7 @@ namespace EvolveSettings
 
                             if (table.Rows.Count >= 1)
                             {
-                                EvolveMessageBox.Show(signup_username.Text + " is already exist", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                EvolveMessageBox.Show(txtUserName.Text + " is already exist", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                             else
                             {
@@ -192,9 +194,9 @@ namespace EvolveSettings
                                 using (SqlCommand cmd = new SqlCommand(insertData, connect))
                                 {
                                     cmd.Parameters.AddWithValue("@image", imageBt);
-                                    cmd.Parameters.AddWithValue("@username", signup_username.Text.Trim());
-                                    cmd.Parameters.AddWithValue("@pass", signup_password.Text.Trim());
-                                    cmd.Parameters.AddWithValue("@email", signup_email.Text.Trim());
+                                    cmd.Parameters.AddWithValue("@username", txtUserName.Text.Trim());
+                                    cmd.Parameters.AddWithValue("@pass", txtPass.Text.Trim());
+                                    cmd.Parameters.AddWithValue("@email", txtEmail.Text.Trim());
                                     cmd.Parameters.AddWithValue("@date", date);
 
                                     cmd.ExecuteNonQuery();
@@ -227,28 +229,28 @@ namespace EvolveSettings
         {
             if (chkSignupShowPass.Checked)
             {
-                signup_password.PasswordChar = '\0';
-                signup_repassword.PasswordChar = '\0';
+                txtPass.PasswordChar = '\0';
+                txtRepass.PasswordChar = '\0';
             }
             else
             {
-                signup_password.PasswordChar = '*';
-                signup_repassword.PasswordChar = '*';
+                txtPass.PasswordChar = '*';
+                txtRepass.PasswordChar = '*';
             }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (signup_password.Text.Length > 0)
+            if (txtPass.Text.Length > 0)
             {
                 lblPassValidationInfo.Visible = true;
             }
-            else if (signup_password.Text.Length < 1)
+            else if (txtPass.Text.Length < 1)
             {
                 lblPassValidationInfo.Visible = false;
             }
             string message = string.Empty;
-            if (passwordValidator.IsStrong(signup_password.Text, out message))
+            if (passwordValidator.IsStrong(txtPass.Text, out message))
             {
                 if (string.IsNullOrEmpty(message))
                     lblPassValidationInfo.Text = "Password validation accepted.";
@@ -261,7 +263,14 @@ namespace EvolveSettings
             }
             if (string.IsNullOrEmpty(message))
             {
-                btnSignup.Enabled = true;
+                if (txtPass.Text != txtRepass.Text)
+                {
+                    btnSignup.Enabled = false;
+                }
+                else
+                {
+                    btnSignup.Enabled = true;
+                }
             }
             else
             {
@@ -278,12 +287,28 @@ namespace EvolveSettings
         private void btnBrowse_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter = " png files (*.png)|*.png|jpg files (*.jpg)|*.jpg|All files (*.*)|*.*";
+            dialog.Filter = " png files (*.png)|*.png| jpg files (*.jpg)|*.jpg| bmp files (*.bmp)|*.bmp";
 
             if (dialog.ShowDialog() == DialogResult.OK)
             {
                 imgLocation = dialog.FileName.ToString();
                 pictureBoxProfile.ImageLocation = imgLocation;
+            }
+        }
+
+        private void txtUserName_TextChanged(object sender, EventArgs e)
+        {
+            if (txtUserName.Text.Length > 1)
+            {
+                txtPass.Enabled = true;
+                txtRepass.Enabled = true;
+                timer1.Start();
+            }
+            if (txtUserName.Text.Length < 1)
+            {
+                txtPass.Enabled = false;
+                txtRepass.Enabled = false;
+                timer1.Stop();
             }
         }
     }

@@ -549,7 +549,7 @@ namespace EvolveSettings
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.pnlNav);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(857, 565);
+            this.MinimumSize = new System.Drawing.Size(1222, 821);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";

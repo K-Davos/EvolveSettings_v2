@@ -8,7 +8,6 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
-//using System.Web.UI.WebControls;
 using System.Windows.Forms;
 
 namespace EvolveSettings.Forms
@@ -29,8 +28,11 @@ namespace EvolveSettings.Forms
         {
             InitializeComponent();
 
+            btnUpdate.Enabled = false;
             lblUserMode.Visible = false;
             lblAdminUserType.Visible = false;
+            txtPass.Enabled = false;
+            txtRepass.Enabled = false;
             if (txtPass.Text.Length < 1)
             {
                 lblPassValidationInfo.Visible = false;
@@ -123,6 +125,7 @@ namespace EvolveSettings.Forms
                     txtbox.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
                     txtbox.BorderColor = themeColor;
                     txtbox.ForeColor = Color.White;
+                    txtbox.DisabledState.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
                 }
             }
             foreach (Guna2Button button in this.pnlUserInfo.Controls.OfType<Guna2Button>())
@@ -177,7 +180,6 @@ namespace EvolveSettings.Forms
         {
             UserModuleForm userModule = new UserModuleForm();
             userModule.lblAddUpdateUser.Text = "Add User";
-            userModule.btnSave.Enabled = true;
             userModule.txtID.Enabled = false;
             userModule.btnUpdate.Visible = false;
             userModule.ShowDialog();
@@ -329,7 +331,9 @@ namespace EvolveSettings.Forms
                         txtbox.Clear();
                     }
                     lblPassValidationInfo.Visible = false;
+                    btnUpdate.Enabled = false;
                     timer1.Stop();
+                    LoadUser();
                 }
 
             }
@@ -369,7 +373,7 @@ namespace EvolveSettings.Forms
         private void btnBrowse_Click(object sender, EventArgs e)
         {
             OpenFileDialog dialog = new OpenFileDialog();
-            dialog.Filter = " png files (*.png)|*.png|jpg files (*.jpg)|*.jpg|All files (*.*)|*.*";
+            dialog.Filter = " png files (*.png)|*.png| jpg files (*.jpg)|*.jpg| bmp files (*.bmp)|*.bmp";
 
             if (dialog.ShowDialog() == DialogResult.OK)
             {
@@ -408,11 +412,34 @@ namespace EvolveSettings.Forms
             }
             if (string.IsNullOrEmpty(message))
             {
-                btnUpdate.Enabled = true;
+                if (txtPass.Text != txtRepass.Text)
+                {
+                    btnUpdate.Enabled = false;
+                }
+                else
+                {
+                    btnUpdate.Enabled = true;
+                }
             }
             else
             {
                 btnUpdate.Enabled = false;
+            }
+        }
+
+        private void txtUserName_TextChanged(object sender, EventArgs e)
+        {
+            if (txtUserName.Text.Length > 1)
+            {
+                txtPass.Enabled = true;
+                txtRepass.Enabled = true;
+                timer1.Start();
+            }
+            if (txtUserName.Text.Length < 1)
+            {
+                txtPass.Enabled = false;
+                txtRepass.Enabled = false;
+                timer1.Stop();
             }
         }
     }

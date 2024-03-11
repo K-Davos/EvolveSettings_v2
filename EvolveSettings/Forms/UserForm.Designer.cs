@@ -29,12 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserForm));
             this.btnAddUser = new Guna.UI2.WinForms.Guna2Button();
             this.dgvUser = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pic = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.pnlGridView = new Guna.UI2.WinForms.Guna2ShadowPanel();
@@ -81,25 +92,14 @@
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblPasswordValidation = new System.Windows.Forms.Label();
             this.pnlUserPerms = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.lblHeaderSelectUserType = new System.Windows.Forms.Label();
+            this.lblUserMode = new System.Windows.Forms.Label();
             this.lblAdminUserType = new System.Windows.Forms.Label();
             this.btnUserTypeGuest = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnUserTypeAdmin = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblUserPerms = new System.Windows.Forms.Label();
-            this.lblUserMode = new System.Windows.Forms.Label();
-            this.lblHeaderSelectUserType = new System.Windows.Forms.Label();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pic = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             this.pnlGridView.SuspendLayout();
@@ -146,21 +146,21 @@
             // dgvUser
             // 
             this.dgvUser.AllowUserToAddRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            this.dgvUser.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvUser.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvUser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.None;
             this.dgvUser.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(246)))));
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(246)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(246)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvUser.ColumnHeadersHeight = 50;
             this.dgvUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column7,
@@ -174,14 +174,14 @@
             this.Column6,
             this.Edit,
             this.Delete});
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvUser.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvUser.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvUser.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(246)))));
             this.dgvUser.Location = new System.Drawing.Point(3, 15);
             this.dgvUser.Name = "dgvUser";
@@ -216,6 +216,96 @@
             this.dgvUser.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUser_CellClick);
             this.dgvUser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUser_CellContentClick);
             // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "NO";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Visible = false;
+            // 
+            // Column0
+            // 
+            this.Column0.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column0.HeaderText = "ID";
+            this.Column0.Name = "Column0";
+            this.Column0.ReadOnly = true;
+            this.Column0.Width = 41;
+            // 
+            // Pic
+            // 
+            this.Pic.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Pic.HeaderText = "Picture";
+            this.Pic.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Pic.Name = "Pic";
+            this.Pic.ReadOnly = true;
+            this.Pic.Width = 47;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column1.HeaderText = "User";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 53;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column2.HeaderText = "Password";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 80;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.HeaderText = "Email";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column4.HeaderText = "Full Name";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 77;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column5.HeaderText = "Date Created";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 89;
+            // 
+            // Column6
+            // 
+            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Column6.HeaderText = "UserType";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 77;
+            // 
+            // Edit
+            // 
+            this.Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Edit.HeaderText = "";
+            this.Edit.Image = global::EvolveSettings.Properties.Resources.edit;
+            this.Edit.Name = "Edit";
+            this.Edit.ReadOnly = true;
+            this.Edit.Visible = false;
+            this.Edit.Width = 5;
+            // 
+            // Delete
+            // 
+            this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Delete.HeaderText = "";
+            this.Delete.Image = global::EvolveSettings.Properties.Resources.delete;
+            this.Delete.Name = "Delete";
+            this.Delete.ReadOnly = true;
+            this.Delete.Width = 5;
+            // 
             // dataGridViewImageColumn1
             // 
             this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -249,7 +339,7 @@
             // 
             // pnlHeader
             // 
-            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(42)))), ((int)(((byte)(64)))));
+            this.pnlHeader.BackColor = System.Drawing.Color.MidnightBlue;
             this.pnlHeader.Controls.Add(this.lblTitle);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
@@ -493,7 +583,7 @@
             this.guna2Panel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel10.Controls.Add(this.lblEditEmail);
-            this.guna2Panel10.Location = new System.Drawing.Point(9, 291);
+            this.guna2Panel10.Location = new System.Drawing.Point(9, 296);
             this.guna2Panel10.Name = "guna2Panel10";
             this.guna2Panel10.Size = new System.Drawing.Size(231, 25);
             this.guna2Panel10.TabIndex = 1050;
@@ -516,7 +606,7 @@
             this.guna2Panel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel9.Controls.Add(this.lblEditRePass);
-            this.guna2Panel9.Location = new System.Drawing.Point(9, 233);
+            this.guna2Panel9.Location = new System.Drawing.Point(9, 235);
             this.guna2Panel9.Name = "guna2Panel9";
             this.guna2Panel9.Size = new System.Drawing.Size(268, 25);
             this.guna2Panel9.TabIndex = 1050;
@@ -539,7 +629,7 @@
             this.guna2Panel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel8.Controls.Add(this.lblEditPassword);
-            this.guna2Panel8.Location = new System.Drawing.Point(9, 175);
+            this.guna2Panel8.Location = new System.Drawing.Point(9, 171);
             this.guna2Panel8.Name = "guna2Panel8";
             this.guna2Panel8.Size = new System.Drawing.Size(231, 25);
             this.guna2Panel8.TabIndex = 1049;
@@ -562,7 +652,7 @@
             this.guna2Panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel7.Controls.Add(this.lblEditUserName);
-            this.guna2Panel7.Location = new System.Drawing.Point(6, 116);
+            this.guna2Panel7.Location = new System.Drawing.Point(6, 108);
             this.guna2Panel7.Name = "guna2Panel7";
             this.guna2Panel7.Size = new System.Drawing.Size(231, 25);
             this.guna2Panel7.TabIndex = 1048;
@@ -585,7 +675,7 @@
             this.guna2Panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel6.Controls.Add(this.lblEditFullName);
-            this.guna2Panel6.Location = new System.Drawing.Point(9, 58);
+            this.guna2Panel6.Location = new System.Drawing.Point(9, 50);
             this.guna2Panel6.Name = "guna2Panel6";
             this.guna2Panel6.Size = new System.Drawing.Size(231, 25);
             this.guna2Panel6.TabIndex = 1047;
@@ -620,7 +710,7 @@
             this.txtEmail.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.Color.Black;
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.txtEmail.Location = new System.Drawing.Point(17, 315);
+            this.txtEmail.Location = new System.Drawing.Point(17, 323);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.PlaceholderText = "";
@@ -646,7 +736,7 @@
             this.txtRepass.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRepass.ForeColor = System.Drawing.Color.Black;
             this.txtRepass.HoverState.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.txtRepass.Location = new System.Drawing.Point(17, 256);
+            this.txtRepass.Location = new System.Drawing.Point(17, 262);
             this.txtRepass.Name = "txtRepass";
             this.txtRepass.PasswordChar = '*';
             this.txtRepass.PlaceholderText = "";
@@ -698,14 +788,16 @@
             this.txtUserName.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserName.ForeColor = System.Drawing.Color.Black;
             this.txtUserName.HoverState.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.txtUserName.Location = new System.Drawing.Point(17, 139);
+            this.txtUserName.Location = new System.Drawing.Point(17, 135);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.PasswordChar = '\0';
             this.txtUserName.PlaceholderText = "";
+            this.txtUserName.ReadOnly = true;
             this.txtUserName.SelectedText = "";
             this.txtUserName.Size = new System.Drawing.Size(348, 34);
             this.txtUserName.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtUserName.TabIndex = 1043;
+            this.txtUserName.TextChanged += new System.EventHandler(this.txtUserName_TextChanged);
             // 
             // txtFullName
             // 
@@ -724,7 +816,7 @@
             this.txtFullName.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFullName.ForeColor = System.Drawing.Color.Black;
             this.txtFullName.HoverState.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.txtFullName.Location = new System.Drawing.Point(17, 81);
+            this.txtFullName.Location = new System.Drawing.Point(17, 73);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.PasswordChar = '\0';
             this.txtFullName.PlaceholderText = "";
@@ -744,7 +836,7 @@
             this.chkEditShowPass.CheckedState.FillColor = System.Drawing.Color.MidnightBlue;
             this.chkEditShowPass.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkEditShowPass.ForeColor = System.Drawing.Color.Gray;
-            this.chkEditShowPass.Location = new System.Drawing.Point(266, 294);
+            this.chkEditShowPass.Location = new System.Drawing.Point(265, 300);
             this.chkEditShowPass.Name = "chkEditShowPass";
             this.chkEditShowPass.Size = new System.Drawing.Size(107, 17);
             this.chkEditShowPass.TabIndex = 1041;
@@ -762,12 +854,12 @@
             this.txtDateCreated.BackColor = System.Drawing.SystemColors.Control;
             this.txtDateCreated.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDateCreated.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDateCreated.Location = new System.Drawing.Point(16, 360);
+            this.txtDateCreated.Location = new System.Drawing.Point(16, 364);
             this.txtDateCreated.Name = "txtDateCreated";
             this.txtDateCreated.ReadOnly = true;
             this.txtDateCreated.Size = new System.Drawing.Size(219, 15);
             this.txtDateCreated.TabIndex = 1039;
-            this.txtDateCreated.Text = "asdasd";
+            this.txtDateCreated.Text = "Date";
             // 
             // guna2Panel5
             // 
@@ -899,6 +991,27 @@
             this.pnlUserPerms.Size = new System.Drawing.Size(447, 224);
             this.pnlUserPerms.TabIndex = 1035;
             // 
+            // lblHeaderSelectUserType
+            // 
+            this.lblHeaderSelectUserType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblHeaderSelectUserType.AutoSize = true;
+            this.lblHeaderSelectUserType.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeaderSelectUserType.Location = new System.Drawing.Point(224, 131);
+            this.lblHeaderSelectUserType.Name = "lblHeaderSelectUserType";
+            this.lblHeaderSelectUserType.Size = new System.Drawing.Size(104, 17);
+            this.lblHeaderSelectUserType.TabIndex = 1041;
+            this.lblHeaderSelectUserType.Text = "Select UserType";
+            // 
+            // lblUserMode
+            // 
+            this.lblUserMode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblUserMode.AutoSize = true;
+            this.lblUserMode.Location = new System.Drawing.Point(223, 150);
+            this.lblUserMode.Name = "lblUserMode";
+            this.lblUserMode.Size = new System.Drawing.Size(53, 13);
+            this.lblUserMode.TabIndex = 1052;
+            this.lblUserMode.Text = "UserType";
+            // 
             // lblAdminUserType
             // 
             this.lblAdminUserType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -991,117 +1104,6 @@
             this.lblUserPerms.Size = new System.Drawing.Size(161, 25);
             this.lblUserPerms.TabIndex = 1032;
             this.lblUserPerms.Text = "User Permissions";
-            // 
-            // lblUserMode
-            // 
-            this.lblUserMode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblUserMode.AutoSize = true;
-            this.lblUserMode.Location = new System.Drawing.Point(223, 150);
-            this.lblUserMode.Name = "lblUserMode";
-            this.lblUserMode.Size = new System.Drawing.Size(53, 13);
-            this.lblUserMode.TabIndex = 1052;
-            this.lblUserMode.Text = "UserType";
-            // 
-            // lblHeaderSelectUserType
-            // 
-            this.lblHeaderSelectUserType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblHeaderSelectUserType.AutoSize = true;
-            this.lblHeaderSelectUserType.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeaderSelectUserType.Location = new System.Drawing.Point(224, 131);
-            this.lblHeaderSelectUserType.Name = "lblHeaderSelectUserType";
-            this.lblHeaderSelectUserType.Size = new System.Drawing.Size(104, 17);
-            this.lblHeaderSelectUserType.TabIndex = 1041;
-            this.lblHeaderSelectUserType.Text = "Select UserType";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "NO";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Visible = false;
-            // 
-            // Column0
-            // 
-            this.Column0.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column0.HeaderText = "ID";
-            this.Column0.Name = "Column0";
-            this.Column0.ReadOnly = true;
-            this.Column0.Width = 41;
-            // 
-            // Pic
-            // 
-            this.Pic.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Pic.HeaderText = "Picture";
-            this.Pic.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Pic.Name = "Pic";
-            this.Pic.ReadOnly = true;
-            this.Pic.Width = 47;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column1.HeaderText = "User";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 53;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column2.HeaderText = "Password";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 80;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.HeaderText = "Email";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column4.HeaderText = "Full Name";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 77;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column5.HeaderText = "Date Created";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 89;
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Column6.HeaderText = "UserType";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 77;
-            // 
-            // Edit
-            // 
-            this.Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Edit.HeaderText = "";
-            this.Edit.Image = global::EvolveSettings.Properties.Resources.edit;
-            this.Edit.Name = "Edit";
-            this.Edit.ReadOnly = true;
-            this.Edit.Visible = false;
-            this.Edit.Width = 5;
-            // 
-            // Delete
-            // 
-            this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Delete.HeaderText = "";
-            this.Delete.Image = global::EvolveSettings.Properties.Resources.delete;
-            this.Delete.Name = "Delete";
-            this.Delete.ReadOnly = true;
-            this.Delete.Width = 5;
             // 
             // timer1
             // 
