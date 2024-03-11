@@ -451,7 +451,7 @@ namespace EvolveSettings
             }
         }
 
-            internal static void ResetAppConfig(bool withoutRestart = false)
+        internal static void ResetAppConfig(bool withoutRestart = false)
         {
             try
             {

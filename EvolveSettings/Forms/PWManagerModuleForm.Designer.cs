@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.PasswordManagerForm = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.btnPassGen = new Guna.UI2.WinForms.Guna2Button();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtRepass = new Guna.UI2.WinForms.Guna2TextBox();
@@ -66,15 +66,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRecord)).BeginInit();
             this.SuspendLayout();
             // 
-            // guna2BorderlessForm1
+            // PasswordManagerForm
             // 
-            this.guna2BorderlessForm1.AnimateWindow = true;
-            this.guna2BorderlessForm1.AnimationInterval = 400;
-            this.guna2BorderlessForm1.BorderRadius = 5;
-            this.guna2BorderlessForm1.ContainerControl = this;
-            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2BorderlessForm1.ResizeForm = false;
-            this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            this.PasswordManagerForm.AnimateWindow = true;
+            this.PasswordManagerForm.AnimationInterval = 400;
+            this.PasswordManagerForm.BorderRadius = 5;
+            this.PasswordManagerForm.ContainerControl = this;
+            this.PasswordManagerForm.DockIndicatorTransparencyValue = 0.6D;
+            this.PasswordManagerForm.DragForm = false;
+            this.PasswordManagerForm.ResizeForm = false;
+            this.PasswordManagerForm.TransparentWhileDrag = true;
             // 
             // btnPassGen
             // 
@@ -549,7 +550,7 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private Guna.UI2.WinForms.Guna2BorderlessForm PasswordManagerForm;
         public Guna.UI2.WinForms.Guna2Button btnPassGen;
         public Guna.UI2.WinForms.Guna2TextBox txtEmail;
         public Guna.UI2.WinForms.Guna2TextBox txtRepass;

@@ -4,9 +4,7 @@ using Microsoft.Win32;
 using System;
 using System.Drawing;
 using System.Linq;
-using System.Reflection;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace EvolveSettings.Forms
 {

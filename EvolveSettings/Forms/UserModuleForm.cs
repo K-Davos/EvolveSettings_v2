@@ -4,13 +4,11 @@ using Microsoft.Win32;
 using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
-using System.Security.Cryptography;
 using System.Windows.Forms;
 
 namespace EvolveSettings.Forms

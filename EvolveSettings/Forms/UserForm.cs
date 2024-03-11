@@ -296,7 +296,7 @@ namespace EvolveSettings.Forms
                     DateTime date = DateTime.Today;
 
 
-                        cmd = new SqlCommand("UPDATE admin SET image = @image, password=@password, email=@email, fullname=@fullname, date_created=@date, usertype=@usertype WHERE username LIKE '" + txtUserName.Text + "' ", connect);
+                    cmd = new SqlCommand("UPDATE admin SET image = @image, password=@password, email=@email, fullname=@fullname, date_created=@date, usertype=@usertype WHERE username LIKE '" + txtUserName.Text + "' ", connect);
 
                     if (!String.IsNullOrEmpty(imgLocation) && System.IO.File.Exists(imgLocation))
                     {

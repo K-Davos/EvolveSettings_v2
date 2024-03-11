@@ -2,13 +2,10 @@
 using Guna.UI2.WinForms;
 using Microsoft.Win32;
 using System;
-using System.Data;
 using System.Data.SqlClient;
-using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
-using System.Web.UI;
 using System.Windows.Forms;
 
 namespace EvolveSettings
@@ -205,7 +202,7 @@ namespace EvolveSettings
         {
             if (activeForm != null)
                 activeForm.Close();
-                activeForm = childForm;
+            activeForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
@@ -396,7 +393,7 @@ namespace EvolveSettings
                 circleProgressBar1.Visible = false;
                 circleProgressBar2.Visible = false;
                 //btnLogout.Location = new Point(15, 681);
-                btnMenu.Location = new Point (25, 19);
+                btnMenu.Location = new Point(25, 19);
                 foreach (Guna2Button menuButton in pnlNav.Controls.OfType<Guna2Button>())
                 {
                     menuButton.Text = "";

@@ -1,8 +1,6 @@
 ﻿using Microsoft.Win32;
 using System;
 using System.IO;
-using System.Reflection;
-using System.Text;
 
 namespace EvolveSettings
 {
@@ -12,7 +10,7 @@ namespace EvolveSettings
         internal readonly static string DataFolder = CleanHelper.ProgramFiles + "\\Evolve\\Data\\";
         internal readonly static string Data2Folder = CleanHelper.ProgramData + "\\Evolve\\Data\\";
         internal readonly static string ScriptsFolder = CleanHelper.ProgramFiles + "\\Evolve\\Scripts\\";
- 
+
         readonly static string[] DataItems =
         {
         };

@@ -1,5 +1,4 @@
-﻿using EvolveSettings.Helpers;
-using EvolveSettings.Forms;
+﻿using EvolveSettings.Forms;
 using System;
 using System.Threading;
 using System.Windows.Forms;
