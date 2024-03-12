@@ -282,7 +282,7 @@ namespace EvolveSettings
         }
         private void btnNetwork_Click(object sender, EventArgs e)
         {
-            //openChildForm(new Form());
+            openChildForm(new NetworkForm());
         }
 
         private void btnPcCleaner_Click(object sender, EventArgs e)

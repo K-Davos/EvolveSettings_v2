@@ -241,6 +241,10 @@
     <Compile Include="ByteSize\BinaryByteSize.cs" />
     <Compile Include="ByteSize\ByteSize.cs" />
     <Compile Include="ByteSize\DecimalByteSize.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Controls\EvolveListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Controls\EvolvePanel.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -269,6 +273,12 @@
     </Compile>
     <Compile Include="Forms\MessageBoxForm.Designer.cs">
       <DependentUpon>MessageBoxForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NetworkForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NetworkForm.Designer.cs">
+      <DependentUpon>NetworkForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\PasswordManagerForm.cs">
       <SubType>Form</SubType>
@@ -338,6 +348,7 @@
     </Compile>
     <Compile Include="Helpers\CleanHelper.cs" />
     <Compile Include="Helpers\CoreHelper.cs" />
+    <Compile Include="Helpers\NetworkHelper.cs" />
     <Compile Include="Helpers\OptionsHelper.cs" />
     <Compile Include="Helpers\PasswordGenerator.cs" />
     <Compile Include="Helpers\PasswordValidator.cs" />
@@ -362,6 +373,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MessageBoxForm.resx">
       <DependentUpon>MessageBoxForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NetworkForm.resx">
+      <DependentUpon>NetworkForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PasswordManagerForm.resx">
       <DependentUpon>PasswordManagerForm.cs</DependentUpon>

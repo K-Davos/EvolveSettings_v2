@@ -10,6 +10,7 @@ namespace EvolveSettings.Models
         public bool AutoStart { get; set; }
         public bool WinTheme { get; set; }
         public bool SignUp { get; set; }
+        public bool CustomDNS { get; set; }
     }
     public class GenerateConfig
     {
