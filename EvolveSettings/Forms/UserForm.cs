@@ -245,6 +245,7 @@ namespace EvolveSettings.Forms
 
         private void dgvUser_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex == -1) return;
             timer1.Start();
             //User information
             lblFullName.Text = dgvUser.Rows[e.RowIndex].Cells[6].Value.ToString();

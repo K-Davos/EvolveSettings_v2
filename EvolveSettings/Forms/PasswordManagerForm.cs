@@ -239,6 +239,7 @@ namespace EvolveSettings.Forms
 
         private void dgvPwManager_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex == -1) return;
             timer1.Start();
             //User information
             lblRecordNameDb.Text = dgvPwManager.Rows[e.RowIndex].Cells[3].Value.ToString();
