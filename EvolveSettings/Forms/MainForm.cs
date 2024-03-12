@@ -285,9 +285,9 @@ namespace EvolveSettings
             //openChildForm(new Form());
         }
 
-        private void btnMaintenance_Click(object sender, EventArgs e)
+        private void btnPcCleaner_Click(object sender, EventArgs e)
         {
-            //openChildForm(new Form());
+            openChildForm(new PcCleanerForm());
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
