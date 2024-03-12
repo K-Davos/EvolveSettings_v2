@@ -30,13 +30,25 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PasswordManagerForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.pnlEditUser = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.pnlGridView = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.dgvPwManager = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Pic = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn4 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.pnlEditRecord = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.btnPassGen = new Guna.UI2.WinForms.Guna2Button();
             this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel10 = new Guna.UI2.WinForms.Guna2Panel();
@@ -62,7 +74,23 @@
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.pnlPasswordValidation = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.lblPassValidationInfo = new System.Windows.Forms.Label();
+            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblPasswordValidation = new System.Windows.Forms.Label();
             this.pnlRecordInfo = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.btnBrowse = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblRecordName = new System.Windows.Forms.Label();
+            this.lblDoubleDot1 = new System.Windows.Forms.Label();
+            this.lblUserName = new System.Windows.Forms.Label();
+            this.lblDoubleDot2 = new System.Windows.Forms.Label();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.lblDoubleDot3 = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblDoubleDot4 = new System.Windows.Forms.Label();
+            this.lblDateCreate = new System.Windows.Forms.Label();
             this.pictureBoxRecord = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblRecordNameDb = new System.Windows.Forms.Label();
@@ -71,37 +99,11 @@
             this.lblPasswordDb = new System.Windows.Forms.Label();
             this.lblDateCreateDb = new System.Windows.Forms.Label();
             this.lblUserInfo = new System.Windows.Forms.Label();
-            this.pnlGridView = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.dgvPwManager = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.dataGridViewImageColumn4 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Pic = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewTextBoxColumn0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblRecordName = new System.Windows.Forms.Label();
-            this.lblUserName = new System.Windows.Forms.Label();
-            this.lblPassword = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.lblDateCreate = new System.Windows.Forms.Label();
-            this.lblDoubleDot4 = new System.Windows.Forms.Label();
-            this.lblDoubleDot3 = new System.Windows.Forms.Label();
-            this.lblDoubleDot2 = new System.Windows.Forms.Label();
-            this.lblDoubleDot1 = new System.Windows.Forms.Label();
-            this.pnlPasswordValidation = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.lblPassValidationInfo = new System.Windows.Forms.Label();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblPasswordValidation = new System.Windows.Forms.Label();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnBrowse = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.tableLayoutPanel2.SuspendLayout();
-            this.pnlEditUser.SuspendLayout();
+            this.pnlGridView.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPwManager)).BeginInit();
+            this.pnlEditRecord.SuspendLayout();
             this.guna2Panel10.SuspendLayout();
             this.guna2Panel9.SuspendLayout();
             this.guna2Panel8.SuspendLayout();
@@ -110,15 +112,13 @@
             this.guna2Panel5.SuspendLayout();
             this.pnlHeader.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.pnlRecordInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRecord)).BeginInit();
-            this.guna2Panel1.SuspendLayout();
-            this.pnlGridView.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPwManager)).BeginInit();
             this.pnlPasswordValidation.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
-            this.guna2Panel2.SuspendLayout();
+            this.pnlRecordInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBrowse)).BeginInit();
+            this.guna2Panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRecord)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridViewImageColumn1
@@ -144,7 +144,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.46645F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.53355F));
             this.tableLayoutPanel2.Controls.Add(this.pnlGridView, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.pnlEditUser, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.pnlEditRecord, 1, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 296);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
@@ -153,35 +153,205 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1222, 467);
             this.tableLayoutPanel2.TabIndex = 1035;
             // 
-            // pnlEditUser
+            // pnlGridView
             // 
-            this.pnlEditUser.BackColor = System.Drawing.Color.Transparent;
-            this.pnlEditUser.Controls.Add(this.btnPassGen);
-            this.pnlEditUser.Controls.Add(this.btnUpdate);
-            this.pnlEditUser.Controls.Add(this.guna2Panel10);
-            this.pnlEditUser.Controls.Add(this.guna2Panel9);
-            this.pnlEditUser.Controls.Add(this.guna2Panel8);
-            this.pnlEditUser.Controls.Add(this.guna2Panel7);
-            this.pnlEditUser.Controls.Add(this.guna2Panel6);
-            this.pnlEditUser.Controls.Add(this.txtEmail);
-            this.pnlEditUser.Controls.Add(this.txtRepass);
-            this.pnlEditUser.Controls.Add(this.txtPass);
-            this.pnlEditUser.Controls.Add(this.txtUserName);
-            this.pnlEditUser.Controls.Add(this.txtRecordName);
-            this.pnlEditUser.Controls.Add(this.chkEditShowPass);
-            this.pnlEditUser.Controls.Add(this.txtDateCreated);
-            this.pnlEditUser.Controls.Add(this.guna2Panel5);
-            this.pnlEditUser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlEditUser.FillColor = System.Drawing.Color.White;
-            this.pnlEditUser.Location = new System.Drawing.Point(810, 3);
-            this.pnlEditUser.Margin = new System.Windows.Forms.Padding(10, 3, 28, 25);
-            this.pnlEditUser.Name = "pnlEditUser";
-            this.pnlEditUser.Radius = 5;
-            this.pnlEditUser.ShadowColor = System.Drawing.Color.Black;
-            this.pnlEditUser.ShadowDepth = 250;
-            this.pnlEditUser.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
-            this.pnlEditUser.Size = new System.Drawing.Size(384, 439);
-            this.pnlEditUser.TabIndex = 1037;
+            this.pnlGridView.BackColor = System.Drawing.Color.Transparent;
+            this.pnlGridView.Controls.Add(this.dgvPwManager);
+            this.pnlGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlGridView.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(246)))));
+            this.pnlGridView.Location = new System.Drawing.Point(28, 3);
+            this.pnlGridView.Margin = new System.Windows.Forms.Padding(28, 3, 3, 25);
+            this.pnlGridView.Name = "pnlGridView";
+            this.pnlGridView.Radius = 5;
+            this.pnlGridView.ShadowColor = System.Drawing.Color.Black;
+            this.pnlGridView.ShadowDepth = 250;
+            this.pnlGridView.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
+            this.pnlGridView.Size = new System.Drawing.Size(769, 439);
+            this.pnlGridView.TabIndex = 5;
+            // 
+            // dgvPwManager
+            // 
+            this.dgvPwManager.AllowUserToAddRows = false;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.dgvPwManager.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvPwManager.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvPwManager.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.None;
+            this.dgvPwManager.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(246)))));
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(246)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPwManager.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvPwManager.ColumnHeadersHeight = 50;
+            this.dgvPwManager.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn0,
+            this.Pic,
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewImageColumn3,
+            this.dataGridViewImageColumn4});
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPwManager.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvPwManager.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(246)))));
+            this.dgvPwManager.Location = new System.Drawing.Point(3, 15);
+            this.dgvPwManager.Name = "dgvPwManager";
+            this.dgvPwManager.ReadOnly = true;
+            this.dgvPwManager.RowHeadersVisible = false;
+            this.dgvPwManager.RowTemplate.DividerHeight = 2;
+            this.dgvPwManager.RowTemplate.Height = 50;
+            this.dgvPwManager.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgvPwManager.Size = new System.Drawing.Size(763, 402);
+            this.dgvPwManager.TabIndex = 4;
+            this.dgvPwManager.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvPwManager.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dgvPwManager.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dgvPwManager.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dgvPwManager.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dgvPwManager.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(246)))));
+            this.dgvPwManager.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(246)))));
+            this.dgvPwManager.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(246)))));
+            this.dgvPwManager.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvPwManager.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPwManager.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dgvPwManager.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvPwManager.ThemeStyle.HeaderStyle.Height = 50;
+            this.dgvPwManager.ThemeStyle.ReadOnly = true;
+            this.dgvPwManager.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dgvPwManager.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dgvPwManager.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvPwManager.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvPwManager.ThemeStyle.RowsStyle.Height = 50;
+            this.dgvPwManager.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dgvPwManager.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dgvPwManager.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPwManager_CellClick);
+            this.dgvPwManager.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPwManager_CellContentClick);
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.HeaderText = "NO";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn0
+            // 
+            this.dataGridViewTextBoxColumn0.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn0.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn0.Name = "dataGridViewTextBoxColumn0";
+            this.dataGridViewTextBoxColumn0.ReadOnly = true;
+            this.dataGridViewTextBoxColumn0.Width = 41;
+            // 
+            // Pic
+            // 
+            this.Pic.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Pic.HeaderText = "Picture";
+            this.Pic.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.Pic.Name = "Pic";
+            this.Pic.ReadOnly = true;
+            this.Pic.Width = 47;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Record Name";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 92;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Email";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn3.HeaderText = "User";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 53;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Password";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewTextBoxColumn5.HeaderText = "Date Created";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.Width = 89;
+            // 
+            // dataGridViewImageColumn3
+            // 
+            this.dataGridViewImageColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewImageColumn3.HeaderText = "";
+            this.dataGridViewImageColumn3.Image = global::EvolveSettings.Properties.Resources.edit;
+            this.dataGridViewImageColumn3.Name = "dataGridViewImageColumn3";
+            this.dataGridViewImageColumn3.ReadOnly = true;
+            this.dataGridViewImageColumn3.Visible = false;
+            this.dataGridViewImageColumn3.Width = 5;
+            // 
+            // dataGridViewImageColumn4
+            // 
+            this.dataGridViewImageColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewImageColumn4.HeaderText = "";
+            this.dataGridViewImageColumn4.Image = global::EvolveSettings.Properties.Resources.delete;
+            this.dataGridViewImageColumn4.Name = "dataGridViewImageColumn4";
+            this.dataGridViewImageColumn4.ReadOnly = true;
+            this.dataGridViewImageColumn4.Width = 5;
+            // 
+            // pnlEditRecord
+            // 
+            this.pnlEditRecord.BackColor = System.Drawing.Color.Transparent;
+            this.pnlEditRecord.Controls.Add(this.btnPassGen);
+            this.pnlEditRecord.Controls.Add(this.btnUpdate);
+            this.pnlEditRecord.Controls.Add(this.guna2Panel10);
+            this.pnlEditRecord.Controls.Add(this.guna2Panel9);
+            this.pnlEditRecord.Controls.Add(this.guna2Panel8);
+            this.pnlEditRecord.Controls.Add(this.guna2Panel7);
+            this.pnlEditRecord.Controls.Add(this.guna2Panel6);
+            this.pnlEditRecord.Controls.Add(this.txtEmail);
+            this.pnlEditRecord.Controls.Add(this.txtRepass);
+            this.pnlEditRecord.Controls.Add(this.txtPass);
+            this.pnlEditRecord.Controls.Add(this.txtUserName);
+            this.pnlEditRecord.Controls.Add(this.txtRecordName);
+            this.pnlEditRecord.Controls.Add(this.chkEditShowPass);
+            this.pnlEditRecord.Controls.Add(this.txtDateCreated);
+            this.pnlEditRecord.Controls.Add(this.guna2Panel5);
+            this.pnlEditRecord.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlEditRecord.FillColor = System.Drawing.Color.White;
+            this.pnlEditRecord.Location = new System.Drawing.Point(810, 3);
+            this.pnlEditRecord.Margin = new System.Windows.Forms.Padding(10, 3, 28, 25);
+            this.pnlEditRecord.Name = "pnlEditRecord";
+            this.pnlEditRecord.Radius = 5;
+            this.pnlEditRecord.ShadowColor = System.Drawing.Color.Black;
+            this.pnlEditRecord.ShadowDepth = 250;
+            this.pnlEditRecord.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
+            this.pnlEditRecord.Size = new System.Drawing.Size(384, 439);
+            this.pnlEditRecord.TabIndex = 1037;
             // 
             // btnPassGen
             // 
@@ -579,6 +749,78 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1222, 247);
             this.tableLayoutPanel1.TabIndex = 1053;
             // 
+            // pnlPasswordValidation
+            // 
+            this.pnlPasswordValidation.BackColor = System.Drawing.Color.Transparent;
+            this.pnlPasswordValidation.Controls.Add(this.lblPassValidationInfo);
+            this.pnlPasswordValidation.Controls.Add(this.guna2TextBox2);
+            this.pnlPasswordValidation.Controls.Add(this.guna2Panel4);
+            this.pnlPasswordValidation.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlPasswordValidation.FillColor = System.Drawing.Color.White;
+            this.pnlPasswordValidation.Location = new System.Drawing.Point(810, 3);
+            this.pnlPasswordValidation.Margin = new System.Windows.Forms.Padding(10, 3, 28, 3);
+            this.pnlPasswordValidation.Name = "pnlPasswordValidation";
+            this.pnlPasswordValidation.Radius = 5;
+            this.pnlPasswordValidation.ShadowColor = System.Drawing.Color.Black;
+            this.pnlPasswordValidation.ShadowDepth = 250;
+            this.pnlPasswordValidation.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
+            this.pnlPasswordValidation.Size = new System.Drawing.Size(384, 241);
+            this.pnlPasswordValidation.TabIndex = 1037;
+            // 
+            // lblPassValidationInfo
+            // 
+            this.lblPassValidationInfo.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassValidationInfo.ForeColor = System.Drawing.Color.Black;
+            this.lblPassValidationInfo.Location = new System.Drawing.Point(11, 50);
+            this.lblPassValidationInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPassValidationInfo.Name = "lblPassValidationInfo";
+            this.lblPassValidationInfo.Size = new System.Drawing.Size(241, 152);
+            this.lblPassValidationInfo.TabIndex = 1035;
+            this.lblPassValidationInfo.Text = "Password not entered";
+            // 
+            // guna2TextBox2
+            // 
+            this.guna2TextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2TextBox2.Animated = true;
+            this.guna2TextBox2.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.guna2TextBox2.BorderRadius = 15;
+            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox2.DefaultText = "";
+            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.guna2TextBox2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2TextBox2.ForeColor = System.Drawing.Color.Black;
+            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.guna2TextBox2.Location = new System.Drawing.Point(175, 274);
+            this.guna2TextBox2.Name = "guna2TextBox2";
+            this.guna2TextBox2.PasswordChar = '\0';
+            this.guna2TextBox2.PlaceholderText = "";
+            this.guna2TextBox2.SelectedText = "";
+            this.guna2TextBox2.Size = new System.Drawing.Size(186, 34);
+            this.guna2TextBox2.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.guna2TextBox2.TabIndex = 1026;
+            // 
+            // guna2Panel4
+            // 
+            this.guna2Panel4.Controls.Add(this.lblPasswordValidation);
+            this.guna2Panel4.Location = new System.Drawing.Point(3, 6);
+            this.guna2Panel4.Name = "guna2Panel4";
+            this.guna2Panel4.Size = new System.Drawing.Size(211, 37);
+            this.guna2Panel4.TabIndex = 1034;
+            // 
+            // lblPasswordValidation
+            // 
+            this.lblPasswordValidation.AutoSize = true;
+            this.lblPasswordValidation.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPasswordValidation.Location = new System.Drawing.Point(6, 7);
+            this.lblPasswordValidation.Name = "lblPasswordValidation";
+            this.lblPasswordValidation.Size = new System.Drawing.Size(191, 25);
+            this.lblPasswordValidation.TabIndex = 1032;
+            this.lblPasswordValidation.Text = "Password Validation";
+            // 
             // pnlRecordInfo
             // 
             this.pnlRecordInfo.BackColor = System.Drawing.Color.Transparent;
@@ -599,6 +841,153 @@
             this.pnlRecordInfo.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
             this.pnlRecordInfo.Size = new System.Drawing.Size(769, 241);
             this.pnlRecordInfo.TabIndex = 5;
+            // 
+            // btnBrowse
+            // 
+            this.btnBrowse.BackColor = System.Drawing.Color.Transparent;
+            this.btnBrowse.FillColor = System.Drawing.Color.Transparent;
+            this.btnBrowse.Image = global::EvolveSettings.Properties.Resources.add;
+            this.btnBrowse.ImageRotate = 0F;
+            this.btnBrowse.Location = new System.Drawing.Point(101, 50);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnBrowse.Size = new System.Drawing.Size(26, 26);
+            this.btnBrowse.TabIndex = 1050;
+            this.btnBrowse.TabStop = false;
+            this.btnBrowse.UseTransparentBackground = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.Controls.Add(this.lblRecordName);
+            this.guna2Panel2.Controls.Add(this.lblDoubleDot1);
+            this.guna2Panel2.Controls.Add(this.lblUserName);
+            this.guna2Panel2.Controls.Add(this.lblDoubleDot2);
+            this.guna2Panel2.Controls.Add(this.lblPassword);
+            this.guna2Panel2.Controls.Add(this.lblDoubleDot3);
+            this.guna2Panel2.Controls.Add(this.lblEmail);
+            this.guna2Panel2.Controls.Add(this.lblDoubleDot4);
+            this.guna2Panel2.Controls.Add(this.lblDateCreate);
+            this.guna2Panel2.Location = new System.Drawing.Point(152, 73);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(149, 129);
+            this.guna2Panel2.TabIndex = 1049;
+            // 
+            // lblRecordName
+            // 
+            this.lblRecordName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblRecordName.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecordName.Location = new System.Drawing.Point(27, 4);
+            this.lblRecordName.Name = "lblRecordName";
+            this.lblRecordName.Size = new System.Drawing.Size(121, 21);
+            this.lblRecordName.TabIndex = 1041;
+            this.lblRecordName.Text = "Record Name :";
+            // 
+            // lblDoubleDot1
+            // 
+            this.lblDoubleDot1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDoubleDot1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDoubleDot1.Location = new System.Drawing.Point(136, 45);
+            this.lblDoubleDot1.Name = "lblDoubleDot1";
+            this.lblDoubleDot1.Size = new System.Drawing.Size(10, 17);
+            this.lblDoubleDot1.TabIndex = 1048;
+            this.lblDoubleDot1.Text = ": ";
+            this.lblDoubleDot1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblUserName
+            // 
+            this.lblUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblUserName.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.Location = new System.Drawing.Point(57, 45);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(79, 17);
+            this.lblUserName.TabIndex = 1036;
+            this.lblUserName.Text = "Username ";
+            this.lblUserName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblDoubleDot2
+            // 
+            this.lblDoubleDot2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDoubleDot2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDoubleDot2.Location = new System.Drawing.Point(136, 60);
+            this.lblDoubleDot2.Name = "lblDoubleDot2";
+            this.lblDoubleDot2.Size = new System.Drawing.Size(10, 17);
+            this.lblDoubleDot2.TabIndex = 1047;
+            this.lblDoubleDot2.Text = ": ";
+            this.lblDoubleDot2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblPassword
+            // 
+            this.lblPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblPassword.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.Location = new System.Drawing.Point(57, 62);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(72, 17);
+            this.lblPassword.TabIndex = 1042;
+            this.lblPassword.Text = "Password";
+            this.lblPassword.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblDoubleDot3
+            // 
+            this.lblDoubleDot3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDoubleDot3.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDoubleDot3.Location = new System.Drawing.Point(136, 77);
+            this.lblDoubleDot3.Name = "lblDoubleDot3";
+            this.lblDoubleDot3.Size = new System.Drawing.Size(10, 17);
+            this.lblDoubleDot3.TabIndex = 1046;
+            this.lblDoubleDot3.Text = ": ";
+            this.lblDoubleDot3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblEmail.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(57, 77);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(72, 17);
+            this.lblEmail.TabIndex = 1043;
+            this.lblEmail.Text = "Email";
+            this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblDoubleDot4
+            // 
+            this.lblDoubleDot4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDoubleDot4.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDoubleDot4.Location = new System.Drawing.Point(136, 93);
+            this.lblDoubleDot4.Name = "lblDoubleDot4";
+            this.lblDoubleDot4.Size = new System.Drawing.Size(10, 17);
+            this.lblDoubleDot4.TabIndex = 1045;
+            this.lblDoubleDot4.Text = ": ";
+            this.lblDoubleDot4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblDateCreate
+            // 
+            this.lblDateCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDateCreate.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateCreate.Location = new System.Drawing.Point(57, 93);
+            this.lblDateCreate.Name = "lblDateCreate";
+            this.lblDateCreate.Size = new System.Drawing.Size(90, 17);
+            this.lblDateCreate.TabIndex = 1044;
+            this.lblDateCreate.Text = "Record Date";
+            this.lblDateCreate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // pictureBoxRecord
             // 
@@ -690,398 +1079,9 @@
             this.lblUserInfo.TabIndex = 1038;
             this.lblUserInfo.Text = "Record Information";
             // 
-            // pnlGridView
-            // 
-            this.pnlGridView.BackColor = System.Drawing.Color.Transparent;
-            this.pnlGridView.Controls.Add(this.dgvPwManager);
-            this.pnlGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlGridView.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(246)))));
-            this.pnlGridView.Location = new System.Drawing.Point(28, 3);
-            this.pnlGridView.Margin = new System.Windows.Forms.Padding(28, 3, 3, 25);
-            this.pnlGridView.Name = "pnlGridView";
-            this.pnlGridView.Radius = 5;
-            this.pnlGridView.ShadowColor = System.Drawing.Color.Black;
-            this.pnlGridView.ShadowDepth = 250;
-            this.pnlGridView.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
-            this.pnlGridView.Size = new System.Drawing.Size(769, 439);
-            this.pnlGridView.TabIndex = 5;
-            // 
-            // dgvPwManager
-            // 
-            this.dgvPwManager.AllowUserToAddRows = false;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.White;
-            this.dgvPwManager.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
-            this.dgvPwManager.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvPwManager.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.None;
-            this.dgvPwManager.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(246)))));
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(246)))));
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPwManager.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle26;
-            this.dgvPwManager.ColumnHeadersHeight = 50;
-            this.dgvPwManager.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn0,
-            this.Pic,
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewImageColumn3,
-            this.dataGridViewImageColumn4});
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPwManager.DefaultCellStyle = dataGridViewCellStyle27;
-            this.dgvPwManager.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(246)))));
-            this.dgvPwManager.Location = new System.Drawing.Point(3, 15);
-            this.dgvPwManager.Name = "dgvPwManager";
-            this.dgvPwManager.ReadOnly = true;
-            this.dgvPwManager.RowHeadersVisible = false;
-            this.dgvPwManager.RowTemplate.DividerHeight = 2;
-            this.dgvPwManager.RowTemplate.Height = 50;
-            this.dgvPwManager.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvPwManager.Size = new System.Drawing.Size(763, 402);
-            this.dgvPwManager.TabIndex = 4;
-            this.dgvPwManager.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvPwManager.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.dgvPwManager.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.dgvPwManager.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.dgvPwManager.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.dgvPwManager.ThemeStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(246)))));
-            this.dgvPwManager.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(246)))));
-            this.dgvPwManager.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(246)))));
-            this.dgvPwManager.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvPwManager.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPwManager.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.dgvPwManager.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvPwManager.ThemeStyle.HeaderStyle.Height = 50;
-            this.dgvPwManager.ThemeStyle.ReadOnly = true;
-            this.dgvPwManager.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.dgvPwManager.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dgvPwManager.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvPwManager.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvPwManager.ThemeStyle.RowsStyle.Height = 50;
-            this.dgvPwManager.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvPwManager.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dgvPwManager.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPwManager_CellClick);
-            this.dgvPwManager.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPwManager_CellContentClick);
-            // 
-            // dataGridViewImageColumn4
-            // 
-            this.dataGridViewImageColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewImageColumn4.HeaderText = "";
-            this.dataGridViewImageColumn4.Image = global::EvolveSettings.Properties.Resources.delete;
-            this.dataGridViewImageColumn4.Name = "dataGridViewImageColumn4";
-            this.dataGridViewImageColumn4.ReadOnly = true;
-            this.dataGridViewImageColumn4.Width = 5;
-            // 
-            // dataGridViewImageColumn3
-            // 
-            this.dataGridViewImageColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewImageColumn3.HeaderText = "";
-            this.dataGridViewImageColumn3.Image = global::EvolveSettings.Properties.Resources.edit;
-            this.dataGridViewImageColumn3.Name = "dataGridViewImageColumn3";
-            this.dataGridViewImageColumn3.ReadOnly = true;
-            this.dataGridViewImageColumn3.Visible = false;
-            this.dataGridViewImageColumn3.Width = 5;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn5.HeaderText = "Date Created";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 89;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn4.HeaderText = "Password";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 80;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn3.HeaderText = "User";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 53;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Email";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Record Name";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 92;
-            // 
-            // Pic
-            // 
-            this.Pic.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Pic.HeaderText = "Picture";
-            this.Pic.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Pic.Name = "Pic";
-            this.Pic.ReadOnly = true;
-            this.Pic.Width = 47;
-            // 
-            // dataGridViewTextBoxColumn0
-            // 
-            this.dataGridViewTextBoxColumn0.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewTextBoxColumn0.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn0.Name = "dataGridViewTextBoxColumn0";
-            this.dataGridViewTextBoxColumn0.ReadOnly = true;
-            this.dataGridViewTextBoxColumn0.Width = 41;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "NO";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Visible = false;
-            // 
-            // lblRecordName
-            // 
-            this.lblRecordName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblRecordName.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecordName.Location = new System.Drawing.Point(27, 4);
-            this.lblRecordName.Name = "lblRecordName";
-            this.lblRecordName.Size = new System.Drawing.Size(121, 21);
-            this.lblRecordName.TabIndex = 1041;
-            this.lblRecordName.Text = "Record Name :";
-            // 
-            // lblUserName
-            // 
-            this.lblUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblUserName.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserName.Location = new System.Drawing.Point(57, 45);
-            this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(79, 17);
-            this.lblUserName.TabIndex = 1036;
-            this.lblUserName.Text = "Username ";
-            this.lblUserName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblPassword
-            // 
-            this.lblPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblPassword.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(57, 62);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(72, 17);
-            this.lblPassword.TabIndex = 1042;
-            this.lblPassword.Text = "Password";
-            this.lblPassword.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblEmail.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(57, 77);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(72, 17);
-            this.lblEmail.TabIndex = 1043;
-            this.lblEmail.Text = "Email";
-            this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblDateCreate
-            // 
-            this.lblDateCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDateCreate.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateCreate.Location = new System.Drawing.Point(57, 93);
-            this.lblDateCreate.Name = "lblDateCreate";
-            this.lblDateCreate.Size = new System.Drawing.Size(90, 17);
-            this.lblDateCreate.TabIndex = 1044;
-            this.lblDateCreate.Text = "Record Date";
-            this.lblDateCreate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblDoubleDot4
-            // 
-            this.lblDoubleDot4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDoubleDot4.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDoubleDot4.Location = new System.Drawing.Point(136, 93);
-            this.lblDoubleDot4.Name = "lblDoubleDot4";
-            this.lblDoubleDot4.Size = new System.Drawing.Size(10, 17);
-            this.lblDoubleDot4.TabIndex = 1045;
-            this.lblDoubleDot4.Text = ": ";
-            this.lblDoubleDot4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblDoubleDot3
-            // 
-            this.lblDoubleDot3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDoubleDot3.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDoubleDot3.Location = new System.Drawing.Point(136, 77);
-            this.lblDoubleDot3.Name = "lblDoubleDot3";
-            this.lblDoubleDot3.Size = new System.Drawing.Size(10, 17);
-            this.lblDoubleDot3.TabIndex = 1046;
-            this.lblDoubleDot3.Text = ": ";
-            this.lblDoubleDot3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblDoubleDot2
-            // 
-            this.lblDoubleDot2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDoubleDot2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDoubleDot2.Location = new System.Drawing.Point(136, 60);
-            this.lblDoubleDot2.Name = "lblDoubleDot2";
-            this.lblDoubleDot2.Size = new System.Drawing.Size(10, 17);
-            this.lblDoubleDot2.TabIndex = 1047;
-            this.lblDoubleDot2.Text = ": ";
-            this.lblDoubleDot2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblDoubleDot1
-            // 
-            this.lblDoubleDot1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDoubleDot1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDoubleDot1.Location = new System.Drawing.Point(136, 45);
-            this.lblDoubleDot1.Name = "lblDoubleDot1";
-            this.lblDoubleDot1.Size = new System.Drawing.Size(10, 17);
-            this.lblDoubleDot1.TabIndex = 1048;
-            this.lblDoubleDot1.Text = ": ";
-            this.lblDoubleDot1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // pnlPasswordValidation
-            // 
-            this.pnlPasswordValidation.BackColor = System.Drawing.Color.Transparent;
-            this.pnlPasswordValidation.Controls.Add(this.lblPassValidationInfo);
-            this.pnlPasswordValidation.Controls.Add(this.guna2TextBox2);
-            this.pnlPasswordValidation.Controls.Add(this.guna2Panel4);
-            this.pnlPasswordValidation.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlPasswordValidation.FillColor = System.Drawing.Color.White;
-            this.pnlPasswordValidation.Location = new System.Drawing.Point(810, 3);
-            this.pnlPasswordValidation.Margin = new System.Windows.Forms.Padding(10, 3, 28, 3);
-            this.pnlPasswordValidation.Name = "pnlPasswordValidation";
-            this.pnlPasswordValidation.Radius = 5;
-            this.pnlPasswordValidation.ShadowColor = System.Drawing.Color.Black;
-            this.pnlPasswordValidation.ShadowDepth = 250;
-            this.pnlPasswordValidation.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
-            this.pnlPasswordValidation.Size = new System.Drawing.Size(384, 241);
-            this.pnlPasswordValidation.TabIndex = 1037;
-            // 
-            // lblPassValidationInfo
-            // 
-            this.lblPassValidationInfo.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassValidationInfo.ForeColor = System.Drawing.Color.Black;
-            this.lblPassValidationInfo.Location = new System.Drawing.Point(11, 50);
-            this.lblPassValidationInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblPassValidationInfo.Name = "lblPassValidationInfo";
-            this.lblPassValidationInfo.Size = new System.Drawing.Size(241, 152);
-            this.lblPassValidationInfo.TabIndex = 1035;
-            this.lblPassValidationInfo.Text = "Password not entered";
-            // 
-            // guna2TextBox2
-            // 
-            this.guna2TextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2TextBox2.Animated = true;
-            this.guna2TextBox2.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.guna2TextBox2.BorderRadius = 15;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.guna2TextBox2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox2.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.guna2TextBox2.Location = new System.Drawing.Point(175, 274);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(186, 34);
-            this.guna2TextBox2.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.guna2TextBox2.TabIndex = 1026;
-            // 
-            // guna2Panel4
-            // 
-            this.guna2Panel4.Controls.Add(this.lblPasswordValidation);
-            this.guna2Panel4.Location = new System.Drawing.Point(3, 6);
-            this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(211, 37);
-            this.guna2Panel4.TabIndex = 1034;
-            // 
-            // lblPasswordValidation
-            // 
-            this.lblPasswordValidation.AutoSize = true;
-            this.lblPasswordValidation.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPasswordValidation.Location = new System.Drawing.Point(6, 7);
-            this.lblPasswordValidation.Name = "lblPasswordValidation";
-            this.lblPasswordValidation.Size = new System.Drawing.Size(191, 25);
-            this.lblPasswordValidation.TabIndex = 1032;
-            this.lblPasswordValidation.Text = "Password Validation";
-            // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.Controls.Add(this.lblRecordName);
-            this.guna2Panel2.Controls.Add(this.lblDoubleDot1);
-            this.guna2Panel2.Controls.Add(this.lblUserName);
-            this.guna2Panel2.Controls.Add(this.lblDoubleDot2);
-            this.guna2Panel2.Controls.Add(this.lblPassword);
-            this.guna2Panel2.Controls.Add(this.lblDoubleDot3);
-            this.guna2Panel2.Controls.Add(this.lblEmail);
-            this.guna2Panel2.Controls.Add(this.lblDoubleDot4);
-            this.guna2Panel2.Controls.Add(this.lblDateCreate);
-            this.guna2Panel2.Location = new System.Drawing.Point(152, 73);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(149, 129);
-            this.guna2Panel2.TabIndex = 1049;
-            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // btnBrowse
-            // 
-            this.btnBrowse.BackColor = System.Drawing.Color.Transparent;
-            this.btnBrowse.FillColor = System.Drawing.Color.Transparent;
-            this.btnBrowse.Image = global::EvolveSettings.Properties.Resources.add;
-            this.btnBrowse.ImageRotate = 0F;
-            this.btnBrowse.Location = new System.Drawing.Point(101, 50);
-            this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnBrowse.Size = new System.Drawing.Size(26, 26);
-            this.btnBrowse.TabIndex = 1050;
-            this.btnBrowse.TabStop = false;
-            this.btnBrowse.UseTransparentBackground = true;
-            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
             // PasswordManagerForm
             // 
@@ -1095,8 +1095,10 @@
             this.Name = "PasswordManagerForm";
             this.Text = "PasswordManagerForm";
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.pnlEditUser.ResumeLayout(false);
-            this.pnlEditUser.PerformLayout();
+            this.pnlGridView.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPwManager)).EndInit();
+            this.pnlEditRecord.ResumeLayout(false);
+            this.pnlEditRecord.PerformLayout();
             this.guna2Panel10.ResumeLayout(false);
             this.guna2Panel10.PerformLayout();
             this.guna2Panel9.ResumeLayout(false);
@@ -1112,18 +1114,16 @@
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.pnlRecordInfo.ResumeLayout(false);
-            this.pnlRecordInfo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRecord)).EndInit();
-            this.guna2Panel1.ResumeLayout(false);
-            this.guna2Panel1.PerformLayout();
-            this.pnlGridView.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPwManager)).EndInit();
             this.pnlPasswordValidation.ResumeLayout(false);
             this.guna2Panel4.ResumeLayout(false);
             this.guna2Panel4.PerformLayout();
-            this.guna2Panel2.ResumeLayout(false);
+            this.pnlRecordInfo.ResumeLayout(false);
+            this.pnlRecordInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBrowse)).EndInit();
+            this.guna2Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRecord)).EndInit();
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1132,7 +1132,7 @@
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private Guna.UI2.WinForms.Guna2ShadowPanel pnlEditUser;
+        private Guna.UI2.WinForms.Guna2ShadowPanel pnlEditRecord;
         public Guna.UI2.WinForms.Guna2Button btnPassGen;
         public Guna.UI2.WinForms.Guna2Button btnUpdate;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel10;

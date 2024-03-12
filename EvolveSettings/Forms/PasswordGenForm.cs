@@ -53,9 +53,9 @@ namespace EvolveSettings.Forms
                 foreach (Guna2TextBox txtbox in this.Controls.OfType<Guna2TextBox>())
                 {
                     txtbox.BackColor = Color.Transparent;
-                    txtbox.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
+                    txtbox.FillColor = SystemColors.Control;
                     txtbox.BorderColor = themeColor;
-                    txtbox.ForeColor = Color.White;
+                    txtbox.ForeColor = Color.Black;
                 }
                 lblPasswordGen.ForeColor = Color.Black;
                 btnClose.ForeColor = Color.Black;

@@ -73,9 +73,31 @@ namespace EvolveSettings.Forms
             {
                 //light
                 this.BackColor = SystemColors.Control;
-                pnlGridView.FillColor = SystemColors.Control;
-
-
+                pnlGridView.FillColor = Color.White;
+                txtDateCreated.ForeColor = Color.Black;
+                txtDateCreated.BackColor = Color.White;
+                pnlHeader.BackColor = SystemColors.Control;
+                lblTitle.ForeColor = Color.Black;
+                lblPassValidationInfo.ForeColor = Color.Black;
+                foreach (Guna2DataGridView gridview in this.pnlGridView.Controls.OfType<Guna2DataGridView>())
+                {
+                    gridview.BackgroundColor = Color.White;
+                    gridview.ColumnHeadersDefaultCellStyle.BackColor = Color.White;
+                    gridview.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+                    gridview.DefaultCellStyle.ForeColor = Color.Black;
+                    gridview.DefaultCellStyle.BackColor = SystemColors.Control;
+                    gridview.DefaultCellStyle.SelectionBackColor = themeColor;
+                    gridview.GridColor = themeColor;
+                    gridview.AlternatingRowsDefaultCellStyle.BackColor = SystemColors.Control;
+                }
+                foreach (Guna2TextBox txtbox in this.pnlEditUser.Controls.OfType<Guna2TextBox>())
+                {
+                    txtbox.BackColor = Color.Transparent;
+                    txtbox.FillColor = Color.White;
+                    txtbox.BorderColor = themeColor;
+                    txtbox.ForeColor = Color.Black;
+                    txtbox.DisabledState.FillColor = SystemColors.Control;
+                }
             }
             else
             {

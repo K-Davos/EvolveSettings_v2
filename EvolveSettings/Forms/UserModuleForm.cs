@@ -91,12 +91,13 @@ namespace EvolveSettings.Forms
                 {
                     lbl.ForeColor = Color.Black;
                 }
-                label1.ForeColor = Color.Black;
-                lblPassValidationInfo.ForeColor = Color.Black;
-                lblCurrentUser.ForeColor = Color.Black;
+                label1.ForeColor = Color.White;
+                lblPassValidationInfo.ForeColor = Color.White;
+                lblCurrentUser.ForeColor = Color.White;
                 pictureBoxClose.ForeColor = Color.Black;
                 txtDateCreated.BackColor = SystemColors.Control;
                 txtDateCreated.ForeColor = Color.Black;
+                lblAddUpdateUser.ForeColor = Color.Black;
             }
             else
             {
@@ -123,6 +124,7 @@ namespace EvolveSettings.Forms
                 pictureBoxClose.ForeColor = Color.White;
                 txtDateCreated.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
                 txtDateCreated.ForeColor = Color.White;
+                lblAddUpdateUser.ForeColor = Color.White;
             }
             chkShowPass.CheckedState.FillColor = themeColor;
             foreach (Guna2Button button in this.Controls.OfType<Guna2Button>())

@@ -88,12 +88,13 @@ namespace EvolveSettings.Forms
                 {
                     lbl.ForeColor = Color.Black;
                 }
-                label1.ForeColor = Color.Black;
-                lblPassValidationInfo.ForeColor = Color.Black;
-                lblCurrentUser.ForeColor = Color.Black;
+                label1.ForeColor = Color.White;
+                lblPassValidationInfo.ForeColor = Color.White;
+                lblCurrentUser.ForeColor = Color.White;
                 pictureBoxClose.ForeColor = Color.Black;
                 txtDateCreated.BackColor = SystemColors.Control;
                 txtDateCreated.ForeColor = Color.Black;
+                lblAddUpdateUser.ForeColor = Color.Black;
             }
             else
             {

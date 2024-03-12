@@ -142,6 +142,7 @@ namespace EvolveSettings
                 panelInfoBody.BackColor = SystemColors.Control;
                 lblMessage.ForeColor = Color.Black;
                 lblCaption.ForeColor = Color.Black;
+                btnClose.Image = EvolveSettings.Properties.Resources.quit_black;
 
             }
             else
@@ -152,6 +153,7 @@ namespace EvolveSettings
                 panelInfoBody.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
                 lblMessage.ForeColor = Color.White;
                 lblCaption.ForeColor = Color.White;
+                btnClose.Image = EvolveSettings.Properties.Resources.quit;
             }
             this.BackColor = themeColor; //Border Color
             foreach (Button button in this.pnlButtons.Controls.OfType<Button>())

@@ -427,11 +427,14 @@
     <Content Include="Resources\edit.png" />
     <Content Include="Resources\logout.png" />
     <Content Include="Resources\maintenance.png" />
+    <Content Include="Resources\maximize_black.png" />
     <Content Include="Resources\menu.png" />
+    <Content Include="Resources\minimize_black.png" />
     <Content Include="Resources\network.png" />
     <Content Include="Resources\pwmanager.png" />
     <None Include="Resources\question.png" />
     <Content Include="Resources\quit.png" />
+    <Content Include="Resources\quit_black.png" />
     <Content Include="Resources\settings.png" />
     <Content Include="Resources\usersm.png" />
     <Content Include="Resources\win11tweaks.png" />

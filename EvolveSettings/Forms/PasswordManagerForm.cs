@@ -68,9 +68,31 @@ namespace EvolveSettings.Forms
             {
                 //light
                 this.BackColor = SystemColors.Control;
-                pnlGridView.FillColor = SystemColors.Control;
-
-
+                pnlGridView.FillColor = Color.White;
+                txtDateCreated.ForeColor = Color.Black;
+                txtDateCreated.BackColor = Color.White;
+                pnlHeader.BackColor = SystemColors.Control;
+                lblTitle.ForeColor = Color.Black;
+                lblPassValidationInfo.ForeColor = Color.Black;
+                foreach (Guna2DataGridView gridview in this.pnlGridView.Controls.OfType<Guna2DataGridView>())
+                {
+                    gridview.BackgroundColor = Color.White;
+                    gridview.ColumnHeadersDefaultCellStyle.BackColor = Color.White;
+                    gridview.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+                    gridview.DefaultCellStyle.ForeColor = Color.Black;
+                    gridview.DefaultCellStyle.BackColor = SystemColors.Control;
+                    gridview.DefaultCellStyle.SelectionBackColor = themeColor;
+                    gridview.GridColor = themeColor;
+                    gridview.AlternatingRowsDefaultCellStyle.BackColor = SystemColors.Control;
+                }
+                foreach (Guna2TextBox txtbox in this.pnlEditRecord.Controls.OfType<Guna2TextBox>())
+                {
+                    txtbox.BackColor = Color.Transparent;
+                    txtbox.FillColor = Color.White;
+                    txtbox.BorderColor = themeColor;
+                    txtbox.ForeColor = Color.Black;
+                    txtbox.DisabledState.FillColor = SystemColors.Control;
+                }
             }
             else
             {
@@ -80,7 +102,7 @@ namespace EvolveSettings.Forms
                 pnlGridView.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
                 pnlRecordInfo.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
                 pnlPasswordValidation.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
-                pnlEditUser.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
+                pnlEditRecord.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
                 txtDateCreated.BackColor = ColorTranslator.FromHtml("#FF2D2D30");
                 lblDoubleDot1.ForeColor = Color.White;
                 lblDoubleDot2.ForeColor = Color.White;
@@ -118,7 +140,7 @@ namespace EvolveSettings.Forms
                     gridview.GridColor = themeColor;
                     gridview.AlternatingRowsDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
                 }
-                foreach (Guna2TextBox txtbox in this.pnlEditUser.Controls.OfType<Guna2TextBox>())
+                foreach (Guna2TextBox txtbox in this.pnlEditRecord.Controls.OfType<Guna2TextBox>())
                 {
                     txtbox.BackColor = Color.Transparent;
                     txtbox.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
@@ -132,7 +154,7 @@ namespace EvolveSettings.Forms
                 button.FillColor = themeColor;
                 button.ForeColor = Color.White;
             }
-            foreach (Guna2Button button in this.pnlEditUser.Controls.OfType<Guna2Button>())
+            foreach (Guna2Button button in this.pnlEditRecord.Controls.OfType<Guna2Button>())
             {
                 button.FillColor = themeColor;
                 button.ForeColor = Color.White;
@@ -314,7 +336,7 @@ namespace EvolveSettings.Forms
                     cmd.ExecuteNonQuery();
                     connect.Close();
                     EvolveMessageBox.Show("User has been successfully updated!");
-                    foreach (Guna2TextBox txtbox in this.pnlEditUser.Controls.OfType<Guna2TextBox>())
+                    foreach (Guna2TextBox txtbox in this.pnlEditRecord.Controls.OfType<Guna2TextBox>())
                     {
                         txtbox.Clear();
                     }

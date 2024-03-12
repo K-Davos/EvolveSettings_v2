@@ -32,38 +32,38 @@ namespace EvolveSettings
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.lblCurrentUser = new System.Windows.Forms.Label();
-            this.btnMaximize = new System.Windows.Forms.Button();
-            this.btnMinimize = new System.Windows.Forms.Button();
-            this.btnCloseApp = new System.Windows.Forms.Button();
             this.pnlNav = new System.Windows.Forms.Panel();
             this.lblUserType = new System.Windows.Forms.Label();
-            this.btnMenu = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnLogout = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.btnUserManagement = new Guna.UI2.WinForms.Guna2Button();
-            this.btnPassManager = new Guna.UI2.WinForms.Guna2Button();
             this.txtNetFw = new System.Windows.Forms.Label();
             this.txtBitness = new System.Windows.Forms.Label();
             this.txtOS = new System.Windows.Forms.Label();
             this.lblversion = new System.Windows.Forms.Label();
             this.txtAppVersion = new System.Windows.Forms.Label();
             this.lblUserMode = new System.Windows.Forms.Label();
+            this.circleProgressBar2 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            this.circleProgressBar1 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            this.panelMain = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlHeader = new System.Windows.Forms.Panel();
+            this.ShadowForm = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.btnMinimize = new System.Windows.Forms.Button();
+            this.btnMaximize = new System.Windows.Forms.Button();
+            this.btnCloseApp = new System.Windows.Forms.Button();
+            this.btnMenu = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnLogout = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnUserManagement = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPassManager = new Guna.UI2.WinForms.Guna2Button();
             this.btnSettings = new Guna.UI2.WinForms.Guna2Button();
             this.btnMaintenance = new Guna.UI2.WinForms.Guna2Button();
             this.btnNetwork = new Guna.UI2.WinForms.Guna2Button();
             this.btnWin11Tweaks = new Guna.UI2.WinForms.Guna2Button();
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
-            this.circleProgressBar2 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
-            this.circleProgressBar1 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.pictureBoxProfile = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.panelMain = new Guna.UI2.WinForms.Guna2Panel();
-            this.pnlHeader = new System.Windows.Forms.Panel();
-            this.ShadowForm = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.pnlNav.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
             this.circleProgressBar2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
             this.panelMain.SuspendLayout();
             this.pnlHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCurrentUser
@@ -77,49 +77,6 @@ namespace EvolveSettings
             this.lblCurrentUser.TabIndex = 0;
             this.lblCurrentUser.Text = "Admin";
             this.lblCurrentUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btnMaximize
-            // 
-            this.btnMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaximize.FlatAppearance.BorderSize = 0;
-            this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaximize.ForeColor = System.Drawing.Color.White;
-            this.btnMaximize.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximize.Image")));
-            this.btnMaximize.Location = new System.Drawing.Point(1062, 0);
-            this.btnMaximize.Name = "btnMaximize";
-            this.btnMaximize.Size = new System.Drawing.Size(48, 42);
-            this.btnMaximize.TabIndex = 18;
-            this.btnMaximize.UseVisualStyleBackColor = true;
-            this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimize.FlatAppearance.BorderSize = 0;
-            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimize.ForeColor = System.Drawing.Color.White;
-            this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
-            this.btnMinimize.Location = new System.Drawing.Point(1011, 0);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(48, 42);
-            this.btnMinimize.TabIndex = 17;
-            this.btnMinimize.UseVisualStyleBackColor = true;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
-            // 
-            // btnCloseApp
-            // 
-            this.btnCloseApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCloseApp.FlatAppearance.BorderSize = 0;
-            this.btnCloseApp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btnCloseApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseApp.ForeColor = System.Drawing.Color.White;
-            this.btnCloseApp.Image = ((System.Drawing.Image)(resources.GetObject("btnCloseApp.Image")));
-            this.btnCloseApp.Location = new System.Drawing.Point(1113, 0);
-            this.btnCloseApp.Name = "btnCloseApp";
-            this.btnCloseApp.Size = new System.Drawing.Size(48, 42);
-            this.btnCloseApp.TabIndex = 16;
-            this.btnCloseApp.UseVisualStyleBackColor = true;
-            this.btnCloseApp.Click += new System.EventHandler(this.btnCloseApp_Click);
             // 
             // pnlNav
             // 
@@ -161,6 +118,193 @@ namespace EvolveSettings
             this.lblUserType.TabIndex = 93;
             this.lblUserType.Text = "UserType";
             this.lblUserType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtNetFw
+            // 
+            this.txtNetFw.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtNetFw.AutoSize = true;
+            this.txtNetFw.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNetFw.ForeColor = System.Drawing.Color.Gray;
+            this.txtNetFw.Location = new System.Drawing.Point(12, 722);
+            this.txtNetFw.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtNetFw.Name = "txtNetFw";
+            this.txtNetFw.Size = new System.Drawing.Size(37, 13);
+            this.txtNetFw.TabIndex = 86;
+            this.txtNetFw.Text = "netfw";
+            // 
+            // txtBitness
+            // 
+            this.txtBitness.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtBitness.AutoSize = true;
+            this.txtBitness.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBitness.ForeColor = System.Drawing.Color.Gray;
+            this.txtBitness.Location = new System.Drawing.Point(12, 705);
+            this.txtBitness.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtBitness.Name = "txtBitness";
+            this.txtBitness.Size = new System.Drawing.Size(44, 13);
+            this.txtBitness.TabIndex = 85;
+            this.txtBitness.Text = "bitness";
+            // 
+            // txtOS
+            // 
+            this.txtOS.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtOS.AutoSize = true;
+            this.txtOS.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOS.ForeColor = System.Drawing.Color.Gray;
+            this.txtOS.Location = new System.Drawing.Point(12, 688);
+            this.txtOS.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtOS.Name = "txtOS";
+            this.txtOS.Size = new System.Drawing.Size(19, 13);
+            this.txtOS.TabIndex = 84;
+            this.txtOS.Text = "os";
+            // 
+            // lblversion
+            // 
+            this.lblversion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblversion.AutoSize = true;
+            this.lblversion.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblversion.ForeColor = System.Drawing.Color.Gray;
+            this.lblversion.Location = new System.Drawing.Point(12, 739);
+            this.lblversion.Name = "lblversion";
+            this.lblversion.Size = new System.Drawing.Size(45, 13);
+            this.lblversion.TabIndex = 83;
+            this.lblversion.Text = "Version";
+            // 
+            // txtAppVersion
+            // 
+            this.txtAppVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtAppVersion.AutoSize = true;
+            this.txtAppVersion.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAppVersion.ForeColor = System.Drawing.Color.Gray;
+            this.txtAppVersion.Location = new System.Drawing.Point(55, 739);
+            this.txtAppVersion.Name = "txtAppVersion";
+            this.txtAppVersion.Size = new System.Drawing.Size(21, 13);
+            this.txtAppVersion.TabIndex = 82;
+            this.txtAppVersion.Text = "1.x";
+            // 
+            // lblUserMode
+            // 
+            this.lblUserMode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblUserMode.AutoSize = true;
+            this.lblUserMode.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserMode.ForeColor = System.Drawing.Color.Tomato;
+            this.lblUserMode.Location = new System.Drawing.Point(12, 761);
+            this.lblUserMode.Name = "lblUserMode";
+            this.lblUserMode.Size = new System.Drawing.Size(60, 13);
+            this.lblUserMode.TabIndex = 81;
+            this.lblUserMode.Text = "UserMode";
+            // 
+            // circleProgressBar2
+            // 
+            this.circleProgressBar2.Animated = true;
+            this.circleProgressBar2.AnimationSpeed = 0.3F;
+            this.circleProgressBar2.BackColor = System.Drawing.Color.Transparent;
+            this.circleProgressBar2.Controls.Add(this.circleProgressBar1);
+            this.circleProgressBar2.FillColor = System.Drawing.Color.Transparent;
+            this.circleProgressBar2.FillThickness = 1;
+            this.circleProgressBar2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.circleProgressBar2.ForeColor = System.Drawing.Color.Transparent;
+            this.circleProgressBar2.Location = new System.Drawing.Point(42, 31);
+            this.circleProgressBar2.Minimum = 0;
+            this.circleProgressBar2.Name = "circleProgressBar2";
+            this.circleProgressBar2.ProgressColor = System.Drawing.Color.MidnightBlue;
+            this.circleProgressBar2.ProgressColor2 = System.Drawing.Color.Red;
+            this.circleProgressBar2.ProgressThickness = 1;
+            this.circleProgressBar2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.circleProgressBar2.Size = new System.Drawing.Size(104, 104);
+            this.circleProgressBar2.TabIndex = 92;
+            this.circleProgressBar2.UseTransparentBackground = true;
+            this.circleProgressBar2.Value = 33;
+            // 
+            // circleProgressBar1
+            // 
+            this.circleProgressBar1.Animated = true;
+            this.circleProgressBar1.AnimationSpeed = 0.3F;
+            this.circleProgressBar1.BackColor = System.Drawing.Color.Transparent;
+            this.circleProgressBar1.FillColor = System.Drawing.Color.Transparent;
+            this.circleProgressBar1.FillThickness = 1;
+            this.circleProgressBar1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.circleProgressBar1.ForeColor = System.Drawing.Color.Transparent;
+            this.circleProgressBar1.Location = new System.Drawing.Point(8, 7);
+            this.circleProgressBar1.Minimum = 0;
+            this.circleProgressBar1.Name = "circleProgressBar1";
+            this.circleProgressBar1.ProgressColor = System.Drawing.Color.Red;
+            this.circleProgressBar1.ProgressColor2 = System.Drawing.Color.MidnightBlue;
+            this.circleProgressBar1.ProgressThickness = 1;
+            this.circleProgressBar1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.circleProgressBar1.Size = new System.Drawing.Size(88, 88);
+            this.circleProgressBar1.TabIndex = 91;
+            this.circleProgressBar1.UseTransparentBackground = true;
+            this.circleProgressBar1.Value = 33;
+            // 
+            // panelMain
+            // 
+            this.panelMain.Controls.Add(this.pnlHeader);
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain.Location = new System.Drawing.Point(187, 0);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(1162, 782);
+            this.panelMain.TabIndex = 8;
+            // 
+            // pnlHeader
+            // 
+            this.pnlHeader.Controls.Add(this.btnMinimize);
+            this.pnlHeader.Controls.Add(this.btnMaximize);
+            this.pnlHeader.Controls.Add(this.btnCloseApp);
+            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Size = new System.Drawing.Size(1162, 42);
+            this.pnlHeader.TabIndex = 20;
+            this.pnlHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_header_MouseDown);
+            // 
+            // ShadowForm
+            // 
+            this.ShadowForm.BorderRadius = 0;
+            this.ShadowForm.TargetForm = this;
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimize.FlatAppearance.BorderSize = 0;
+            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimize.ForeColor = System.Drawing.Color.White;
+            this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
+            this.btnMinimize.Location = new System.Drawing.Point(1011, 0);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(48, 42);
+            this.btnMinimize.TabIndex = 17;
+            this.btnMinimize.UseVisualStyleBackColor = true;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
+            // btnMaximize
+            // 
+            this.btnMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMaximize.FlatAppearance.BorderSize = 0;
+            this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaximize.ForeColor = System.Drawing.Color.White;
+            this.btnMaximize.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximize.Image")));
+            this.btnMaximize.Location = new System.Drawing.Point(1062, 0);
+            this.btnMaximize.Name = "btnMaximize";
+            this.btnMaximize.Size = new System.Drawing.Size(48, 42);
+            this.btnMaximize.TabIndex = 18;
+            this.btnMaximize.UseVisualStyleBackColor = true;
+            this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
+            // 
+            // btnCloseApp
+            // 
+            this.btnCloseApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCloseApp.FlatAppearance.BorderSize = 0;
+            this.btnCloseApp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnCloseApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloseApp.ForeColor = System.Drawing.Color.White;
+            this.btnCloseApp.Image = global::EvolveSettings.Properties.Resources.quit;
+            this.btnCloseApp.Location = new System.Drawing.Point(1113, 0);
+            this.btnCloseApp.Name = "btnCloseApp";
+            this.btnCloseApp.Size = new System.Drawing.Size(48, 42);
+            this.btnCloseApp.TabIndex = 16;
+            this.btnCloseApp.UseVisualStyleBackColor = true;
+            this.btnCloseApp.Click += new System.EventHandler(this.btnCloseApp_Click);
             // 
             // btnMenu
             // 
@@ -250,81 +394,6 @@ namespace EvolveSettings
             this.btnPassManager.Text = "  Password Manager";
             this.btnPassManager.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnPassManager.Click += new System.EventHandler(this.btnPassManager_Click);
-            // 
-            // txtNetFw
-            // 
-            this.txtNetFw.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtNetFw.AutoSize = true;
-            this.txtNetFw.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNetFw.ForeColor = System.Drawing.Color.Gray;
-            this.txtNetFw.Location = new System.Drawing.Point(12, 722);
-            this.txtNetFw.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.txtNetFw.Name = "txtNetFw";
-            this.txtNetFw.Size = new System.Drawing.Size(37, 13);
-            this.txtNetFw.TabIndex = 86;
-            this.txtNetFw.Text = "netfw";
-            // 
-            // txtBitness
-            // 
-            this.txtBitness.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtBitness.AutoSize = true;
-            this.txtBitness.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBitness.ForeColor = System.Drawing.Color.Gray;
-            this.txtBitness.Location = new System.Drawing.Point(12, 705);
-            this.txtBitness.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.txtBitness.Name = "txtBitness";
-            this.txtBitness.Size = new System.Drawing.Size(44, 13);
-            this.txtBitness.TabIndex = 85;
-            this.txtBitness.Text = "bitness";
-            // 
-            // txtOS
-            // 
-            this.txtOS.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtOS.AutoSize = true;
-            this.txtOS.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOS.ForeColor = System.Drawing.Color.Gray;
-            this.txtOS.Location = new System.Drawing.Point(12, 688);
-            this.txtOS.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.txtOS.Name = "txtOS";
-            this.txtOS.Size = new System.Drawing.Size(19, 13);
-            this.txtOS.TabIndex = 84;
-            this.txtOS.Text = "os";
-            // 
-            // lblversion
-            // 
-            this.lblversion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblversion.AutoSize = true;
-            this.lblversion.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblversion.ForeColor = System.Drawing.Color.Gray;
-            this.lblversion.Location = new System.Drawing.Point(12, 739);
-            this.lblversion.Name = "lblversion";
-            this.lblversion.Size = new System.Drawing.Size(45, 13);
-            this.lblversion.TabIndex = 83;
-            this.lblversion.Text = "Version";
-            // 
-            // txtAppVersion
-            // 
-            this.txtAppVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtAppVersion.AutoSize = true;
-            this.txtAppVersion.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAppVersion.ForeColor = System.Drawing.Color.Gray;
-            this.txtAppVersion.Location = new System.Drawing.Point(55, 739);
-            this.txtAppVersion.Name = "txtAppVersion";
-            this.txtAppVersion.Size = new System.Drawing.Size(21, 13);
-            this.txtAppVersion.TabIndex = 82;
-            this.txtAppVersion.Text = "1.x";
-            // 
-            // lblUserMode
-            // 
-            this.lblUserMode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblUserMode.AutoSize = true;
-            this.lblUserMode.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserMode.ForeColor = System.Drawing.Color.Tomato;
-            this.lblUserMode.Location = new System.Drawing.Point(12, 761);
-            this.lblUserMode.Name = "lblUserMode";
-            this.lblUserMode.Size = new System.Drawing.Size(60, 13);
-            this.lblUserMode.TabIndex = 81;
-            this.lblUserMode.Text = "UserMode";
             // 
             // btnSettings
             // 
@@ -456,49 +525,6 @@ namespace EvolveSettings
             this.btnHome.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnHome.Click += new System.EventHandler(this.BtnHome_Click);
             // 
-            // circleProgressBar2
-            // 
-            this.circleProgressBar2.Animated = true;
-            this.circleProgressBar2.AnimationSpeed = 0.3F;
-            this.circleProgressBar2.BackColor = System.Drawing.Color.Transparent;
-            this.circleProgressBar2.Controls.Add(this.circleProgressBar1);
-            this.circleProgressBar2.FillColor = System.Drawing.Color.Transparent;
-            this.circleProgressBar2.FillThickness = 1;
-            this.circleProgressBar2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.circleProgressBar2.ForeColor = System.Drawing.Color.Transparent;
-            this.circleProgressBar2.Location = new System.Drawing.Point(42, 31);
-            this.circleProgressBar2.Minimum = 0;
-            this.circleProgressBar2.Name = "circleProgressBar2";
-            this.circleProgressBar2.ProgressColor = System.Drawing.Color.MidnightBlue;
-            this.circleProgressBar2.ProgressColor2 = System.Drawing.Color.Red;
-            this.circleProgressBar2.ProgressThickness = 1;
-            this.circleProgressBar2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.circleProgressBar2.Size = new System.Drawing.Size(104, 104);
-            this.circleProgressBar2.TabIndex = 92;
-            this.circleProgressBar2.UseTransparentBackground = true;
-            this.circleProgressBar2.Value = 33;
-            // 
-            // circleProgressBar1
-            // 
-            this.circleProgressBar1.Animated = true;
-            this.circleProgressBar1.AnimationSpeed = 0.3F;
-            this.circleProgressBar1.BackColor = System.Drawing.Color.Transparent;
-            this.circleProgressBar1.FillColor = System.Drawing.Color.Transparent;
-            this.circleProgressBar1.FillThickness = 1;
-            this.circleProgressBar1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.circleProgressBar1.ForeColor = System.Drawing.Color.Transparent;
-            this.circleProgressBar1.Location = new System.Drawing.Point(8, 7);
-            this.circleProgressBar1.Minimum = 0;
-            this.circleProgressBar1.Name = "circleProgressBar1";
-            this.circleProgressBar1.ProgressColor = System.Drawing.Color.Red;
-            this.circleProgressBar1.ProgressColor2 = System.Drawing.Color.MidnightBlue;
-            this.circleProgressBar1.ProgressThickness = 1;
-            this.circleProgressBar1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.circleProgressBar1.Size = new System.Drawing.Size(88, 88);
-            this.circleProgressBar1.TabIndex = 91;
-            this.circleProgressBar1.UseTransparentBackground = true;
-            this.circleProgressBar1.Value = 33;
-            // 
             // pictureBoxProfile
             // 
             this.pictureBoxProfile.BackColor = System.Drawing.Color.Transparent;
@@ -513,32 +539,6 @@ namespace EvolveSettings
             this.pictureBoxProfile.TabIndex = 88;
             this.pictureBoxProfile.TabStop = false;
             this.pictureBoxProfile.UseTransparentBackground = true;
-            // 
-            // panelMain
-            // 
-            this.panelMain.Controls.Add(this.pnlHeader);
-            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(187, 0);
-            this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1162, 782);
-            this.panelMain.TabIndex = 8;
-            // 
-            // pnlHeader
-            // 
-            this.pnlHeader.Controls.Add(this.btnMinimize);
-            this.pnlHeader.Controls.Add(this.btnMaximize);
-            this.pnlHeader.Controls.Add(this.btnCloseApp);
-            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1162, 42);
-            this.pnlHeader.TabIndex = 20;
-            this.pnlHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_header_MouseDown);
-            // 
-            // ShadowForm
-            // 
-            this.ShadowForm.BorderRadius = 0;
-            this.ShadowForm.TargetForm = this;
             // 
             // MainForm
             // 
@@ -557,11 +557,11 @@ namespace EvolveSettings
             this.Resize += new System.EventHandler(this.MainForm_Resize);
             this.pnlNav.ResumeLayout(false);
             this.pnlNav.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();
             this.circleProgressBar2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
             this.panelMain.ResumeLayout(false);
             this.pnlHeader.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -237,12 +237,18 @@ namespace EvolveSettings
                 //light
                 this.BackColor = themeColor;//Border color
                 pnlHeader.BackColor = SystemColors.Control;
+                btnCloseApp.Image = EvolveSettings.Properties.Resources.quit_black;
+                btnMaximize.Image = EvolveSettings.Properties.Resources.maximize_black;
+                btnMinimize.Image = EvolveSettings.Properties.Resources.minimize_black;
             }
             else
             {
                 //dark
                 this.BackColor = themeColor;//Border color
                 pnlHeader.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
+                btnCloseApp.Image = EvolveSettings.Properties.Resources.quit;
+                btnMaximize.Image = EvolveSettings.Properties.Resources.maximize;
+                btnMinimize.Image = EvolveSettings.Properties.Resources.minimize;
             }
             pnlNav.BackColor = themeColor;
             foreach (Guna2Button button in this.pnlNav.Controls.OfType<Guna2Button>())
