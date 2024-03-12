@@ -256,6 +256,18 @@
     <Compile Include="ErrorLogger.cs" />
     <Compile Include="EvolveMessageBox.cs" />
     <Compile Include="EvolveUtilities.cs" />
+    <Compile Include="Forms\EncryptorModuleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EncryptorModuleForm.Designer.cs">
+      <DependentUpon>EncryptorModuleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FileEncryptorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FileEncryptorForm.Designer.cs">
+      <DependentUpon>FileEncryptorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ForgotPassForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -365,6 +377,12 @@
     </Compile>
     <Compile Include="Helpers\SqlConnectionHelper.cs" />
     <Compile Include="WinTheme.cs" />
+    <EmbeddedResource Include="Forms\EncryptorModuleForm.resx">
+      <DependentUpon>EncryptorModuleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FileEncryptorForm.resx">
+      <DependentUpon>FileEncryptorForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ForgotPassForm.resx">
       <DependentUpon>ForgotPassForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -448,6 +466,8 @@
     <None Include="Resources\information.png" />
     <Content Include="Resources\delete.png" />
     <Content Include="Resources\edit.png" />
+    <Content Include="Resources\encrypted_file.png" />
+    <Content Include="Resources\encryptor.png" />
     <Content Include="Resources\logout.png" />
     <Content Include="Resources\maintenance.png" />
     <Content Include="Resources\maximize_black.png" />

@@ -44,6 +44,8 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.pnlGridView = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
@@ -54,6 +56,8 @@
             this.lblUserType = new System.Windows.Forms.Label();
             this.lblUserInfo = new System.Windows.Forms.Label();
             this.pnlUserInfo = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.btnBrowse = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.pictureBoxProfile = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -97,14 +101,12 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnBrowse = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.pictureBoxProfile = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             this.pnlGridView.SuspendLayout();
             this.pnlHeader.SuspendLayout();
             this.pnlUserInfo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBrowse)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -120,8 +122,6 @@
             this.guna2Panel4.SuspendLayout();
             this.pnlUserPerms.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBrowse)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAddUser
@@ -136,7 +136,7 @@
             this.btnAddUser.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnAddUser.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddUser.ForeColor = System.Drawing.Color.White;
-            this.btnAddUser.Location = new System.Drawing.Point(284, 11);
+            this.btnAddUser.Location = new System.Drawing.Point(333, 11);
             this.btnAddUser.Name = "btnAddUser";
             this.btnAddUser.Size = new System.Drawing.Size(104, 32);
             this.btnAddUser.TabIndex = 1;
@@ -190,7 +190,7 @@
             this.dgvUser.RowTemplate.DividerHeight = 2;
             this.dgvUser.RowTemplate.Height = 50;
             this.dgvUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvUser.Size = new System.Drawing.Size(763, 402);
+            this.dgvUser.Size = new System.Drawing.Size(828, 402);
             this.dgvUser.TabIndex = 4;
             this.dgvUser.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvUser.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -287,6 +287,25 @@
             this.Column6.ReadOnly = true;
             this.Column6.Width = 77;
             // 
+            // Edit
+            // 
+            this.Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Edit.HeaderText = "";
+            this.Edit.Image = global::EvolveSettings.Properties.Resources.edit;
+            this.Edit.Name = "Edit";
+            this.Edit.ReadOnly = true;
+            this.Edit.Visible = false;
+            this.Edit.Width = 5;
+            // 
+            // Delete
+            // 
+            this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Delete.HeaderText = "";
+            this.Delete.Image = global::EvolveSettings.Properties.Resources.delete;
+            this.Delete.Name = "Delete";
+            this.Delete.ReadOnly = true;
+            this.Delete.Width = 5;
+            // 
             // pnlGridView
             // 
             this.pnlGridView.BackColor = System.Drawing.Color.Transparent;
@@ -300,7 +319,7 @@
             this.pnlGridView.ShadowColor = System.Drawing.Color.Black;
             this.pnlGridView.ShadowDepth = 250;
             this.pnlGridView.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
-            this.pnlGridView.Size = new System.Drawing.Size(769, 439);
+            this.pnlGridView.Size = new System.Drawing.Size(834, 439);
             this.pnlGridView.TabIndex = 5;
             // 
             // pnlHeader
@@ -310,7 +329,7 @@
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1222, 49);
+            this.pnlHeader.Size = new System.Drawing.Size(1322, 49);
             this.pnlHeader.TabIndex = 17;
             // 
             // lblTitle
@@ -402,8 +421,38 @@
             this.pnlUserInfo.ShadowColor = System.Drawing.Color.Black;
             this.pnlUserInfo.ShadowDepth = 250;
             this.pnlUserInfo.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
-            this.pnlUserInfo.Size = new System.Drawing.Size(410, 224);
+            this.pnlUserInfo.Size = new System.Drawing.Size(459, 224);
             this.pnlUserInfo.TabIndex = 0;
+            // 
+            // btnBrowse
+            // 
+            this.btnBrowse.BackColor = System.Drawing.Color.Transparent;
+            this.btnBrowse.FillColor = System.Drawing.Color.Transparent;
+            this.btnBrowse.Image = global::EvolveSettings.Properties.Resources.add;
+            this.btnBrowse.ImageRotate = 0F;
+            this.btnBrowse.Location = new System.Drawing.Point(69, 50);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnBrowse.Size = new System.Drawing.Size(26, 26);
+            this.btnBrowse.TabIndex = 1035;
+            this.btnBrowse.TabStop = false;
+            this.btnBrowse.UseTransparentBackground = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            // 
+            // pictureBoxProfile
+            // 
+            this.pictureBoxProfile.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxProfile.FillColor = System.Drawing.Color.Transparent;
+            this.pictureBoxProfile.Image = global::EvolveSettings.Properties.Resources.evolve_settings;
+            this.pictureBoxProfile.ImageRotate = 0F;
+            this.pictureBoxProfile.Location = new System.Drawing.Point(14, 46);
+            this.pictureBoxProfile.Name = "pictureBoxProfile";
+            this.pictureBoxProfile.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.pictureBoxProfile.Size = new System.Drawing.Size(81, 81);
+            this.pictureBoxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxProfile.TabIndex = 1024;
+            this.pictureBoxProfile.TabStop = false;
+            this.pictureBoxProfile.UseTransparentBackground = true;
             // 
             // guna2Panel2
             // 
@@ -442,7 +491,7 @@
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1222, 467);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1322, 467);
             this.tableLayoutPanel2.TabIndex = 1034;
             // 
             // pnlEditUser
@@ -465,14 +514,14 @@
             this.pnlEditUser.Controls.Add(this.guna2Panel5);
             this.pnlEditUser.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlEditUser.FillColor = System.Drawing.Color.White;
-            this.pnlEditUser.Location = new System.Drawing.Point(810, 3);
+            this.pnlEditUser.Location = new System.Drawing.Point(875, 3);
             this.pnlEditUser.Margin = new System.Windows.Forms.Padding(10, 3, 28, 25);
             this.pnlEditUser.Name = "pnlEditUser";
             this.pnlEditUser.Radius = 5;
             this.pnlEditUser.ShadowColor = System.Drawing.Color.Black;
             this.pnlEditUser.ShadowDepth = 250;
             this.pnlEditUser.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
-            this.pnlEditUser.Size = new System.Drawing.Size(384, 439);
+            this.pnlEditUser.Size = new System.Drawing.Size(419, 439);
             this.pnlEditUser.TabIndex = 1037;
             // 
             // btnPassGen
@@ -488,7 +537,7 @@
             this.btnPassGen.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnPassGen.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPassGen.ForeColor = System.Drawing.Color.White;
-            this.btnPassGen.Location = new System.Drawing.Point(116, 385);
+            this.btnPassGen.Location = new System.Drawing.Point(151, 385);
             this.btnPassGen.Name = "btnPassGen";
             this.btnPassGen.Size = new System.Drawing.Size(131, 32);
             this.btnPassGen.TabIndex = 1047;
@@ -507,7 +556,7 @@
             this.btnUpdate.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(270, 385);
+            this.btnUpdate.Location = new System.Drawing.Point(305, 385);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(96, 32);
             this.btnUpdate.TabIndex = 1051;
@@ -521,7 +570,7 @@
             this.guna2Panel10.Controls.Add(this.lblEditEmail);
             this.guna2Panel10.Location = new System.Drawing.Point(9, 296);
             this.guna2Panel10.Name = "guna2Panel10";
-            this.guna2Panel10.Size = new System.Drawing.Size(231, 25);
+            this.guna2Panel10.Size = new System.Drawing.Size(266, 25);
             this.guna2Panel10.TabIndex = 1050;
             // 
             // lblEditEmail
@@ -544,7 +593,7 @@
             this.guna2Panel9.Controls.Add(this.lblEditRePass);
             this.guna2Panel9.Location = new System.Drawing.Point(9, 235);
             this.guna2Panel9.Name = "guna2Panel9";
-            this.guna2Panel9.Size = new System.Drawing.Size(268, 25);
+            this.guna2Panel9.Size = new System.Drawing.Size(303, 25);
             this.guna2Panel9.TabIndex = 1050;
             // 
             // lblEditRePass
@@ -567,7 +616,7 @@
             this.guna2Panel8.Controls.Add(this.lblEditPassword);
             this.guna2Panel8.Location = new System.Drawing.Point(9, 171);
             this.guna2Panel8.Name = "guna2Panel8";
-            this.guna2Panel8.Size = new System.Drawing.Size(231, 25);
+            this.guna2Panel8.Size = new System.Drawing.Size(266, 25);
             this.guna2Panel8.TabIndex = 1049;
             // 
             // lblEditPassword
@@ -590,7 +639,7 @@
             this.guna2Panel7.Controls.Add(this.lblEditUserName);
             this.guna2Panel7.Location = new System.Drawing.Point(6, 108);
             this.guna2Panel7.Name = "guna2Panel7";
-            this.guna2Panel7.Size = new System.Drawing.Size(231, 25);
+            this.guna2Panel7.Size = new System.Drawing.Size(266, 25);
             this.guna2Panel7.TabIndex = 1048;
             // 
             // lblEditUserName
@@ -613,7 +662,7 @@
             this.guna2Panel6.Controls.Add(this.lblEditFullName);
             this.guna2Panel6.Location = new System.Drawing.Point(9, 50);
             this.guna2Panel6.Name = "guna2Panel6";
-            this.guna2Panel6.Size = new System.Drawing.Size(231, 25);
+            this.guna2Panel6.Size = new System.Drawing.Size(266, 25);
             this.guna2Panel6.TabIndex = 1047;
             // 
             // lblEditFullName
@@ -651,7 +700,7 @@
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.PlaceholderText = "";
             this.txtEmail.SelectedText = "";
-            this.txtEmail.Size = new System.Drawing.Size(348, 34);
+            this.txtEmail.Size = new System.Drawing.Size(383, 34);
             this.txtEmail.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtEmail.TabIndex = 1046;
             // 
@@ -677,7 +726,7 @@
             this.txtRepass.PasswordChar = '*';
             this.txtRepass.PlaceholderText = "";
             this.txtRepass.SelectedText = "";
-            this.txtRepass.Size = new System.Drawing.Size(348, 34);
+            this.txtRepass.Size = new System.Drawing.Size(383, 34);
             this.txtRepass.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtRepass.TabIndex = 1045;
             // 
@@ -703,7 +752,7 @@
             this.txtPass.PasswordChar = '*';
             this.txtPass.PlaceholderText = "";
             this.txtPass.SelectedText = "";
-            this.txtPass.Size = new System.Drawing.Size(348, 34);
+            this.txtPass.Size = new System.Drawing.Size(383, 34);
             this.txtPass.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtPass.TabIndex = 1044;
             // 
@@ -730,7 +779,7 @@
             this.txtUserName.PlaceholderText = "";
             this.txtUserName.ReadOnly = true;
             this.txtUserName.SelectedText = "";
-            this.txtUserName.Size = new System.Drawing.Size(348, 34);
+            this.txtUserName.Size = new System.Drawing.Size(383, 34);
             this.txtUserName.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtUserName.TabIndex = 1043;
             this.txtUserName.TextChanged += new System.EventHandler(this.txtUserName_TextChanged);
@@ -757,7 +806,7 @@
             this.txtFullName.PasswordChar = '\0';
             this.txtFullName.PlaceholderText = "";
             this.txtFullName.SelectedText = "";
-            this.txtFullName.Size = new System.Drawing.Size(348, 34);
+            this.txtFullName.Size = new System.Drawing.Size(383, 34);
             this.txtFullName.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtFullName.TabIndex = 1042;
             // 
@@ -772,7 +821,7 @@
             this.chkEditShowPass.CheckedState.FillColor = System.Drawing.Color.MidnightBlue;
             this.chkEditShowPass.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkEditShowPass.ForeColor = System.Drawing.Color.Gray;
-            this.chkEditShowPass.Location = new System.Drawing.Point(265, 300);
+            this.chkEditShowPass.Location = new System.Drawing.Point(300, 300);
             this.chkEditShowPass.Name = "chkEditShowPass";
             this.chkEditShowPass.Size = new System.Drawing.Size(107, 17);
             this.chkEditShowPass.TabIndex = 1041;
@@ -793,7 +842,7 @@
             this.txtDateCreated.Location = new System.Drawing.Point(16, 364);
             this.txtDateCreated.Name = "txtDateCreated";
             this.txtDateCreated.ReadOnly = true;
-            this.txtDateCreated.Size = new System.Drawing.Size(219, 15);
+            this.txtDateCreated.Size = new System.Drawing.Size(254, 15);
             this.txtDateCreated.TabIndex = 1039;
             this.txtDateCreated.Text = "Date";
             // 
@@ -830,7 +879,7 @@
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.761317F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 94.23869F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1222, 243);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1322, 243);
             this.tableLayoutPanel1.TabIndex = 1035;
             // 
             // pnlPasswordValidation
@@ -841,7 +890,7 @@
             this.pnlPasswordValidation.Controls.Add(this.guna2TextBox2);
             this.pnlPasswordValidation.Controls.Add(this.guna2Panel4);
             this.pnlPasswordValidation.FillColor = System.Drawing.Color.White;
-            this.pnlPasswordValidation.Location = new System.Drawing.Point(910, 16);
+            this.pnlPasswordValidation.Location = new System.Drawing.Point(1010, 16);
             this.pnlPasswordValidation.Margin = new System.Windows.Forms.Padding(10, 3, 28, 3);
             this.pnlPasswordValidation.Name = "pnlPasswordValidation";
             this.pnlPasswordValidation.Radius = 5;
@@ -917,14 +966,14 @@
             this.pnlUserPerms.Controls.Add(this.guna2Panel3);
             this.pnlUserPerms.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlUserPerms.FillColor = System.Drawing.Color.White;
-            this.pnlUserPerms.Location = new System.Drawing.Point(451, 16);
+            this.pnlUserPerms.Location = new System.Drawing.Point(500, 16);
             this.pnlUserPerms.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.pnlUserPerms.Name = "pnlUserPerms";
             this.pnlUserPerms.Radius = 5;
             this.pnlUserPerms.ShadowColor = System.Drawing.Color.Black;
             this.pnlUserPerms.ShadowDepth = 250;
             this.pnlUserPerms.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
-            this.pnlUserPerms.Size = new System.Drawing.Size(446, 224);
+            this.pnlUserPerms.Size = new System.Drawing.Size(497, 224);
             this.pnlUserPerms.TabIndex = 1035;
             // 
             // lblHeaderSelectUserType
@@ -932,7 +981,7 @@
             this.lblHeaderSelectUserType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblHeaderSelectUserType.AutoSize = true;
             this.lblHeaderSelectUserType.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeaderSelectUserType.Location = new System.Drawing.Point(223, 131);
+            this.lblHeaderSelectUserType.Location = new System.Drawing.Point(274, 131);
             this.lblHeaderSelectUserType.Name = "lblHeaderSelectUserType";
             this.lblHeaderSelectUserType.Size = new System.Drawing.Size(104, 17);
             this.lblHeaderSelectUserType.TabIndex = 1041;
@@ -942,7 +991,7 @@
             // 
             this.lblUserMode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblUserMode.AutoSize = true;
-            this.lblUserMode.Location = new System.Drawing.Point(222, 150);
+            this.lblUserMode.Location = new System.Drawing.Point(273, 150);
             this.lblUserMode.Name = "lblUserMode";
             this.lblUserMode.Size = new System.Drawing.Size(53, 13);
             this.lblUserMode.TabIndex = 1052;
@@ -952,7 +1001,7 @@
             // 
             this.lblAdminUserType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblAdminUserType.AutoSize = true;
-            this.lblAdminUserType.Location = new System.Drawing.Point(273, 150);
+            this.lblAdminUserType.Location = new System.Drawing.Point(324, 150);
             this.lblAdminUserType.Name = "lblAdminUserType";
             this.lblAdminUserType.Size = new System.Drawing.Size(35, 13);
             this.lblAdminUserType.TabIndex = 1048;
@@ -971,7 +1020,7 @@
             this.btnUserTypeGuest.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnUserTypeGuest.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnUserTypeGuest.ForeColor = System.Drawing.Color.White;
-            this.btnUserTypeGuest.Location = new System.Drawing.Point(226, 170);
+            this.btnUserTypeGuest.Location = new System.Drawing.Point(277, 170);
             this.btnUserTypeGuest.Name = "btnUserTypeGuest";
             this.btnUserTypeGuest.Size = new System.Drawing.Size(96, 32);
             this.btnUserTypeGuest.TabIndex = 1050;
@@ -994,7 +1043,7 @@
             this.guna2TextBox1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2TextBox1.ForeColor = System.Drawing.Color.Black;
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.guna2TextBox1.Location = new System.Drawing.Point(238, 274);
+            this.guna2TextBox1.Location = new System.Drawing.Point(289, 274);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PasswordChar = '\0';
             this.guna2TextBox1.PlaceholderText = "";
@@ -1016,7 +1065,7 @@
             this.btnUserTypeAdmin.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnUserTypeAdmin.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnUserTypeAdmin.ForeColor = System.Drawing.Color.White;
-            this.btnUserTypeAdmin.Location = new System.Drawing.Point(328, 170);
+            this.btnUserTypeAdmin.Location = new System.Drawing.Point(379, 170);
             this.btnUserTypeAdmin.Name = "btnUserTypeAdmin";
             this.btnUserTypeAdmin.Size = new System.Drawing.Size(96, 32);
             this.btnUserTypeAdmin.TabIndex = 1049;
@@ -1052,7 +1101,6 @@
             this.dataGridViewImageColumn1.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn1.Image")));
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             this.dataGridViewImageColumn1.Visible = false;
-            this.dataGridViewImageColumn1.Width = 5;
             // 
             // dataGridViewImageColumn2
             // 
@@ -1061,63 +1109,13 @@
             this.dataGridViewImageColumn2.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn2.Image")));
             this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
             this.dataGridViewImageColumn2.Visible = false;
-            this.dataGridViewImageColumn2.Width = 5;
-            // 
-            // btnBrowse
-            // 
-            this.btnBrowse.BackColor = System.Drawing.Color.Transparent;
-            this.btnBrowse.FillColor = System.Drawing.Color.Transparent;
-            this.btnBrowse.Image = global::EvolveSettings.Properties.Resources.add;
-            this.btnBrowse.ImageRotate = 0F;
-            this.btnBrowse.Location = new System.Drawing.Point(69, 50);
-            this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnBrowse.Size = new System.Drawing.Size(26, 26);
-            this.btnBrowse.TabIndex = 1035;
-            this.btnBrowse.TabStop = false;
-            this.btnBrowse.UseTransparentBackground = true;
-            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
-            // 
-            // pictureBoxProfile
-            // 
-            this.pictureBoxProfile.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxProfile.FillColor = System.Drawing.Color.Transparent;
-            this.pictureBoxProfile.Image = global::EvolveSettings.Properties.Resources.evolve_settings;
-            this.pictureBoxProfile.ImageRotate = 0F;
-            this.pictureBoxProfile.Location = new System.Drawing.Point(14, 46);
-            this.pictureBoxProfile.Name = "pictureBoxProfile";
-            this.pictureBoxProfile.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.pictureBoxProfile.Size = new System.Drawing.Size(81, 81);
-            this.pictureBoxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxProfile.TabIndex = 1024;
-            this.pictureBoxProfile.TabStop = false;
-            this.pictureBoxProfile.UseTransparentBackground = true;
-            // 
-            // Edit
-            // 
-            this.Edit.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Edit.HeaderText = "";
-            this.Edit.Image = global::EvolveSettings.Properties.Resources.edit;
-            this.Edit.Name = "Edit";
-            this.Edit.ReadOnly = true;
-            this.Edit.Visible = false;
-            this.Edit.Width = 5;
-            // 
-            // Delete
-            // 
-            this.Delete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Delete.HeaderText = "";
-            this.Delete.Image = global::EvolveSettings.Properties.Resources.delete;
-            this.Delete.Name = "Delete";
-            this.Delete.ReadOnly = true;
-            this.Delete.Width = 5;
             // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1222, 762);
+            this.ClientSize = new System.Drawing.Size(1322, 762);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.pnlHeader);
@@ -1131,6 +1129,8 @@
             this.pnlHeader.PerformLayout();
             this.pnlUserInfo.ResumeLayout(false);
             this.pnlUserInfo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBrowse)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);
@@ -1158,8 +1158,6 @@
             this.pnlUserPerms.PerformLayout();
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBrowse)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
             this.ResumeLayout(false);
 
         }

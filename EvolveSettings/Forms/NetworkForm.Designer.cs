@@ -30,6 +30,7 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pnlPingIP = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.listPingResults = new EvolveSettings.Controls.EvolveListView();
             this.txtPingInput = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnExport = new Guna.UI2.WinForms.Guna2Button();
             this.btnShodan = new Guna.UI2.WinForms.Guna2Button();
@@ -72,7 +73,6 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.ExportDialog = new System.Windows.Forms.SaveFileDialog();
             this.DefineURLIconDialog = new System.Windows.Forms.OpenFileDialog();
-            this.listPingResults = new EvolveSettings.Controls.EvolveListView();
             this.tableLayoutPanel1.SuspendLayout();
             this.pnlPingIP.SuspendLayout();
             this.pnlDnsServer.SuspendLayout();
@@ -94,7 +94,7 @@
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1222, 716);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1385, 716);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // pnlPingIP
@@ -115,15 +115,31 @@
             this.pnlPingIP.Controls.Add(this.lblIPaddressPing);
             this.pnlPingIP.Controls.Add(this.lblPingResults);
             this.pnlPingIP.FillColor = System.Drawing.Color.White;
-            this.pnlPingIP.Location = new System.Drawing.Point(616, 3);
+            this.pnlPingIP.Location = new System.Drawing.Point(697, 3);
             this.pnlPingIP.Margin = new System.Windows.Forms.Padding(5, 3, 28, 25);
             this.pnlPingIP.Name = "pnlPingIP";
             this.pnlPingIP.Radius = 5;
             this.pnlPingIP.ShadowColor = System.Drawing.Color.Black;
             this.pnlPingIP.ShadowDepth = 250;
             this.pnlPingIP.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
-            this.pnlPingIP.Size = new System.Drawing.Size(578, 688);
+            this.pnlPingIP.Size = new System.Drawing.Size(660, 688);
             this.pnlPingIP.TabIndex = 1;
+            // 
+            // listPingResults
+            // 
+            this.listPingResults.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listPingResults.BackColor = System.Drawing.Color.DimGray;
+            this.listPingResults.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listPingResults.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
+            this.listPingResults.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listPingResults.FormattingEnabled = true;
+            this.listPingResults.Location = new System.Drawing.Point(90, 289);
+            this.listPingResults.Name = "listPingResults";
+            this.listPingResults.Radius = 5;
+            this.listPingResults.Size = new System.Drawing.Size(276, 200);
+            this.listPingResults.TabIndex = 171;
             // 
             // txtPingInput
             // 
@@ -148,7 +164,7 @@
             this.txtPingInput.PasswordChar = '\0';
             this.txtPingInput.PlaceholderText = "";
             this.txtPingInput.SelectedText = "";
-            this.txtPingInput.Size = new System.Drawing.Size(194, 34);
+            this.txtPingInput.Size = new System.Drawing.Size(276, 34);
             this.txtPingInput.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtPingInput.TabIndex = 170;
             // 
@@ -165,7 +181,7 @@
             this.btnExport.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnExport.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExport.ForeColor = System.Drawing.Color.White;
-            this.btnExport.Location = new System.Drawing.Point(180, 511);
+            this.btnExport.Location = new System.Drawing.Point(262, 511);
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(104, 32);
             this.btnExport.TabIndex = 169;
@@ -185,7 +201,7 @@
             this.btnShodan.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnShodan.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShodan.ForeColor = System.Drawing.Color.White;
-            this.btnShodan.Location = new System.Drawing.Point(444, 612);
+            this.btnShodan.Location = new System.Drawing.Point(526, 612);
             this.btnShodan.Name = "btnShodan";
             this.btnShodan.Size = new System.Drawing.Size(104, 32);
             this.btnShodan.TabIndex = 168;
@@ -205,7 +221,7 @@
             this.copyB.FillColor = System.Drawing.Color.MidnightBlue;
             this.copyB.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.copyB.ForeColor = System.Drawing.Color.White;
-            this.copyB.Location = new System.Drawing.Point(324, 612);
+            this.copyB.Location = new System.Drawing.Point(406, 612);
             this.copyB.Name = "copyB";
             this.copyB.Size = new System.Drawing.Size(104, 32);
             this.copyB.TabIndex = 167;
@@ -225,7 +241,7 @@
             this.copyIPB.FillColor = System.Drawing.Color.MidnightBlue;
             this.copyIPB.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.copyIPB.ForeColor = System.Drawing.Color.White;
-            this.copyIPB.Location = new System.Drawing.Point(444, 168);
+            this.copyIPB.Location = new System.Drawing.Point(526, 168);
             this.copyIPB.Name = "copyIPB";
             this.copyIPB.Size = new System.Drawing.Size(104, 32);
             this.copyIPB.TabIndex = 166;
@@ -245,7 +261,7 @@
             this.btnPing.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnPing.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPing.ForeColor = System.Drawing.Color.White;
-            this.btnPing.Location = new System.Drawing.Point(324, 168);
+            this.btnPing.Location = new System.Drawing.Point(406, 168);
             this.btnPing.Name = "btnPing";
             this.btnPing.Size = new System.Drawing.Size(104, 32);
             this.btnPing.TabIndex = 164;
@@ -258,7 +274,7 @@
             this.label9.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
             this.label9.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.label9.Location = new System.Drawing.Point(321, 573);
+            this.label9.Location = new System.Drawing.Point(403, 573);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(184, 36);
             this.label9.TabIndex = 165;
@@ -338,7 +354,7 @@
             this.pnlDnsServer.ShadowColor = System.Drawing.Color.Black;
             this.pnlDnsServer.ShadowDepth = 250;
             this.pnlDnsServer.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
-            this.pnlDnsServer.Size = new System.Drawing.Size(578, 688);
+            this.pnlDnsServer.Size = new System.Drawing.Size(659, 688);
             this.pnlDnsServer.TabIndex = 0;
             // 
             // boxDNS
@@ -359,7 +375,7 @@
             this.boxDNS.Name = "boxDNS";
             this.boxDNS.ShadowDecoration.BorderRadius = 0;
             this.boxDNS.ShadowDecoration.Color = System.Drawing.Color.Transparent;
-            this.boxDNS.Size = new System.Drawing.Size(406, 22);
+            this.boxDNS.Size = new System.Drawing.Size(487, 22);
             this.boxDNS.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.boxDNS.TabIndex = 193;
             // 
@@ -380,7 +396,7 @@
             this.boxAdapter.Name = "boxAdapter";
             this.boxAdapter.ShadowDecoration.BorderRadius = 0;
             this.boxAdapter.ShadowDecoration.Color = System.Drawing.Color.Transparent;
-            this.boxAdapter.Size = new System.Drawing.Size(406, 22);
+            this.boxAdapter.Size = new System.Drawing.Size(487, 22);
             this.boxAdapter.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.boxAdapter.TabIndex = 192;
             // 
@@ -536,7 +552,7 @@
             this.btnOpenNetwork.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnOpenNetwork.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOpenNetwork.ForeColor = System.Drawing.Color.White;
-            this.btnOpenNetwork.Location = new System.Drawing.Point(412, 612);
+            this.btnOpenNetwork.Location = new System.Drawing.Point(493, 612);
             this.btnOpenNetwork.Name = "btnOpenNetwork";
             this.btnOpenNetwork.Size = new System.Drawing.Size(141, 32);
             this.btnOpenNetwork.TabIndex = 185;
@@ -803,7 +819,7 @@
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1222, 49);
+            this.pnlHeader.Size = new System.Drawing.Size(1385, 49);
             this.pnlHeader.TabIndex = 18;
             // 
             // lblTitle
@@ -827,27 +843,11 @@
             // 
             this.DefineURLIconDialog.Filter = "Icon [*.ico]|*.ico|Executable [*.exe]|*.exe";
             // 
-            // listPingResults
-            // 
-            this.listPingResults.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listPingResults.BackColor = System.Drawing.Color.DimGray;
-            this.listPingResults.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listPingResults.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.listPingResults.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listPingResults.FormattingEnabled = true;
-            this.listPingResults.Location = new System.Drawing.Point(90, 289);
-            this.listPingResults.Name = "listPingResults";
-            this.listPingResults.Radius = 5;
-            this.listPingResults.Size = new System.Drawing.Size(194, 200);
-            this.listPingResults.TabIndex = 171;
-            // 
             // NetworkForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1222, 762);
+            this.ClientSize = new System.Drawing.Size(1385, 762);
             this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

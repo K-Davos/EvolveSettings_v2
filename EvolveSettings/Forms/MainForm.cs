@@ -295,14 +295,19 @@ namespace EvolveSettings
             openChildForm(new SettingsForm());
         }
 
-        private void btnUserManagement_Click(object sender, EventArgs e)
+        private void btnFileEncryptor_Click(object sender, EventArgs e)
         {
-            openChildForm(new UserForm());
+            openChildForm(new FileEncryptorForm());
         }
 
         private void btnPassManager_Click(object sender, EventArgs e)
         {
             openChildForm(new PasswordManagerForm());
+        }
+
+        private void btnUserManagement_Click(object sender, EventArgs e)
+        {
+            openChildForm(new UserForm());
         }
 
         private void btnCloseApp_Click(object sender, EventArgs e)
