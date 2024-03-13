@@ -203,8 +203,9 @@ namespace EvolveSettings.Forms
 
                         cmd.Parameters.AddWithValue("@image", imageBt);
                     }
+                    string hash = BCrypt.Net.BCrypt.HashPassword(txtPass.Text);
                     cmd.Parameters.AddWithValue("@username", txtUserName.Text.Trim());
-                    cmd.Parameters.AddWithValue("@pass", txtPass.Text.Trim());
+                    cmd.Parameters.AddWithValue("@pass", hash);
                     cmd.Parameters.AddWithValue("@email", txtEmail.Text.Trim());
                     cmd.Parameters.AddWithValue("@fullname", txtFullName.Text.Trim());
                     cmd.Parameters.AddWithValue("@date", date);

@@ -189,13 +189,13 @@ namespace EvolveSettings
                                 MemoryStream memoryStream = new MemoryStream();
                                 image.Save(memoryStream, ImageFormat.Png);
 
+                                string hash = BCrypt.Net.BCrypt.HashPassword(txtPass.Text);
                                 byte[] imageBt = memoryStream.ToArray();
-
                                 using (SqlCommand cmd = new SqlCommand(insertData, connect))
                                 {
                                     cmd.Parameters.AddWithValue("@image", imageBt);
                                     cmd.Parameters.AddWithValue("@username", txtUserName.Text.Trim());
-                                    cmd.Parameters.AddWithValue("@pass", txtPass.Text.Trim());
+                                    cmd.Parameters.AddWithValue("@pass", hash);
                                     cmd.Parameters.AddWithValue("@email", txtEmail.Text.Trim());
                                     cmd.Parameters.AddWithValue("@date", date);
 

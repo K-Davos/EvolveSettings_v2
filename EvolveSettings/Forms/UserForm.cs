@@ -255,7 +255,6 @@ namespace EvolveSettings.Forms
 
             // Edit User
             txtUserName.Text = dgvUser.Rows[e.RowIndex].Cells[3].Value.ToString();
-            txtPass.Text = dgvUser.Rows[e.RowIndex].Cells[4].Value.ToString();
             txtEmail.Text = dgvUser.Rows[e.RowIndex].Cells[5].Value.ToString();
             txtFullName.Text = dgvUser.Rows[e.RowIndex].Cells[6].Value.ToString();
             txtDateCreated.Text = dgvUser.Rows[e.RowIndex].Cells[7].Value.ToString();
@@ -339,7 +338,8 @@ namespace EvolveSettings.Forms
 
                         cmd.Parameters.AddWithValue("@image", imageBt);
                     }
-                    cmd.Parameters.AddWithValue("@password", txtPass.Text.Trim());
+                    string hash = BCrypt.Net.BCrypt.HashPassword(txtPass.Text);
+                    cmd.Parameters.AddWithValue("@password", hash);
                     cmd.Parameters.AddWithValue("@email", txtEmail.Text.Trim());
                     cmd.Parameters.AddWithValue("@fullname", txtFullName.Text.Trim());
                     cmd.Parameters.AddWithValue("@date", date);

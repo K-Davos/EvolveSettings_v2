@@ -2,6 +2,7 @@
 using Microsoft.Win32;
 using System;
 using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
@@ -18,6 +19,7 @@ namespace EvolveSettings
 
         SqlConnection connect = new SqlConnection(SqlConnectionHelper.connectReturn());
         SqlCommand cmdR = new SqlCommand();
+        SqlDataReader datareader;
         int attempts = 1;
 
         public Login()
@@ -45,7 +47,7 @@ namespace EvolveSettings
                 lblRegister.Visible = false;
             }
 
-            if (login_password.Text.Length < 5)
+            if (txtPass.Text.Length < 5)
             {
                 btnLogin.Enabled = false;
                 timer1.Start();
@@ -158,17 +160,17 @@ namespace EvolveSettings
         {
             if (chkLoginShowPass.Checked)
             {
-                login_password.PasswordChar = '\0';
+                txtPass.PasswordChar = '\0';
             }
             else
             {
-                login_password.PasswordChar = '*';
+                txtPass.PasswordChar = '*';
             }
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (login_username.Text == "" || login_password.Text == "")
+            if (txtUserName.Text == "" || txtPass.Text == "")
             {
                 EvolveMessageBox.Show("Please fil all blank fields", "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -180,34 +182,37 @@ namespace EvolveSettings
                     {
                         connect.Open();
 
-                        String selectData = "SELECT * FROM admin WHERE username = @username AND password = @pass";
+                        string selectData = "SELECT password FROM admin WHERE username='" + txtUserName.Text + "'";
                         using (SqlCommand cmd = new SqlCommand(selectData, connect))
                         {
-                            cmd.Parameters.AddWithValue("@username", login_username.Text);
-                            cmd.Parameters.AddWithValue("@pass", login_password.Text);
                             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                             DataTable table = new DataTable();
                             adapter.Fill(table);
-
                             if (table.Rows.Count >= 1)
                             {
-                                EvolveMessageBox.Show("Logged In successfully", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                datareader = cmd.ExecuteReader();
+                                datareader.Read();
+                                bool verify = BCrypt.Net.BCrypt.Verify(txtPass.Text, datareader.GetString(0));
+                                if (verify)
+                                {
+                                    EvolveMessageBox.Show("Logged In successfully", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    datareader.Close();
+                                    usrname = txtUserName.Text;
+                                    MainForm mForm = new MainForm(usrname);
+                                    string sql = "Select username, image FROM admin WHERE username='" + txtUserName.Text + "'";
+                                    cmdR = new SqlCommand(sql, connect);
 
-                                usrname = login_username.Text;
-                                MainForm mForm = new MainForm(usrname);
-                                string sql = "Select username, image FROM admin WHERE username='" + login_username.Text + "'";
-                                cmdR = new SqlCommand(sql, connect);
-
-                                SqlDataReader reader = cmdR.ExecuteReader();
-                                reader.Read();
-                                login_username.Text = reader[0].ToString();
-                                byte[] img = (byte[])(reader[1]);
-                                MemoryStream memstream = new MemoryStream(img);
-                                mForm.pictureBoxProfile.Image = Image.FromStream(memstream);
-                                mForm.Show();
-                                connect.Close();
-                                this.Hide();
-                                timer1.Stop();
+                                    SqlDataReader reader = cmdR.ExecuteReader();
+                                    reader.Read();
+                                    txtUserName.Text = reader[0].ToString();
+                                    byte[] img = (byte[])(reader[1]);
+                                    MemoryStream memstream = new MemoryStream(img);
+                                    mForm.pictureBoxProfile.Image = Image.FromStream(memstream);
+                                    mForm.Show();
+                                    connect.Close();
+                                    this.Hide();
+                                    timer1.Stop();
+                                }
                             }
                             else
                             {
@@ -235,11 +240,11 @@ namespace EvolveSettings
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (login_password.Text.Length < 5)
+            if (txtPass.Text.Length < 5)
             {
                 btnLogin.Enabled = false;
             }
-            else if (login_password.Text.Length > 5)
+            else if (txtPass.Text.Length > 5)
             {
                 btnLogin.Enabled = true;
             }
