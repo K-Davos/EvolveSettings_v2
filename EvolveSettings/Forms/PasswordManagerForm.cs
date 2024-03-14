@@ -393,6 +393,20 @@ namespace EvolveSettings.Forms
             }
         }
 
+        private void chkEditShowPass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkEditShowPass.Checked)
+            {
+                txtPass.PasswordChar = '\0';
+                txtRepass.PasswordChar = '\0';
+            }
+            else
+            {
+                txtPass.PasswordChar = '*';
+                txtRepass.PasswordChar = '*';
+            }
+        }
+
         private void txtUserName_TextChanged(object sender, EventArgs e)
         {
             if (txtUserName.Text.Length > 1)
@@ -419,6 +433,12 @@ namespace EvolveSettings.Forms
                 imgLocation = dialog.FileName.ToString();
                 pictureBoxRecord.ImageLocation = imgLocation;
             }
+        }
+
+        private void btnPwEncryption_Click(object sender, EventArgs e)
+        {
+            PasswordEncryptionForm pwEncryption = new PasswordEncryptionForm();
+            pwEncryption.ShowDialog();
         }
     }
 }

@@ -49,16 +49,12 @@
             this.txtFileName = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblFileName = new System.Windows.Forms.Label();
             this.pnlGridView = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.dgvEncryptor = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.pnlHeader = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pnlEncryptor = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pnlDbFileInfo = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.pnlEncryptor = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.lblEncrypting = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dgvEncryptor = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -68,13 +64,18 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
-            this.lblEncrypting = new System.Windows.Forms.Label();
+            this.pnlHeader = new System.Windows.Forms.Panel();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnPwEncryption = new Guna.UI2.WinForms.Guna2Button();
             this.pnlGridView.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEncryptor)).BeginInit();
-            this.pnlHeader.SuspendLayout();
-            this.pnlEncryptor.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.pnlDbFileInfo.SuspendLayout();
+            this.pnlEncryptor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEncryptor)).BeginInit();
+            this.pnlHeader.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnFileEncryptor
@@ -90,7 +91,7 @@
             this.btnFileEncryptor.ForeColor = System.Drawing.Color.White;
             this.btnFileEncryptor.Location = new System.Drawing.Point(17, 61);
             this.btnFileEncryptor.Name = "btnFileEncryptor";
-            this.btnFileEncryptor.Size = new System.Drawing.Size(104, 32);
+            this.btnFileEncryptor.Size = new System.Drawing.Size(139, 32);
             this.btnFileEncryptor.TabIndex = 1065;
             this.btnFileEncryptor.Text = "File Encryptor";
             this.btnFileEncryptor.Click += new System.EventHandler(this.btnFileEncryptor_Click);
@@ -163,7 +164,7 @@
             this.btnAddFileRecord.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnAddFileRecord.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddFileRecord.ForeColor = System.Drawing.Color.White;
-            this.btnAddFileRecord.Location = new System.Drawing.Point(664, 134);
+            this.btnAddFileRecord.Location = new System.Drawing.Point(665, 134);
             this.btnAddFileRecord.Name = "btnAddFileRecord";
             this.btnAddFileRecord.Size = new System.Drawing.Size(96, 32);
             this.btnAddFileRecord.TabIndex = 1061;
@@ -182,7 +183,7 @@
             this.btnUpdate.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(664, 172);
+            this.btnUpdate.Location = new System.Drawing.Point(665, 172);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(96, 32);
             this.btnUpdate.TabIndex = 1060;
@@ -373,6 +374,84 @@
             this.pnlGridView.Size = new System.Drawing.Size(1281, 679);
             this.pnlGridView.TabIndex = 19;
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.23653F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.76347F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 442F));
+            this.tableLayoutPanel1.Controls.Add(this.pnlDbFileInfo, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pnlEncryptor, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 3);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1281, 254);
+            this.tableLayoutPanel1.TabIndex = 1070;
+            // 
+            // pnlDbFileInfo
+            // 
+            this.pnlDbFileInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlDbFileInfo.BackColor = System.Drawing.Color.Transparent;
+            this.pnlDbFileInfo.Controls.Add(this.label6);
+            this.pnlDbFileInfo.Controls.Add(this.btnUpdate);
+            this.pnlDbFileInfo.Controls.Add(this.btnAddFileRecord);
+            this.pnlDbFileInfo.Controls.Add(this.chkShowPass);
+            this.pnlDbFileInfo.Controls.Add(this.txtDescription);
+            this.pnlDbFileInfo.Controls.Add(this.lblFileName);
+            this.pnlDbFileInfo.Controls.Add(this.lblFileDescription);
+            this.pnlDbFileInfo.Controls.Add(this.txtPass);
+            this.pnlDbFileInfo.Controls.Add(this.txtFileName);
+            this.pnlDbFileInfo.Controls.Add(this.lblPass);
+            this.pnlDbFileInfo.Controls.Add(this.txtDateCreated);
+            this.pnlDbFileInfo.Controls.Add(this.lblFileFolderLocation);
+            this.pnlDbFileInfo.Controls.Add(this.txtRepass);
+            this.pnlDbFileInfo.Controls.Add(this.txtLocation);
+            this.pnlDbFileInfo.Controls.Add(this.lblRePass);
+            this.pnlDbFileInfo.FillColor = System.Drawing.Color.White;
+            this.pnlDbFileInfo.Location = new System.Drawing.Point(486, 20);
+            this.pnlDbFileInfo.Margin = new System.Windows.Forms.Padding(10, 20, 20, 3);
+            this.pnlDbFileInfo.Name = "pnlDbFileInfo";
+            this.pnlDbFileInfo.Radius = 5;
+            this.pnlDbFileInfo.ShadowColor = System.Drawing.Color.Black;
+            this.pnlDbFileInfo.ShadowDepth = 250;
+            this.pnlDbFileInfo.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
+            this.pnlDbFileInfo.Size = new System.Drawing.Size(775, 231);
+            this.pnlDbFileInfo.TabIndex = 1070;
+            // 
+            // pnlEncryptor
+            // 
+            this.pnlEncryptor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlEncryptor.BackColor = System.Drawing.Color.Transparent;
+            this.pnlEncryptor.Controls.Add(this.btnPwEncryption);
+            this.pnlEncryptor.Controls.Add(this.lblEncrypting);
+            this.pnlEncryptor.Controls.Add(this.btnFileEncryptor);
+            this.pnlEncryptor.FillColor = System.Drawing.Color.White;
+            this.pnlEncryptor.Location = new System.Drawing.Point(20, 20);
+            this.pnlEncryptor.Margin = new System.Windows.Forms.Padding(20, 20, 10, 3);
+            this.pnlEncryptor.Name = "pnlEncryptor";
+            this.pnlEncryptor.Radius = 5;
+            this.pnlEncryptor.ShadowColor = System.Drawing.Color.Black;
+            this.pnlEncryptor.ShadowDepth = 250;
+            this.pnlEncryptor.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
+            this.pnlEncryptor.Size = new System.Drawing.Size(446, 231);
+            this.pnlEncryptor.TabIndex = 1069;
+            // 
+            // lblEncrypting
+            // 
+            this.lblEncrypting.AutoSize = true;
+            this.lblEncrypting.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEncrypting.Location = new System.Drawing.Point(12, 13);
+            this.lblEncrypting.Name = "lblEncrypting";
+            this.lblEncrypting.Size = new System.Drawing.Size(264, 25);
+            this.lblEncrypting.TabIndex = 1066;
+            this.lblEncrypting.Text = "File and Password Encryptor";
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -451,110 +530,8 @@
             this.dgvEncryptor.ThemeStyle.RowsStyle.Height = 50;
             this.dgvEncryptor.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvEncryptor.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // pnlHeader
-            // 
-            this.pnlHeader.BackColor = System.Drawing.Color.MidnightBlue;
-            this.pnlHeader.Controls.Add(this.lblTitle);
-            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1322, 49);
-            this.pnlHeader.TabIndex = 21;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Bold);
-            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(179)))));
-            this.lblTitle.Location = new System.Drawing.Point(20, 5);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(243, 38);
-            this.lblTitle.TabIndex = 13;
-            this.lblTitle.Text = "Privacy and Security";
-            this.lblTitle.UseCompatibleTextRendering = true;
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewImageColumn1.HeaderText = "";
-            this.dataGridViewImageColumn1.Image = global::EvolveSettings.Properties.Resources.edit;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Visible = false;
-            // 
-            // dataGridViewImageColumn2
-            // 
-            this.dataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dataGridViewImageColumn2.HeaderText = "";
-            this.dataGridViewImageColumn2.Image = global::EvolveSettings.Properties.Resources.delete;
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            // 
-            // pnlEncryptor
-            // 
-            this.pnlEncryptor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlEncryptor.BackColor = System.Drawing.Color.Transparent;
-            this.pnlEncryptor.Controls.Add(this.lblEncrypting);
-            this.pnlEncryptor.Controls.Add(this.btnFileEncryptor);
-            this.pnlEncryptor.FillColor = System.Drawing.Color.White;
-            this.pnlEncryptor.Location = new System.Drawing.Point(20, 20);
-            this.pnlEncryptor.Margin = new System.Windows.Forms.Padding(20, 20, 10, 3);
-            this.pnlEncryptor.Name = "pnlEncryptor";
-            this.pnlEncryptor.Radius = 5;
-            this.pnlEncryptor.ShadowColor = System.Drawing.Color.Black;
-            this.pnlEncryptor.ShadowDepth = 250;
-            this.pnlEncryptor.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
-            this.pnlEncryptor.Size = new System.Drawing.Size(447, 231);
-            this.pnlEncryptor.TabIndex = 1069;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.23653F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.76347F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 442F));
-            this.tableLayoutPanel1.Controls.Add(this.pnlDbFileInfo, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.pnlEncryptor, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 3);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1281, 254);
-            this.tableLayoutPanel1.TabIndex = 1070;
-            // 
-            // pnlDbFileInfo
-            // 
-            this.pnlDbFileInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlDbFileInfo.BackColor = System.Drawing.Color.Transparent;
-            this.pnlDbFileInfo.Controls.Add(this.label6);
-            this.pnlDbFileInfo.Controls.Add(this.btnUpdate);
-            this.pnlDbFileInfo.Controls.Add(this.btnAddFileRecord);
-            this.pnlDbFileInfo.Controls.Add(this.chkShowPass);
-            this.pnlDbFileInfo.Controls.Add(this.txtDescription);
-            this.pnlDbFileInfo.Controls.Add(this.lblFileName);
-            this.pnlDbFileInfo.Controls.Add(this.lblFileDescription);
-            this.pnlDbFileInfo.Controls.Add(this.txtPass);
-            this.pnlDbFileInfo.Controls.Add(this.txtFileName);
-            this.pnlDbFileInfo.Controls.Add(this.lblPass);
-            this.pnlDbFileInfo.Controls.Add(this.txtDateCreated);
-            this.pnlDbFileInfo.Controls.Add(this.lblFileFolderLocation);
-            this.pnlDbFileInfo.Controls.Add(this.txtRepass);
-            this.pnlDbFileInfo.Controls.Add(this.txtLocation);
-            this.pnlDbFileInfo.Controls.Add(this.lblRePass);
-            this.pnlDbFileInfo.FillColor = System.Drawing.Color.White;
-            this.pnlDbFileInfo.Location = new System.Drawing.Point(487, 20);
-            this.pnlDbFileInfo.Margin = new System.Windows.Forms.Padding(10, 20, 20, 3);
-            this.pnlDbFileInfo.Name = "pnlDbFileInfo";
-            this.pnlDbFileInfo.Radius = 5;
-            this.pnlDbFileInfo.ShadowColor = System.Drawing.Color.Black;
-            this.pnlDbFileInfo.ShadowDepth = 250;
-            this.pnlDbFileInfo.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
-            this.pnlDbFileInfo.Size = new System.Drawing.Size(774, 231);
-            this.pnlDbFileInfo.TabIndex = 1070;
+            this.dgvEncryptor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEncryptor_CellClick);
+            this.dgvEncryptor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPwManager_CellContentClick);
             // 
             // Column7
             // 
@@ -630,15 +607,60 @@
             this.Delete.ReadOnly = true;
             this.Delete.Width = 5;
             // 
-            // lblEncrypting
+            // pnlHeader
             // 
-            this.lblEncrypting.AutoSize = true;
-            this.lblEncrypting.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEncrypting.Location = new System.Drawing.Point(12, 13);
-            this.lblEncrypting.Name = "lblEncrypting";
-            this.lblEncrypting.Size = new System.Drawing.Size(264, 25);
-            this.lblEncrypting.TabIndex = 1066;
-            this.lblEncrypting.Text = "File and Password Encryptor";
+            this.pnlHeader.BackColor = System.Drawing.Color.MidnightBlue;
+            this.pnlHeader.Controls.Add(this.lblTitle);
+            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Size = new System.Drawing.Size(1322, 49);
+            this.pnlHeader.TabIndex = 21;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Nirmala UI", 18F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(179)))));
+            this.lblTitle.Location = new System.Drawing.Point(20, 5);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(243, 38);
+            this.lblTitle.TabIndex = 13;
+            this.lblTitle.Text = "Privacy and Security";
+            this.lblTitle.UseCompatibleTextRendering = true;
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewImageColumn1.HeaderText = "";
+            this.dataGridViewImageColumn1.Image = global::EvolveSettings.Properties.Resources.edit;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Visible = false;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dataGridViewImageColumn2.HeaderText = "";
+            this.dataGridViewImageColumn2.Image = global::EvolveSettings.Properties.Resources.delete;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            // 
+            // btnPwEncryption
+            // 
+            this.btnPwEncryption.BackColor = System.Drawing.Color.Transparent;
+            this.btnPwEncryption.BorderRadius = 15;
+            this.btnPwEncryption.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPwEncryption.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPwEncryption.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPwEncryption.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPwEncryption.FillColor = System.Drawing.Color.MidnightBlue;
+            this.btnPwEncryption.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnPwEncryption.ForeColor = System.Drawing.Color.White;
+            this.btnPwEncryption.Location = new System.Drawing.Point(17, 99);
+            this.btnPwEncryption.Name = "btnPwEncryption";
+            this.btnPwEncryption.Size = new System.Drawing.Size(139, 32);
+            this.btnPwEncryption.TabIndex = 1067;
+            this.btnPwEncryption.Text = "Password Encryption";
+            this.btnPwEncryption.Click += new System.EventHandler(this.btnPwEncryption_Click);
             // 
             // PrivacyAndSecurityForm
             // 
@@ -652,14 +674,14 @@
             this.Text = "FileEnctyptorDbForm";
             this.pnlGridView.ResumeLayout(false);
             this.pnlGridView.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvEncryptor)).EndInit();
-            this.pnlHeader.ResumeLayout(false);
-            this.pnlHeader.PerformLayout();
-            this.pnlEncryptor.ResumeLayout(false);
-            this.pnlEncryptor.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.pnlDbFileInfo.ResumeLayout(false);
             this.pnlDbFileInfo.PerformLayout();
+            this.pnlEncryptor.ResumeLayout(false);
+            this.pnlEncryptor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvEncryptor)).EndInit();
+            this.pnlHeader.ResumeLayout(false);
+            this.pnlHeader.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -702,5 +724,6 @@
         private System.Windows.Forms.DataGridViewImageColumn Edit;
         private System.Windows.Forms.DataGridViewImageColumn Delete;
         private System.Windows.Forms.Label lblEncrypting;
+        public Guna.UI2.WinForms.Guna2Button btnPwEncryption;
     }
 }

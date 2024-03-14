@@ -310,5 +310,11 @@ namespace EvolveSettings.Forms
             FileEncryptorForm frmFileEncryptor = new FileEncryptorForm();
             frmFileEncryptor.ShowDialog();
         }
+
+        private void btnPwEncryption_Click(object sender, EventArgs e)
+        {
+            PasswordEncryptionForm pwEncryption = new PasswordEncryptionForm();
+            pwEncryption.ShowDialog();
+        }
     }
 }
