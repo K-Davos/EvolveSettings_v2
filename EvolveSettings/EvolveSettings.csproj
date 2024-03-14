@@ -295,6 +295,12 @@
     <Compile Include="Forms\NetworkForm.Designer.cs">
       <DependentUpon>NetworkForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\PasswordEncryptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PasswordEncryptionForm.Designer.cs">
+      <DependentUpon>PasswordEncryptionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\PasswordManagerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -397,6 +403,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\NetworkForm.resx">
       <DependentUpon>NetworkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PasswordEncryptionForm.resx">
+      <DependentUpon>PasswordEncryptionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PasswordManagerForm.resx">
       <DependentUpon>PasswordManagerForm.cs</DependentUpon>

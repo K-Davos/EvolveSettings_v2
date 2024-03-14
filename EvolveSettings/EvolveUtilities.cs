@@ -4,8 +4,10 @@ using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 using System.Security.AccessControl;
+using System.Security.Cryptography;
 using System.Security.Principal;
 using System.ServiceProcess;
+using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -474,6 +476,49 @@ namespace EvolveSettings
                     }
 
                     Application.Restart();
+                }
+            }
+        }
+
+        internal static string Encrypt(string text, string key)
+        {
+            using (Aes aesAlg = Aes.Create())
+            {
+                aesAlg.Key = Encoding.UTF8.GetBytes(key);
+                aesAlg.IV = new byte[16];
+                ICryptoTransform encryptor = aesAlg.CreateEncryptor(aesAlg.Key, aesAlg.IV);
+
+                using (MemoryStream msEncrypt = new MemoryStream())
+                {
+                    using (CryptoStream csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
+                    {
+                        using (StreamWriter swEncrypt = new StreamWriter(csEncrypt))
+                        {
+                            swEncrypt.Write(text);
+                        }
+                        return Convert.ToBase64String(msEncrypt.ToArray());
+                    }
+                }
+            }
+        }
+
+        internal static string Decrypt(string encryptedText, string key)
+        {
+            using (Aes aesAlg = Aes.Create())
+            {
+                aesAlg.Key = Encoding.UTF8.GetBytes(key);
+                aesAlg.IV = new byte[16];
+                ICryptoTransform decryptor = aesAlg.CreateDecryptor(aesAlg.Key, aesAlg.IV);
+
+                using (MemoryStream msDecrypt = new MemoryStream(Convert.FromBase64String(encryptedText)))
+                {
+                    using (CryptoStream csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read))
+                    {
+                        using (StreamReader srDecrypt = new StreamReader(csDecrypt))
+                        {
+                            return srDecrypt.ReadToEnd();
+                        }
+                    }
                 }
             }
         }
