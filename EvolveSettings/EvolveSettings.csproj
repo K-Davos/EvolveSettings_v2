@@ -254,6 +254,7 @@
     <Compile Include="Controls\EvolveToggleButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="EffectBlur.cs" />
     <Compile Include="EmbeddedAssembly.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="ErrorLogger.cs" />
@@ -484,6 +485,8 @@
     <Content Include="Resources\maintenance.png" />
     <Content Include="Resources\maximize_black.png" />
     <Content Include="Resources\menu.png" />
+    <Content Include="Resources\menu_close.png" />
+    <Content Include="Resources\menu_open.png" />
     <Content Include="Resources\minimize_black.png" />
     <Content Include="Resources\network.png" />
     <Content Include="Resources\pwmanager.png" />

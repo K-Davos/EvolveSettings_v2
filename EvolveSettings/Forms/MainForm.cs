@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using static EvolveSettings.EffectBlur;
 
 namespace EvolveSettings
 {
@@ -28,6 +29,8 @@ namespace EvolveSettings
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        [DllImport("user32.dll")]
+        internal static extern int SetWindowCompositionAttribute(IntPtr hwnd, ref WindowCompositionAttributeData data);
 
         public MainForm()
         {
@@ -210,6 +213,33 @@ namespace EvolveSettings
             panelMain.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
+        }
+
+        //Acryl/Blur
+        private uint _blurOpacity;
+
+        public double BlurOpacity
+        {
+            get { return _blurOpacity; }
+            set { _blurOpacity = (uint)value; EnableBlur(); }
+        }
+
+        private uint _blurBackgroundColor = 0x990000;
+
+        internal void EnableBlur()
+        {
+            var accent = new AccentPolicy();
+            accent.AccentState = AccentState.ACCENT_ENABLE_ACRYLICBLURBEHIND;
+            accent.GradientColor = (_blurOpacity << 24) | (_blurBackgroundColor & 0xFFFFFF);
+            var accentStructSize = Marshal.SizeOf(accent);
+            var accentPtr = Marshal.AllocHGlobal(accentStructSize);
+            Marshal.StructureToPtr(accent, accentPtr, false);
+            var data = new WindowCompositionAttributeData();
+            data.Attribute = WindowCompositionAttribute.WCA_ACCENT_POLICY;
+            data.SizeOfData = accentStructSize;
+            data.Data = accentPtr;
+            SetWindowCompositionAttribute(this.Handle, ref data);
+            Marshal.FreeHGlobal(accentPtr);
         }
 
         #region wintheme
@@ -433,6 +463,25 @@ namespace EvolveSettings
                     menuButton.ImageOffset = new Point(0, 0);
                     menuButton.Padding = new Padding(10, 0, 0, 0);
                 }
+            }
+        }
+
+        private void trackBarBlur_Scroll(object sender, ScrollEventArgs e)
+        {
+            lblLength.Text = trackBarBlur.Value.ToString();
+            BlurOpacity = (int)e.NewValue;
+        }
+
+        private void toggleBlurEffect_CheckedChanged(object sender, EventArgs e)
+        {
+            if (toggleBlurEffect.Checked)
+            {
+                EnableBlur();
+                this.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
+            }
+            else
+            {
+                LoadTheme();
             }
         }
     }
