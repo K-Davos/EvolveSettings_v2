@@ -107,6 +107,10 @@ namespace EvolveSettings
         {
             //resize form
             formSize = this.ClientSize;
+            lblBlurEffect.Visible = false;
+            trackBarBlurEffect.Visible = false;
+            lblLength.Visible = false;
+            tglBlurEffect.Visible = false;
         }
 
         #region resize form
@@ -284,6 +288,7 @@ namespace EvolveSettings
             foreach (Guna2Button button in this.pnlNav.Controls.OfType<Guna2Button>())
             {
                 button.FillColor = themeColor;
+                button.BackColor = Color.Transparent;
             }
         }
 
@@ -468,21 +473,60 @@ namespace EvolveSettings
 
         private void trackBarBlur_Scroll(object sender, ScrollEventArgs e)
         {
-            lblLength.Text = trackBarBlur.Value.ToString();
+            lblLength.Text = trackBarBlurEffect.Value.ToString();
             BlurOpacity = (int)e.NewValue;
         }
 
-        private void toggleBlurEffect_CheckedChanged(object sender, EventArgs e)
+        private void tglBlurEffect_CheckedChanged(object sender, EventArgs e)
         {
-            if (toggleBlurEffect.Checked)
+            if (tglBlurEffect.Checked)
             {
                 EnableBlur();
+                pictureBoxProfile.BackColor = Color.Transparent;
+                circleProgressBar1.Visible = false;
+                circleProgressBar2.Visible = false;
                 this.BackColor = System.Drawing.ColorTranslator.FromHtml("#010000");
+                foreach (Guna2Button button in this.pnlNav.Controls.OfType<Guna2Button>())
+                {
+                    button.FillColor = Color.Transparent;
+                    button.BackColor = Color.Transparent;
+                }
             }
             else
             {
                 LoadTheme();
+                circleProgressBar1.Visible = true;
+                circleProgressBar2.Visible = true;
+                Login login = new Login();
+                login.Show();
+                this.Dispose();
             }
         }
+
+        private void btnOpen_Click(object sender, EventArgs e)
+        {
+            BlurPanel();
+        }
+
+        private void BlurPanel()
+        {
+            if (this.lblBlurEffect.Visible == false)
+            {
+                lblBlurEffect.Visible = true;
+                trackBarBlurEffect.Visible = true;
+                lblLength.Visible = true;
+                tglBlurEffect.Visible = true;
+                btnOpen.Image = EvolveSettings.Properties.Resources.menu_open;
+            }
+            else
+            {
+                lblBlurEffect.Visible = false;
+                trackBarBlurEffect.Visible = false;
+                lblLength.Visible = false;
+                tglBlurEffect.Visible = false;
+                btnOpen.Image = EvolveSettings.Properties.Resources.menu_close;
+            }
+        }
+
     }
 }

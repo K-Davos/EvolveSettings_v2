@@ -33,46 +33,44 @@ namespace EvolveSettings
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.lblCurrentUser = new System.Windows.Forms.Label();
             this.pnlNav = new System.Windows.Forms.Panel();
+            this.btnOpen = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnFileEncryptor = new Guna.UI2.WinForms.Guna2Button();
             this.lblUserType = new System.Windows.Forms.Label();
+            this.btnMenu = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnLogout = new Guna.UI2.WinForms.Guna2CircleButton();
+            this.btnUserManagement = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPassManager = new Guna.UI2.WinForms.Guna2Button();
             this.txtNetFw = new System.Windows.Forms.Label();
             this.txtBitness = new System.Windows.Forms.Label();
             this.txtOS = new System.Windows.Forms.Label();
             this.lblversion = new System.Windows.Forms.Label();
             this.txtAppVersion = new System.Windows.Forms.Label();
             this.lblUserMode = new System.Windows.Forms.Label();
-            this.circleProgressBar2 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
-            this.circleProgressBar1 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
-            this.panelMain = new Guna.UI2.WinForms.Guna2Panel();
-            this.trackBarBlur = new Guna.UI2.WinForms.Guna2TrackBar();
-            this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.lblLength = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pnlHeader = new System.Windows.Forms.Panel();
-            this.ShadowForm = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
-            this.btnMinimize = new System.Windows.Forms.Button();
-            this.btnMaximize = new System.Windows.Forms.Button();
-            this.btnCloseApp = new System.Windows.Forms.Button();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnFileEncryptor = new Guna.UI2.WinForms.Guna2Button();
-            this.btnMenu = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnLogout = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.btnUserManagement = new Guna.UI2.WinForms.Guna2Button();
-            this.btnPassManager = new Guna.UI2.WinForms.Guna2Button();
             this.btnSettings = new Guna.UI2.WinForms.Guna2Button();
             this.btnPcCleaner = new Guna.UI2.WinForms.Guna2Button();
             this.btnNetwork = new Guna.UI2.WinForms.Guna2Button();
             this.btnWin11Tweaks = new Guna.UI2.WinForms.Guna2Button();
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
+            this.circleProgressBar2 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            this.circleProgressBar1 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.pictureBoxProfile = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.toggleBlurEffect = new EvolveSettings.Controls.EvolveToggleButton();
+            this.panelMain = new Guna.UI2.WinForms.Guna2Panel();
+            this.pnlHeader = new System.Windows.Forms.Panel();
+            this.btnMinimize = new System.Windows.Forms.Button();
+            this.btnMaximize = new System.Windows.Forms.Button();
+            this.btnCloseApp = new System.Windows.Forms.Button();
+            this.ShadowForm = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
+            this.trackBarBlurEffect = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.lblLength = new System.Windows.Forms.Label();
+            this.lblBlurEffect = new System.Windows.Forms.Label();
+            this.tglBlurEffect = new EvolveSettings.Controls.EvolveToggleButton();
             this.pnlNav.SuspendLayout();
-            this.circleProgressBar2.SuspendLayout();
-            this.panelMain.SuspendLayout();
-            this.guna2ShadowPanel1.SuspendLayout();
-            this.pnlHeader.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnOpen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
+            this.circleProgressBar2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
+            this.panelMain.SuspendLayout();
+            this.pnlHeader.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblCurrentUser
@@ -90,8 +88,11 @@ namespace EvolveSettings
             // pnlNav
             // 
             this.pnlNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.pnlNav.Controls.Add(this.guna2ShadowPanel1);
-            this.pnlNav.Controls.Add(this.guna2PictureBox1);
+            this.pnlNav.Controls.Add(this.trackBarBlurEffect);
+            this.pnlNav.Controls.Add(this.lblLength);
+            this.pnlNav.Controls.Add(this.lblBlurEffect);
+            this.pnlNav.Controls.Add(this.tglBlurEffect);
+            this.pnlNav.Controls.Add(this.btnOpen);
             this.pnlNav.Controls.Add(this.btnFileEncryptor);
             this.pnlNav.Controls.Add(this.lblUserType);
             this.pnlNav.Controls.Add(this.btnMenu);
@@ -118,267 +119,20 @@ namespace EvolveSettings
             this.pnlNav.Size = new System.Drawing.Size(187, 782);
             this.pnlNav.TabIndex = 6;
             // 
-            // lblUserType
+            // btnOpen
             // 
-            this.lblUserType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblUserType.AutoSize = true;
-            this.lblUserType.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserType.ForeColor = System.Drawing.Color.Tomato;
-            this.lblUserType.Location = new System.Drawing.Point(67, 160);
-            this.lblUserType.Name = "lblUserType";
-            this.lblUserType.Size = new System.Drawing.Size(52, 13);
-            this.lblUserType.TabIndex = 93;
-            this.lblUserType.Text = "UserType";
-            this.lblUserType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtNetFw
-            // 
-            this.txtNetFw.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtNetFw.AutoSize = true;
-            this.txtNetFw.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNetFw.ForeColor = System.Drawing.Color.Gray;
-            this.txtNetFw.Location = new System.Drawing.Point(12, 722);
-            this.txtNetFw.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.txtNetFw.Name = "txtNetFw";
-            this.txtNetFw.Size = new System.Drawing.Size(37, 13);
-            this.txtNetFw.TabIndex = 86;
-            this.txtNetFw.Text = "netfw";
-            // 
-            // txtBitness
-            // 
-            this.txtBitness.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtBitness.AutoSize = true;
-            this.txtBitness.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBitness.ForeColor = System.Drawing.Color.Gray;
-            this.txtBitness.Location = new System.Drawing.Point(12, 705);
-            this.txtBitness.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.txtBitness.Name = "txtBitness";
-            this.txtBitness.Size = new System.Drawing.Size(44, 13);
-            this.txtBitness.TabIndex = 85;
-            this.txtBitness.Text = "bitness";
-            // 
-            // txtOS
-            // 
-            this.txtOS.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtOS.AutoSize = true;
-            this.txtOS.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtOS.ForeColor = System.Drawing.Color.Gray;
-            this.txtOS.Location = new System.Drawing.Point(12, 688);
-            this.txtOS.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.txtOS.Name = "txtOS";
-            this.txtOS.Size = new System.Drawing.Size(19, 13);
-            this.txtOS.TabIndex = 84;
-            this.txtOS.Text = "os";
-            // 
-            // lblversion
-            // 
-            this.lblversion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblversion.AutoSize = true;
-            this.lblversion.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblversion.ForeColor = System.Drawing.Color.Gray;
-            this.lblversion.Location = new System.Drawing.Point(12, 739);
-            this.lblversion.Name = "lblversion";
-            this.lblversion.Size = new System.Drawing.Size(45, 13);
-            this.lblversion.TabIndex = 83;
-            this.lblversion.Text = "Version";
-            // 
-            // txtAppVersion
-            // 
-            this.txtAppVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtAppVersion.AutoSize = true;
-            this.txtAppVersion.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAppVersion.ForeColor = System.Drawing.Color.Gray;
-            this.txtAppVersion.Location = new System.Drawing.Point(55, 739);
-            this.txtAppVersion.Name = "txtAppVersion";
-            this.txtAppVersion.Size = new System.Drawing.Size(21, 13);
-            this.txtAppVersion.TabIndex = 82;
-            this.txtAppVersion.Text = "1.x";
-            // 
-            // lblUserMode
-            // 
-            this.lblUserMode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lblUserMode.AutoSize = true;
-            this.lblUserMode.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserMode.ForeColor = System.Drawing.Color.Tomato;
-            this.lblUserMode.Location = new System.Drawing.Point(12, 761);
-            this.lblUserMode.Name = "lblUserMode";
-            this.lblUserMode.Size = new System.Drawing.Size(60, 13);
-            this.lblUserMode.TabIndex = 81;
-            this.lblUserMode.Text = "UserMode";
-            // 
-            // circleProgressBar2
-            // 
-            this.circleProgressBar2.Animated = true;
-            this.circleProgressBar2.AnimationSpeed = 0.3F;
-            this.circleProgressBar2.BackColor = System.Drawing.Color.Transparent;
-            this.circleProgressBar2.Controls.Add(this.circleProgressBar1);
-            this.circleProgressBar2.FillColor = System.Drawing.Color.Transparent;
-            this.circleProgressBar2.FillThickness = 1;
-            this.circleProgressBar2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.circleProgressBar2.ForeColor = System.Drawing.Color.Transparent;
-            this.circleProgressBar2.Location = new System.Drawing.Point(42, 31);
-            this.circleProgressBar2.Minimum = 0;
-            this.circleProgressBar2.Name = "circleProgressBar2";
-            this.circleProgressBar2.ProgressColor = System.Drawing.Color.MidnightBlue;
-            this.circleProgressBar2.ProgressColor2 = System.Drawing.Color.Red;
-            this.circleProgressBar2.ProgressThickness = 1;
-            this.circleProgressBar2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.circleProgressBar2.Size = new System.Drawing.Size(104, 104);
-            this.circleProgressBar2.TabIndex = 92;
-            this.circleProgressBar2.UseTransparentBackground = true;
-            this.circleProgressBar2.Value = 33;
-            // 
-            // circleProgressBar1
-            // 
-            this.circleProgressBar1.Animated = true;
-            this.circleProgressBar1.AnimationSpeed = 0.3F;
-            this.circleProgressBar1.BackColor = System.Drawing.Color.Transparent;
-            this.circleProgressBar1.FillColor = System.Drawing.Color.Transparent;
-            this.circleProgressBar1.FillThickness = 1;
-            this.circleProgressBar1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.circleProgressBar1.ForeColor = System.Drawing.Color.Transparent;
-            this.circleProgressBar1.Location = new System.Drawing.Point(8, 7);
-            this.circleProgressBar1.Minimum = 0;
-            this.circleProgressBar1.Name = "circleProgressBar1";
-            this.circleProgressBar1.ProgressColor = System.Drawing.Color.Red;
-            this.circleProgressBar1.ProgressColor2 = System.Drawing.Color.MidnightBlue;
-            this.circleProgressBar1.ProgressThickness = 1;
-            this.circleProgressBar1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.circleProgressBar1.Size = new System.Drawing.Size(88, 88);
-            this.circleProgressBar1.TabIndex = 91;
-            this.circleProgressBar1.UseTransparentBackground = true;
-            this.circleProgressBar1.Value = 33;
-            // 
-            // panelMain
-            // 
-            this.panelMain.Controls.Add(this.pnlHeader);
-            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(187, 0);
-            this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1262, 782);
-            this.panelMain.TabIndex = 8;
-            // 
-            // trackBarBlur
-            // 
-            this.trackBarBlur.BackColor = System.Drawing.Color.Transparent;
-            this.trackBarBlur.Location = new System.Drawing.Point(18, 26);
-            this.trackBarBlur.Maximum = 64;
-            this.trackBarBlur.Name = "trackBarBlur";
-            this.trackBarBlur.Size = new System.Drawing.Size(137, 23);
-            this.trackBarBlur.TabIndex = 1014;
-            this.trackBarBlur.ThumbColor = System.Drawing.Color.MidnightBlue;
-            this.trackBarBlur.Value = 8;
-            this.trackBarBlur.Scroll += new System.Windows.Forms.ScrollEventHandler(this.trackBarBlur_Scroll);
-            // 
-            // guna2ShadowPanel1
-            // 
-            this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ShadowPanel1.Controls.Add(this.trackBarBlur);
-            this.guna2ShadowPanel1.Controls.Add(this.lblLength);
-            this.guna2ShadowPanel1.Controls.Add(this.label1);
-            this.guna2ShadowPanel1.Controls.Add(this.toggleBlurEffect);
-            this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
-            this.guna2ShadowPanel1.Location = new System.Drawing.Point(3, 601);
-            this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
-            this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(184, 100);
-            this.guna2ShadowPanel1.TabIndex = 21;
-            // 
-            // lblLength
-            // 
-            this.lblLength.AutoSize = true;
-            this.lblLength.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLength.ForeColor = System.Drawing.Color.Black;
-            this.lblLength.Location = new System.Drawing.Point(161, 26);
-            this.lblLength.Name = "lblLength";
-            this.lblLength.Size = new System.Drawing.Size(16, 18);
-            this.lblLength.TabIndex = 1015;
-            this.lblLength.Text = "8";
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label1.Location = new System.Drawing.Point(15, 69);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 22);
-            this.label1.TabIndex = 75;
-            this.label1.Text = "Enable Acrylic Design";
-            // 
-            // pnlHeader
-            // 
-            this.pnlHeader.Controls.Add(this.btnMinimize);
-            this.pnlHeader.Controls.Add(this.btnMaximize);
-            this.pnlHeader.Controls.Add(this.btnCloseApp);
-            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(1262, 42);
-            this.pnlHeader.TabIndex = 20;
-            this.pnlHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_header_MouseDown);
-            // 
-            // ShadowForm
-            // 
-            this.ShadowForm.BorderRadius = 0;
-            this.ShadowForm.TargetForm = this;
-            // 
-            // btnMinimize
-            // 
-            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimize.FlatAppearance.BorderSize = 0;
-            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimize.ForeColor = System.Drawing.Color.White;
-            this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
-            this.btnMinimize.Location = new System.Drawing.Point(1111, 0);
-            this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(48, 42);
-            this.btnMinimize.TabIndex = 17;
-            this.btnMinimize.UseVisualStyleBackColor = true;
-            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
-            // 
-            // btnMaximize
-            // 
-            this.btnMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaximize.FlatAppearance.BorderSize = 0;
-            this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaximize.ForeColor = System.Drawing.Color.White;
-            this.btnMaximize.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximize.Image")));
-            this.btnMaximize.Location = new System.Drawing.Point(1162, 0);
-            this.btnMaximize.Name = "btnMaximize";
-            this.btnMaximize.Size = new System.Drawing.Size(48, 42);
-            this.btnMaximize.TabIndex = 18;
-            this.btnMaximize.UseVisualStyleBackColor = true;
-            this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
-            // 
-            // btnCloseApp
-            // 
-            this.btnCloseApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCloseApp.FlatAppearance.BorderSize = 0;
-            this.btnCloseApp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btnCloseApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCloseApp.ForeColor = System.Drawing.Color.White;
-            this.btnCloseApp.Image = global::EvolveSettings.Properties.Resources.quit;
-            this.btnCloseApp.Location = new System.Drawing.Point(1213, 0);
-            this.btnCloseApp.Name = "btnCloseApp";
-            this.btnCloseApp.Size = new System.Drawing.Size(48, 42);
-            this.btnCloseApp.TabIndex = 16;
-            this.btnCloseApp.UseVisualStyleBackColor = true;
-            this.btnCloseApp.Click += new System.EventHandler(this.btnCloseApp_Click);
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.Image = global::EvolveSettings.Properties.Resources.menu_close;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(155, 722);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(25, 25);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 95;
-            this.guna2PictureBox1.TabStop = false;
-            this.guna2PictureBox1.UseTransparentBackground = true;
+            this.btnOpen.BackColor = System.Drawing.Color.Transparent;
+            this.btnOpen.FillColor = System.Drawing.Color.Transparent;
+            this.btnOpen.Image = global::EvolveSettings.Properties.Resources.menu_close;
+            this.btnOpen.ImageRotate = 0F;
+            this.btnOpen.Location = new System.Drawing.Point(155, 722);
+            this.btnOpen.Name = "btnOpen";
+            this.btnOpen.Size = new System.Drawing.Size(25, 25);
+            this.btnOpen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnOpen.TabIndex = 95;
+            this.btnOpen.TabStop = false;
+            this.btnOpen.UseTransparentBackground = true;
+            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
             // 
             // btnFileEncryptor
             // 
@@ -405,6 +159,19 @@ namespace EvolveSettings
             this.btnFileEncryptor.Text = "  File Encryptor";
             this.btnFileEncryptor.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnFileEncryptor.Click += new System.EventHandler(this.btnFileEncryptor_Click);
+            // 
+            // lblUserType
+            // 
+            this.lblUserType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblUserType.AutoSize = true;
+            this.lblUserType.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserType.ForeColor = System.Drawing.Color.Tomato;
+            this.lblUserType.Location = new System.Drawing.Point(67, 160);
+            this.lblUserType.Name = "lblUserType";
+            this.lblUserType.Size = new System.Drawing.Size(52, 13);
+            this.lblUserType.TabIndex = 93;
+            this.lblUserType.Text = "UserType";
+            this.lblUserType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnMenu
             // 
@@ -494,6 +261,81 @@ namespace EvolveSettings
             this.btnPassManager.Text = "  Password Manager";
             this.btnPassManager.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnPassManager.Click += new System.EventHandler(this.btnPassManager_Click);
+            // 
+            // txtNetFw
+            // 
+            this.txtNetFw.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtNetFw.AutoSize = true;
+            this.txtNetFw.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNetFw.ForeColor = System.Drawing.Color.Gray;
+            this.txtNetFw.Location = new System.Drawing.Point(12, 722);
+            this.txtNetFw.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtNetFw.Name = "txtNetFw";
+            this.txtNetFw.Size = new System.Drawing.Size(37, 13);
+            this.txtNetFw.TabIndex = 86;
+            this.txtNetFw.Text = "netfw";
+            // 
+            // txtBitness
+            // 
+            this.txtBitness.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtBitness.AutoSize = true;
+            this.txtBitness.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBitness.ForeColor = System.Drawing.Color.Gray;
+            this.txtBitness.Location = new System.Drawing.Point(12, 705);
+            this.txtBitness.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtBitness.Name = "txtBitness";
+            this.txtBitness.Size = new System.Drawing.Size(44, 13);
+            this.txtBitness.TabIndex = 85;
+            this.txtBitness.Text = "bitness";
+            // 
+            // txtOS
+            // 
+            this.txtOS.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtOS.AutoSize = true;
+            this.txtOS.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtOS.ForeColor = System.Drawing.Color.Gray;
+            this.txtOS.Location = new System.Drawing.Point(12, 688);
+            this.txtOS.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtOS.Name = "txtOS";
+            this.txtOS.Size = new System.Drawing.Size(19, 13);
+            this.txtOS.TabIndex = 84;
+            this.txtOS.Text = "os";
+            // 
+            // lblversion
+            // 
+            this.lblversion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblversion.AutoSize = true;
+            this.lblversion.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblversion.ForeColor = System.Drawing.Color.Gray;
+            this.lblversion.Location = new System.Drawing.Point(12, 739);
+            this.lblversion.Name = "lblversion";
+            this.lblversion.Size = new System.Drawing.Size(45, 13);
+            this.lblversion.TabIndex = 83;
+            this.lblversion.Text = "Version";
+            // 
+            // txtAppVersion
+            // 
+            this.txtAppVersion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.txtAppVersion.AutoSize = true;
+            this.txtAppVersion.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAppVersion.ForeColor = System.Drawing.Color.Gray;
+            this.txtAppVersion.Location = new System.Drawing.Point(55, 739);
+            this.txtAppVersion.Name = "txtAppVersion";
+            this.txtAppVersion.Size = new System.Drawing.Size(21, 13);
+            this.txtAppVersion.TabIndex = 82;
+            this.txtAppVersion.Text = "1.x";
+            // 
+            // lblUserMode
+            // 
+            this.lblUserMode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblUserMode.AutoSize = true;
+            this.lblUserMode.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserMode.ForeColor = System.Drawing.Color.Tomato;
+            this.lblUserMode.Location = new System.Drawing.Point(12, 761);
+            this.lblUserMode.Name = "lblUserMode";
+            this.lblUserMode.Size = new System.Drawing.Size(60, 13);
+            this.lblUserMode.TabIndex = 81;
+            this.lblUserMode.Text = "UserMode";
             // 
             // btnSettings
             // 
@@ -625,6 +467,49 @@ namespace EvolveSettings
             this.btnHome.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnHome.Click += new System.EventHandler(this.BtnHome_Click);
             // 
+            // circleProgressBar2
+            // 
+            this.circleProgressBar2.Animated = true;
+            this.circleProgressBar2.AnimationSpeed = 0.3F;
+            this.circleProgressBar2.BackColor = System.Drawing.Color.Transparent;
+            this.circleProgressBar2.Controls.Add(this.circleProgressBar1);
+            this.circleProgressBar2.FillColor = System.Drawing.Color.Transparent;
+            this.circleProgressBar2.FillThickness = 1;
+            this.circleProgressBar2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.circleProgressBar2.ForeColor = System.Drawing.Color.Transparent;
+            this.circleProgressBar2.Location = new System.Drawing.Point(42, 31);
+            this.circleProgressBar2.Minimum = 0;
+            this.circleProgressBar2.Name = "circleProgressBar2";
+            this.circleProgressBar2.ProgressColor = System.Drawing.Color.MidnightBlue;
+            this.circleProgressBar2.ProgressColor2 = System.Drawing.Color.Red;
+            this.circleProgressBar2.ProgressThickness = 1;
+            this.circleProgressBar2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.circleProgressBar2.Size = new System.Drawing.Size(104, 104);
+            this.circleProgressBar2.TabIndex = 92;
+            this.circleProgressBar2.UseTransparentBackground = true;
+            this.circleProgressBar2.Value = 33;
+            // 
+            // circleProgressBar1
+            // 
+            this.circleProgressBar1.Animated = true;
+            this.circleProgressBar1.AnimationSpeed = 0.3F;
+            this.circleProgressBar1.BackColor = System.Drawing.Color.Transparent;
+            this.circleProgressBar1.FillColor = System.Drawing.Color.Transparent;
+            this.circleProgressBar1.FillThickness = 1;
+            this.circleProgressBar1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.circleProgressBar1.ForeColor = System.Drawing.Color.Transparent;
+            this.circleProgressBar1.Location = new System.Drawing.Point(8, 7);
+            this.circleProgressBar1.Minimum = 0;
+            this.circleProgressBar1.Name = "circleProgressBar1";
+            this.circleProgressBar1.ProgressColor = System.Drawing.Color.Red;
+            this.circleProgressBar1.ProgressColor2 = System.Drawing.Color.MidnightBlue;
+            this.circleProgressBar1.ProgressThickness = 1;
+            this.circleProgressBar1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.circleProgressBar1.Size = new System.Drawing.Size(88, 88);
+            this.circleProgressBar1.TabIndex = 91;
+            this.circleProgressBar1.UseTransparentBackground = true;
+            this.circleProgressBar1.Value = 33;
+            // 
             // pictureBoxProfile
             // 
             this.pictureBoxProfile.BackColor = System.Drawing.Color.Transparent;
@@ -633,6 +518,7 @@ namespace EvolveSettings
             this.pictureBoxProfile.ImageRotate = 0F;
             this.pictureBoxProfile.Location = new System.Drawing.Point(49, 37);
             this.pictureBoxProfile.Name = "pictureBoxProfile";
+            this.pictureBoxProfile.ShadowDecoration.Color = System.Drawing.Color.Transparent;
             this.pictureBoxProfile.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.pictureBoxProfile.Size = new System.Drawing.Size(89, 89);
             this.pictureBoxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -640,20 +526,122 @@ namespace EvolveSettings
             this.pictureBoxProfile.TabStop = false;
             this.pictureBoxProfile.UseTransparentBackground = true;
             // 
-            // toggleBlurEffect
+            // panelMain
             // 
-            this.toggleBlurEffect.AutoSize = true;
-            this.toggleBlurEffect.Location = new System.Drawing.Point(132, 65);
-            this.toggleBlurEffect.MinimumSize = new System.Drawing.Size(45, 22);
-            this.toggleBlurEffect.Name = "toggleBlurEffect";
-            this.toggleBlurEffect.OffBackColor = System.Drawing.Color.Gray;
-            this.toggleBlurEffect.OffToggleColor = System.Drawing.Color.Gainsboro;
-            this.toggleBlurEffect.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.toggleBlurEffect.OnToggleColor = System.Drawing.Color.WhiteSmoke;
-            this.toggleBlurEffect.Size = new System.Drawing.Size(45, 22);
-            this.toggleBlurEffect.TabIndex = 74;
-            this.toggleBlurEffect.UseVisualStyleBackColor = true;
-            this.toggleBlurEffect.CheckedChanged += new System.EventHandler(this.toggleBlurEffect_CheckedChanged);
+            this.panelMain.Controls.Add(this.pnlHeader);
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain.Location = new System.Drawing.Point(187, 0);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(1262, 782);
+            this.panelMain.TabIndex = 8;
+            // 
+            // pnlHeader
+            // 
+            this.pnlHeader.Controls.Add(this.btnMinimize);
+            this.pnlHeader.Controls.Add(this.btnMaximize);
+            this.pnlHeader.Controls.Add(this.btnCloseApp);
+            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Size = new System.Drawing.Size(1262, 42);
+            this.pnlHeader.TabIndex = 20;
+            this.pnlHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_header_MouseDown);
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimize.FlatAppearance.BorderSize = 0;
+            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimize.ForeColor = System.Drawing.Color.White;
+            this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
+            this.btnMinimize.Location = new System.Drawing.Point(1111, 0);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(48, 42);
+            this.btnMinimize.TabIndex = 17;
+            this.btnMinimize.UseVisualStyleBackColor = true;
+            this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
+            // 
+            // btnMaximize
+            // 
+            this.btnMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMaximize.FlatAppearance.BorderSize = 0;
+            this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaximize.ForeColor = System.Drawing.Color.White;
+            this.btnMaximize.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximize.Image")));
+            this.btnMaximize.Location = new System.Drawing.Point(1162, 0);
+            this.btnMaximize.Name = "btnMaximize";
+            this.btnMaximize.Size = new System.Drawing.Size(48, 42);
+            this.btnMaximize.TabIndex = 18;
+            this.btnMaximize.UseVisualStyleBackColor = true;
+            this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
+            // 
+            // btnCloseApp
+            // 
+            this.btnCloseApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCloseApp.FlatAppearance.BorderSize = 0;
+            this.btnCloseApp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnCloseApp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCloseApp.ForeColor = System.Drawing.Color.White;
+            this.btnCloseApp.Image = global::EvolveSettings.Properties.Resources.quit;
+            this.btnCloseApp.Location = new System.Drawing.Point(1213, 0);
+            this.btnCloseApp.Name = "btnCloseApp";
+            this.btnCloseApp.Size = new System.Drawing.Size(48, 42);
+            this.btnCloseApp.TabIndex = 16;
+            this.btnCloseApp.UseVisualStyleBackColor = true;
+            this.btnCloseApp.Click += new System.EventHandler(this.btnCloseApp_Click);
+            // 
+            // ShadowForm
+            // 
+            this.ShadowForm.BorderRadius = 0;
+            this.ShadowForm.TargetForm = this;
+            // 
+            // trackBarBlurEffect
+            // 
+            this.trackBarBlurEffect.BackColor = System.Drawing.Color.Transparent;
+            this.trackBarBlurEffect.Location = new System.Drawing.Point(15, 636);
+            this.trackBarBlurEffect.Name = "trackBarBlurEffect";
+            this.trackBarBlurEffect.Size = new System.Drawing.Size(137, 23);
+            this.trackBarBlurEffect.TabIndex = 1018;
+            this.trackBarBlurEffect.ThumbColor = System.Drawing.Color.MidnightBlue;
+            this.trackBarBlurEffect.Value = 8;
+            this.trackBarBlurEffect.Scroll += new System.Windows.Forms.ScrollEventHandler(this.trackBarBlur_Scroll);
+            // 
+            // lblLength
+            // 
+            this.lblLength.AutoSize = true;
+            this.lblLength.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLength.ForeColor = System.Drawing.Color.Black;
+            this.lblLength.Location = new System.Drawing.Point(158, 636);
+            this.lblLength.Name = "lblLength";
+            this.lblLength.Size = new System.Drawing.Size(16, 18);
+            this.lblLength.TabIndex = 1019;
+            this.lblLength.Text = "8";
+            // 
+            // lblBlurEffect
+            // 
+            this.lblBlurEffect.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBlurEffect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.lblBlurEffect.Location = new System.Drawing.Point(12, 669);
+            this.lblBlurEffect.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblBlurEffect.Name = "lblBlurEffect";
+            this.lblBlurEffect.Size = new System.Drawing.Size(117, 22);
+            this.lblBlurEffect.TabIndex = 1017;
+            this.lblBlurEffect.Text = "Enable Acrylic Design";
+            // 
+            // tglBlurEffect
+            // 
+            this.tglBlurEffect.AutoSize = true;
+            this.tglBlurEffect.Location = new System.Drawing.Point(129, 665);
+            this.tglBlurEffect.MinimumSize = new System.Drawing.Size(45, 22);
+            this.tglBlurEffect.Name = "tglBlurEffect";
+            this.tglBlurEffect.OffBackColor = System.Drawing.Color.Gray;
+            this.tglBlurEffect.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.tglBlurEffect.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.tglBlurEffect.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.tglBlurEffect.Size = new System.Drawing.Size(45, 22);
+            this.tglBlurEffect.TabIndex = 1016;
+            this.tglBlurEffect.UseVisualStyleBackColor = true;
+            this.tglBlurEffect.CheckedChanged += new System.EventHandler(this.tglBlurEffect_CheckedChanged);
             // 
             // MainForm
             // 
@@ -672,14 +660,12 @@ namespace EvolveSettings
             this.Resize += new System.EventHandler(this.MainForm_Resize);
             this.pnlNav.ResumeLayout(false);
             this.pnlNav.PerformLayout();
-            this.circleProgressBar2.ResumeLayout(false);
-            this.panelMain.ResumeLayout(false);
-            this.guna2ShadowPanel1.ResumeLayout(false);
-            this.guna2ShadowPanel1.PerformLayout();
-            this.pnlHeader.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnOpen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).EndInit();
+            this.circleProgressBar2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
+            this.panelMain.ResumeLayout(false);
+            this.pnlHeader.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -713,11 +699,10 @@ namespace EvolveSettings
         private Guna.UI2.WinForms.Guna2CircleProgressBar circleProgressBar2;
         private System.Windows.Forms.Label lblUserType;
         private Guna.UI2.WinForms.Guna2Button btnFileEncryptor;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
-        private System.Windows.Forms.Label label1;
-        public Controls.EvolveToggleButton toggleBlurEffect;
-        private Guna.UI2.WinForms.Guna2TrackBar trackBarBlur;
+        private Guna.UI2.WinForms.Guna2PictureBox btnOpen;
+        private Guna.UI2.WinForms.Guna2TrackBar trackBarBlurEffect;
         private System.Windows.Forms.Label lblLength;
+        private System.Windows.Forms.Label lblBlurEffect;
+        public Controls.EvolveToggleButton tglBlurEffect;
     }
 }
