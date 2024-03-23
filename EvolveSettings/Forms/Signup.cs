@@ -9,6 +9,7 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace EvolveSettings
@@ -37,6 +38,9 @@ namespace EvolveSettings
                 LoadTheme();
             }
 
+            picBoxValidation.Image = Properties.Resources.checkmark_invalid;
+            picBoxPassValidation.Image = Properties.Resources.checkmark_invalid;
+            picBoxRepassValidation.Image = Properties.Resources.checkmark_invalid;
             btnSignup.Enabled = false;
             txtPass.Enabled = false;
             txtRepass.Enabled = false;
@@ -253,9 +257,15 @@ namespace EvolveSettings
             if (passwordValidator.IsStrong(txtPass.Text, out message))
             {
                 if (string.IsNullOrEmpty(message))
+                {
                     lblPassValidationInfo.Text = "Password validation accepted.";
+                    picBoxPassValidation.Image = Properties.Resources.checkmark_valid;
+                }
                 else
+                {
                     lblPassValidationInfo.Text = message;
+                    picBoxPassValidation.Image = Properties.Resources.checkmark_invalid;
+                }
             }
             else
             {
@@ -266,15 +276,18 @@ namespace EvolveSettings
                 if (txtPass.Text != txtRepass.Text)
                 {
                     btnSignup.Enabled = false;
+                    picBoxRepassValidation.Image = Properties.Resources.checkmark_invalid;
                 }
                 else
                 {
                     btnSignup.Enabled = true;
+                    picBoxRepassValidation.Image = Properties.Resources.checkmark_valid;
                 }
             }
             else
             {
                 btnSignup.Enabled = false;
+                picBoxRepassValidation.Image = Properties.Resources.checkmark_invalid;
             }
         }
 
@@ -309,6 +322,34 @@ namespace EvolveSettings
                 txtPass.Enabled = false;
                 txtRepass.Enabled = false;
                 timer1.Stop();
+            }
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+            //  mail@mail.com                        => ^([\w]+)@([\w]+)\.([\w]+)$
+            //  http://www.google.com                => ^(http://www\.)([\w]+)\.([\w]+)$
+            //  Phone Number like : 0011 XXX XXX XXX => ^(0011)(([ ][0-9]{3}){3})$
+            //  Date XX/XX/XXXX                      => ^([0-9]{2})\/([0-9]{2})\/([0-9]{4})$
+
+            Regexp(@"^([\w]+)@([\w]+)\.([\w]+)$", txtEmail, picBoxValidation/*, lblEmailVal, "Mail"*/);
+        }
+
+        public void Regexp(string re, Guna2TextBox tb, PictureBox pc/*, Label lbl, string s*/)
+        {
+            Regex regex = new Regex(re);
+
+            if (regex.IsMatch(tb.Text))
+            {
+                pc.Image = Properties.Resources.checkmark_valid;
+                //lbl.ForeColor = Color.Green;
+                //lbl.Text = s + " Valid";
+            }
+            else
+            {
+                pc.Image = Properties.Resources.checkmark_invalid;
+                //lbl.ForeColor = Color.Red;
+                //lbl.Text = s + " InValid";
             }
         }
     }

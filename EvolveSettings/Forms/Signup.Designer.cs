@@ -51,14 +51,21 @@ namespace EvolveSettings
             this.pnlPwValidation = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.lblPassValidationInfo = new System.Windows.Forms.Label();
-            this.btnBrowse = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBoxProfile = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.lblEmail = new System.Windows.Forms.Label();
+            this.lblEmailVal = new System.Windows.Forms.Label();
+            this.picBoxValidation = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnBrowse = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.pictureBoxProfile = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.picBoxPassValidation = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.picBoxRepassValidation = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel3.SuspendLayout();
             this.pnlPwValidation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxValidation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBrowse)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxPassValidation)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxRepassValidation)).BeginInit();
             this.SuspendLayout();
             // 
             // frmSignUp
@@ -88,7 +95,7 @@ namespace EvolveSettings
             this.btnSignupPassGen.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnSignupPassGen.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignupPassGen.ForeColor = System.Drawing.Color.White;
-            this.btnSignupPassGen.Location = new System.Drawing.Point(468, 338);
+            this.btnSignupPassGen.Location = new System.Drawing.Point(306, 338);
             this.btnSignupPassGen.Name = "btnSignupPassGen";
             this.btnSignupPassGen.Size = new System.Drawing.Size(142, 32);
             this.btnSignupPassGen.TabIndex = 26;
@@ -186,11 +193,12 @@ namespace EvolveSettings
             this.txtEmail.Location = new System.Drawing.Point(306, 81);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
-            this.txtEmail.PlaceholderText = "";
+            this.txtEmail.PlaceholderText = "please enter a valid email address";
             this.txtEmail.SelectedText = "";
             this.txtEmail.Size = new System.Drawing.Size(304, 34);
             this.txtEmail.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtEmail.TabIndex = 20;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // chkSignupShowPass
             // 
@@ -225,7 +233,7 @@ namespace EvolveSettings
             this.btnSignup.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnSignup.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSignup.ForeColor = System.Drawing.Color.White;
-            this.btnSignup.Location = new System.Drawing.Point(306, 338);
+            this.btnSignup.Location = new System.Drawing.Point(514, 338);
             this.btnSignup.Name = "btnSignup";
             this.btnSignup.Size = new System.Drawing.Size(96, 32);
             this.btnSignup.TabIndex = 24;
@@ -257,7 +265,7 @@ namespace EvolveSettings
             this.signup_close.AutoSize = true;
             this.signup_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.signup_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.signup_close.Location = new System.Drawing.Point(608, 8);
+            this.signup_close.Location = new System.Drawing.Point(633, 8);
             this.signup_close.Name = "signup_close";
             this.signup_close.Size = new System.Drawing.Size(18, 18);
             this.signup_close.TabIndex = 27;
@@ -270,7 +278,7 @@ namespace EvolveSettings
             this.txtLoginHere.Cursor = System.Windows.Forms.Cursors.Hand;
             this.txtLoginHere.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLoginHere.ForeColor = System.Drawing.Color.DimGray;
-            this.txtLoginHere.Location = new System.Drawing.Point(484, 382);
+            this.txtLoginHere.Location = new System.Drawing.Point(507, 383);
             this.txtLoginHere.Name = "txtLoginHere";
             this.txtLoginHere.Size = new System.Drawing.Size(66, 15);
             this.txtLoginHere.TabIndex = 25;
@@ -282,7 +290,7 @@ namespace EvolveSettings
             this.lblAlreadyAccount.AutoSize = true;
             this.lblAlreadyAccount.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAlreadyAccount.ForeColor = System.Drawing.Color.DimGray;
-            this.lblAlreadyAccount.Location = new System.Drawing.Point(339, 382);
+            this.lblAlreadyAccount.Location = new System.Drawing.Point(362, 383);
             this.lblAlreadyAccount.Name = "lblAlreadyAccount";
             this.lblAlreadyAccount.Size = new System.Drawing.Size(142, 15);
             this.lblAlreadyAccount.TabIndex = 28;
@@ -330,7 +338,8 @@ namespace EvolveSettings
             this.pnlPwValidation.Name = "pnlPwValidation";
             this.pnlPwValidation.Radius = 5;
             this.pnlPwValidation.ShadowColor = System.Drawing.Color.Black;
-            this.pnlPwValidation.ShadowDepth = 250;
+            this.pnlPwValidation.ShadowDepth = 50;
+            this.pnlPwValidation.ShadowShift = 10;
             this.pnlPwValidation.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
             this.pnlPwValidation.Size = new System.Drawing.Size(236, 174);
             this.pnlPwValidation.TabIndex = 1026;
@@ -357,6 +366,52 @@ namespace EvolveSettings
             this.lblPassValidationInfo.TabIndex = 1012;
             this.lblPassValidationInfo.Text = "Password not entered";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.LightGray;
+            this.label6.Location = new System.Drawing.Point(71, 176);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(83, 25);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Register";
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(303, 61);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(94, 17);
+            this.lblEmail.TabIndex = 18;
+            this.lblEmail.Text = "Email Address:";
+            // 
+            // lblEmailVal
+            // 
+            this.lblEmailVal.AutoSize = true;
+            this.lblEmailVal.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailVal.Location = new System.Drawing.Point(538, 61);
+            this.lblEmailVal.Name = "lblEmailVal";
+            this.lblEmailVal.Size = new System.Drawing.Size(72, 13);
+            this.lblEmailVal.TabIndex = 32;
+            this.lblEmailVal.Text = "Email is valid";
+            this.lblEmailVal.Visible = false;
+            // 
+            // picBoxValidation
+            // 
+            this.picBoxValidation.BackColor = System.Drawing.Color.Transparent;
+            this.picBoxValidation.FillColor = System.Drawing.Color.Transparent;
+            this.picBoxValidation.Image = global::EvolveSettings.Properties.Resources.checkmark_valid;
+            this.picBoxValidation.ImageRotate = 0F;
+            this.picBoxValidation.Location = new System.Drawing.Point(620, 81);
+            this.picBoxValidation.Name = "picBoxValidation";
+            this.picBoxValidation.Size = new System.Drawing.Size(30, 34);
+            this.picBoxValidation.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBoxValidation.TabIndex = 33;
+            this.picBoxValidation.TabStop = false;
+            this.picBoxValidation.UseTransparentBackground = true;
+            // 
             // btnBrowse
             // 
             this.btnBrowse.BackColor = System.Drawing.Color.Transparent;
@@ -373,17 +428,6 @@ namespace EvolveSettings
             this.btnBrowse.UseTransparentBackground = true;
             this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.LightGray;
-            this.label6.Location = new System.Drawing.Point(71, 176);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(141, 25);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "EvolveSettings";
-            // 
             // pictureBoxProfile
             // 
             this.pictureBoxProfile.BackColor = System.Drawing.Color.Transparent;
@@ -399,21 +443,43 @@ namespace EvolveSettings
             this.pictureBoxProfile.TabStop = false;
             this.pictureBoxProfile.UseTransparentBackground = true;
             // 
-            // lblEmail
+            // picBoxPassValidation
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(303, 61);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(94, 17);
-            this.lblEmail.TabIndex = 18;
-            this.lblEmail.Text = "Email Address:";
+            this.picBoxPassValidation.BackColor = System.Drawing.Color.Transparent;
+            this.picBoxPassValidation.FillColor = System.Drawing.Color.Transparent;
+            this.picBoxPassValidation.Image = global::EvolveSettings.Properties.Resources.checkmark_valid;
+            this.picBoxPassValidation.ImageRotate = 0F;
+            this.picBoxPassValidation.Location = new System.Drawing.Point(619, 209);
+            this.picBoxPassValidation.Name = "picBoxPassValidation";
+            this.picBoxPassValidation.Size = new System.Drawing.Size(30, 34);
+            this.picBoxPassValidation.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBoxPassValidation.TabIndex = 34;
+            this.picBoxPassValidation.TabStop = false;
+            this.picBoxPassValidation.UseTransparentBackground = true;
+            // 
+            // picBoxRepassValidation
+            // 
+            this.picBoxRepassValidation.BackColor = System.Drawing.Color.Transparent;
+            this.picBoxRepassValidation.FillColor = System.Drawing.Color.Transparent;
+            this.picBoxRepassValidation.Image = global::EvolveSettings.Properties.Resources.checkmark_valid;
+            this.picBoxRepassValidation.ImageRotate = 0F;
+            this.picBoxRepassValidation.Location = new System.Drawing.Point(619, 274);
+            this.picBoxRepassValidation.Name = "picBoxRepassValidation";
+            this.picBoxRepassValidation.Size = new System.Drawing.Size(30, 34);
+            this.picBoxRepassValidation.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBoxRepassValidation.TabIndex = 35;
+            this.picBoxRepassValidation.TabStop = false;
+            this.picBoxRepassValidation.UseTransparentBackground = true;
             // 
             // Signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(634, 411);
+            this.ClientSize = new System.Drawing.Size(659, 411);
+            this.Controls.Add(this.picBoxRepassValidation);
+            this.Controls.Add(this.picBoxPassValidation);
+            this.Controls.Add(this.picBoxValidation);
+            this.Controls.Add(this.lblEmailVal);
             this.Controls.Add(this.btnSignupPassGen);
             this.Controls.Add(this.txtRepass);
             this.Controls.Add(this.txtPass);
@@ -439,8 +505,11 @@ namespace EvolveSettings
             this.panel3.PerformLayout();
             this.pnlPwValidation.ResumeLayout(false);
             this.pnlPwValidation.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxValidation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBrowse)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxPassValidation)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxRepassValidation)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -471,5 +540,9 @@ namespace EvolveSettings
         private Guna.UI2.WinForms.Guna2CirclePictureBox pictureBoxProfile;
         private System.Windows.Forms.Label lblEmail;
         private Guna.UI2.WinForms.Guna2ShadowPanel pnlPwValidation;
+        private System.Windows.Forms.Label lblEmailVal;
+        private Guna.UI2.WinForms.Guna2PictureBox picBoxValidation;
+        private Guna.UI2.WinForms.Guna2PictureBox picBoxRepassValidation;
+        private Guna.UI2.WinForms.Guna2PictureBox picBoxPassValidation;
     }
 }

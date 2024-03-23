@@ -467,6 +467,8 @@
     <None Include="Resources\error.png" />
     <None Include="Resources\exclamation.png" />
     <None Include="Resources\information.png" />
+    <Content Include="Resources\checkmark_invalid.png" />
+    <Content Include="Resources\checkmark_valid.png" />
     <Content Include="Resources\delete.png" />
     <Content Include="Resources\edit.png" />
     <Content Include="Resources\encrypted_file.png" />
@@ -484,9 +486,9 @@
     <Content Include="Resources\settings.png" />
     <Content Include="Resources\usersm.png" />
     <Content Include="Resources\win11tweaks.png" />
-    <EmbeddedResource Include="EvolveSettingsDb.mdf">
+    <None Include="EvolveSettingsDb.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
+    </None>
     <Content Include="EvolveSettings.ico" />
     <Content Include="EvolveSettingsDb_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

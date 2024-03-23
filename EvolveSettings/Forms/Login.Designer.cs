@@ -71,7 +71,7 @@ namespace EvolveSettings
             this.panel1.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(-1, -1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(636, 412);
+            this.panel1.Size = new System.Drawing.Size(660, 412);
             this.panel1.TabIndex = 0;
             // 
             // lblForgotPass
@@ -107,7 +107,7 @@ namespace EvolveSettings
             this.txtPass.PasswordChar = '*';
             this.txtPass.PlaceholderText = "";
             this.txtPass.SelectedText = "";
-            this.txtPass.Size = new System.Drawing.Size(304, 34);
+            this.txtPass.Size = new System.Drawing.Size(335, 34);
             this.txtPass.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtPass.TabIndex = 2;
             // 
@@ -131,7 +131,7 @@ namespace EvolveSettings
             this.txtUserName.PasswordChar = '\0';
             this.txtUserName.PlaceholderText = "";
             this.txtUserName.SelectedText = "";
-            this.txtUserName.Size = new System.Drawing.Size(304, 34);
+            this.txtUserName.Size = new System.Drawing.Size(335, 34);
             this.txtUserName.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtUserName.TabIndex = 1;
             // 
@@ -145,7 +145,7 @@ namespace EvolveSettings
             this.chkLoginShowPass.CheckedState.FillColor = System.Drawing.Color.MidnightBlue;
             this.chkLoginShowPass.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkLoginShowPass.ForeColor = System.Drawing.Color.Gray;
-            this.chkLoginShowPass.Location = new System.Drawing.Point(510, 243);
+            this.chkLoginShowPass.Location = new System.Drawing.Point(541, 243);
             this.chkLoginShowPass.Name = "chkLoginShowPass";
             this.chkLoginShowPass.Size = new System.Drawing.Size(107, 17);
             this.chkLoginShowPass.TabIndex = 4;
@@ -168,7 +168,7 @@ namespace EvolveSettings
             this.btnLogin.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(306, 273);
+            this.btnLogin.Location = new System.Drawing.Point(306, 278);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(96, 32);
             this.btnLogin.TabIndex = 3;
@@ -180,7 +180,7 @@ namespace EvolveSettings
             this.login_close.AutoSize = true;
             this.login_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.login_close.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.login_close.Location = new System.Drawing.Point(609, 9);
+            this.login_close.Location = new System.Drawing.Point(633, 9);
             this.login_close.Name = "login_close";
             this.login_close.Size = new System.Drawing.Size(18, 18);
             this.login_close.TabIndex = 10;
@@ -193,7 +193,7 @@ namespace EvolveSettings
             this.lblRegister.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblRegister.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegister.ForeColor = System.Drawing.Color.DimGray;
-            this.lblRegister.Location = new System.Drawing.Point(485, 384);
+            this.lblRegister.Location = new System.Drawing.Point(496, 384);
             this.lblRegister.Name = "lblRegister";
             this.lblRegister.Size = new System.Drawing.Size(83, 15);
             this.lblRegister.TabIndex = 9;
@@ -205,7 +205,7 @@ namespace EvolveSettings
             this.lblNoAccount.AutoSize = true;
             this.lblNoAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNoAccount.ForeColor = System.Drawing.Color.DimGray;
-            this.lblNoAccount.Location = new System.Drawing.Point(340, 383);
+            this.lblNoAccount.Location = new System.Drawing.Point(351, 383);
             this.lblNoAccount.Name = "lblNoAccount";
             this.lblNoAccount.Size = new System.Drawing.Size(135, 15);
             this.lblNoAccount.TabIndex = 8;
@@ -295,7 +295,7 @@ namespace EvolveSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(634, 411);
+            this.ClientSize = new System.Drawing.Size(659, 411);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
