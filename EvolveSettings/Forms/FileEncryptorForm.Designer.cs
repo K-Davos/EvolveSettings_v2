@@ -59,11 +59,14 @@
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.lblAddUpdateUser = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.pnlFiles.SuspendLayout();
             this.pnlFolders.SuspendLayout();
             this.pnlEncryptDecrypt.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.pnlHeader.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlFiles
@@ -132,7 +135,7 @@
             // 
             // listBoxFile
             // 
-            this.listBoxFile.BackColor = System.Drawing.Color.DimGray;
+            this.listBoxFile.BackColor = System.Drawing.Color.White;
             this.listBoxFile.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBoxFile.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxFile.FormattingEnabled = true;
@@ -171,7 +174,7 @@
             // 
             // listBoxFolder
             // 
-            this.listBoxFolder.BackColor = System.Drawing.Color.DimGray;
+            this.listBoxFolder.BackColor = System.Drawing.Color.White;
             this.listBoxFolder.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBoxFolder.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxFolder.FormattingEnabled = true;
@@ -257,8 +260,8 @@
             this.pnlEncryptDecrypt.Controls.Add(this.btnEncrypt);
             this.pnlEncryptDecrypt.Controls.Add(this.btnDecrypt);
             this.pnlEncryptDecrypt.Controls.Add(this.btnClearAll);
-            this.pnlEncryptDecrypt.FillColor = System.Drawing.Color.DimGray;
-            this.pnlEncryptDecrypt.Location = new System.Drawing.Point(174, 59);
+            this.pnlEncryptDecrypt.FillColor = System.Drawing.Color.White;
+            this.pnlEncryptDecrypt.Location = new System.Drawing.Point(303, 59);
             this.pnlEncryptDecrypt.Margin = new System.Windows.Forms.Padding(28, 3, 5, 25);
             this.pnlEncryptDecrypt.Name = "pnlEncryptDecrypt";
             this.pnlEncryptDecrypt.Radius = 5;
@@ -453,7 +456,7 @@
             this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox1.Image = global::EvolveSettings.Properties.Resources.encrypted_file;
             this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(40, 209);
+            this.guna2PictureBox1.Location = new System.Drawing.Point(92, 134);
             this.guna2PictureBox1.Name = "guna2PictureBox1";
             this.guna2PictureBox1.Size = new System.Drawing.Size(91, 91);
             this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -466,7 +469,7 @@
             this.btnClose.AutoSize = true;
             this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.Location = new System.Drawing.Point(865, 9);
+            this.btnClose.Location = new System.Drawing.Point(712, 9);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(18, 18);
             this.btnClose.TabIndex = 28;
@@ -479,10 +482,10 @@
             this.pnlHeader.Controls.Add(this.btnClose);
             this.pnlHeader.Controls.Add(this.lblAddUpdateUser);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Location = new System.Drawing.Point(284, 0);
             this.pnlHeader.Margin = new System.Windows.Forms.Padding(4);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(895, 42);
+            this.pnlHeader.Size = new System.Drawing.Size(739, 42);
             this.pnlHeader.TabIndex = 10300;
             this.pnlHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnlHeader_MouseDown);
             // 
@@ -502,13 +505,35 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel3.Controls.Add(this.guna2PictureBox1);
+            this.panel3.Controls.Add(this.label6);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(284, 512);
+            this.panel3.TabIndex = 10301;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.LightGray;
+            this.label6.Location = new System.Drawing.Point(63, 238);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(145, 25);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "File Encryption";
+            // 
             // FileEncryptorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(895, 512);
-            this.Controls.Add(this.guna2PictureBox1);
+            this.ClientSize = new System.Drawing.Size(1023, 512);
             this.Controls.Add(this.pnlHeader);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.pnlEncryptDecrypt);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FileEncryptorForm";
@@ -523,6 +548,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -558,5 +585,7 @@
         public System.Windows.Forms.Label lblAddUpdateUser;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label6;
     }
 }

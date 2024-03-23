@@ -495,6 +495,7 @@ namespace EvolveSettings
                         using (StreamWriter swEncrypt = new StreamWriter(csEncrypt))
                         {
                             swEncrypt.Write(text);
+                            EvolveMessageBox.Show("Your password has been successfully encrypted", "Password Encryptor", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         return Convert.ToBase64String(msEncrypt.ToArray());
                     }
@@ -516,6 +517,7 @@ namespace EvolveSettings
                     {
                         using (StreamReader srDecrypt = new StreamReader(csDecrypt))
                         {
+                            EvolveMessageBox.Show("Your password has been successfully decrypted", "Password Encryptor", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             return srDecrypt.ReadToEnd();
                         }
                     }

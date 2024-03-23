@@ -168,6 +168,7 @@
             this.txtPass.Size = new System.Drawing.Size(304, 34);
             this.txtPass.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtPass.TabIndex = 38;
+            this.txtPass.TextChanged += new System.EventHandler(this.txtPass_TextChanged);
             // 
             // txtRecordName
             // 
@@ -217,6 +218,7 @@
             this.txtEncrypted.Size = new System.Drawing.Size(304, 34);
             this.txtEncrypted.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtEncrypted.TabIndex = 36;
+            this.txtEncrypted.TextChanged += new System.EventHandler(this.txtEncrypted_TextChanged);
             // 
             // chkSignupShowPass
             // 

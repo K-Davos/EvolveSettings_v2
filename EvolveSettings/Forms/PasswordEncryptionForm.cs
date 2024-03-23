@@ -126,6 +126,8 @@ namespace EvolveSettings.Forms
         {
             encryptionKey = "0123456789123456";
             btnSave.Enabled = false;
+            btnEncrypt.Enabled = false;
+            btnDecrypt.Enabled = false;
         }
 
         private void btnEncrypt_Click(object sender, EventArgs e)
@@ -199,6 +201,30 @@ namespace EvolveSettings.Forms
         private void pictureBoxClose_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void txtPass_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPass.Text.Length > 1)
+            {
+                btnEncrypt.Enabled = true;
+            }
+            if (txtPass.Text.Length < 1)
+            {
+                btnEncrypt.Enabled = false;
+            }
+        }
+
+        private void txtEncrypted_TextChanged(object sender, EventArgs e)
+        {
+            if (txtEncrypted.Text.Length > 1)
+            {
+                btnDecrypt.Enabled = true;
+            }
+            if (txtEncrypted.Text.Length < 1)
+            {
+                btnDecrypt.Enabled = false;
+            }
         }
     }
 }

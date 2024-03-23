@@ -51,19 +51,19 @@ namespace EvolveSettings
             this.pnlPwValidation = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.lblPassValidationInfo = new System.Windows.Forms.Label();
+            this.btnBrowse = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.pictureBoxProfile = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblEmailVal = new System.Windows.Forms.Label();
             this.picBoxValidation = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnBrowse = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.pictureBoxProfile = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.picBoxPassValidation = new Guna.UI2.WinForms.Guna2PictureBox();
             this.picBoxRepassValidation = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel3.SuspendLayout();
             this.pnlPwValidation.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxValidation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBrowse)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxValidation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPassValidation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxRepassValidation)).BeginInit();
             this.SuspendLayout();
@@ -95,7 +95,7 @@ namespace EvolveSettings
             this.btnSignupPassGen.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnSignupPassGen.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignupPassGen.ForeColor = System.Drawing.Color.White;
-            this.btnSignupPassGen.Location = new System.Drawing.Point(306, 338);
+            this.btnSignupPassGen.Location = new System.Drawing.Point(468, 340);
             this.btnSignupPassGen.Name = "btnSignupPassGen";
             this.btnSignupPassGen.Size = new System.Drawing.Size(142, 32);
             this.btnSignupPassGen.TabIndex = 26;
@@ -233,7 +233,7 @@ namespace EvolveSettings
             this.btnSignup.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnSignup.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSignup.ForeColor = System.Drawing.Color.White;
-            this.btnSignup.Location = new System.Drawing.Point(514, 338);
+            this.btnSignup.Location = new System.Drawing.Point(306, 340);
             this.btnSignup.Name = "btnSignup";
             this.btnSignup.Size = new System.Drawing.Size(96, 32);
             this.btnSignup.TabIndex = 24;
@@ -366,6 +366,22 @@ namespace EvolveSettings
             this.lblPassValidationInfo.TabIndex = 1012;
             this.lblPassValidationInfo.Text = "Password not entered";
             // 
+            // btnBrowse
+            // 
+            this.btnBrowse.BackColor = System.Drawing.Color.Transparent;
+            this.btnBrowse.FillColor = System.Drawing.Color.Transparent;
+            this.btnBrowse.Image = global::EvolveSettings.Properties.Resources.add;
+            this.btnBrowse.ImageRotate = 0F;
+            this.btnBrowse.Location = new System.Drawing.Point(155, 86);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnBrowse.Size = new System.Drawing.Size(26, 26);
+            this.btnBrowse.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnBrowse.TabIndex = 1025;
+            this.btnBrowse.TabStop = false;
+            this.btnBrowse.UseTransparentBackground = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -376,6 +392,21 @@ namespace EvolveSettings
             this.label6.Size = new System.Drawing.Size(83, 25);
             this.label6.TabIndex = 0;
             this.label6.Text = "Register";
+            // 
+            // pictureBoxProfile
+            // 
+            this.pictureBoxProfile.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBoxProfile.FillColor = System.Drawing.Color.Transparent;
+            this.pictureBoxProfile.Image = global::EvolveSettings.Properties.Resources.user;
+            this.pictureBoxProfile.ImageRotate = 0F;
+            this.pictureBoxProfile.Location = new System.Drawing.Point(94, 82);
+            this.pictureBoxProfile.Name = "pictureBoxProfile";
+            this.pictureBoxProfile.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.pictureBoxProfile.Size = new System.Drawing.Size(91, 91);
+            this.pictureBoxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxProfile.TabIndex = 0;
+            this.pictureBoxProfile.TabStop = false;
+            this.pictureBoxProfile.UseTransparentBackground = true;
             // 
             // lblEmail
             // 
@@ -411,37 +442,6 @@ namespace EvolveSettings
             this.picBoxValidation.TabIndex = 33;
             this.picBoxValidation.TabStop = false;
             this.picBoxValidation.UseTransparentBackground = true;
-            // 
-            // btnBrowse
-            // 
-            this.btnBrowse.BackColor = System.Drawing.Color.Transparent;
-            this.btnBrowse.FillColor = System.Drawing.Color.Transparent;
-            this.btnBrowse.Image = global::EvolveSettings.Properties.Resources.add;
-            this.btnBrowse.ImageRotate = 0F;
-            this.btnBrowse.Location = new System.Drawing.Point(155, 86);
-            this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnBrowse.Size = new System.Drawing.Size(26, 26);
-            this.btnBrowse.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnBrowse.TabIndex = 1025;
-            this.btnBrowse.TabStop = false;
-            this.btnBrowse.UseTransparentBackground = true;
-            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
-            // 
-            // pictureBoxProfile
-            // 
-            this.pictureBoxProfile.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBoxProfile.FillColor = System.Drawing.Color.Transparent;
-            this.pictureBoxProfile.Image = global::EvolveSettings.Properties.Resources.user;
-            this.pictureBoxProfile.ImageRotate = 0F;
-            this.pictureBoxProfile.Location = new System.Drawing.Point(94, 82);
-            this.pictureBoxProfile.Name = "pictureBoxProfile";
-            this.pictureBoxProfile.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.pictureBoxProfile.Size = new System.Drawing.Size(91, 91);
-            this.pictureBoxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxProfile.TabIndex = 0;
-            this.pictureBoxProfile.TabStop = false;
-            this.pictureBoxProfile.UseTransparentBackground = true;
             // 
             // picBoxPassValidation
             // 
@@ -505,9 +505,9 @@ namespace EvolveSettings
             this.panel3.PerformLayout();
             this.pnlPwValidation.ResumeLayout(false);
             this.pnlPwValidation.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picBoxValidation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBrowse)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxValidation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxPassValidation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxRepassValidation)).EndInit();
             this.ResumeLayout(false);

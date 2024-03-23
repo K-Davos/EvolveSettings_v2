@@ -52,6 +52,7 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.pnlDbFileInfo = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.pnlEncryptor = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.btnPwEncryption = new Guna.UI2.WinForms.Guna2Button();
             this.lblEncrypting = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.dgvEncryptor = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -69,7 +70,6 @@
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnPwEncryption = new Guna.UI2.WinForms.Guna2Button();
             this.pnlGridView.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.pnlDbFileInfo.SuspendLayout();
@@ -237,7 +237,7 @@
             // 
             // txtDateCreated
             // 
-            this.txtDateCreated.BackColor = System.Drawing.SystemColors.Control;
+            this.txtDateCreated.BackColor = System.Drawing.Color.White;
             this.txtDateCreated.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDateCreated.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDateCreated.Location = new System.Drawing.Point(331, 155);
@@ -362,7 +362,7 @@
             this.pnlGridView.Controls.Add(this.tableLayoutPanel1);
             this.pnlGridView.Controls.Add(this.label7);
             this.pnlGridView.Controls.Add(this.dgvEncryptor);
-            this.pnlGridView.FillColor = System.Drawing.Color.DimGray;
+            this.pnlGridView.FillColor = System.Drawing.Color.White;
             this.pnlGridView.Location = new System.Drawing.Point(20, 64);
             this.pnlGridView.Margin = new System.Windows.Forms.Padding(10, 3, 5, 25);
             this.pnlGridView.Name = "pnlGridView";
@@ -441,6 +441,24 @@
             this.pnlEncryptor.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
             this.pnlEncryptor.Size = new System.Drawing.Size(446, 231);
             this.pnlEncryptor.TabIndex = 1069;
+            // 
+            // btnPwEncryption
+            // 
+            this.btnPwEncryption.BackColor = System.Drawing.Color.Transparent;
+            this.btnPwEncryption.BorderRadius = 15;
+            this.btnPwEncryption.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPwEncryption.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPwEncryption.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPwEncryption.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPwEncryption.FillColor = System.Drawing.Color.MidnightBlue;
+            this.btnPwEncryption.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnPwEncryption.ForeColor = System.Drawing.Color.White;
+            this.btnPwEncryption.Location = new System.Drawing.Point(17, 99);
+            this.btnPwEncryption.Name = "btnPwEncryption";
+            this.btnPwEncryption.Size = new System.Drawing.Size(139, 32);
+            this.btnPwEncryption.TabIndex = 1067;
+            this.btnPwEncryption.Text = "Password Encryptor";
+            this.btnPwEncryption.Click += new System.EventHandler(this.btnPwEncryption_Click);
             // 
             // lblEncrypting
             // 
@@ -643,24 +661,6 @@
             this.dataGridViewImageColumn2.HeaderText = "";
             this.dataGridViewImageColumn2.Image = global::EvolveSettings.Properties.Resources.delete;
             this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            // 
-            // btnPwEncryption
-            // 
-            this.btnPwEncryption.BackColor = System.Drawing.Color.Transparent;
-            this.btnPwEncryption.BorderRadius = 15;
-            this.btnPwEncryption.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnPwEncryption.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnPwEncryption.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnPwEncryption.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnPwEncryption.FillColor = System.Drawing.Color.MidnightBlue;
-            this.btnPwEncryption.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnPwEncryption.ForeColor = System.Drawing.Color.White;
-            this.btnPwEncryption.Location = new System.Drawing.Point(17, 99);
-            this.btnPwEncryption.Name = "btnPwEncryption";
-            this.btnPwEncryption.Size = new System.Drawing.Size(139, 32);
-            this.btnPwEncryption.TabIndex = 1067;
-            this.btnPwEncryption.Text = "Password Encryption";
-            this.btnPwEncryption.Click += new System.EventHandler(this.btnPwEncryption_Click);
             // 
             // PrivacyAndSecurityForm
             // 

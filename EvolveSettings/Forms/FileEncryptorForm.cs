@@ -73,6 +73,7 @@ namespace EvolveSettings.Forms
             {
                 //light
                 this.BackColor = SystemColors.Control;
+                panel3.BackColor = themeColor;
                 pnlFiles.FillColor = Color.White;
                 pnlFolders.FillColor = Color.White;
                 pnlEncryptDecrypt.FillColor = Color.White;
@@ -100,6 +101,7 @@ namespace EvolveSettings.Forms
             {
                 //dark
                 this.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
+                panel3.BackColor = themeColor;
                 pnlFiles.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
                 pnlFolders.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
                 pnlEncryptDecrypt.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
