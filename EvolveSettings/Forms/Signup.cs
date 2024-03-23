@@ -42,6 +42,7 @@ namespace EvolveSettings
             picBoxPassValidation.Image = Properties.Resources.checkmark_invalid;
             picBoxRepassValidation.Image = Properties.Resources.checkmark_invalid;
             btnSignup.Enabled = false;
+            txtUserName.Enabled = false;
             txtPass.Enabled = false;
             txtRepass.Enabled = false;
             if (txtPass.Text.Length < 1)
@@ -342,12 +343,14 @@ namespace EvolveSettings
             if (regex.IsMatch(tb.Text))
             {
                 pc.Image = Properties.Resources.checkmark_valid;
+                txtUserName.Enabled = true;
                 //lbl.ForeColor = Color.Green;
                 //lbl.Text = s + " Valid";
             }
             else
             {
                 pc.Image = Properties.Resources.checkmark_invalid;
+                txtUserName.Enabled = false;
                 //lbl.ForeColor = Color.Red;
                 //lbl.Text = s + " InValid";
             }
