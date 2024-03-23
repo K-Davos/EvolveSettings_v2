@@ -271,6 +271,12 @@
     <Compile Include="Forms\FileEncryptorForm.Designer.cs">
       <DependentUpon>FileEncryptorForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\PrivacyAndSecurityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PrivacyAndSecurityForm.Designer.cs">
+      <DependentUpon>PrivacyAndSecurityForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ForgotPassForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -385,6 +391,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FileEncryptorForm.resx">
       <DependentUpon>FileEncryptorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PrivacyAndSecurityForm.resx">
+      <DependentUpon>PrivacyAndSecurityForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ForgotPassForm.resx">
       <DependentUpon>ForgotPassForm.cs</DependentUpon>

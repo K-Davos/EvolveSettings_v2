@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
@@ -17,13 +18,11 @@ namespace EvolveSettings.Forms
         //WinTheme
         private UserPreferenceChangedEventHandler UserPreferenceChanged;
 
-        //Sql Database
-        SqlConnection connect = new SqlConnection(SqlConnectionHelper.connectReturn());
-        SqlCommand cmd = new SqlCommand();
-        SqlDataReader dr;
-
-        //Password Validator
-        PasswordValidator passwordValidator = new PasswordValidator();
+        //Drag Form
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
         public FileEncryptorForm()
         {
@@ -38,23 +37,16 @@ namespace EvolveSettings.Forms
                 LoadTheme();
             }
 
-            txtFileName.ReadOnly = true;
-            txtPass.Enabled = false;
-            txtRepass.Enabled = false;
             txtEncryptorPass.Enabled = false;
             txtEncryptorRepass.Enabled = false;
             btnEncrypt.Enabled = false;
             btnDecrypt.Enabled = false;
-            btnUpdate.Enabled = false;
-            if (txtPass.Text.Length < 1)
-            {
-                lblPassValidationInfo.Visible = false;
-            }
-            if (txtEncryptorPass.Text.Length < 1)
-            {
-                lblEncryptPassValidationInfo.Visible = false;
-            }
-            LoadEncryptorDB();
+        }
+
+        private void pnlHeader_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
         #region wintheme
@@ -81,86 +73,41 @@ namespace EvolveSettings.Forms
             {
                 //light
                 this.BackColor = SystemColors.Control;
-                pnlGridView.FillColor = Color.White;
-                txtDateCreated.ForeColor = Color.Black;
-                txtDateCreated.BackColor = Color.White;
-                pnlHeader.BackColor = SystemColors.Control;
-                lblTitle.ForeColor = Color.Black;
-                lblPassValidationInfo.ForeColor = Color.Black;
-                foreach (Guna2DataGridView gridview in this.pnlGridView.Controls.OfType<Guna2DataGridView>())
-                {
-                    gridview.BackgroundColor = Color.White;
-                    gridview.ColumnHeadersDefaultCellStyle.BackColor = Color.White;
-                    gridview.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
-                    gridview.DefaultCellStyle.ForeColor = Color.Black;
-                    gridview.DefaultCellStyle.BackColor = SystemColors.Control;
-                    gridview.DefaultCellStyle.SelectionBackColor = themeColor;
-                    gridview.GridColor = themeColor;
-                    gridview.AlternatingRowsDefaultCellStyle.BackColor = SystemColors.Control;
-                }
+                pnlFiles.FillColor = Color.White;
+                pnlFolders.FillColor = Color.White;
+                pnlEncryptDecrypt.FillColor = Color.White;
+                listBoxFile.BackColor = Color.White;
+                listBoxFile.ForeColor = Color.Black;
+                listBoxFolder.BackColor = Color.White;
+                listBoxFolder.ForeColor = Color.Black;
+                pnlHeader.BackColor = themeColor;
                 foreach (Guna2TextBox txtbox in this.pnlEncryptDecrypt.Controls.OfType<Guna2TextBox>())
                 {
                     txtbox.BackColor = Color.Transparent;
-                    txtbox.FillColor = Color.White;
+                    txtbox.FillColor = SystemColors.Control;
                     txtbox.BorderColor = themeColor;
                     txtbox.ForeColor = Color.Black;
-                    txtbox.DisabledState.FillColor = SystemColors.Control;
                 }
-                foreach (Guna2TextBox txtbox in this.pnlDbFileInfo.Controls.OfType<Guna2TextBox>())
-                {
-                    txtbox.BackColor = Color.Transparent;
-                    txtbox.FillColor = Color.White;
-                    txtbox.BorderColor = themeColor;
-                    txtbox.ForeColor = Color.Black;
-                    txtbox.DisabledState.FillColor = SystemColors.Control;
-                }
+                lblFiles.ForeColor = Color.Black;
+                lblFilesAndFolders.ForeColor = ColorTranslator.FromHtml("#212121");
+                lblEncryptDecrypt.ForeColor = ColorTranslator.FromHtml("#212121");
+                btnClose.ForeColor = Color.Black;
+                lblAddUpdateUser.ForeColor = Color.Black;
+                lblEditPassword.ForeColor = Color.Black;
+                lblEditRepass.ForeColor = Color.Black;
             }
             else
             {
                 //dark
                 this.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
-                pnlHeader.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
-                pnlGridView.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
-                pnlFiles.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
-                pnlFolders.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
+                pnlFiles.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
+                pnlFolders.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
                 pnlEncryptDecrypt.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
-                pnlPwValidation.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
-                pnlDbFileInfo.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
-                txtDateCreated.BackColor = ColorTranslator.FromHtml("#FF2D2D30");
                 listBoxFile.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
-                listBoxFolder.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
-                lblFileName.ForeColor = Color.White;
-                lblFileDescription.ForeColor = Color.White;
-                lblFileFolderLocation.ForeColor = Color.White;
-                txtDateCreated.ForeColor = Color.White;
-                lblPass.ForeColor = Color.White;
-                lblRePass.ForeColor = Color.White;
-                lblEditPassword.ForeColor = Color.White;
-                lblEditPassword.ForeColor = Color.White;
-                lblEditRepass.ForeColor = Color.White;
-                lblLength.ForeColor = Color.White;
-                lblPasswordValidation.ForeColor = Color.White;
-                lblPassValidationInfo.ForeColor = Color.White;
-                lblEncryptPassValidationInfo.ForeColor = Color.White;
                 listBoxFile.ForeColor = Color.White;
+                listBoxFolder.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
                 listBoxFolder.ForeColor = Color.White;
-                label5.ForeColor = Color.White;
-                label3.ForeColor = Color.White;
-                label1.ForeColor = Color.White;
-                label2.ForeColor = Color.White;
-                label7.ForeColor = Color.White;
-                label6.ForeColor = Color.White;
-                foreach (Guna2DataGridView gridview in this.pnlGridView.Controls.OfType<Guna2DataGridView>())
-                {
-                    gridview.BackgroundColor = ColorTranslator.FromHtml("#FF2D2D30");
-                    gridview.ColumnHeadersDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#FF2D2D30");
-                    gridview.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-                    gridview.DefaultCellStyle.ForeColor = Color.White;
-                    gridview.DefaultCellStyle.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
-                    gridview.DefaultCellStyle.SelectionBackColor = themeColor;
-                    gridview.GridColor = themeColor;
-                    gridview.AlternatingRowsDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
-                }
+                pnlHeader.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
                 foreach (Guna2TextBox txtbox in this.pnlEncryptDecrypt.Controls.OfType<Guna2TextBox>())
                 {
                     txtbox.BackColor = Color.Transparent;
@@ -169,21 +116,16 @@ namespace EvolveSettings.Forms
                     txtbox.ForeColor = Color.White;
                     txtbox.DisabledState.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
                 }
-                foreach (Guna2TextBox txtbox in this.pnlDbFileInfo.Controls.OfType<Guna2TextBox>())
-                {
-                    txtbox.BackColor = Color.Transparent;
-                    txtbox.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
-                    txtbox.BorderColor = themeColor;
-                    txtbox.ForeColor = Color.White;
-                    txtbox.DisabledState.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
-                }
+                lblFiles.ForeColor = Color.White;
+                lblFilesAndFolders.ForeColor = ColorTranslator.FromHtml("#A2A4A5");
+                lblEncryptDecrypt.ForeColor = ColorTranslator.FromHtml("#A2A4A5");
+                btnClose.ForeColor = Color.White;
+                lblAddUpdateUser.ForeColor = Color.White;
+                lblEditPassword.ForeColor = Color.White;
+                lblEditRepass.ForeColor = Color.White;
             }
-            foreach (Guna2Button button in this.pnlEncryptDecrypt.Controls.OfType<Guna2Button>())
-            {
-                button.FillColor = themeColor;
-                button.ForeColor = Color.White;
-            }
-            foreach (Guna2Button button in this.pnlDbFileInfo.Controls.OfType<Guna2Button>())
+            chkEncryptorShowPass.CheckedState.FillColor = themeColor;
+            foreach (Guna2Button button in this.pnlFiles.Controls.OfType<Guna2Button>())
             {
                 button.FillColor = themeColor;
                 button.ForeColor = Color.White;
@@ -193,7 +135,7 @@ namespace EvolveSettings.Forms
                 button.FillColor = themeColor;
                 button.ForeColor = Color.White;
             }
-            foreach (Guna2Button button in this.pnlFiles.Controls.OfType<Guna2Button>())
+            foreach (Guna2Button button in this.pnlEncryptDecrypt.Controls.OfType<Guna2Button>())
             {
                 button.FillColor = themeColor;
                 button.ForeColor = Color.White;
@@ -214,116 +156,6 @@ namespace EvolveSettings.Forms
         }
         #endregion wintheme
 
-        #region encryptor database
-        public void LoadEncryptorDB()
-        {
-            int i = 0;
-            dgvEncryptor.Rows.Clear();
-            cmd = new SqlCommand("SELECT * FROM encryptor", connect); //encryptor is the database table name
-            connect.Open();
-            dr = cmd.ExecuteReader();
-            while (dr.Read())
-            {
-                i++;
-                dgvEncryptor.Rows.Add(i, dr[0].ToString(), dr[1].ToString(), dr[2].ToString(), dr[3].ToString(), dr[4].ToString(), dr[5].ToString());
-            }
-            dr.Close();
-            connect.Close();
-        }
-
-        private void dgvPwManager_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            string colName = dgvEncryptor.Columns[e.ColumnIndex].Name;
-            if (colName == "Delete")
-            {
-                if (EvolveMessageBox.Show("Are you sure you want to delete this record?", "Delete Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-                    connect.Open();
-                    cmd = new SqlCommand("DELETE FROM encryptor WHERE id LIKE '" + dgvEncryptor.Rows[e.RowIndex].Cells[1].Value.ToString() + "'", connect);
-                    cmd.ExecuteNonQuery();
-                    connect.Close();
-                    EvolveMessageBox.Show("Record has been successfully deleted!");
-                }
-            }
-            LoadEncryptorDB();
-        }
-
-        private void dgvEncryptor_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex == -1) return;
-            timer1.Start();
-
-            // Edit User
-            txtFileName.Text = dgvEncryptor.Rows[e.RowIndex].Cells[2].Value.ToString();
-            txtPass.Text = dgvEncryptor.Rows[e.RowIndex].Cells[3].Value.ToString();
-            txtDescription.Text = dgvEncryptor.Rows[e.RowIndex].Cells[4].Value.ToString();
-            txtLocation.Text = dgvEncryptor.Rows[e.RowIndex].Cells[5].Value.ToString();
-            txtDateCreated.Text = dgvEncryptor.Rows[e.RowIndex].Cells[6].Value.ToString();
-        }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (txtPass.Text != txtRepass.Text)
-                {
-                    EvolveMessageBox.Show("Passwords do not Match!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-                if (txtPass.Text.Length < 7)
-                {
-                    EvolveMessageBox.Show("Password must be at least 8 characters!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    return;
-                }
-                if (EvolveMessageBox.Show("Are you sure you want to update this record?", "Update Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                {
-
-                    DateTime date = DateTime.Today;
-
-                    cmd = new SqlCommand("UPDATE encryptor SET password = @password, description=@description, location=@location, date_created=@date WHERE filename LIKE '" + txtFileName.Text + "' ", connect);
-                    cmd.Parameters.AddWithValue("@password", txtPass.Text.Trim());
-                    cmd.Parameters.AddWithValue("@description", txtDescription.Text.Trim());
-                    cmd.Parameters.AddWithValue("@location", txtLocation.Text.Trim());
-                    cmd.Parameters.AddWithValue("@date", date);
-
-                    connect.Open();
-                    cmd.ExecuteNonQuery();
-                    connect.Close();
-                    EvolveMessageBox.Show("File record has been successfully updated!");
-                    foreach (Guna2TextBox txtbox in this.pnlDbFileInfo.Controls.OfType<Guna2TextBox>())
-                    {
-                        txtbox.Clear();
-                    }
-                    txtDateCreated.Clear();
-                    lblPassValidationInfo.Visible = false;
-                    btnUpdate.Enabled = false;
-                    timer1.Stop();
-                    LoadEncryptorDB();
-                }
-
-            }
-            catch (Exception ex)
-            {
-
-                MessageBox.Show(ex.Message);
-            }
-        }
-        #endregion Encryptor database
-
-        private void chkShowPass_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chkShowPass.Checked)
-            {
-                txtPass.PasswordChar = '\0';
-                txtRepass.PasswordChar = '\0';
-            }
-            else
-            {
-                txtPass.PasswordChar = '*';
-                txtRepass.PasswordChar = '*';
-            }
-        }
-
         private void chkEncryptorShowPass_CheckedChanged(object sender, EventArgs e)
         {
             if (chkEncryptorShowPass.Checked)
@@ -343,103 +175,13 @@ namespace EvolveSettings.Forms
             if (txtEncryptorPass.Text.Length > 1)
             {
                 txtEncryptorRepass.Enabled = true;
-                timer2.Start();
+                timer1.Start();
             }
             if (txtEncryptorPass.Text.Length < 1)
             {
                 txtEncryptorRepass.Enabled = false;
-                timer2.Stop();
-            }
-        }
-
-        private void txtFileName_TextChanged(object sender, EventArgs e)
-        {
-            if (txtFileName.Text.Length > 1)
-            {
-                txtPass.Enabled = true;
-                txtRepass.Enabled = true;
-                timer1.Start();
-            }
-            if (txtFileName.Text.Length < 1)
-            {
-                txtPass.Enabled = false;
-                txtRepass.Enabled = false;
                 timer1.Stop();
             }
-        }
-        #region timers
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            //Encryption password check DbRecord
-            if (txtPass.Text.Length > 0)
-            {
-                lblPassValidationInfo.Visible = true;
-            }
-            else if (txtPass.Text.Length < 1)
-            {
-                lblPassValidationInfo.Visible = false;
-            }
-            string message = string.Empty;
-            if (passwordValidator.IsStrong(txtPass.Text, out message))
-            {
-                if (string.IsNullOrEmpty(message))
-                    lblPassValidationInfo.Text = "Password validation accepted.";
-                else
-                    lblPassValidationInfo.Text = message;
-            }
-            else
-            {
-                lblPassValidationInfo.Text = message;
-            }
-            if (txtPass.Text != txtRepass.Text)
-            {
-                btnUpdate.Enabled = false;
-            }
-            else
-            {
-                btnUpdate.Enabled = true;
-            }
-        }
-
-        private void timer2_Tick(object sender, EventArgs e)
-        {
-            //Encryption password check
-            if (txtEncryptorPass.Text.Length > 0)
-            {
-                lblEncryptPassValidationInfo.Visible = true;
-            }
-            else if (txtEncryptorPass.Text.Length < 1)
-            {
-                lblEncryptPassValidationInfo.Visible = false;
-            }
-            string message = string.Empty;
-            if (passwordValidator.IsStrong(txtEncryptorPass.Text, out message))
-            {
-                if (string.IsNullOrEmpty(message))
-                    lblEncryptPassValidationInfo.Text = "Password validation accepted.";
-                else
-                    lblEncryptPassValidationInfo.Text = message;
-            }
-            else
-            {
-                lblEncryptPassValidationInfo.Text = message;
-            }
-            if (txtEncryptorPass.Text != txtEncryptorRepass.Text)
-            {
-                btnEncrypt.Enabled = false;
-                btnDecrypt.Enabled = false;
-            }
-            else
-            {
-                btnEncrypt.Enabled = true;
-                btnDecrypt.Enabled = true;
-            }
-        }
-        #endregion timers
-
-        private void guna2TrackBar1_Scroll(object sender, ScrollEventArgs e)
-        {
-            lblLength.Text = guna2TrackBar1.Value.ToString();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -463,13 +205,6 @@ namespace EvolveSettings.Forms
                 listBoxFile.Items.Add(file); //add file path to the listbox
             }
             txtEncryptorPass.Enabled = true;
-        }
-
-        private void btnAddFileRecord_Click(object sender, EventArgs e)
-        {
-            EncryptorModuleForm encryptorModule = new EncryptorModuleForm();
-            encryptorModule.ShowDialog();
-            LoadEncryptorDB();
         }
 
         private void btnAddFolder_Click(object sender, EventArgs e)
@@ -531,6 +266,11 @@ namespace EvolveSettings.Forms
                         File.Delete("" + listBoxFile.Items[num]);
                     }
                 }
+                EvolveMessageBox.Show("Your File(s) have been successfully encrypted", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                listBoxFile.Items.Clear();
+                listBoxFolder.Items.Clear();
+                txtEncryptorPass.Clear();
+                txtEncryptorRepass.Clear();
             }
             //Selected folders
             if (listBoxFolder.Items.Count > 0)
@@ -547,6 +287,11 @@ namespace EvolveSettings.Forms
                             File.Delete(name_file);
                         }
                     }
+                    EvolveMessageBox.Show("Your File(s) have been successfully encrypted", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    listBoxFile.Items.Clear();
+                    listBoxFolder.Items.Clear();
+                    txtEncryptorPass.Clear();
+                    txtEncryptorRepass.Clear();
                 }
             }
         }
@@ -580,6 +325,11 @@ namespace EvolveSettings.Forms
                         File.Delete(e_file);
                     }
                 }
+                EvolveMessageBox.Show("Your File(s) have been successfully decrypted", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                listBoxFile.Items.Clear();
+                listBoxFolder.Items.Clear();
+                txtEncryptorPass.Clear();
+                txtEncryptorRepass.Clear();
             }
             //This is for selected folders
             if (listBoxFolder.Items.Count > 0)
@@ -596,6 +346,11 @@ namespace EvolveSettings.Forms
                             File.Delete(name_file);
                         }
                     }
+                    EvolveMessageBox.Show("Your File(s) have been successfully decrypted", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    listBoxFile.Items.Clear();
+                    listBoxFolder.Items.Clear();
+                    txtEncryptorPass.Clear();
+                    txtEncryptorRepass.Clear();
                 }
             }
         }
@@ -659,30 +414,18 @@ namespace EvolveSettings.Forms
         }
         #endregion encryptor
 
-        #region passgenerator
-        private void btnGenerate_Click(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)
         {
-            txtGenPassword.Text = Helpers.PasswordGenerator.GeneratePassword(GetGenerateConfig());
-        }
-
-        private Models.GenerateConfig GetGenerateConfig()
-        {
-            Models.GenerateConfig config = new Models.GenerateConfig();
-            config.IsLowerCase = chkLowercase.Checked;
-            config.IsUpperCase = chkUppercase.Checked;
-            config.IsDigits = chkDigits.Checked;
-            config.IsSymbols = chkSymbols.Checked;
-            config.Length = guna2TrackBar1.Value;
-            return config;
-        }
-
-        private void btnPassGenCopy_Click(object sender, EventArgs e)
-        {
-            if (txtGenPassword.Text.Trim().Length > 0)
+            if (txtEncryptorPass.Text != txtEncryptorRepass.Text)
             {
-                Clipboard.SetText(txtGenPassword.Text);
+                btnEncrypt.Enabled = false;
+                btnDecrypt.Enabled = false;
+            }
+            else
+            {
+                btnEncrypt.Enabled = true;
+                btnDecrypt.Enabled = true;
             }
         }
-        #endregion passgenerator
     }
 }

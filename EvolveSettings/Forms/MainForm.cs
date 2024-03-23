@@ -297,7 +297,7 @@ namespace EvolveSettings
 
         private void btnFileEncryptor_Click(object sender, EventArgs e)
         {
-            openChildForm(new FileEncryptorForm());
+            openChildForm(new PrivacyAndSecurityForm());
         }
 
         private void btnPassManager_Click(object sender, EventArgs e)
