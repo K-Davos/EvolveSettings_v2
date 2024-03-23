@@ -122,7 +122,8 @@ namespace EvolveSettings.Forms
         {
             if (txtResetPass.Text == txtResetRePass.Text)
             {
-                cmd = new SqlCommand("UPDATE admin SET [password] = '" + txtResetPass.Text + "' WHERE email='" + email + "' ", connect);
+                string hash = BCrypt.Net.BCrypt.HashPassword(txtResetPass.Text);
+                cmd = new SqlCommand("UPDATE admin SET [password] = '" + hash + "' WHERE email='" + email + "' ", connect);
                 connect.Open();
                 cmd.ExecuteNonQuery();
                 connect.Close();
