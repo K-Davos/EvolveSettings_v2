@@ -314,6 +314,12 @@ namespace EvolveSettings.Forms
         private void btnPwEncryption_Click(object sender, EventArgs e)
         {
             PasswordEncryptionForm pwEncryption = new PasswordEncryptionForm();
+            pwEncryption.txtRecordName.Visible = false;
+            pwEncryption.lblRecordName.Visible = false;
+            pwEncryption.btnSave2.Visible = false;
+            pwEncryption.txtFileName.Visible = true;
+            pwEncryption.lblFileName.Visible = true;
+            pwEncryption.btnSave.Visible = true;
             pwEncryption.ShowDialog();
         }
     }

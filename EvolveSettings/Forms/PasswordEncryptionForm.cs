@@ -77,6 +77,7 @@ namespace EvolveSettings.Forms
                 lblPassword.ForeColor = Color.Black;
                 lblEncrypted.ForeColor = Color.Black;
                 lblDecrypted.ForeColor = Color.Black;
+                lblFileName.ForeColor = Color.Black;
 
             }
             else
@@ -99,6 +100,7 @@ namespace EvolveSettings.Forms
                 lblPassword.ForeColor = Color.White;
                 lblEncrypted.ForeColor = Color.White;
                 lblDecrypted.ForeColor = Color.White;
+                lblFileName.ForeColor = Color.White;
             }
             chkSignupShowPass.CheckedState.FillColor = themeColor;
             foreach (Guna2Button button in this.Controls.OfType<Guna2Button>())
@@ -126,6 +128,7 @@ namespace EvolveSettings.Forms
         {
             encryptionKey = "0123456789123456";
             btnSave.Enabled = false;
+            btnSave2.Enabled = false;
             btnEncrypt.Enabled = false;
             btnDecrypt.Enabled = false;
         }
@@ -157,7 +160,31 @@ namespace EvolveSettings.Forms
                     txtEncrypted.Text = encryptedText;
                 }
                 //Add to database
-                cmd = new SqlCommand("UPDATE encryptor SET password = @EncryptedPassword WHERE filename LIKE '" + txtRecordName.Text + "' ", connect);
+                cmd = new SqlCommand("UPDATE encryptor SET password = @EncryptedPassword WHERE filename LIKE '" + txtFileName.Text + "' ", connect);
+
+                cmd.Parameters.AddWithValue("@EncryptedPassword", encryptedText);
+
+                connect.Open();
+                cmd.ExecuteNonQuery();
+                connect.Close();
+                EvolveMessageBox.Show("Encrypted password successfully saved to database", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnSave2_Click(object sender, EventArgs e)
+        {
+            if (txtPass.Text.Length < 1)
+            {
+                EvolveMessageBox.Show("No password entered! Please enter your (Decrypted) password", "Information Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            if (txtPass.Text.Length > 1)
+            {
+                string encryptedText = EvolveUtilities.Encrypt(txtPass.Text, encryptionKey);
+                {
+                    txtEncrypted.Text = encryptedText;
+                }
+                //Add to database
+                cmd = new SqlCommand("UPDATE pwmanager SET password = @EncryptedPassword WHERE recordname LIKE '" + txtRecordName.Text + "' ", connect);
 
                 cmd.Parameters.AddWithValue("@EncryptedPassword", encryptedText);
 
@@ -195,6 +222,18 @@ namespace EvolveSettings.Forms
             if (txtRecordName.Text.Length < 1)
             {
                 btnSave.Enabled = false;
+            }
+        }
+
+        private void txtFileName_TextChanged(object sender, EventArgs e)
+        {
+            if (txtFileName.Text.Length > 1)
+            {
+                btnSave2.Enabled = true;
+            }
+            if (txtFileName.Text.Length < 1)
+            {
+                btnSave2.Enabled = false;
             }
         }
 

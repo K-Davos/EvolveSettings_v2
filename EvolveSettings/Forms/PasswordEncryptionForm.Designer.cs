@@ -49,6 +49,9 @@
             this.pictureBoxClose = new System.Windows.Forms.Label();
             this.lblPassEncryptor = new System.Windows.Forms.Label();
             this.btnSave = new Guna.UI2.WinForms.Guna2Button();
+            this.txtFileName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblFileName = new System.Windows.Forms.Label();
+            this.btnSave2 = new Guna.UI2.WinForms.Guna2Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
             this.pnlHeader.SuspendLayout();
@@ -356,11 +359,71 @@
             this.btnSave.Text = "Save";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // txtFileName
+            // 
+            this.txtFileName.Animated = true;
+            this.txtFileName.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.txtFileName.BorderRadius = 15;
+            this.txtFileName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFileName.DefaultText = "";
+            this.txtFileName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtFileName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtFileName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFileName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFileName.FocusedState.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.txtFileName.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFileName.ForeColor = System.Drawing.Color.Black;
+            this.txtFileName.HoverState.BorderColor = System.Drawing.Color.MidnightBlue;
+            this.txtFileName.Location = new System.Drawing.Point(307, 87);
+            this.txtFileName.Name = "txtFileName";
+            this.txtFileName.PasswordChar = '\0';
+            this.txtFileName.PlaceholderText = "";
+            this.txtFileName.SelectedText = "";
+            this.txtFileName.Size = new System.Drawing.Size(304, 34);
+            this.txtFileName.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
+            this.txtFileName.TabIndex = 1042;
+            this.txtFileName.Visible = false;
+            this.txtFileName.TextChanged += new System.EventHandler(this.txtFileName_TextChanged);
+            // 
+            // lblFileName
+            // 
+            this.lblFileName.AutoSize = true;
+            this.lblFileName.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFileName.Location = new System.Drawing.Point(305, 67);
+            this.lblFileName.Name = "lblFileName";
+            this.lblFileName.Size = new System.Drawing.Size(69, 17);
+            this.lblFileName.TabIndex = 1043;
+            this.lblFileName.Text = "File Name:";
+            this.lblFileName.Visible = false;
+            // 
+            // btnSave2
+            // 
+            this.btnSave2.Animated = true;
+            this.btnSave2.BackColor = System.Drawing.Color.Transparent;
+            this.btnSave2.BorderRadius = 15;
+            this.btnSave2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSave2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSave2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSave2.FillColor = System.Drawing.Color.MidnightBlue;
+            this.btnSave2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSave2.ForeColor = System.Drawing.Color.White;
+            this.btnSave2.Location = new System.Drawing.Point(300, 355);
+            this.btnSave2.Name = "btnSave2";
+            this.btnSave2.Size = new System.Drawing.Size(96, 34);
+            this.btnSave2.TabIndex = 1044;
+            this.btnSave2.Text = "Save";
+            this.btnSave2.Visible = false;
+            this.btnSave2.Click += new System.EventHandler(this.btnSave2_Click);
+            // 
             // PasswordEncryptionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 411);
+            this.Controls.Add(this.btnSave2);
+            this.Controls.Add(this.lblFileName);
+            this.Controls.Add(this.txtFileName);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.pnlHeader);
             this.Controls.Add(this.panel3);
@@ -400,17 +463,20 @@
         public Guna.UI2.WinForms.Guna2Button btnDecrypt;
         private Guna.UI2.WinForms.Guna2TextBox txtDecrypted;
         private Guna.UI2.WinForms.Guna2TextBox txtPass;
-        private Guna.UI2.WinForms.Guna2TextBox txtRecordName;
         private Guna.UI2.WinForms.Guna2TextBox txtEncrypted;
         private Guna.UI2.WinForms.Guna2CheckBox chkSignupShowPass;
         public Guna.UI2.WinForms.Guna2Button btnEncrypt;
         private System.Windows.Forms.Label lblDecrypted;
         private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.Label lblRecordName;
         private System.Windows.Forms.Label lblEncrypted;
         private System.Windows.Forms.Panel pnlHeader;
         private System.Windows.Forms.Label pictureBoxClose;
         public System.Windows.Forms.Label lblPassEncryptor;
         public Guna.UI2.WinForms.Guna2Button btnSave;
+        public Guna.UI2.WinForms.Guna2Button btnSave2;
+        public System.Windows.Forms.Label lblFileName;
+        public Guna.UI2.WinForms.Guna2TextBox txtFileName;
+        public System.Windows.Forms.Label lblRecordName;
+        public Guna.UI2.WinForms.Guna2TextBox txtRecordName;
     }
 }
