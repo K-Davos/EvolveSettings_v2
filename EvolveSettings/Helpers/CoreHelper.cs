@@ -21,10 +21,18 @@ namespace EvolveSettings
 
         readonly static string[] scriptItems =
         {
+            ScriptsFolder + "GameModeOFF.cmd",
+            ScriptsFolder + "GameModeON.cmd",
+            ScriptsFolder + "EvolvePerformance.bat",
+            ScriptsFolder + "EvolvePowerSaving.bat"
         };
 
         readonly static string[] scriptFiles =
         {
+            Properties.Resources.GameModeOFF,
+            Properties.Resources.GameModeON,
+            Properties.Resources.EvolvePerformance,
+            Properties.Resources.EvolvePowerSaving
         };
 
         internal static void Deploy()

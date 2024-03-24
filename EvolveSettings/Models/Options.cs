@@ -11,6 +11,9 @@ namespace EvolveSettings.Models
         public bool WinTheme { get; set; }
         public bool SignUp { get; set; }
         public bool CustomDNS { get; set; }
+        public bool SystemMonitor { get; set; }
+        public bool PowerSavingsMode { get; set; }
+        public bool GameMode { get; set; }
     }
     public class GenerateConfig
     {

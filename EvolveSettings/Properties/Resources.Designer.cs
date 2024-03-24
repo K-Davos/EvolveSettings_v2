@@ -161,12 +161,85 @@ namespace EvolveSettings.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to @echo off
+        ///powercfg /import &quot;C:\Program Files(x86)\Evolve\Data\EvolveX-Performance.pow 9183f4e0-8bdc-47d1-8112-20d0095879ee&quot;
+        ///exit 0.
+        /// </summary>
+        internal static string EvolvePerformance {
+            get {
+                return ResourceManager.GetString("EvolvePerformance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to @echo off
+        ///powercfg /import &quot;C:\Program Files (x86)\Evolve\Data\EvolveX-Performance.pow a1841308-3541-4fab-bc81-f71556f20b4a&quot;
+        ///exit 0.
+        /// </summary>
+        internal static string EvolvePowerSaving {
+            get {
+                return ResourceManager.GetString("EvolvePowerSaving", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap exclamation {
             get {
                 object obj = ResourceManager.GetObject("exclamation", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to @echo off
+        ///
+        ///:: Set services back to default and start the services.
+        ///sc config &quot;asus&quot; start=auto
+        ///sc config &quot;asusm&quot; start=demand
+        ///sc config &quot;AsusUpdateCheck&quot; start=auto
+        ///sc config &quot;LightingService&quot; start=auto
+        ///sc config &quot;ArmouryCrateService&quot; start=auto
+        ///sc config &quot;AsusCertService&quot; start=auto
+        ///sc config &quot;asComSvc&quot; start=auto
+        ///sc config &quot;CorsairCpuIdService&quot; start=auto
+        ///sc config &quot;CorsairCpuIdService&quot; start=auto
+        ///sc config &quot;CorsairService&quot; start=auto
+        ///sc config &quot;iCUEUpdateService&quot; start=demand
+        ///sc config &quot;RO [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string GameModeOFF {
+            get {
+                return ResourceManager.GetString("GameModeOFF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to @echo off
+        ///
+        ///:: Ending tasks.
+        ///taskkill /im &quot;iCue.exe&quot; /f
+        ///taskkill /im &quot;ArmouryCrate.exe&quot; /f
+        ///taskkill /im &quot;AcPowerNotification.exe&quot; /f
+        ///taskkill /im &quot;NoiseCancelingEngine.exe&quot; /f
+        ///taskkill /im &quot;ArmourySocketServer.exe&quot; /f
+        ///taskkill /im &quot;GoogleCrashHandler.exe&quot; /f
+        ///taskkill /im &quot;GoogleCrashHandler64.exe&quot; /f
+        ///
+        ///:: Attempting to stop services.
+        ///sc stop &quot;asus&quot;
+        ///sc stop &quot;asusm&quot;
+        ///sc stop &quot;AsusUpdateCheck&quot;
+        ///sc stop &quot;LightingService&quot;
+        ///sc stop &quot;ArmouryCrateService&quot;
+        ///sc stop &quot;AsusCertService&quot;
+        ///sc stop &quot;asComSvc&quot;
+        ///s [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string GameModeON {
+            get {
+                return ResourceManager.GetString("GameModeON", resourceCulture);
             }
         }
         
@@ -326,6 +399,16 @@ namespace EvolveSettings.Properties {
         internal static System.Drawing.Bitmap shutdown {
             get {
                 object obj = ResourceManager.GetObject("shutdown", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sys_monitor {
+            get {
+                object obj = ResourceManager.GetObject("sys_monitor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

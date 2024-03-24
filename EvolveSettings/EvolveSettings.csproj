@@ -254,6 +254,7 @@
     <Compile Include="Controls\EvolveToggleButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="EffectBlur.cs" />
     <Compile Include="EmbeddedAssembly.cs" />
     <Compile Include="Enums.cs" />
     <Compile Include="ErrorLogger.cs" />
@@ -361,6 +362,12 @@
     <Compile Include="Forms\SplashForm.Designer.cs">
       <DependentUpon>SplashForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\SystemMonitorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SystemMonitorForm.Designer.cs">
+      <DependentUpon>SystemMonitorForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\UserForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -375,6 +382,7 @@
     </Compile>
     <Compile Include="Helpers\CleanHelper.cs" />
     <Compile Include="Helpers\CoreHelper.cs" />
+    <Compile Include="Helpers\EvolveHelper.cs" />
     <Compile Include="Helpers\NetworkHelper.cs" />
     <Compile Include="Helpers\OptionsHelper.cs" />
     <Compile Include="Helpers\PasswordGenerator.cs" />
@@ -443,6 +451,9 @@
     <EmbeddedResource Include="Forms\SplashForm.resx">
       <DependentUpon>SplashForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SystemMonitorForm.resx">
+      <DependentUpon>SystemMonitorForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -481,6 +492,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\add.png" />
+    <None Include="Resources\Assets\EvolvePerformance.cmd" />
+    <None Include="Resources\Assets\EvolvePowerSaving.cmd" />
+    <None Include="Resources\Assets\GameModeOFF.cmd" />
+    <None Include="Resources\Assets\GameModeON.cmd" />
     <None Include="Resources\chat.png" />
     <None Include="Resources\error.png" />
     <None Include="Resources\exclamation.png" />
@@ -502,6 +517,7 @@
     <Content Include="Resources\quit.png" />
     <Content Include="Resources\quit_black.png" />
     <Content Include="Resources\settings.png" />
+    <Content Include="Resources\sys_monitor.png" />
     <Content Include="Resources\usersm.png" />
     <Content Include="Resources\win11tweaks.png" />
     <None Include="EvolveSettingsDb.mdf">
@@ -521,9 +537,7 @@
     <Content Include="Resources\shutdown.png" />
     <Content Include="Resources\user.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\Assets\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">
       <Visible>False</Visible>

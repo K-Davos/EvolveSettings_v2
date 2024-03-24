@@ -55,6 +55,7 @@ namespace EvolveSettings
             this.pictureBoxProfile = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.panelMain = new Guna.UI2.WinForms.Guna2Panel();
             this.pnlHeader = new System.Windows.Forms.Panel();
+            this.btnSystemMonitor = new System.Windows.Forms.Button();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnMaximize = new System.Windows.Forms.Button();
             this.btnCloseApp = new System.Windows.Forms.Button();
@@ -510,6 +511,7 @@ namespace EvolveSettings
             // 
             // pnlHeader
             // 
+            this.pnlHeader.Controls.Add(this.btnSystemMonitor);
             this.pnlHeader.Controls.Add(this.btnMinimize);
             this.pnlHeader.Controls.Add(this.btnMaximize);
             this.pnlHeader.Controls.Add(this.btnCloseApp);
@@ -519,6 +521,20 @@ namespace EvolveSettings
             this.pnlHeader.Size = new System.Drawing.Size(1262, 42);
             this.pnlHeader.TabIndex = 20;
             this.pnlHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_header_MouseDown);
+            // 
+            // btnSystemMonitor
+            // 
+            this.btnSystemMonitor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSystemMonitor.FlatAppearance.BorderSize = 0;
+            this.btnSystemMonitor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSystemMonitor.ForeColor = System.Drawing.Color.White;
+            this.btnSystemMonitor.Image = global::EvolveSettings.Properties.Resources.sys_monitor;
+            this.btnSystemMonitor.Location = new System.Drawing.Point(1060, 0);
+            this.btnSystemMonitor.Name = "btnSystemMonitor";
+            this.btnSystemMonitor.Size = new System.Drawing.Size(48, 42);
+            this.btnSystemMonitor.TabIndex = 1054;
+            this.btnSystemMonitor.UseVisualStyleBackColor = true;
+            this.btnSystemMonitor.Click += new System.EventHandler(this.btnSystemMonitor_Click);
             // 
             // btnMinimize
             // 
@@ -623,5 +639,6 @@ namespace EvolveSettings
         private Guna.UI2.WinForms.Guna2CircleProgressBar circleProgressBar2;
         private System.Windows.Forms.Label lblUserType;
         private Guna.UI2.WinForms.Guna2Button btnFileEncryptor;
+        private System.Windows.Forms.Button btnSystemMonitor;
     }
 }

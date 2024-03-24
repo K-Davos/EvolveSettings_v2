@@ -86,6 +86,7 @@ namespace EvolveSettings
             Exception error = (Exception)e.ExceptionObject;
             Logger.LogError("Program.Main-UnhandledException", error.Message, error.StackTrace);
         }
+
         private static System.Reflection.Assembly CurrentDomain_AssemblyResolve(object sender, ResolveEventArgs args)
         {
             return EmbeddedAssembly.Get(args.Name);

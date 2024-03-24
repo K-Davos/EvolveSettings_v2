@@ -34,8 +34,8 @@ namespace EvolveSettings
             InitializeComponent();
         }
 
-        public MainForm(String usrname)
-        {
+            public MainForm(String usrname)
+            {
             InitializeComponent();
             lblCurrentUser.Text = usrname;
 
@@ -434,6 +434,14 @@ namespace EvolveSettings
                     menuButton.Padding = new Padding(10, 0, 0, 0);
                 }
             }
+        }
+
+        private void btnSystemMonitor_Click(object sender, EventArgs e)
+        {
+            SystemMonitorForm sysmon = new SystemMonitorForm();
+            this.Hide();
+            sysmon.ShowDialog();
+            this.Show();
         }
     }
 }
