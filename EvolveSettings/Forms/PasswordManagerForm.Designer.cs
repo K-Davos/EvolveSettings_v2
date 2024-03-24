@@ -30,12 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PasswordManagerForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.pnlGridView = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.dgvPwManager = new Guna.UI2.WinForms.Guna2DataGridView();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,18 +47,13 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn4 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.pnlEditRecord = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.btnPwEncryption = new Guna.UI2.WinForms.Guna2Button();
             this.btnPassGen = new Guna.UI2.WinForms.Guna2Button();
             this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Panel10 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblEditEmail = new System.Windows.Forms.Label();
-            this.guna2Panel9 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblEditRePass = new System.Windows.Forms.Label();
-            this.guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblEditPassword = new System.Windows.Forms.Label();
-            this.guna2Panel7 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblEditUserName = new System.Windows.Forms.Label();
-            this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblEditFullName = new System.Windows.Forms.Label();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtRepass = new Guna.UI2.WinForms.Guna2TextBox();
@@ -68,21 +62,16 @@
             this.txtRecordName = new Guna.UI2.WinForms.Guna2TextBox();
             this.chkEditShowPass = new Guna.UI2.WinForms.Guna2CheckBox();
             this.txtDateCreated = new System.Windows.Forms.TextBox();
-            this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblEditUser = new System.Windows.Forms.Label();
             this.btnAddRecord = new Guna.UI2.WinForms.Guna2Button();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.pnlPasswordValidation = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.pnlEditRecord = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.lblPassValidationInfo = new System.Windows.Forms.Label();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.lblPasswordValidation = new System.Windows.Forms.Label();
             this.pnlRecordInfo = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.btnBrowse = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblRecordName = new System.Windows.Forms.Label();
             this.lblDoubleDot1 = new System.Windows.Forms.Label();
             this.lblUserName = new System.Windows.Forms.Label();
             this.lblDoubleDot2 = new System.Windows.Forms.Label();
@@ -100,26 +89,19 @@
             this.lblDateCreateDb = new System.Windows.Forms.Label();
             this.lblUserInfo = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnPwEncryption = new Guna.UI2.WinForms.Guna2Button();
-            this.tableLayoutPanel2.SuspendLayout();
+            this.pnlPwValidation = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.lblEditUser = new System.Windows.Forms.Label();
             this.pnlGridView.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPwManager)).BeginInit();
-            this.pnlEditRecord.SuspendLayout();
-            this.guna2Panel10.SuspendLayout();
-            this.guna2Panel9.SuspendLayout();
-            this.guna2Panel8.SuspendLayout();
-            this.guna2Panel7.SuspendLayout();
-            this.guna2Panel6.SuspendLayout();
-            this.guna2Panel5.SuspendLayout();
             this.pnlHeader.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.pnlPasswordValidation.SuspendLayout();
-            this.guna2Panel4.SuspendLayout();
+            this.pnlEditRecord.SuspendLayout();
             this.pnlRecordInfo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBrowse)).BeginInit();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRecord)).BeginInit();
             this.guna2Panel1.SuspendLayout();
+            this.pnlPwValidation.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridViewImageColumn1
@@ -136,58 +118,44 @@
             this.dataGridViewImageColumn2.Image = ((System.Drawing.Image)(resources.GetObject("dataGridViewImageColumn2.Image")));
             this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
             // 
-            // tableLayoutPanel2
-            // 
-            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.46645F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.53355F));
-            this.tableLayoutPanel2.Controls.Add(this.pnlGridView, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.pnlEditRecord, 1, 0);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 296);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1322, 467);
-            this.tableLayoutPanel2.TabIndex = 1035;
-            // 
             // pnlGridView
             // 
+            this.pnlGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlGridView.BackColor = System.Drawing.Color.Transparent;
+            this.pnlGridView.Controls.Add(this.tableLayoutPanel1);
             this.pnlGridView.Controls.Add(this.dgvPwManager);
-            this.pnlGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlGridView.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(246)))));
-            this.pnlGridView.Location = new System.Drawing.Point(28, 3);
+            this.pnlGridView.FillColor = System.Drawing.Color.White;
+            this.pnlGridView.Location = new System.Drawing.Point(20, 64);
             this.pnlGridView.Margin = new System.Windows.Forms.Padding(28, 3, 3, 25);
             this.pnlGridView.Name = "pnlGridView";
             this.pnlGridView.Radius = 5;
             this.pnlGridView.ShadowColor = System.Drawing.Color.Black;
             this.pnlGridView.ShadowDepth = 250;
+            this.pnlGridView.ShadowShift = 0;
             this.pnlGridView.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
-            this.pnlGridView.Size = new System.Drawing.Size(834, 439);
+            this.pnlGridView.Size = new System.Drawing.Size(1281, 679);
             this.pnlGridView.TabIndex = 5;
             // 
             // dgvPwManager
             // 
             this.dgvPwManager.AllowUserToAddRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgvPwManager.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle34.BackColor = System.Drawing.Color.White;
+            this.dgvPwManager.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle34;
             this.dgvPwManager.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPwManager.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.None;
             this.dgvPwManager.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(246)))));
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(246)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvPwManager.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(246)))));
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle35.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPwManager.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle35;
             this.dgvPwManager.ColumnHeadersHeight = 50;
             this.dgvPwManager.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn6,
@@ -200,23 +168,23 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewImageColumn3,
             this.dataGridViewImageColumn4});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvPwManager.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle36.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle36.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle36.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPwManager.DefaultCellStyle = dataGridViewCellStyle36;
             this.dgvPwManager.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(246)))));
-            this.dgvPwManager.Location = new System.Drawing.Point(3, 15);
+            this.dgvPwManager.Location = new System.Drawing.Point(20, 302);
             this.dgvPwManager.Name = "dgvPwManager";
             this.dgvPwManager.ReadOnly = true;
             this.dgvPwManager.RowHeadersVisible = false;
             this.dgvPwManager.RowTemplate.DividerHeight = 2;
             this.dgvPwManager.RowTemplate.Height = 50;
             this.dgvPwManager.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvPwManager.Size = new System.Drawing.Size(828, 402);
+            this.dgvPwManager.Size = new System.Drawing.Size(1242, 355);
             this.dgvPwManager.TabIndex = 4;
             this.dgvPwManager.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvPwManager.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -324,36 +292,24 @@
             this.dataGridViewImageColumn4.ReadOnly = true;
             this.dataGridViewImageColumn4.Width = 5;
             // 
-            // pnlEditRecord
+            // btnPwEncryption
             // 
-            this.pnlEditRecord.BackColor = System.Drawing.Color.Transparent;
-            this.pnlEditRecord.Controls.Add(this.btnPwEncryption);
-            this.pnlEditRecord.Controls.Add(this.btnPassGen);
-            this.pnlEditRecord.Controls.Add(this.btnUpdate);
-            this.pnlEditRecord.Controls.Add(this.guna2Panel10);
-            this.pnlEditRecord.Controls.Add(this.guna2Panel9);
-            this.pnlEditRecord.Controls.Add(this.guna2Panel8);
-            this.pnlEditRecord.Controls.Add(this.guna2Panel7);
-            this.pnlEditRecord.Controls.Add(this.guna2Panel6);
-            this.pnlEditRecord.Controls.Add(this.txtEmail);
-            this.pnlEditRecord.Controls.Add(this.txtRepass);
-            this.pnlEditRecord.Controls.Add(this.txtPass);
-            this.pnlEditRecord.Controls.Add(this.txtUserName);
-            this.pnlEditRecord.Controls.Add(this.txtRecordName);
-            this.pnlEditRecord.Controls.Add(this.chkEditShowPass);
-            this.pnlEditRecord.Controls.Add(this.txtDateCreated);
-            this.pnlEditRecord.Controls.Add(this.guna2Panel5);
-            this.pnlEditRecord.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlEditRecord.FillColor = System.Drawing.Color.White;
-            this.pnlEditRecord.Location = new System.Drawing.Point(875, 3);
-            this.pnlEditRecord.Margin = new System.Windows.Forms.Padding(10, 3, 28, 25);
-            this.pnlEditRecord.Name = "pnlEditRecord";
-            this.pnlEditRecord.Radius = 5;
-            this.pnlEditRecord.ShadowColor = System.Drawing.Color.Black;
-            this.pnlEditRecord.ShadowDepth = 250;
-            this.pnlEditRecord.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
-            this.pnlEditRecord.Size = new System.Drawing.Size(419, 439);
-            this.pnlEditRecord.TabIndex = 1037;
+            this.btnPwEncryption.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPwEncryption.BackColor = System.Drawing.Color.Transparent;
+            this.btnPwEncryption.BorderRadius = 15;
+            this.btnPwEncryption.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPwEncryption.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPwEncryption.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPwEncryption.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPwEncryption.FillColor = System.Drawing.Color.MidnightBlue;
+            this.btnPwEncryption.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnPwEncryption.ForeColor = System.Drawing.Color.White;
+            this.btnPwEncryption.Location = new System.Drawing.Point(130, 179);
+            this.btnPwEncryption.Name = "btnPwEncryption";
+            this.btnPwEncryption.Size = new System.Drawing.Size(142, 32);
+            this.btnPwEncryption.TabIndex = 1052;
+            this.btnPwEncryption.Text = "Password Encryption";
+            this.btnPwEncryption.Click += new System.EventHandler(this.btnPwEncryption_Click);
             // 
             // btnPassGen
             // 
@@ -368,16 +324,15 @@
             this.btnPassGen.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnPassGen.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPassGen.ForeColor = System.Drawing.Color.White;
-            this.btnPassGen.Location = new System.Drawing.Point(168, 385);
+            this.btnPassGen.Location = new System.Drawing.Point(130, 213);
             this.btnPassGen.Name = "btnPassGen";
-            this.btnPassGen.Size = new System.Drawing.Size(131, 32);
+            this.btnPassGen.Size = new System.Drawing.Size(142, 32);
             this.btnPassGen.TabIndex = 1047;
             this.btnPassGen.Text = "Password Generator";
             this.btnPassGen.Click += new System.EventHandler(this.btnPassGen_Click);
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnUpdate.BackColor = System.Drawing.Color.Transparent;
             this.btnUpdate.BorderRadius = 15;
             this.btnUpdate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -387,22 +342,12 @@
             this.btnUpdate.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(305, 385);
+            this.btnUpdate.Location = new System.Drawing.Point(516, 213);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(96, 32);
             this.btnUpdate.TabIndex = 1051;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // guna2Panel10
-            // 
-            this.guna2Panel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Panel10.Controls.Add(this.lblEditEmail);
-            this.guna2Panel10.Location = new System.Drawing.Point(8, 295);
-            this.guna2Panel10.Name = "guna2Panel10";
-            this.guna2Panel10.Size = new System.Drawing.Size(266, 25);
-            this.guna2Panel10.TabIndex = 1050;
             // 
             // lblEditEmail
             // 
@@ -411,21 +356,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEditEmail.AutoSize = true;
             this.lblEditEmail.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEditEmail.Location = new System.Drawing.Point(3, 4);
+            this.lblEditEmail.Location = new System.Drawing.Point(24, 171);
             this.lblEditEmail.Name = "lblEditEmail";
             this.lblEditEmail.Size = new System.Drawing.Size(46, 17);
             this.lblEditEmail.TabIndex = 1037;
             this.lblEditEmail.Text = "Email: ";
-            // 
-            // guna2Panel9
-            // 
-            this.guna2Panel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Panel9.Controls.Add(this.lblEditRePass);
-            this.guna2Panel9.Location = new System.Drawing.Point(8, 233);
-            this.guna2Panel9.Name = "guna2Panel9";
-            this.guna2Panel9.Size = new System.Drawing.Size(303, 25);
-            this.guna2Panel9.TabIndex = 1050;
             // 
             // lblEditRePass
             // 
@@ -434,21 +369,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEditRePass.AutoSize = true;
             this.lblEditRePass.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEditRePass.Location = new System.Drawing.Point(3, 4);
+            this.lblEditRePass.Location = new System.Drawing.Point(344, 114);
             this.lblEditRePass.Name = "lblEditRePass";
             this.lblEditRePass.Size = new System.Drawing.Size(125, 17);
             this.lblEditRePass.TabIndex = 1038;
             this.lblEditRePass.Text = "Confirm Password : ";
-            // 
-            // guna2Panel8
-            // 
-            this.guna2Panel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Panel8.Controls.Add(this.lblEditPassword);
-            this.guna2Panel8.Location = new System.Drawing.Point(9, 171);
-            this.guna2Panel8.Name = "guna2Panel8";
-            this.guna2Panel8.Size = new System.Drawing.Size(266, 25);
-            this.guna2Panel8.TabIndex = 1049;
             // 
             // lblEditPassword
             // 
@@ -457,21 +382,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEditPassword.AutoSize = true;
             this.lblEditPassword.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEditPassword.Location = new System.Drawing.Point(3, 4);
+            this.lblEditPassword.Location = new System.Drawing.Point(344, 57);
             this.lblEditPassword.Name = "lblEditPassword";
             this.lblEditPassword.Size = new System.Drawing.Size(75, 17);
             this.lblEditPassword.TabIndex = 1036;
             this.lblEditPassword.Text = "Password : ";
-            // 
-            // guna2Panel7
-            // 
-            this.guna2Panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Panel7.Controls.Add(this.lblEditUserName);
-            this.guna2Panel7.Location = new System.Drawing.Point(6, 108);
-            this.guna2Panel7.Name = "guna2Panel7";
-            this.guna2Panel7.Size = new System.Drawing.Size(266, 25);
-            this.guna2Panel7.TabIndex = 1048;
             // 
             // lblEditUserName
             // 
@@ -480,21 +395,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEditUserName.AutoSize = true;
             this.lblEditUserName.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEditUserName.Location = new System.Drawing.Point(6, 4);
+            this.lblEditUserName.Location = new System.Drawing.Point(24, 114);
             this.lblEditUserName.Name = "lblEditUserName";
             this.lblEditUserName.Size = new System.Drawing.Size(78, 17);
             this.lblEditUserName.TabIndex = 1035;
             this.lblEditUserName.Text = "Username : ";
-            // 
-            // guna2Panel6
-            // 
-            this.guna2Panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Panel6.Controls.Add(this.lblEditFullName);
-            this.guna2Panel6.Location = new System.Drawing.Point(9, 50);
-            this.guna2Panel6.Name = "guna2Panel6";
-            this.guna2Panel6.Size = new System.Drawing.Size(266, 25);
-            this.guna2Panel6.TabIndex = 1047;
             // 
             // lblEditFullName
             // 
@@ -503,7 +408,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEditFullName.AutoSize = true;
             this.lblEditFullName.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEditFullName.Location = new System.Drawing.Point(3, 4);
+            this.lblEditFullName.Location = new System.Drawing.Point(24, 57);
             this.lblEditFullName.Name = "lblEditFullName";
             this.lblEditFullName.Size = new System.Drawing.Size(96, 17);
             this.lblEditFullName.TabIndex = 1040;
@@ -511,8 +416,6 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEmail.Animated = true;
             this.txtEmail.BorderColor = System.Drawing.Color.MidnightBlue;
             this.txtEmail.BorderRadius = 15;
@@ -526,19 +429,17 @@
             this.txtEmail.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.Color.Black;
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.txtEmail.Location = new System.Drawing.Point(16, 323);
+            this.txtEmail.Location = new System.Drawing.Point(27, 192);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
             this.txtEmail.PlaceholderText = "";
             this.txtEmail.SelectedText = "";
-            this.txtEmail.Size = new System.Drawing.Size(383, 34);
+            this.txtEmail.Size = new System.Drawing.Size(264, 34);
             this.txtEmail.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtEmail.TabIndex = 1046;
             // 
             // txtRepass
             // 
-            this.txtRepass.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtRepass.Animated = true;
             this.txtRepass.BorderColor = System.Drawing.Color.MidnightBlue;
             this.txtRepass.BorderRadius = 15;
@@ -552,19 +453,17 @@
             this.txtRepass.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRepass.ForeColor = System.Drawing.Color.Black;
             this.txtRepass.HoverState.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.txtRepass.Location = new System.Drawing.Point(16, 260);
+            this.txtRepass.Location = new System.Drawing.Point(347, 135);
             this.txtRepass.Name = "txtRepass";
             this.txtRepass.PasswordChar = '*';
             this.txtRepass.PlaceholderText = "";
             this.txtRepass.SelectedText = "";
-            this.txtRepass.Size = new System.Drawing.Size(383, 34);
+            this.txtRepass.Size = new System.Drawing.Size(265, 34);
             this.txtRepass.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtRepass.TabIndex = 1045;
             // 
             // txtPass
             // 
-            this.txtPass.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPass.Animated = true;
             this.txtPass.BorderColor = System.Drawing.Color.MidnightBlue;
             this.txtPass.BorderRadius = 15;
@@ -578,19 +477,17 @@
             this.txtPass.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.ForeColor = System.Drawing.Color.Black;
             this.txtPass.HoverState.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.txtPass.Location = new System.Drawing.Point(16, 198);
+            this.txtPass.Location = new System.Drawing.Point(347, 78);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
             this.txtPass.PlaceholderText = "";
             this.txtPass.SelectedText = "";
-            this.txtPass.Size = new System.Drawing.Size(383, 34);
+            this.txtPass.Size = new System.Drawing.Size(265, 34);
             this.txtPass.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtPass.TabIndex = 1044;
             // 
             // txtUserName
             // 
-            this.txtUserName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUserName.Animated = true;
             this.txtUserName.BorderColor = System.Drawing.Color.MidnightBlue;
             this.txtUserName.BorderRadius = 15;
@@ -604,20 +501,18 @@
             this.txtUserName.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUserName.ForeColor = System.Drawing.Color.Black;
             this.txtUserName.HoverState.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.txtUserName.Location = new System.Drawing.Point(17, 135);
+            this.txtUserName.Location = new System.Drawing.Point(27, 135);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.PasswordChar = '\0';
             this.txtUserName.PlaceholderText = "";
             this.txtUserName.SelectedText = "";
-            this.txtUserName.Size = new System.Drawing.Size(383, 34);
+            this.txtUserName.Size = new System.Drawing.Size(264, 34);
             this.txtUserName.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtUserName.TabIndex = 1043;
             this.txtUserName.TextChanged += new System.EventHandler(this.txtUserName_TextChanged);
             // 
             // txtRecordName
             // 
-            this.txtRecordName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtRecordName.Animated = true;
             this.txtRecordName.BorderColor = System.Drawing.Color.MidnightBlue;
             this.txtRecordName.BorderRadius = 15;
@@ -631,19 +526,18 @@
             this.txtRecordName.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRecordName.ForeColor = System.Drawing.Color.Black;
             this.txtRecordName.HoverState.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.txtRecordName.Location = new System.Drawing.Point(17, 73);
+            this.txtRecordName.Location = new System.Drawing.Point(26, 78);
             this.txtRecordName.Name = "txtRecordName";
             this.txtRecordName.PasswordChar = '\0';
             this.txtRecordName.PlaceholderText = "";
             this.txtRecordName.ReadOnly = true;
             this.txtRecordName.SelectedText = "";
-            this.txtRecordName.Size = new System.Drawing.Size(383, 34);
+            this.txtRecordName.Size = new System.Drawing.Size(265, 34);
             this.txtRecordName.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
             this.txtRecordName.TabIndex = 1042;
             // 
             // chkEditShowPass
             // 
-            this.chkEditShowPass.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkEditShowPass.Animated = true;
             this.chkEditShowPass.AutoSize = true;
             this.chkEditShowPass.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -652,7 +546,7 @@
             this.chkEditShowPass.CheckedState.FillColor = System.Drawing.Color.MidnightBlue;
             this.chkEditShowPass.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkEditShowPass.ForeColor = System.Drawing.Color.Gray;
-            this.chkEditShowPass.Location = new System.Drawing.Point(300, 298);
+            this.chkEditShowPass.Location = new System.Drawing.Point(512, 176);
             this.chkEditShowPass.Name = "chkEditShowPass";
             this.chkEditShowPass.Size = new System.Drawing.Size(107, 17);
             this.chkEditShowPass.TabIndex = 1041;
@@ -670,34 +564,15 @@
             this.txtDateCreated.BackColor = System.Drawing.SystemColors.Control;
             this.txtDateCreated.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDateCreated.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDateCreated.Location = new System.Drawing.Point(16, 363);
+            this.txtDateCreated.Location = new System.Drawing.Point(347, 176);
             this.txtDateCreated.Name = "txtDateCreated";
             this.txtDateCreated.ReadOnly = true;
-            this.txtDateCreated.Size = new System.Drawing.Size(254, 15);
+            this.txtDateCreated.Size = new System.Drawing.Size(153, 15);
             this.txtDateCreated.TabIndex = 1039;
             this.txtDateCreated.Text = "Date";
             // 
-            // guna2Panel5
-            // 
-            this.guna2Panel5.Controls.Add(this.lblEditUser);
-            this.guna2Panel5.Location = new System.Drawing.Point(6, 3);
-            this.guna2Panel5.Name = "guna2Panel5";
-            this.guna2Panel5.Size = new System.Drawing.Size(131, 37);
-            this.guna2Panel5.TabIndex = 1034;
-            // 
-            // lblEditUser
-            // 
-            this.lblEditUser.AutoSize = true;
-            this.lblEditUser.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEditUser.Location = new System.Drawing.Point(3, 7);
-            this.lblEditUser.Name = "lblEditUser";
-            this.lblEditUser.Size = new System.Drawing.Size(113, 25);
-            this.lblEditUser.TabIndex = 1032;
-            this.lblEditUser.Text = "Edit Record";
-            // 
             // btnAddRecord
             // 
-            this.btnAddRecord.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddRecord.Animated = true;
             this.btnAddRecord.BorderRadius = 15;
             this.btnAddRecord.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -707,9 +582,9 @@
             this.btnAddRecord.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnAddRecord.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddRecord.ForeColor = System.Drawing.Color.White;
-            this.btnAddRecord.Location = new System.Drawing.Point(705, 13);
+            this.btnAddRecord.Location = new System.Drawing.Point(413, 213);
             this.btnAddRecord.Name = "btnAddRecord";
-            this.btnAddRecord.Size = new System.Drawing.Size(104, 32);
+            this.btnAddRecord.Size = new System.Drawing.Size(96, 32);
             this.btnAddRecord.TabIndex = 1036;
             this.btnAddRecord.Text = "Add Record";
             this.btnAddRecord.Click += new System.EventHandler(this.btnAddRecord_Click);
@@ -738,87 +613,67 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.46645F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.53355F));
-            this.tableLayoutPanel1.Controls.Add(this.pnlPasswordValidation, 0, 0);
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.pnlEditRecord, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.pnlRecordInfo, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.pnlPwValidation, 2, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 49);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1322, 247);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1281, 296);
             this.tableLayoutPanel1.TabIndex = 1053;
             // 
-            // pnlPasswordValidation
+            // pnlEditRecord
             // 
-            this.pnlPasswordValidation.BackColor = System.Drawing.Color.Transparent;
-            this.pnlPasswordValidation.Controls.Add(this.lblPassValidationInfo);
-            this.pnlPasswordValidation.Controls.Add(this.guna2TextBox2);
-            this.pnlPasswordValidation.Controls.Add(this.guna2Panel4);
-            this.pnlPasswordValidation.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlPasswordValidation.FillColor = System.Drawing.Color.White;
-            this.pnlPasswordValidation.Location = new System.Drawing.Point(875, 3);
-            this.pnlPasswordValidation.Margin = new System.Windows.Forms.Padding(10, 3, 28, 3);
-            this.pnlPasswordValidation.Name = "pnlPasswordValidation";
-            this.pnlPasswordValidation.Radius = 5;
-            this.pnlPasswordValidation.ShadowColor = System.Drawing.Color.Black;
-            this.pnlPasswordValidation.ShadowDepth = 250;
-            this.pnlPasswordValidation.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
-            this.pnlPasswordValidation.Size = new System.Drawing.Size(419, 241);
-            this.pnlPasswordValidation.TabIndex = 1037;
+            this.pnlEditRecord.BackColor = System.Drawing.Color.Transparent;
+            this.pnlEditRecord.Controls.Add(this.lblEditUser);
+            this.pnlEditRecord.Controls.Add(this.lblEditEmail);
+            this.pnlEditRecord.Controls.Add(this.lblEditRePass);
+            this.pnlEditRecord.Controls.Add(this.btnUpdate);
+            this.pnlEditRecord.Controls.Add(this.btnAddRecord);
+            this.pnlEditRecord.Controls.Add(this.chkEditShowPass);
+            this.pnlEditRecord.Controls.Add(this.lblEditPassword);
+            this.pnlEditRecord.Controls.Add(this.txtDateCreated);
+            this.pnlEditRecord.Controls.Add(this.lblEditUserName);
+            this.pnlEditRecord.Controls.Add(this.lblEditFullName);
+            this.pnlEditRecord.Controls.Add(this.txtRecordName);
+            this.pnlEditRecord.Controls.Add(this.txtUserName);
+            this.pnlEditRecord.Controls.Add(this.txtEmail);
+            this.pnlEditRecord.Controls.Add(this.txtPass);
+            this.pnlEditRecord.Controls.Add(this.txtRepass);
+            this.pnlEditRecord.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlEditRecord.FillColor = System.Drawing.Color.White;
+            this.pnlEditRecord.Location = new System.Drawing.Point(317, 20);
+            this.pnlEditRecord.Margin = new System.Windows.Forms.Padding(5, 20, 5, 3);
+            this.pnlEditRecord.Name = "pnlEditRecord";
+            this.pnlEditRecord.Radius = 5;
+            this.pnlEditRecord.ShadowColor = System.Drawing.Color.Black;
+            this.pnlEditRecord.ShadowDepth = 250;
+            this.pnlEditRecord.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
+            this.pnlEditRecord.Size = new System.Drawing.Size(647, 273);
+            this.pnlEditRecord.TabIndex = 1037;
             // 
             // lblPassValidationInfo
             // 
             this.lblPassValidationInfo.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassValidationInfo.ForeColor = System.Drawing.Color.Black;
-            this.lblPassValidationInfo.Location = new System.Drawing.Point(11, 50);
+            this.lblPassValidationInfo.Location = new System.Drawing.Point(16, 60);
             this.lblPassValidationInfo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPassValidationInfo.Name = "lblPassValidationInfo";
-            this.lblPassValidationInfo.Size = new System.Drawing.Size(241, 152);
+            this.lblPassValidationInfo.Size = new System.Drawing.Size(221, 116);
             this.lblPassValidationInfo.TabIndex = 1035;
             this.lblPassValidationInfo.Text = "Password not entered";
-            // 
-            // guna2TextBox2
-            // 
-            this.guna2TextBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2TextBox2.Animated = true;
-            this.guna2TextBox2.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.guna2TextBox2.BorderRadius = 15;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.guna2TextBox2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox2.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.guna2TextBox2.Location = new System.Drawing.Point(210, 274);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '\0';
-            this.guna2TextBox2.PlaceholderText = "";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(186, 34);
-            this.guna2TextBox2.Style = Guna.UI2.WinForms.Enums.TextBoxStyle.Material;
-            this.guna2TextBox2.TabIndex = 1026;
-            // 
-            // guna2Panel4
-            // 
-            this.guna2Panel4.Controls.Add(this.lblPasswordValidation);
-            this.guna2Panel4.Location = new System.Drawing.Point(3, 6);
-            this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(211, 37);
-            this.guna2Panel4.TabIndex = 1034;
             // 
             // lblPasswordValidation
             // 
             this.lblPasswordValidation.AutoSize = true;
             this.lblPasswordValidation.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPasswordValidation.Location = new System.Drawing.Point(6, 7);
+            this.lblPasswordValidation.Location = new System.Drawing.Point(4, 6);
             this.lblPasswordValidation.Name = "lblPasswordValidation";
             this.lblPasswordValidation.Size = new System.Drawing.Size(191, 25);
             this.lblPasswordValidation.TabIndex = 1032;
@@ -832,17 +687,16 @@
             this.pnlRecordInfo.Controls.Add(this.pictureBoxRecord);
             this.pnlRecordInfo.Controls.Add(this.guna2Panel1);
             this.pnlRecordInfo.Controls.Add(this.lblUserInfo);
-            this.pnlRecordInfo.Controls.Add(this.btnAddRecord);
             this.pnlRecordInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlRecordInfo.FillColor = System.Drawing.Color.White;
-            this.pnlRecordInfo.Location = new System.Drawing.Point(28, 3);
-            this.pnlRecordInfo.Margin = new System.Windows.Forms.Padding(28, 3, 3, 3);
+            this.pnlRecordInfo.Location = new System.Drawing.Point(20, 20);
+            this.pnlRecordInfo.Margin = new System.Windows.Forms.Padding(20, 20, 5, 3);
             this.pnlRecordInfo.Name = "pnlRecordInfo";
             this.pnlRecordInfo.Radius = 5;
             this.pnlRecordInfo.ShadowColor = System.Drawing.Color.Black;
             this.pnlRecordInfo.ShadowDepth = 250;
             this.pnlRecordInfo.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
-            this.pnlRecordInfo.Size = new System.Drawing.Size(834, 241);
+            this.pnlRecordInfo.Size = new System.Drawing.Size(287, 273);
             this.pnlRecordInfo.TabIndex = 5;
             // 
             // btnBrowse
@@ -851,7 +705,7 @@
             this.btnBrowse.FillColor = System.Drawing.Color.Transparent;
             this.btnBrowse.Image = global::EvolveSettings.Properties.Resources.add;
             this.btnBrowse.ImageRotate = 0F;
-            this.btnBrowse.Location = new System.Drawing.Point(101, 50);
+            this.btnBrowse.Location = new System.Drawing.Point(112, 40);
             this.btnBrowse.Name = "btnBrowse";
             this.btnBrowse.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.btnBrowse.Size = new System.Drawing.Size(26, 26);
@@ -862,7 +716,7 @@
             // 
             // guna2Panel2
             // 
-            this.guna2Panel2.Controls.Add(this.lblRecordName);
+            this.guna2Panel2.Controls.Add(this.lblRecordNameDb);
             this.guna2Panel2.Controls.Add(this.lblDoubleDot1);
             this.guna2Panel2.Controls.Add(this.lblUserName);
             this.guna2Panel2.Controls.Add(this.lblDoubleDot2);
@@ -871,30 +725,15 @@
             this.guna2Panel2.Controls.Add(this.lblEmail);
             this.guna2Panel2.Controls.Add(this.lblDoubleDot4);
             this.guna2Panel2.Controls.Add(this.lblDateCreate);
-            this.guna2Panel2.Location = new System.Drawing.Point(152, 73);
+            this.guna2Panel2.Location = new System.Drawing.Point(2, 132);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(149, 129);
+            this.guna2Panel2.Size = new System.Drawing.Size(106, 129);
             this.guna2Panel2.TabIndex = 1049;
-            // 
-            // lblRecordName
-            // 
-            this.lblRecordName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblRecordName.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecordName.Location = new System.Drawing.Point(27, 4);
-            this.lblRecordName.Name = "lblRecordName";
-            this.lblRecordName.Size = new System.Drawing.Size(121, 21);
-            this.lblRecordName.TabIndex = 1041;
-            this.lblRecordName.Text = "Record Name :";
             // 
             // lblDoubleDot1
             // 
-            this.lblDoubleDot1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDoubleDot1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDoubleDot1.Location = new System.Drawing.Point(136, 45);
+            this.lblDoubleDot1.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDoubleDot1.Location = new System.Drawing.Point(94, 45);
             this.lblDoubleDot1.Name = "lblDoubleDot1";
             this.lblDoubleDot1.Size = new System.Drawing.Size(10, 17);
             this.lblDoubleDot1.TabIndex = 1048;
@@ -903,11 +742,8 @@
             // 
             // lblUserName
             // 
-            this.lblUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblUserName.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserName.Location = new System.Drawing.Point(57, 45);
+            this.lblUserName.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.Location = new System.Drawing.Point(15, 45);
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.Size = new System.Drawing.Size(79, 17);
             this.lblUserName.TabIndex = 1036;
@@ -916,11 +752,8 @@
             // 
             // lblDoubleDot2
             // 
-            this.lblDoubleDot2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDoubleDot2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDoubleDot2.Location = new System.Drawing.Point(136, 60);
+            this.lblDoubleDot2.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDoubleDot2.Location = new System.Drawing.Point(94, 60);
             this.lblDoubleDot2.Name = "lblDoubleDot2";
             this.lblDoubleDot2.Size = new System.Drawing.Size(10, 17);
             this.lblDoubleDot2.TabIndex = 1047;
@@ -929,11 +762,8 @@
             // 
             // lblPassword
             // 
-            this.lblPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblPassword.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(57, 62);
+            this.lblPassword.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.Location = new System.Drawing.Point(15, 62);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(72, 17);
             this.lblPassword.TabIndex = 1042;
@@ -942,11 +772,8 @@
             // 
             // lblDoubleDot3
             // 
-            this.lblDoubleDot3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDoubleDot3.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDoubleDot3.Location = new System.Drawing.Point(136, 77);
+            this.lblDoubleDot3.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDoubleDot3.Location = new System.Drawing.Point(94, 77);
             this.lblDoubleDot3.Name = "lblDoubleDot3";
             this.lblDoubleDot3.Size = new System.Drawing.Size(10, 17);
             this.lblDoubleDot3.TabIndex = 1046;
@@ -955,11 +782,8 @@
             // 
             // lblEmail
             // 
-            this.lblEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblEmail.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(57, 77);
+            this.lblEmail.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(15, 77);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(72, 17);
             this.lblEmail.TabIndex = 1043;
@@ -968,11 +792,8 @@
             // 
             // lblDoubleDot4
             // 
-            this.lblDoubleDot4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDoubleDot4.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDoubleDot4.Location = new System.Drawing.Point(136, 93);
+            this.lblDoubleDot4.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDoubleDot4.Location = new System.Drawing.Point(94, 93);
             this.lblDoubleDot4.Name = "lblDoubleDot4";
             this.lblDoubleDot4.Size = new System.Drawing.Size(10, 17);
             this.lblDoubleDot4.TabIndex = 1045;
@@ -981,11 +802,8 @@
             // 
             // lblDateCreate
             // 
-            this.lblDateCreate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblDateCreate.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateCreate.Location = new System.Drawing.Point(57, 93);
+            this.lblDateCreate.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateCreate.Location = new System.Drawing.Point(15, 93);
             this.lblDateCreate.Name = "lblDateCreate";
             this.lblDateCreate.Size = new System.Drawing.Size(90, 17);
             this.lblDateCreate.TabIndex = 1044;
@@ -996,7 +814,7 @@
             // 
             this.pictureBoxRecord.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxRecord.FillColor = System.Drawing.Color.Transparent;
-            this.pictureBoxRecord.Image = global::EvolveSettings.Properties.Resources.evolve_settings;
+            this.pictureBoxRecord.Image = global::EvolveSettings.Properties.Resources.user;
             this.pictureBoxRecord.ImageRotate = 0F;
             this.pictureBoxRecord.Location = new System.Drawing.Point(46, 50);
             this.pictureBoxRecord.Name = "pictureBoxRecord";
@@ -1009,66 +827,63 @@
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel1.AutoSize = true;
-            this.guna2Panel1.Controls.Add(this.lblRecordNameDb);
             this.guna2Panel1.Controls.Add(this.lblEmailDb);
             this.guna2Panel1.Controls.Add(this.lblUserNameDb);
             this.guna2Panel1.Controls.Add(this.lblPasswordDb);
             this.guna2Panel1.Controls.Add(this.lblDateCreateDb);
-            this.guna2Panel1.Location = new System.Drawing.Point(303, 73);
+            this.guna2Panel1.Location = new System.Drawing.Point(106, 132);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(240, 129);
+            this.guna2Panel1.Size = new System.Drawing.Size(177, 129);
             this.guna2Panel1.TabIndex = 1039;
             // 
             // lblRecordNameDb
             // 
             this.lblRecordNameDb.AutoSize = true;
-            this.lblRecordNameDb.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecordNameDb.Location = new System.Drawing.Point(4, 4);
+            this.lblRecordNameDb.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecordNameDb.Location = new System.Drawing.Point(3, 5);
             this.lblRecordNameDb.Name = "lblRecordNameDb";
-            this.lblRecordNameDb.Size = new System.Drawing.Size(127, 21);
+            this.lblRecordNameDb.Size = new System.Drawing.Size(102, 17);
             this.lblRecordNameDb.TabIndex = 1027;
             this.lblRecordNameDb.Text = "Evolve Settings";
             // 
             // lblEmailDb
             // 
             this.lblEmailDb.AutoSize = true;
-            this.lblEmailDb.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailDb.Location = new System.Drawing.Point(5, 77);
+            this.lblEmailDb.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailDb.Location = new System.Drawing.Point(5, 78);
             this.lblEmailDb.Name = "lblEmailDb";
-            this.lblEmailDb.Size = new System.Drawing.Size(167, 17);
+            this.lblEmailDb.Size = new System.Drawing.Size(154, 15);
             this.lblEmailDb.TabIndex = 1029;
             this.lblEmailDb.Text = "evolvesettings@evolve.com";
             // 
             // lblUserNameDb
             // 
             this.lblUserNameDb.AutoSize = true;
-            this.lblUserNameDb.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserNameDb.Location = new System.Drawing.Point(5, 45);
+            this.lblUserNameDb.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserNameDb.Location = new System.Drawing.Point(5, 46);
             this.lblUserNameDb.Name = "lblUserNameDb";
-            this.lblUserNameDb.Size = new System.Drawing.Size(45, 17);
+            this.lblUserNameDb.Size = new System.Drawing.Size(41, 15);
             this.lblUserNameDb.TabIndex = 1028;
             this.lblUserNameDb.Text = "Evolve";
             // 
             // lblPasswordDb
             // 
             this.lblPasswordDb.AutoSize = true;
-            this.lblPasswordDb.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPasswordDb.Location = new System.Drawing.Point(5, 61);
+            this.lblPasswordDb.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPasswordDb.Location = new System.Drawing.Point(5, 62);
             this.lblPasswordDb.Name = "lblPasswordDb";
-            this.lblPasswordDb.Size = new System.Drawing.Size(64, 17);
+            this.lblPasswordDb.Size = new System.Drawing.Size(57, 15);
             this.lblPasswordDb.TabIndex = 1031;
             this.lblPasswordDb.Text = "Password";
             // 
             // lblDateCreateDb
             // 
             this.lblDateCreateDb.AutoSize = true;
-            this.lblDateCreateDb.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDateCreateDb.Location = new System.Drawing.Point(5, 93);
+            this.lblDateCreateDb.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateCreateDb.Location = new System.Drawing.Point(5, 94);
             this.lblDateCreateDb.Name = "lblDateCreateDb";
-            this.lblDateCreateDb.Size = new System.Drawing.Size(74, 17);
+            this.lblDateCreateDb.Size = new System.Drawing.Size(65, 15);
             this.lblDateCreateDb.TabIndex = 1030;
             this.lblDateCreateDb.Text = "20-05-2024";
             // 
@@ -1076,7 +891,7 @@
             // 
             this.lblUserInfo.AutoSize = true;
             this.lblUserInfo.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserInfo.Location = new System.Drawing.Point(15, 13);
+            this.lblUserInfo.Location = new System.Drawing.Point(4, 6);
             this.lblUserInfo.Name = "lblUserInfo";
             this.lblUserInfo.Size = new System.Drawing.Size(187, 25);
             this.lblUserInfo.TabIndex = 1038;
@@ -1086,66 +901,62 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // btnPwEncryption
+            // pnlPwValidation
             // 
-            this.btnPwEncryption.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPwEncryption.BackColor = System.Drawing.Color.Transparent;
-            this.btnPwEncryption.BorderRadius = 15;
-            this.btnPwEncryption.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnPwEncryption.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnPwEncryption.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnPwEncryption.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnPwEncryption.FillColor = System.Drawing.Color.MidnightBlue;
-            this.btnPwEncryption.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnPwEncryption.ForeColor = System.Drawing.Color.White;
-            this.btnPwEncryption.Location = new System.Drawing.Point(14, 385);
-            this.btnPwEncryption.Name = "btnPwEncryption";
-            this.btnPwEncryption.Size = new System.Drawing.Size(148, 32);
-            this.btnPwEncryption.TabIndex = 1052;
-            this.btnPwEncryption.Text = "Password Encryption";
-            this.btnPwEncryption.Click += new System.EventHandler(this.btnPwEncryption_Click);
+            this.pnlPwValidation.BackColor = System.Drawing.Color.Transparent;
+            this.pnlPwValidation.Controls.Add(this.lblPasswordValidation);
+            this.pnlPwValidation.Controls.Add(this.lblPassValidationInfo);
+            this.pnlPwValidation.Controls.Add(this.btnPwEncryption);
+            this.pnlPwValidation.Controls.Add(this.btnPassGen);
+            this.pnlPwValidation.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlPwValidation.FillColor = System.Drawing.Color.White;
+            this.pnlPwValidation.Location = new System.Drawing.Point(974, 20);
+            this.pnlPwValidation.Margin = new System.Windows.Forms.Padding(5, 20, 20, 3);
+            this.pnlPwValidation.Name = "pnlPwValidation";
+            this.pnlPwValidation.Radius = 5;
+            this.pnlPwValidation.ShadowColor = System.Drawing.Color.Black;
+            this.pnlPwValidation.ShadowDepth = 250;
+            this.pnlPwValidation.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
+            this.pnlPwValidation.Size = new System.Drawing.Size(287, 273);
+            this.pnlPwValidation.TabIndex = 1038;
+            // 
+            // lblEditUser
+            // 
+            this.lblEditUser.AutoSize = true;
+            this.lblEditUser.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEditUser.Location = new System.Drawing.Point(7, 6);
+            this.lblEditUser.Name = "lblEditUser";
+            this.lblEditUser.Size = new System.Drawing.Size(113, 25);
+            this.lblEditUser.TabIndex = 1051;
+            this.lblEditUser.Text = "Edit Record";
             // 
             // PasswordManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1322, 762);
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.pnlGridView);
             this.Controls.Add(this.pnlHeader);
-            this.Controls.Add(this.tableLayoutPanel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PasswordManagerForm";
             this.Text = "PasswordManagerForm";
-            this.tableLayoutPanel2.ResumeLayout(false);
             this.pnlGridView.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPwManager)).EndInit();
-            this.pnlEditRecord.ResumeLayout(false);
-            this.pnlEditRecord.PerformLayout();
-            this.guna2Panel10.ResumeLayout(false);
-            this.guna2Panel10.PerformLayout();
-            this.guna2Panel9.ResumeLayout(false);
-            this.guna2Panel9.PerformLayout();
-            this.guna2Panel8.ResumeLayout(false);
-            this.guna2Panel8.PerformLayout();
-            this.guna2Panel7.ResumeLayout(false);
-            this.guna2Panel7.PerformLayout();
-            this.guna2Panel6.ResumeLayout(false);
-            this.guna2Panel6.PerformLayout();
-            this.guna2Panel5.ResumeLayout(false);
-            this.guna2Panel5.PerformLayout();
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.pnlPasswordValidation.ResumeLayout(false);
-            this.guna2Panel4.ResumeLayout(false);
-            this.guna2Panel4.PerformLayout();
+            this.pnlEditRecord.ResumeLayout(false);
+            this.pnlEditRecord.PerformLayout();
             this.pnlRecordInfo.ResumeLayout(false);
             this.pnlRecordInfo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBrowse)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxRecord)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
+            this.pnlPwValidation.ResumeLayout(false);
+            this.pnlPwValidation.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1153,19 +964,12 @@
         #endregion
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private Guna.UI2.WinForms.Guna2ShadowPanel pnlEditRecord;
         public Guna.UI2.WinForms.Guna2Button btnPassGen;
         public Guna.UI2.WinForms.Guna2Button btnUpdate;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel10;
         private System.Windows.Forms.Label lblEditEmail;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel9;
         private System.Windows.Forms.Label lblEditRePass;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel8;
         private System.Windows.Forms.Label lblEditPassword;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel7;
         private System.Windows.Forms.Label lblEditUserName;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
         private System.Windows.Forms.Label lblEditFullName;
         public Guna.UI2.WinForms.Guna2TextBox txtEmail;
         public Guna.UI2.WinForms.Guna2TextBox txtRepass;
@@ -1174,8 +978,6 @@
         public Guna.UI2.WinForms.Guna2TextBox txtRecordName;
         private Guna.UI2.WinForms.Guna2CheckBox chkEditShowPass;
         public System.Windows.Forms.TextBox txtDateCreated;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
-        private System.Windows.Forms.Label lblEditUser;
         private Guna.UI2.WinForms.Guna2Button btnAddRecord;
         private System.Windows.Forms.Panel pnlHeader;
         private System.Windows.Forms.Label lblTitle;
@@ -1201,7 +1003,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn3;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn4;
-        private System.Windows.Forms.Label lblRecordName;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblUserName;
@@ -1210,14 +1011,14 @@
         private System.Windows.Forms.Label lblDoubleDot2;
         private System.Windows.Forms.Label lblDoubleDot3;
         private System.Windows.Forms.Label lblDoubleDot4;
-        private Guna.UI2.WinForms.Guna2ShadowPanel pnlPasswordValidation;
+        private Guna.UI2.WinForms.Guna2ShadowPanel pnlEditRecord;
         private System.Windows.Forms.Label lblPassValidationInfo;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private System.Windows.Forms.Label lblPasswordValidation;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.Timer timer1;
         private Guna.UI2.WinForms.Guna2CirclePictureBox btnBrowse;
         public Guna.UI2.WinForms.Guna2Button btnPwEncryption;
+        private Guna.UI2.WinForms.Guna2ShadowPanel pnlPwValidation;
+        private System.Windows.Forms.Label lblEditUser;
     }
 }

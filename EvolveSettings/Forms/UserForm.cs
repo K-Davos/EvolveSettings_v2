@@ -90,7 +90,7 @@ namespace EvolveSettings.Forms
                     gridview.GridColor = themeColor;
                     gridview.AlternatingRowsDefaultCellStyle.BackColor = SystemColors.Control;
                 }
-                foreach (Guna2TextBox txtbox in this.pnlEditUser.Controls.OfType<Guna2TextBox>())
+                foreach (Guna2TextBox txtbox in this.pnlEditRecord.Controls.OfType<Guna2TextBox>())
                 {
                     txtbox.BackColor = Color.Transparent;
                     txtbox.FillColor = Color.White;
@@ -105,11 +105,10 @@ namespace EvolveSettings.Forms
                 this.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
                 pnlHeader.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
                 pnlGridView.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
-                pnlUserInfo.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
-                pnlUserPerms.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
-                pnlPasswordValidation.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
-                pnlEditUser.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
-                txtDateCreated.BackColor = ColorTranslator.FromHtml("#FF2D2D30");
+                pnlPwValidation.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
+                pnlUserInfo.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
+                pnlEditRecord.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
+                txtDateCreated.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
                 lblUserMode.ForeColor = Color.White;
                 lblAdminUserType.ForeColor = Color.Red;
                 txtDateCreated.ForeColor = Color.White;
@@ -119,9 +118,8 @@ namespace EvolveSettings.Forms
                 lblEditPassword.ForeColor = Color.White;
                 lblEditRePass.ForeColor = Color.White;
                 lblEditEmail.ForeColor = Color.White;
-                lblUserInfo.ForeColor = Color.White;
                 lblFullName.ForeColor = Color.White;
-                lblUserPerms.ForeColor = Color.White;
+                lblEditUser.ForeColor = Color.White;
                 lblPasswordValidation.ForeColor = Color.White;
                 lblPassValidationInfo.ForeColor = Color.White;
                 lblEditUser.ForeColor = Color.White;
@@ -141,26 +139,26 @@ namespace EvolveSettings.Forms
                     gridview.GridColor = themeColor;
                     gridview.AlternatingRowsDefaultCellStyle.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
                 }
-                foreach (Guna2TextBox txtbox in this.pnlEditUser.Controls.OfType<Guna2TextBox>())
+                foreach (Guna2TextBox txtbox in this.pnlEditRecord.Controls.OfType<Guna2TextBox>())
                 {
                     txtbox.BackColor = Color.Transparent;
-                    txtbox.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
+                    txtbox.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
                     txtbox.BorderColor = themeColor;
                     txtbox.ForeColor = Color.White;
                     txtbox.DisabledState.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
                 }
             }
-            foreach (Guna2Button button in this.pnlUserInfo.Controls.OfType<Guna2Button>())
+            foreach (Guna2Button button in this.pnlPwValidation.Controls.OfType<Guna2Button>())
             {
                 button.FillColor = themeColor;
                 button.ForeColor = Color.White;
             }
-            foreach (Guna2Button button in this.pnlUserPerms.Controls.OfType<Guna2Button>())
+            foreach (Guna2Button button in this.pnlEditRecord.Controls.OfType<Guna2Button>())
             {
                 button.FillColor = themeColor;
                 button.ForeColor = Color.White;
             }
-            foreach (Guna2Button button in this.pnlEditUser.Controls.OfType<Guna2Button>())
+            foreach (Guna2Button button in this.pnlEditRecord.Controls.OfType<Guna2Button>())
             {
                 button.FillColor = themeColor;
                 button.ForeColor = Color.White;
@@ -349,7 +347,7 @@ namespace EvolveSettings.Forms
                     cmd.ExecuteNonQuery();
                     connect.Close();
                     EvolveMessageBox.Show("User has been successfully updated!");
-                    foreach (Guna2TextBox txtbox in this.pnlEditUser.Controls.OfType<Guna2TextBox>())
+                    foreach (Guna2TextBox txtbox in this.pnlEditRecord.Controls.OfType<Guna2TextBox>())
                     {
                         txtbox.Clear();
                     }

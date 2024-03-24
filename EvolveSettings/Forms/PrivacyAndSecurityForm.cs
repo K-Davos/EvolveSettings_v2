@@ -116,7 +116,6 @@ namespace EvolveSettings.Forms
                 txtDateCreated.ForeColor = Color.White;
                 lblPass.ForeColor = Color.White;
                 lblRePass.ForeColor = Color.White;
-                label7.ForeColor = Color.White;
                 label6.ForeColor = Color.White;
                 lblTitle.ForeColor = Color.White;
                 foreach (Guna2DataGridView gridview in this.pnlGridView.Controls.OfType<Guna2DataGridView>())

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnFileEncryptor = new Guna.UI2.WinForms.Guna2Button();
             this.txtDescription = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblFileDescription = new System.Windows.Forms.Label();
@@ -54,7 +54,6 @@
             this.pnlEncryptor = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.btnPwEncryption = new Guna.UI2.WinForms.Guna2Button();
             this.lblEncrypting = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.dgvEncryptor = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column0 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,6 +69,7 @@
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.pnlGridView.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.pnlDbFileInfo.SuspendLayout();
@@ -111,7 +111,7 @@
             this.txtDescription.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescription.ForeColor = System.Drawing.Color.Black;
             this.txtDescription.HoverState.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.txtDescription.Location = new System.Drawing.Point(19, 115);
+            this.txtDescription.Location = new System.Drawing.Point(30, 133);
             this.txtDescription.MaximumSize = new System.Drawing.Size(375, 34);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.PasswordChar = '\0';
@@ -125,7 +125,7 @@
             // 
             this.lblFileDescription.AutoSize = true;
             this.lblFileDescription.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFileDescription.Location = new System.Drawing.Point(16, 99);
+            this.lblFileDescription.Location = new System.Drawing.Point(27, 117);
             this.lblFileDescription.Name = "lblFileDescription";
             this.lblFileDescription.Size = new System.Drawing.Size(104, 17);
             this.lblFileDescription.TabIndex = 1063;
@@ -141,7 +141,7 @@
             this.chkShowPass.CheckedState.FillColor = System.Drawing.Color.MidnightBlue;
             this.chkShowPass.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chkShowPass.ForeColor = System.Drawing.Color.Gray;
-            this.chkShowPass.Location = new System.Drawing.Point(516, 153);
+            this.chkShowPass.Location = new System.Drawing.Point(549, 171);
             this.chkShowPass.Name = "chkShowPass";
             this.chkShowPass.Size = new System.Drawing.Size(107, 17);
             this.chkShowPass.TabIndex = 1062;
@@ -154,7 +154,6 @@
             // 
             // btnAddFileRecord
             // 
-            this.btnAddFileRecord.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddFileRecord.Animated = true;
             this.btnAddFileRecord.BorderRadius = 15;
             this.btnAddFileRecord.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -164,7 +163,7 @@
             this.btnAddFileRecord.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnAddFileRecord.Font = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddFileRecord.ForeColor = System.Drawing.Color.White;
-            this.btnAddFileRecord.Location = new System.Drawing.Point(665, 134);
+            this.btnAddFileRecord.Location = new System.Drawing.Point(451, 212);
             this.btnAddFileRecord.Name = "btnAddFileRecord";
             this.btnAddFileRecord.Size = new System.Drawing.Size(96, 32);
             this.btnAddFileRecord.TabIndex = 1061;
@@ -173,7 +172,6 @@
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnUpdate.BackColor = System.Drawing.Color.Transparent;
             this.btnUpdate.BorderRadius = 15;
             this.btnUpdate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -183,7 +181,7 @@
             this.btnUpdate.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(665, 172);
+            this.btnUpdate.Location = new System.Drawing.Point(553, 212);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(96, 32);
             this.btnUpdate.TabIndex = 1060;
@@ -193,12 +191,12 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(14, 13);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(225, 25);
+            this.label6.Size = new System.Drawing.Size(219, 21);
             this.label6.TabIndex = 1059;
-            this.label6.Text = "Update File Information";
+            this.label6.Text = "Update Record Information";
             // 
             // txtPass
             // 
@@ -215,7 +213,7 @@
             this.txtPass.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.ForeColor = System.Drawing.Color.Black;
             this.txtPass.HoverState.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.txtPass.Location = new System.Drawing.Point(331, 61);
+            this.txtPass.Location = new System.Drawing.Point(364, 79);
             this.txtPass.MaximumSize = new System.Drawing.Size(375, 34);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
@@ -229,7 +227,7 @@
             // 
             this.lblPass.AutoSize = true;
             this.lblPass.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPass.Location = new System.Drawing.Point(328, 45);
+            this.lblPass.Location = new System.Drawing.Point(361, 63);
             this.lblPass.Name = "lblPass";
             this.lblPass.Size = new System.Drawing.Size(71, 17);
             this.lblPass.TabIndex = 1050;
@@ -240,7 +238,7 @@
             this.txtDateCreated.BackColor = System.Drawing.Color.White;
             this.txtDateCreated.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDateCreated.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDateCreated.Location = new System.Drawing.Point(331, 155);
+            this.txtDateCreated.Location = new System.Drawing.Point(364, 173);
             this.txtDateCreated.Name = "txtDateCreated";
             this.txtDateCreated.ReadOnly = true;
             this.txtDateCreated.Size = new System.Drawing.Size(126, 15);
@@ -262,7 +260,7 @@
             this.txtRepass.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRepass.ForeColor = System.Drawing.Color.Black;
             this.txtRepass.HoverState.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.txtRepass.Location = new System.Drawing.Point(331, 115);
+            this.txtRepass.Location = new System.Drawing.Point(364, 133);
             this.txtRepass.MaximumSize = new System.Drawing.Size(375, 34);
             this.txtRepass.Name = "txtRepass";
             this.txtRepass.PasswordChar = '*';
@@ -276,7 +274,7 @@
             // 
             this.lblRePass.AutoSize = true;
             this.lblRePass.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRePass.Location = new System.Drawing.Point(328, 100);
+            this.lblRePass.Location = new System.Drawing.Point(361, 118);
             this.lblRePass.Name = "lblRePass";
             this.lblRePass.Size = new System.Drawing.Size(121, 17);
             this.lblRePass.TabIndex = 1047;
@@ -297,7 +295,7 @@
             this.txtLocation.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLocation.ForeColor = System.Drawing.Color.Black;
             this.txtLocation.HoverState.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.txtLocation.Location = new System.Drawing.Point(19, 170);
+            this.txtLocation.Location = new System.Drawing.Point(30, 188);
             this.txtLocation.MaximumSize = new System.Drawing.Size(375, 34);
             this.txtLocation.Name = "txtLocation";
             this.txtLocation.PasswordChar = '\0';
@@ -311,7 +309,7 @@
             // 
             this.lblFileFolderLocation.AutoSize = true;
             this.lblFileFolderLocation.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFileFolderLocation.Location = new System.Drawing.Point(16, 154);
+            this.lblFileFolderLocation.Location = new System.Drawing.Point(27, 172);
             this.lblFileFolderLocation.Name = "lblFileFolderLocation";
             this.lblFileFolderLocation.Size = new System.Drawing.Size(129, 17);
             this.lblFileFolderLocation.TabIndex = 1045;
@@ -332,7 +330,7 @@
             this.txtFileName.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFileName.ForeColor = System.Drawing.Color.Black;
             this.txtFileName.HoverState.BorderColor = System.Drawing.Color.MidnightBlue;
-            this.txtFileName.Location = new System.Drawing.Point(19, 61);
+            this.txtFileName.Location = new System.Drawing.Point(30, 79);
             this.txtFileName.MaximumSize = new System.Drawing.Size(375, 34);
             this.txtFileName.Name = "txtFileName";
             this.txtFileName.PasswordChar = '\0';
@@ -347,7 +345,7 @@
             // 
             this.lblFileName.AutoSize = true;
             this.lblFileName.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFileName.Location = new System.Drawing.Point(16, 45);
+            this.lblFileName.Location = new System.Drawing.Point(27, 63);
             this.lblFileName.Name = "lblFileName";
             this.lblFileName.Size = new System.Drawing.Size(73, 17);
             this.lblFileName.TabIndex = 1043;
@@ -360,7 +358,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlGridView.BackColor = System.Drawing.Color.Transparent;
             this.pnlGridView.Controls.Add(this.tableLayoutPanel1);
-            this.pnlGridView.Controls.Add(this.label7);
             this.pnlGridView.Controls.Add(this.dgvEncryptor);
             this.pnlGridView.FillColor = System.Drawing.Color.White;
             this.pnlGridView.Location = new System.Drawing.Point(20, 64);
@@ -376,26 +373,21 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.23653F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 62.76347F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 442F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 99.99999F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
             this.tableLayoutPanel1.Controls.Add(this.pnlDbFileInfo, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.pnlEncryptor, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 3);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1281, 254);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1281, 290);
             this.tableLayoutPanel1.TabIndex = 1070;
             // 
             // pnlDbFileInfo
             // 
-            this.pnlDbFileInfo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlDbFileInfo.BackColor = System.Drawing.Color.Transparent;
             this.pnlDbFileInfo.Controls.Add(this.label6);
             this.pnlDbFileInfo.Controls.Add(this.btnUpdate);
@@ -412,25 +404,26 @@
             this.pnlDbFileInfo.Controls.Add(this.txtRepass);
             this.pnlDbFileInfo.Controls.Add(this.txtLocation);
             this.pnlDbFileInfo.Controls.Add(this.lblRePass);
+            this.pnlDbFileInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlDbFileInfo.FillColor = System.Drawing.Color.White;
-            this.pnlDbFileInfo.Location = new System.Drawing.Point(486, 20);
+            this.pnlDbFileInfo.Location = new System.Drawing.Point(560, 20);
             this.pnlDbFileInfo.Margin = new System.Windows.Forms.Padding(10, 20, 20, 3);
             this.pnlDbFileInfo.Name = "pnlDbFileInfo";
             this.pnlDbFileInfo.Radius = 5;
             this.pnlDbFileInfo.ShadowColor = System.Drawing.Color.Black;
             this.pnlDbFileInfo.ShadowDepth = 250;
             this.pnlDbFileInfo.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
-            this.pnlDbFileInfo.Size = new System.Drawing.Size(775, 231);
+            this.pnlDbFileInfo.Size = new System.Drawing.Size(701, 267);
             this.pnlDbFileInfo.TabIndex = 1070;
             // 
             // pnlEncryptor
             // 
-            this.pnlEncryptor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlEncryptor.BackColor = System.Drawing.Color.Transparent;
+            this.pnlEncryptor.Controls.Add(this.label1);
             this.pnlEncryptor.Controls.Add(this.btnPwEncryption);
             this.pnlEncryptor.Controls.Add(this.lblEncrypting);
             this.pnlEncryptor.Controls.Add(this.btnFileEncryptor);
+            this.pnlEncryptor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlEncryptor.FillColor = System.Drawing.Color.White;
             this.pnlEncryptor.Location = new System.Drawing.Point(20, 20);
             this.pnlEncryptor.Margin = new System.Windows.Forms.Padding(20, 20, 10, 3);
@@ -439,7 +432,7 @@
             this.pnlEncryptor.ShadowColor = System.Drawing.Color.Black;
             this.pnlEncryptor.ShadowDepth = 250;
             this.pnlEncryptor.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
-            this.pnlEncryptor.Size = new System.Drawing.Size(446, 231);
+            this.pnlEncryptor.Size = new System.Drawing.Size(520, 267);
             this.pnlEncryptor.TabIndex = 1069;
             // 
             // btnPwEncryption
@@ -463,41 +456,31 @@
             // lblEncrypting
             // 
             this.lblEncrypting.AutoSize = true;
-            this.lblEncrypting.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEncrypting.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEncrypting.Location = new System.Drawing.Point(12, 13);
             this.lblEncrypting.Name = "lblEncrypting";
-            this.lblEncrypting.Size = new System.Drawing.Size(264, 25);
+            this.lblEncrypting.Size = new System.Drawing.Size(94, 21);
             this.lblEncrypting.TabIndex = 1066;
-            this.lblEncrypting.Text = "File and Password Encryptor";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(15, 253);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(93, 25);
-            this.label7.TabIndex = 1062;
-            this.label7.Text = "Database";
+            this.lblEncrypting.Text = "Encryption";
             // 
             // dgvEncryptor
             // 
             this.dgvEncryptor.AllowUserToAddRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.dgvEncryptor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.dgvEncryptor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvEncryptor.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvEncryptor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.None;
             this.dgvEncryptor.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(246)))));
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(246)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvEncryptor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(246)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvEncryptor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvEncryptor.ColumnHeadersHeight = 50;
             this.dgvEncryptor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column7,
@@ -509,23 +492,23 @@
             this.Column5,
             this.Edit,
             this.Delete});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvEncryptor.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvEncryptor.DefaultCellStyle = dataGridViewCellStyle9;
             this.dgvEncryptor.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(241)))), ((int)(((byte)(246)))));
-            this.dgvEncryptor.Location = new System.Drawing.Point(20, 281);
+            this.dgvEncryptor.Location = new System.Drawing.Point(20, 299);
             this.dgvEncryptor.Name = "dgvEncryptor";
             this.dgvEncryptor.ReadOnly = true;
             this.dgvEncryptor.RowHeadersVisible = false;
             this.dgvEncryptor.RowTemplate.DividerHeight = 2;
             this.dgvEncryptor.RowTemplate.Height = 50;
             this.dgvEncryptor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvEncryptor.Size = new System.Drawing.Size(1241, 377);
+            this.dgvEncryptor.Size = new System.Drawing.Size(1241, 359);
             this.dgvEncryptor.TabIndex = 5;
             this.dgvEncryptor.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvEncryptor.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -662,6 +645,16 @@
             this.dataGridViewImageColumn2.Image = global::EvolveSettings.Properties.Resources.delete;
             this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(192, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 21);
+            this.label1.TabIndex = 1068;
+            this.label1.Text = "Privacy";
+            // 
             // PrivacyAndSecurityForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -673,7 +666,6 @@
             this.Name = "PrivacyAndSecurityForm";
             this.Text = "FileEnctyptorDbForm";
             this.pnlGridView.ResumeLayout(false);
-            this.pnlGridView.PerformLayout();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.pnlDbFileInfo.ResumeLayout(false);
             this.pnlDbFileInfo.PerformLayout();
@@ -703,7 +695,6 @@
         public Guna.UI2.WinForms.Guna2TextBox txtFileName;
         private System.Windows.Forms.Label lblFileName;
         private Guna.UI2.WinForms.Guna2ShadowPanel pnlGridView;
-        private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2DataGridView dgvEncryptor;
         private System.Windows.Forms.Panel pnlHeader;
         private System.Windows.Forms.Label lblTitle;
@@ -725,5 +716,6 @@
         private System.Windows.Forms.DataGridViewImageColumn Delete;
         private System.Windows.Forms.Label lblEncrypting;
         public Guna.UI2.WinForms.Guna2Button btnPwEncryption;
+        private System.Windows.Forms.Label label1;
     }
 }
