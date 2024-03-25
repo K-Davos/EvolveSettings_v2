@@ -14,6 +14,10 @@ namespace EvolveSettings.Models
         public bool SystemMonitor { get; set; }
         public bool PowerSavingsMode { get; set; }
         public bool GameMode { get; set; }
+        public bool WindowsAutoUpdates { get; set; }
+        public bool ExcludeWinDriverUpdates { get; set; }
+        public bool InsiderService { get; set; }
+        public bool MsStoreUpdates { get; set; }
     }
     public class GenerateConfig
     {

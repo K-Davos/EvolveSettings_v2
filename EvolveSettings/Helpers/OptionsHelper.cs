@@ -47,6 +47,10 @@ namespace EvolveSettings
                 CurrentOptions.SystemMonitor = false;
                 CurrentOptions.PowerSavingsMode = false;
                 CurrentOptions.GameMode = false;
+                CurrentOptions.WindowsAutoUpdates = false;
+                CurrentOptions.ExcludeWinDriverUpdates = false;
+                CurrentOptions.InsiderService = false;
+                CurrentOptions.MsStoreUpdates = false;
 
                 using (FileStream fs = File.Open(SettingsFile, FileMode.CreateNew))
                 using (StreamWriter sw = new StreamWriter(fs))

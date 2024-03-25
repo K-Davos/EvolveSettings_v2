@@ -15,7 +15,7 @@ using System.Windows.Forms;
 
 namespace EvolveSettings.Forms
 {
-    public partial class PrivacyAndSecurityForm : Form
+    public partial class UserSecurityForm : Form
     {
         //WinTheme
         private UserPreferenceChangedEventHandler UserPreferenceChanged;
@@ -28,7 +28,7 @@ namespace EvolveSettings.Forms
         //Password Validator
         PasswordValidator passwordValidator = new PasswordValidator();
 
-        public PrivacyAndSecurityForm()
+        public UserSecurityForm()
         {
             InitializeComponent();
 

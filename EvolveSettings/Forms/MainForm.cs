@@ -278,7 +278,7 @@ namespace EvolveSettings
 
         private void btnWin11Tweaks_Click(object sender, EventArgs e)
         {
-            //openChildForm(new Form());
+            openChildForm(new PrivacyAndServicesForm());
         }
         private void btnNetwork_Click(object sender, EventArgs e)
         {
@@ -297,7 +297,7 @@ namespace EvolveSettings
 
         private void btnFileEncryptor_Click(object sender, EventArgs e)
         {
-            openChildForm(new PrivacyAndSecurityForm());
+            openChildForm(new UserSecurityForm());
         }
 
         private void btnPassManager_Click(object sender, EventArgs e)

@@ -130,8 +130,8 @@ namespace EvolveSettings
             this.btnFileEncryptor.Name = "btnFileEncryptor";
             this.btnFileEncryptor.Size = new System.Drawing.Size(186, 42);
             this.btnFileEncryptor.TabIndex = 94;
-            this.btnFileEncryptor.Tag = "Privacy And Security";
-            this.btnFileEncryptor.Text = "  Privacy And Security";
+            this.btnFileEncryptor.Tag = "User(s) Security";
+            this.btnFileEncryptor.Text = "  User(s) Security";
             this.btnFileEncryptor.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnFileEncryptor.Click += new System.EventHandler(this.btnFileEncryptor_Click);
             // 

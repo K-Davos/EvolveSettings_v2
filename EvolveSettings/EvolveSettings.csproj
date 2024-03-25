@@ -272,11 +272,11 @@
     <Compile Include="Forms\FileEncryptorForm.Designer.cs">
       <DependentUpon>FileEncryptorForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\PrivacyAndSecurityForm.cs">
+    <Compile Include="Forms\UserSecurityForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\PrivacyAndSecurityForm.Designer.cs">
-      <DependentUpon>PrivacyAndSecurityForm.cs</DependentUpon>
+    <Compile Include="Forms\UserSecurityForm.Designer.cs">
+      <DependentUpon>UserSecurityForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ForgotPassForm.cs">
       <SubType>Form</SubType>
@@ -319,6 +319,12 @@
     </Compile>
     <Compile Include="Forms\PcCleanerForm.Designer.cs">
       <DependentUpon>PcCleanerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PrivacyAndServicesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PrivacyAndServicesForm.Designer.cs">
+      <DependentUpon>PrivacyAndServicesForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\PWManagerModuleForm.cs">
       <SubType>Form</SubType>
@@ -406,8 +412,8 @@
     <EmbeddedResource Include="Forms\FileEncryptorForm.resx">
       <DependentUpon>FileEncryptorForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\PrivacyAndSecurityForm.resx">
-      <DependentUpon>PrivacyAndSecurityForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\UserSecurityForm.resx">
+      <DependentUpon>UserSecurityForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ForgotPassForm.resx">
       <DependentUpon>ForgotPassForm.cs</DependentUpon>
@@ -429,6 +435,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PcCleanerForm.resx">
       <DependentUpon>PcCleanerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PrivacyAndServicesForm.resx">
+      <DependentUpon>PrivacyAndServicesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\PWManagerModuleForm.resx">
       <DependentUpon>PWManagerModuleForm.cs</DependentUpon>
