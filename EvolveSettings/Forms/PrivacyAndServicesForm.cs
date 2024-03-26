@@ -1,14 +1,8 @@
 ﻿using EvolveSettings.Controls;
-using Guna.UI2.WinForms;
 using Microsoft.Win32;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace EvolveSettings.Forms
@@ -73,7 +67,8 @@ namespace EvolveSettings.Forms
                     pnlHeader.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
                     pnlBack.FillColor = Color.Transparent;
                 }
-                scrollBarBackPanel.ThumbColor = ColorTranslator.FromHtml("#FF1F1F20");
+                scrollBarBackPanel.ThumbColor = ColorTranslator.FromHtml("#FF2D2D30");
+                scrollBarBackPanel.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
                 pnlWinUpdates.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
                 pnlExcludeDriverUpdates.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
                 pnlInsiderService.FillColor = ColorTranslator.FromHtml("#FF2D2D30");

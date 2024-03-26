@@ -30,8 +30,8 @@ namespace EvolveSettings
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation6 = new Guna.UI2.AnimatorNS.Animation();
-            Guna.UI2.AnimatorNS.Animation animation5 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation10 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation9 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.lblCurrentUser = new System.Windows.Forms.Label();
             this.pnlNav = new System.Windows.Forms.Panel();
@@ -60,7 +60,6 @@ namespace EvolveSettings
             this.btnMaximize = new CustomControls.EvolveControls.EvolveButton();
             this.pnlFlyOut = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnSystemMonitor = new System.Windows.Forms.Button();
             this.toggleBlurEffect = new EvolveSettings.Controls.EvolveToggleButton();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.btnFlyOutPanel = new System.Windows.Forms.Button();
@@ -69,6 +68,7 @@ namespace EvolveSettings
             this.ShadowForm = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
             this.guna2Transition2 = new Guna.UI2.WinForms.Guna2Transition();
+            this.btnSystemMonitor = new Guna.UI2.WinForms.Guna2CircleButton();
             this.pnlNav.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
@@ -582,8 +582,8 @@ namespace EvolveSettings
             // 
             this.pnlFlyOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlFlyOut.BackColor = System.Drawing.Color.Transparent;
-            this.pnlFlyOut.Controls.Add(this.label1);
             this.pnlFlyOut.Controls.Add(this.btnSystemMonitor);
+            this.pnlFlyOut.Controls.Add(this.label1);
             this.pnlFlyOut.Controls.Add(this.lblLength);
             this.pnlFlyOut.Controls.Add(this.toggleBlurEffect);
             this.pnlFlyOut.Controls.Add(this.trackBarBlur);
@@ -592,8 +592,9 @@ namespace EvolveSettings
             this.guna2Transition1.SetDecoration(this.pnlFlyOut, Guna.UI2.AnimatorNS.DecorationType.None);
             this.pnlFlyOut.FillColor = System.Drawing.Color.White;
             this.pnlFlyOut.ForeColor = System.Drawing.Color.Transparent;
-            this.pnlFlyOut.Location = new System.Drawing.Point(984, 48);
+            this.pnlFlyOut.Location = new System.Drawing.Point(984, 44);
             this.pnlFlyOut.Name = "pnlFlyOut";
+            this.pnlFlyOut.Radius = 2;
             this.pnlFlyOut.ShadowColor = System.Drawing.Color.Black;
             this.pnlFlyOut.Size = new System.Drawing.Size(200, 108);
             this.pnlFlyOut.TabIndex = 1022;
@@ -610,22 +611,6 @@ namespace EvolveSettings
             this.label1.Size = new System.Drawing.Size(117, 22);
             this.label1.TabIndex = 1056;
             this.label1.Text = "System Monitor";
-            // 
-            // btnSystemMonitor
-            // 
-            this.btnSystemMonitor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Transition1.SetDecoration(this.btnSystemMonitor, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Transition2.SetDecoration(this.btnSystemMonitor, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnSystemMonitor.FlatAppearance.BorderSize = 0;
-            this.btnSystemMonitor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSystemMonitor.ForeColor = System.Drawing.Color.White;
-            this.btnSystemMonitor.Image = global::EvolveSettings.Properties.Resources.sys_monitor;
-            this.btnSystemMonitor.Location = new System.Drawing.Point(135, 5);
-            this.btnSystemMonitor.Name = "btnSystemMonitor";
-            this.btnSystemMonitor.Size = new System.Drawing.Size(48, 42);
-            this.btnSystemMonitor.TabIndex = 1055;
-            this.btnSystemMonitor.UseVisualStyleBackColor = true;
-            this.btnSystemMonitor.Click += new System.EventHandler(this.btnSystemMonitor_Click);
             // 
             // toggleBlurEffect
             // 
@@ -716,43 +701,67 @@ namespace EvolveSettings
             // 
             this.guna2Transition1.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Scale;
             this.guna2Transition1.Cursor = null;
-            animation6.AnimateOnlyDifferences = true;
-            animation6.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.BlindCoeff")));
-            animation6.LeafCoeff = 0F;
-            animation6.MaxTime = 1F;
-            animation6.MinTime = 0F;
-            animation6.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicCoeff")));
-            animation6.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicShift")));
-            animation6.MosaicSize = 0;
-            animation6.Padding = new System.Windows.Forms.Padding(0);
-            animation6.RotateCoeff = 0F;
-            animation6.RotateLimit = 0F;
-            animation6.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.ScaleCoeff")));
-            animation6.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.SlideCoeff")));
-            animation6.TimeCoeff = 0F;
-            animation6.TransparencyCoeff = 0F;
-            this.guna2Transition1.DefaultAnimation = animation6;
+            animation10.AnimateOnlyDifferences = true;
+            animation10.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation10.BlindCoeff")));
+            animation10.LeafCoeff = 0F;
+            animation10.MaxTime = 1F;
+            animation10.MinTime = 0F;
+            animation10.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation10.MosaicCoeff")));
+            animation10.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation10.MosaicShift")));
+            animation10.MosaicSize = 0;
+            animation10.Padding = new System.Windows.Forms.Padding(0);
+            animation10.RotateCoeff = 0F;
+            animation10.RotateLimit = 0F;
+            animation10.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation10.ScaleCoeff")));
+            animation10.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation10.SlideCoeff")));
+            animation10.TimeCoeff = 0F;
+            animation10.TransparencyCoeff = 0F;
+            this.guna2Transition1.DefaultAnimation = animation10;
             // 
             // guna2Transition2
             // 
             this.guna2Transition2.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Scale;
             this.guna2Transition2.Cursor = null;
-            animation5.AnimateOnlyDifferences = true;
-            animation5.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.BlindCoeff")));
-            animation5.LeafCoeff = 0F;
-            animation5.MaxTime = 1F;
-            animation5.MinTime = 0F;
-            animation5.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicCoeff")));
-            animation5.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicShift")));
-            animation5.MosaicSize = 0;
-            animation5.Padding = new System.Windows.Forms.Padding(0);
-            animation5.RotateCoeff = 0F;
-            animation5.RotateLimit = 0F;
-            animation5.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.ScaleCoeff")));
-            animation5.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.SlideCoeff")));
-            animation5.TimeCoeff = 0F;
-            animation5.TransparencyCoeff = 0F;
-            this.guna2Transition2.DefaultAnimation = animation5;
+            animation9.AnimateOnlyDifferences = true;
+            animation9.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.BlindCoeff")));
+            animation9.LeafCoeff = 0F;
+            animation9.MaxTime = 1F;
+            animation9.MinTime = 0F;
+            animation9.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.MosaicCoeff")));
+            animation9.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation9.MosaicShift")));
+            animation9.MosaicSize = 0;
+            animation9.Padding = new System.Windows.Forms.Padding(0);
+            animation9.RotateCoeff = 0F;
+            animation9.RotateLimit = 0F;
+            animation9.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.ScaleCoeff")));
+            animation9.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation9.SlideCoeff")));
+            animation9.TimeCoeff = 0F;
+            animation9.TransparencyCoeff = 0F;
+            this.guna2Transition2.DefaultAnimation = animation9;
+            // 
+            // btnSystemMonitor
+            // 
+            this.btnSystemMonitor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSystemMonitor.Animated = true;
+            this.btnSystemMonitor.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Transition2.SetDecoration(this.btnSystemMonitor, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Transition1.SetDecoration(this.btnSystemMonitor, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnSystemMonitor.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSystemMonitor.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSystemMonitor.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSystemMonitor.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSystemMonitor.FillColor = System.Drawing.Color.Transparent;
+            this.btnSystemMonitor.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSystemMonitor.ForeColor = System.Drawing.Color.White;
+            this.btnSystemMonitor.Image = global::EvolveSettings.Properties.Resources.sys_monitor;
+            this.btnSystemMonitor.ImageOffset = new System.Drawing.Point(1, 0);
+            this.btnSystemMonitor.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnSystemMonitor.Location = new System.Drawing.Point(138, 8);
+            this.btnSystemMonitor.Name = "btnSystemMonitor";
+            this.btnSystemMonitor.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnSystemMonitor.Size = new System.Drawing.Size(42, 42);
+            this.btnSystemMonitor.TabIndex = 1057;
+            this.btnSystemMonitor.Click += new System.EventHandler(this.btnSystemMonitor_Click);
             // 
             // MainForm
             // 
@@ -816,9 +825,9 @@ namespace EvolveSettings
         private Guna.UI2.WinForms.Guna2ShadowPanel pnlFlyOut;
         private System.Windows.Forms.Label lblLength;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnSystemMonitor;
         private Guna.UI2.WinForms.Guna2Transition guna2Transition1;
         private Guna.UI2.WinForms.Guna2Transition guna2Transition2;
         private CustomControls.EvolveControls.EvolveButton btnMaximize;
+        private Guna.UI2.WinForms.Guna2CircleButton btnSystemMonitor;
     }
 }

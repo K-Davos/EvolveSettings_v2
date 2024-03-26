@@ -2,9 +2,7 @@
 using Microsoft.Win32;
 using System;
 using System.Data;
-using System.Data.Common;
 using System.Data.SqlClient;
-using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -176,7 +174,7 @@ namespace EvolveSettings
             }
             else
             {
-                if (connect.State != ConnectionState.Open && attempts <4)
+                if (connect.State != ConnectionState.Open && attempts < 4)
                 {
                     try
                     {
@@ -216,7 +214,7 @@ namespace EvolveSettings
                             }
                             else
                             {
-                                EvolveMessageBox.Show("The username or password is incorrect. Please try again. Number of login attempts: " +attempts, "Failed to login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                EvolveMessageBox.Show("The username or password is incorrect. Please try again. Number of login attempts: " + attempts, "Failed to login", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
                     }

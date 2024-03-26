@@ -102,9 +102,18 @@ namespace EvolveSettings.Forms
             else
             {
                 //dark
-                this.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
-                pnlHeader.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
-                pnlGridView.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
+                if (OptionsHelper.CurrentOptions.BlurEffect == true)
+                {
+                    this.BackColor = Color.Black;
+                    pnlHeader.BackColor = Color.Black;
+                    pnlGridView.FillColor = Color.Transparent;
+                }
+                else
+                {
+                    this.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
+                    pnlHeader.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
+                    pnlGridView.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
+                }
                 pnlPwValidation.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
                 pnlUserInfo.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
                 pnlEditRecord.FillColor = ColorTranslator.FromHtml("#FF1F1F20");

@@ -5,12 +5,10 @@ using Microsoft.Win32;
 using System;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Drawing.Printing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using static EvolveSettings.EffectBlur;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace EvolveSettings
 {
@@ -40,8 +38,8 @@ namespace EvolveSettings
             InitializeComponent();
         }
 
-            public MainForm(String usrname)
-            {
+        public MainForm(String usrname)
+        {
             InitializeComponent();
             lblCurrentUser.Text = usrname;
 
@@ -297,6 +295,7 @@ namespace EvolveSettings
                 pnlFlyOut.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
                 lblLength.ForeColor = Color.White;
                 btnMaximize.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
+                btnSystemMonitor.HoverState.FillColor = themeColor;
                 btnCloseApp.Image = EvolveSettings.Properties.Resources.quit;
                 btnMaximize.Image = EvolveSettings.Properties.Resources.maximize;
                 btnMinimize.Image = EvolveSettings.Properties.Resources.minimize;
@@ -556,7 +555,7 @@ namespace EvolveSettings
 
         private void btnFlyOutPanel_Click(object sender, EventArgs e)
         {
-                FlyOutPanel();
+            FlyOutPanel();
         }
 
         private void FlyOutPanel()

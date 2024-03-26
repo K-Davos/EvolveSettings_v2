@@ -141,7 +141,7 @@ namespace EvolveSettings.Forms
         private void cleanDriveB_Click(object sender, EventArgs e)
         {
             if (EvolveMessageBox.Show("Are you sure you want to remove all the selected files? Total disk space will be cleaned: " + lblFootprint.Text, "Pc Cleaner", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-            { 
+            {
                 CleanPC();
                 EvolveMessageBox.Show("Files have been successfully deleted!");
             }

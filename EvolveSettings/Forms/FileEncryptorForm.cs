@@ -1,8 +1,6 @@
-﻿using EvolveSettings.Helpers;
-using Guna.UI2.WinForms;
+﻿using Guna.UI2.WinForms;
 using Microsoft.Win32;
 using System;
-using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
