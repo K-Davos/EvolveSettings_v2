@@ -24,7 +24,13 @@ namespace EvolveSettings
             ScriptsFolder + "GameModeOFF.cmd",
             ScriptsFolder + "GameModeON.cmd",
             ScriptsFolder + "EvolvePerformance.bat",
-            ScriptsFolder + "EvolvePowerSaving.bat"
+            ScriptsFolder + "EvolvePowerSaving.bat",
+            ScriptsFolder + "DisableOfficeTelemetry.reg",
+            ScriptsFolder + "DisableOfficeTelemetryTasks.bat",
+            ScriptsFolder + "EnableOfficeTelemetry.reg",
+            ScriptsFolder + "EnableOfficeTelemetryTasks.bat",
+            ScriptsFolder + "DisableTelemetryTasks.bat",
+            ScriptsFolder + "EnableTelemetryTasks.bat"
         };
 
         readonly static string[] scriptFiles =
@@ -32,7 +38,13 @@ namespace EvolveSettings
             Properties.Resources.GameModeOFF,
             Properties.Resources.GameModeON,
             Properties.Resources.EvolvePerformance,
-            Properties.Resources.EvolvePowerSaving
+            Properties.Resources.EvolvePowerSaving,
+            Properties.Resources.DisableOfficeTelemetry,
+            Properties.Resources.DisableOfficeTelemetryTasks,
+            Properties.Resources.EnableOfficeTelemetry,
+            Properties.Resources.EnableOfficeTelemetryTasks,
+            Properties.Resources.DisableTelemetryTasks,
+            Properties.Resources.EnableTelemetryTasks
         };
 
         internal static void Deploy()

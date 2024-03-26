@@ -19,6 +19,17 @@ namespace EvolveSettings.Models
         public bool InsiderService { get; set; }
         public bool MsStoreUpdates { get; set; }
         public bool BlurEffect { get; set; }
+        public bool TelemetryServices { get; set; }
+        public bool TelemetryTasks { get; set; }
+        public bool EnhancePrivacy { get; set; }
+        public bool EdgeTelemetry { get; set; }
+        public bool EdgeDiscover { get; set; }
+        public bool ChromeTelemetry { get; set; }
+        public bool StartMenuAds { get; set; }
+        public bool Cortana { get; set; }
+        public bool HomeGroup { get; set; }
+        public bool NvidiaTelemetry { get; set; }
+        public bool MsOfficeTelemetry { get; set; }
     }
     public class GenerateConfig
     {

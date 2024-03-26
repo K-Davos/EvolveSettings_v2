@@ -504,6 +504,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\add.png" />
+    <None Include="Resources\Assets\DisableOfficeTelemetry.reg" />
+    <None Include="Resources\Assets\DisableOfficeTelemetryTasks.bat" />
+    <None Include="Resources\Assets\DisableTelemetryTasks.bat" />
+    <None Include="Resources\Assets\EnableOfficeTelemetry.reg" />
+    <None Include="Resources\Assets\EnableOfficeTelemetryTasks.bat" />
+    <None Include="Resources\Assets\EnableTelemetryTasks.bat" />
     <None Include="Resources\Assets\EvolvePerformance.cmd" />
     <None Include="Resources\Assets\EvolvePowerSaving.cmd" />
     <None Include="Resources\Assets\GameModeOFF.cmd" />

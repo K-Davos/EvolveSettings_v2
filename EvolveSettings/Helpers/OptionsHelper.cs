@@ -52,6 +52,17 @@ namespace EvolveSettings
                 CurrentOptions.InsiderService = false;
                 CurrentOptions.MsStoreUpdates = false;
                 CurrentOptions.BlurEffect = false;
+                CurrentOptions.TelemetryServices = false;
+                CurrentOptions.TelemetryTasks = false;
+                CurrentOptions.EnhancePrivacy = false;
+                CurrentOptions.EdgeTelemetry = false;
+                CurrentOptions.EdgeDiscover = false;
+                CurrentOptions.ChromeTelemetry = false;
+                CurrentOptions.StartMenuAds = false;
+                CurrentOptions.Cortana = false;
+                CurrentOptions.HomeGroup = false;
+                CurrentOptions.NvidiaTelemetry = false;
+                CurrentOptions.MsOfficeTelemetry = false;
 
                 using (FileStream fs = File.Open(SettingsFile, FileMode.CreateNew))
                 using (StreamWriter sw = new StreamWriter(fs))

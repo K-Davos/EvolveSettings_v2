@@ -131,12 +131,124 @@ namespace EvolveSettings.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Windows Registry Editor Version 5.00
+        ///
+        ///[HKEY_CURRENT_USER\Software\Policies\microsoft\office\16.0\osm\preventedapplications]
+        ///&quot;accesssolution&quot;=dword:00000001
+        ///&quot;olksolution&quot;=dword:00000001
+        ///&quot;onenotesolution&quot;=dword:00000001
+        ///&quot;pptsolution&quot;=dword:00000001
+        ///&quot;projectsolution&quot;=dword:00000001
+        ///&quot;publishersolution&quot;=dword:00000001
+        ///&quot;visiosolution&quot;=dword:00000001
+        ///&quot;wdsolution&quot;=dword:00000001
+        ///&quot;xlsolution&quot;=dword:00000001
+        ///
+        ///[HKEY_CURRENT_USER\Software\Policies\microsoft\office\16.0\osm\preventedsolutiontypes]
+        ///&quot;agave&quot;= [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string DisableOfficeTelemetry {
+            get {
+                return ResourceManager.GetString("DisableOfficeTelemetry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to schtasks /end /tn &quot;\Microsoft\Office\OfficeTelemetryAgentFallBack2016&quot;
+        ///schtasks /change /tn &quot;\Microsoft\Office\OfficeTelemetryAgentFallBack2016&quot; /disable
+        ///schtasks /end /tn &quot;\Microsoft\Office\OfficeTelemetryAgentLogOn2016&quot;
+        ///schtasks /change /tn &quot;\Microsoft\Office\OfficeTelemetryAgentLogOn2016&quot; /disable
+        ///
+        ///schtasks /end /tn &quot;\Microsoft\Office\OfficeTelemetryAgentFallBack&quot;
+        ///schtasks /change /tn &quot;\Microsoft\Office\OfficeTelemetryAgentFallBack&quot; /disable
+        ///schtasks /end /tn &quot;\Microsoft\Office\OfficeTelemetryAgen [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string DisableOfficeTelemetryTasks {
+            get {
+                return ResourceManager.GetString("DisableOfficeTelemetryTasks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to @echo off
+        ///schtasks /end /tn &quot;\Microsoft\Windows\Customer Experience Improvement Program\Consolidator&quot;
+        ///schtasks /change /tn &quot;\Microsoft\Windows\Customer Experience Improvement Program\Consolidator&quot; /disable
+        ///schtasks /end /tn &quot;\Microsoft\Windows\Customer Experience Improvement Program\BthSQM&quot;
+        ///schtasks /change /tn &quot;\Microsoft\Windows\Customer Experience Improvement Program\BthSQM&quot; /disable
+        ///schtasks /end /tn &quot;\Microsoft\Windows\Customer Experience Improvement Program\KernelCeipTask&quot;
+        ///schtasks /change /tn &quot; [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string DisableTelemetryTasks {
+            get {
+                return ResourceManager.GetString("DisableTelemetryTasks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap edit {
             get {
                 object obj = ResourceManager.GetObject("edit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Windows Registry Editor Version 5.00
+        ///
+        ///[HKEY_CURRENT_USER\Software\Policies\microsoft\office\16.0\osm\preventedapplications]
+        ///&quot;accesssolution&quot;=-
+        ///&quot;olksolution&quot;=-
+        ///&quot;onenotesolution&quot;=-
+        ///&quot;pptsolution&quot;=-
+        ///&quot;projectsolution&quot;=-
+        ///&quot;publishersolution&quot;=-
+        ///&quot;visiosolution&quot;=-
+        ///&quot;wdsolution&quot;=-
+        ///&quot;xlsolution&quot;=-
+        ///
+        ///[HKEY_CURRENT_USER\Software\Policies\microsoft\office\16.0\osm\preventedsolutiontypes]
+        ///&quot;agave&quot;=-
+        ///&quot;appaddins&quot;=-
+        ///&quot;comaddins&quot;=-
+        ///&quot;documentfiles&quot;=-
+        ///&quot;templatefiles&quot;=-
+        ///.
+        /// </summary>
+        internal static string EnableOfficeTelemetry {
+            get {
+                return ResourceManager.GetString("EnableOfficeTelemetry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to schtasks /change /tn &quot;\Microsoft\Office\OfficeTelemetryAgentFallBack2016&quot; /enable
+        ///schtasks /change /tn &quot;\Microsoft\Office\OfficeTelemetryAgentLogOn2016&quot; /enable
+        ///
+        ///schtasks /change /tn &quot;\Microsoft\Office\OfficeTelemetryAgentFallBack&quot; /enable
+        ///schtasks /change /tn &quot;\Microsoft\Office\OfficeTelemetryAgentLogOn&quot; /enable
+        ///
+        ///reg add &quot;HKCU\SOFTWARE\Microsoft\Office\15.0\Outlook\Options\Mail&quot; /v &quot;EnableLogging&quot; /t REG_DWORD /d 1 /f
+        ///reg add &quot;HKCU\SOFTWARE\Microsoft\Office\16.0\Outlook\Options\Mail&quot; /v &quot;EnableLoggi [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string EnableOfficeTelemetryTasks {
+            get {
+                return ResourceManager.GetString("EnableOfficeTelemetryTasks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to @echo off
+        ///schtasks /change /tn &quot;\Microsoft\Windows\Customer Experience Improvement Program\Consolidator&quot; /enable
+        ///schtasks /change /tn &quot;\Microsoft\Windows\Customer Experience Improvement Program\BthSQM&quot; /enable
+        ///schtasks /change /tn &quot;\Microsoft\Windows\Customer Experience Improvement Program\KernelCeipTask&quot; /enable
+        ///schtasks /change /tn &quot;\Microsoft\Windows\Customer Experience Improvement Program\UsbCeip&quot; /enable
+        ///schtasks /change /tn &quot;\Microsoft\Windows\Customer Experience Improvement Program\Uploader&quot; /en [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string EnableTelemetryTasks {
+            get {
+                return ResourceManager.GetString("EnableTelemetryTasks", resourceCulture);
             }
         }
         
