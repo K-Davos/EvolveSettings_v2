@@ -245,6 +245,9 @@
     <Compile Include="ByteSize\ByteSize.cs" />
     <Compile Include="ByteSize\DecimalByteSize.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="Controls\EvolveButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Controls\EvolveListView.cs">
       <SubType>Component</SubType>
     </Compile>

@@ -5,10 +5,12 @@ using Microsoft.Win32;
 using System;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using static EvolveSettings.EffectBlur;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace EvolveSettings
 {
@@ -283,9 +285,10 @@ namespace EvolveSettings
             {
                 //dark
                 this.BackColor = themeColor;//Border color
-                if (OptionsHelper.CurrentOptions.BlurEffect = true)
+                if (OptionsHelper.CurrentOptions.BlurEffect == true)
                 {
                     pnlHeader.BackColor = Color.Black;
+                    btnMaximize.BackColor = Color.Transparent;
                 }
                 else
                 {
@@ -293,6 +296,7 @@ namespace EvolveSettings
                 }
                 pnlFlyOut.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
                 lblLength.ForeColor = Color.White;
+                btnMaximize.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
                 btnCloseApp.Image = EvolveSettings.Properties.Resources.quit;
                 btnMaximize.Image = EvolveSettings.Properties.Resources.maximize;
                 btnMinimize.Image = EvolveSettings.Properties.Resources.minimize;
@@ -531,6 +535,8 @@ namespace EvolveSettings
                 trackBarBlur.Enabled = true;
                 pictureBoxProfile.BackColor = Color.Transparent;
                 this.BackColor = Color.Black; //Border Color
+                pnlHeader.BackColor = Color.Black;
+                btnMaximize.BackColor = Color.Transparent;
                 foreach (Guna2Button button in this.pnlNav.Controls.OfType<Guna2Button>())
                 {
                     button.FillColor = Color.Transparent;
