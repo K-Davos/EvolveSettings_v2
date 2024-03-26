@@ -248,6 +248,9 @@
     <Compile Include="Controls\EvolveButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Controls\EvolveExtendedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Controls\EvolveListView.cs">
       <SubType>Component</SubType>
     </Compile>

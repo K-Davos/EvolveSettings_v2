@@ -30,9 +30,9 @@ namespace EvolveSettings
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation15 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation6 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation5 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            Guna.UI2.AnimatorNS.Animation animation16 = new Guna.UI2.AnimatorNS.Animation();
             this.lblCurrentUser = new System.Windows.Forms.Label();
             this.pnlNav = new System.Windows.Forms.Panel();
             this.btnFileEncryptor = new Guna.UI2.WinForms.Guna2Button();
@@ -57,9 +57,11 @@ namespace EvolveSettings
             this.trackBarBlur = new Guna.UI2.WinForms.Guna2TrackBar();
             this.lblBlurEffect = new System.Windows.Forms.Label();
             this.panelMain = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnMaximize = new CustomControls.EvolveControls.EvolveButton();
             this.pnlFlyOut = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSystemMonitor = new System.Windows.Forms.Button();
+            this.toggleBlurEffect = new EvolveSettings.Controls.EvolveToggleButton();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.btnFlyOutPanel = new System.Windows.Forms.Button();
             this.btnMinimize = new System.Windows.Forms.Button();
@@ -67,8 +69,6 @@ namespace EvolveSettings
             this.ShadowForm = new Guna.UI2.WinForms.Guna2ShadowForm(this.components);
             this.guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
             this.guna2Transition2 = new Guna.UI2.WinForms.Guna2Transition();
-            this.btnMaximize = new CustomControls.EvolveControls.EvolveButton();
-            this.toggleBlurEffect = new EvolveSettings.Controls.EvolveToggleButton();
             this.pnlNav.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProfile)).BeginInit();
@@ -556,6 +556,28 @@ namespace EvolveSettings
             this.panelMain.Size = new System.Drawing.Size(1262, 782);
             this.panelMain.TabIndex = 8;
             // 
+            // btnMaximize
+            // 
+            this.btnMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMaximize.BackColor = System.Drawing.Color.Transparent;
+            this.btnMaximize.BackgroundColor = System.Drawing.Color.Transparent;
+            this.btnMaximize.BorderColor = System.Drawing.Color.Transparent;
+            this.btnMaximize.BorderRadius = 0;
+            this.btnMaximize.BorderSize = 0;
+            this.guna2Transition1.SetDecoration(this.btnMaximize, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Transition2.SetDecoration(this.btnMaximize, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnMaximize.FlatAppearance.BorderSize = 0;
+            this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaximize.ForeColor = System.Drawing.Color.Transparent;
+            this.btnMaximize.Image = global::EvolveSettings.Properties.Resources.maximize;
+            this.btnMaximize.Location = new System.Drawing.Point(1162, 0);
+            this.btnMaximize.Name = "btnMaximize";
+            this.btnMaximize.Size = new System.Drawing.Size(48, 42);
+            this.btnMaximize.TabIndex = 1023;
+            this.btnMaximize.TextColor = System.Drawing.Color.Transparent;
+            this.btnMaximize.UseVisualStyleBackColor = false;
+            this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
+            // 
             // pnlFlyOut
             // 
             this.pnlFlyOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -604,6 +626,23 @@ namespace EvolveSettings
             this.btnSystemMonitor.TabIndex = 1055;
             this.btnSystemMonitor.UseVisualStyleBackColor = true;
             this.btnSystemMonitor.Click += new System.EventHandler(this.btnSystemMonitor_Click);
+            // 
+            // toggleBlurEffect
+            // 
+            this.toggleBlurEffect.AutoSize = true;
+            this.guna2Transition2.SetDecoration(this.toggleBlurEffect, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2Transition1.SetDecoration(this.toggleBlurEffect, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.toggleBlurEffect.Location = new System.Drawing.Point(138, 53);
+            this.toggleBlurEffect.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleBlurEffect.Name = "toggleBlurEffect";
+            this.toggleBlurEffect.OffBackColor = System.Drawing.Color.Gray;
+            this.toggleBlurEffect.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.toggleBlurEffect.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.toggleBlurEffect.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.toggleBlurEffect.Size = new System.Drawing.Size(45, 22);
+            this.toggleBlurEffect.TabIndex = 1019;
+            this.toggleBlurEffect.UseVisualStyleBackColor = true;
+            this.toggleBlurEffect.CheckedChanged += new System.EventHandler(this.toggleBlurEffect_CheckedChanged);
             // 
             // pnlHeader
             // 
@@ -677,82 +716,43 @@ namespace EvolveSettings
             // 
             this.guna2Transition1.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Scale;
             this.guna2Transition1.Cursor = null;
-            animation15.AnimateOnlyDifferences = true;
-            animation15.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation15.BlindCoeff")));
-            animation15.LeafCoeff = 0F;
-            animation15.MaxTime = 1F;
-            animation15.MinTime = 0F;
-            animation15.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation15.MosaicCoeff")));
-            animation15.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation15.MosaicShift")));
-            animation15.MosaicSize = 0;
-            animation15.Padding = new System.Windows.Forms.Padding(0);
-            animation15.RotateCoeff = 0F;
-            animation15.RotateLimit = 0F;
-            animation15.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation15.ScaleCoeff")));
-            animation15.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation15.SlideCoeff")));
-            animation15.TimeCoeff = 0F;
-            animation15.TransparencyCoeff = 0F;
-            this.guna2Transition1.DefaultAnimation = animation15;
+            animation6.AnimateOnlyDifferences = true;
+            animation6.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.BlindCoeff")));
+            animation6.LeafCoeff = 0F;
+            animation6.MaxTime = 1F;
+            animation6.MinTime = 0F;
+            animation6.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicCoeff")));
+            animation6.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicShift")));
+            animation6.MosaicSize = 0;
+            animation6.Padding = new System.Windows.Forms.Padding(0);
+            animation6.RotateCoeff = 0F;
+            animation6.RotateLimit = 0F;
+            animation6.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.ScaleCoeff")));
+            animation6.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.SlideCoeff")));
+            animation6.TimeCoeff = 0F;
+            animation6.TransparencyCoeff = 0F;
+            this.guna2Transition1.DefaultAnimation = animation6;
             // 
             // guna2Transition2
             // 
             this.guna2Transition2.AnimationType = Guna.UI2.AnimatorNS.AnimationType.Scale;
             this.guna2Transition2.Cursor = null;
-            animation16.AnimateOnlyDifferences = true;
-            animation16.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation16.BlindCoeff")));
-            animation16.LeafCoeff = 0F;
-            animation16.MaxTime = 1F;
-            animation16.MinTime = 0F;
-            animation16.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation16.MosaicCoeff")));
-            animation16.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation16.MosaicShift")));
-            animation16.MosaicSize = 0;
-            animation16.Padding = new System.Windows.Forms.Padding(0);
-            animation16.RotateCoeff = 0F;
-            animation16.RotateLimit = 0F;
-            animation16.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation16.ScaleCoeff")));
-            animation16.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation16.SlideCoeff")));
-            animation16.TimeCoeff = 0F;
-            animation16.TransparencyCoeff = 0F;
-            this.guna2Transition2.DefaultAnimation = animation16;
-            // 
-            // btnMaximize
-            // 
-            this.btnMaximize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaximize.BackColor = System.Drawing.Color.Transparent;
-            this.btnMaximize.BackgroundColor = System.Drawing.Color.Transparent;
-            this.btnMaximize.BorderColor = System.Drawing.Color.Transparent;
-            this.btnMaximize.BorderRadius = 0;
-            this.btnMaximize.BorderSize = 0;
-            this.guna2Transition1.SetDecoration(this.btnMaximize, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Transition2.SetDecoration(this.btnMaximize, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.btnMaximize.FlatAppearance.BorderSize = 0;
-            this.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaximize.ForeColor = System.Drawing.Color.Transparent;
-            this.btnMaximize.Image = global::EvolveSettings.Properties.Resources.maximize;
-            this.btnMaximize.Location = new System.Drawing.Point(1162, 0);
-            this.btnMaximize.Name = "btnMaximize";
-            this.btnMaximize.Size = new System.Drawing.Size(48, 42);
-            this.btnMaximize.TabIndex = 1023;
-            this.btnMaximize.TextColor = System.Drawing.Color.Transparent;
-            this.btnMaximize.UseVisualStyleBackColor = false;
-            this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
-            // 
-            // toggleBlurEffect
-            // 
-            this.toggleBlurEffect.AutoSize = true;
-            this.guna2Transition2.SetDecoration(this.toggleBlurEffect, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Transition1.SetDecoration(this.toggleBlurEffect, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.toggleBlurEffect.Location = new System.Drawing.Point(138, 53);
-            this.toggleBlurEffect.MinimumSize = new System.Drawing.Size(45, 22);
-            this.toggleBlurEffect.Name = "toggleBlurEffect";
-            this.toggleBlurEffect.OffBackColor = System.Drawing.Color.Gray;
-            this.toggleBlurEffect.OffToggleColor = System.Drawing.Color.Gainsboro;
-            this.toggleBlurEffect.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.toggleBlurEffect.OnToggleColor = System.Drawing.Color.WhiteSmoke;
-            this.toggleBlurEffect.Size = new System.Drawing.Size(45, 22);
-            this.toggleBlurEffect.TabIndex = 1019;
-            this.toggleBlurEffect.UseVisualStyleBackColor = true;
-            this.toggleBlurEffect.CheckedChanged += new System.EventHandler(this.toggleBlurEffect_CheckedChanged);
+            animation5.AnimateOnlyDifferences = true;
+            animation5.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.BlindCoeff")));
+            animation5.LeafCoeff = 0F;
+            animation5.MaxTime = 1F;
+            animation5.MinTime = 0F;
+            animation5.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicCoeff")));
+            animation5.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicShift")));
+            animation5.MosaicSize = 0;
+            animation5.Padding = new System.Windows.Forms.Padding(0);
+            animation5.RotateCoeff = 0F;
+            animation5.RotateLimit = 0F;
+            animation5.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.ScaleCoeff")));
+            animation5.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.SlideCoeff")));
+            animation5.TimeCoeff = 0F;
+            animation5.TransparencyCoeff = 0F;
+            this.guna2Transition2.DefaultAnimation = animation5;
             // 
             // MainForm
             // 

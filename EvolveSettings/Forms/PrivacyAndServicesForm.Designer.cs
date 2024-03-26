@@ -33,60 +33,75 @@
             this.pnlMsStore = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.lblMsStore = new System.Windows.Forms.Label();
             this.lblMsStoreSum = new System.Windows.Forms.Label();
+            this.toggleMsStoreUpdate = new EvolveSettings.Controls.EvolveToggleButton();
             this.pnlInsiderService = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.lblInsiderService = new System.Windows.Forms.Label();
             this.lblInsiderServiceSum = new System.Windows.Forms.Label();
+            this.toggleInsiderService = new EvolveSettings.Controls.EvolveToggleButton();
             this.pnlExcludeDriverUpdates = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.lblExcludeDrivers = new System.Windows.Forms.Label();
             this.lblExcludeDriversSum = new System.Windows.Forms.Label();
+            this.toggleExcludeDrivers = new EvolveSettings.Controls.EvolveToggleButton();
             this.pnlWinUpdates = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.lblWinUpdate = new System.Windows.Forms.Label();
             this.lblWinUpdateSum = new System.Windows.Forms.Label();
+            this.toggleWinUpdate = new EvolveSettings.Controls.EvolveToggleButton();
             this.pnlBack = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
             this.pnlPrivacyPanel11 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.lblOfficeTelemetry = new System.Windows.Forms.Label();
             this.lblOfficeTelemetrySum = new System.Windows.Forms.Label();
+            this.toggleMsOfficeTelemetry = new EvolveSettings.Controls.EvolveToggleButton();
             this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
             this.pnlPrivacyPanel10 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.lblNvidiaTelemetry = new System.Windows.Forms.Label();
             this.lblNvidiaTelemetrySum = new System.Windows.Forms.Label();
+            this.toggleNvidiaTelemetry = new EvolveSettings.Controls.EvolveToggleButton();
             this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
             this.pnlPrivacyPanel9 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.lblCortana = new System.Windows.Forms.Label();
             this.lblCortanaSum = new System.Windows.Forms.Label();
+            this.toggleCortana = new EvolveSettings.Controls.EvolveToggleButton();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.pnlPrivacyPanel8 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.lblHomegroup = new System.Windows.Forms.Label();
             this.lblHomegroupSum = new System.Windows.Forms.Label();
+            this.toggleHomeGroup = new EvolveSettings.Controls.EvolveToggleButton();
             this.tableLayoutPanel10 = new System.Windows.Forms.TableLayoutPanel();
             this.pnlPrivacyPanel7 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.lblStartMenuAds = new System.Windows.Forms.Label();
             this.lblStartMenuAdsSum = new System.Windows.Forms.Label();
+            this.toggleStartMenuAds = new EvolveSettings.Controls.EvolveToggleButton();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.pnlPrivacyPanel6 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.lblChromeTelemetry = new System.Windows.Forms.Label();
             this.lblChromeTelemetrySum = new System.Windows.Forms.Label();
+            this.toggleChromeTelemetry = new EvolveSettings.Controls.EvolveToggleButton();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
             this.pnlPrivacyPanel5 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.lblEdgeDiscover = new System.Windows.Forms.Label();
             this.lblEdgeDiscoverSum = new System.Windows.Forms.Label();
+            this.toggleEdgeDiscover = new EvolveSettings.Controls.EvolveToggleButton();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.pnlPrivacyPanel4 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.lblEdgeTelemetry = new System.Windows.Forms.Label();
             this.lblEdgeTelemetrySum = new System.Windows.Forms.Label();
+            this.toggleEdgeTelemetry = new EvolveSettings.Controls.EvolveToggleButton();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.pnlPrivacyPanel3 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.lblEnhancedPrivacy = new System.Windows.Forms.Label();
             this.lblEnhancedPrivacySum = new System.Windows.Forms.Label();
+            this.toggleEnhancePrivacy = new EvolveSettings.Controls.EvolveToggleButton();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.pnlPrivacyPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.lblTelemetryTasks = new System.Windows.Forms.Label();
             this.lblTelemetryTasksSum = new System.Windows.Forms.Label();
+            this.toggleDisableTelemetryTasks = new EvolveSettings.Controls.EvolveToggleButton();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
             this.pnlPrivacyPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.lblTelemetryServices = new System.Windows.Forms.Label();
             this.lblTelemetryServicesSum = new System.Windows.Forms.Label();
+            this.toggleDisableTelemetryServ = new EvolveSettings.Controls.EvolveToggleButton();
             this.lblPrivacyHeader = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -94,21 +109,6 @@
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.lblWinUpdateHeader = new System.Windows.Forms.Label();
             this.scrollBarBackPanel = new Guna.UI2.WinForms.Guna2VScrollBar();
-            this.toggleMsOfficeTelemetry = new EvolveSettings.Controls.EvolveToggleButton();
-            this.toggleNvidiaTelemetry = new EvolveSettings.Controls.EvolveToggleButton();
-            this.toggleCortana = new EvolveSettings.Controls.EvolveToggleButton();
-            this.toggleHomeGroup = new EvolveSettings.Controls.EvolveToggleButton();
-            this.toggleStartMenuAds = new EvolveSettings.Controls.EvolveToggleButton();
-            this.toggleChromeTelemetry = new EvolveSettings.Controls.EvolveToggleButton();
-            this.toggleEdgeDiscover = new EvolveSettings.Controls.EvolveToggleButton();
-            this.toggleEdgeTelemetry = new EvolveSettings.Controls.EvolveToggleButton();
-            this.toggleEnhancePrivacy = new EvolveSettings.Controls.EvolveToggleButton();
-            this.toggleDisableTelemetryTasks = new EvolveSettings.Controls.EvolveToggleButton();
-            this.toggleDisableTelemetryServ = new EvolveSettings.Controls.EvolveToggleButton();
-            this.toggleMsStoreUpdate = new EvolveSettings.Controls.EvolveToggleButton();
-            this.toggleInsiderService = new EvolveSettings.Controls.EvolveToggleButton();
-            this.toggleExcludeDrivers = new EvolveSettings.Controls.EvolveToggleButton();
-            this.toggleWinUpdate = new EvolveSettings.Controls.EvolveToggleButton();
             this.pnlHeader.SuspendLayout();
             this.pnlMsStore.SuspendLayout();
             this.pnlInsiderService.SuspendLayout();
@@ -207,6 +207,22 @@
             this.lblMsStoreSum.TabIndex = 13;
             this.lblMsStoreSum.Text = "Disable Microsoft Store automatic updates";
             // 
+            // toggleMsStoreUpdate
+            // 
+            this.toggleMsStoreUpdate.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.toggleMsStoreUpdate.AutoSize = true;
+            this.toggleMsStoreUpdate.Location = new System.Drawing.Point(1158, 22);
+            this.toggleMsStoreUpdate.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleMsStoreUpdate.Name = "toggleMsStoreUpdate";
+            this.toggleMsStoreUpdate.OffBackColor = System.Drawing.Color.Gray;
+            this.toggleMsStoreUpdate.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.toggleMsStoreUpdate.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.toggleMsStoreUpdate.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.toggleMsStoreUpdate.Size = new System.Drawing.Size(45, 22);
+            this.toggleMsStoreUpdate.TabIndex = 23;
+            this.toggleMsStoreUpdate.UseVisualStyleBackColor = true;
+            this.toggleMsStoreUpdate.CheckedChanged += new System.EventHandler(this.ToggleMsStoreUpdate_CheckedChanged);
+            // 
             // pnlInsiderService
             // 
             this.pnlInsiderService.BackColor = System.Drawing.Color.Transparent;
@@ -251,6 +267,22 @@
     " the public. It\'s considered an unnecesaary service for some users who don\'t wis" +
     "h to participate. ";
             // 
+            // toggleInsiderService
+            // 
+            this.toggleInsiderService.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.toggleInsiderService.AutoSize = true;
+            this.toggleInsiderService.Location = new System.Drawing.Point(1158, 22);
+            this.toggleInsiderService.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleInsiderService.Name = "toggleInsiderService";
+            this.toggleInsiderService.OffBackColor = System.Drawing.Color.Gray;
+            this.toggleInsiderService.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.toggleInsiderService.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.toggleInsiderService.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.toggleInsiderService.Size = new System.Drawing.Size(45, 22);
+            this.toggleInsiderService.TabIndex = 28;
+            this.toggleInsiderService.UseVisualStyleBackColor = true;
+            this.toggleInsiderService.CheckedChanged += new System.EventHandler(this.ToggleInsiderService_CheckedChanged);
+            // 
             // pnlExcludeDriverUpdates
             // 
             this.pnlExcludeDriverUpdates.BackColor = System.Drawing.Color.Transparent;
@@ -293,6 +325,22 @@
             this.lblExcludeDriversSum.TabIndex = 13;
             this.lblExcludeDriversSum.Text = "This is useful when windows update constantly replaces a properly working driver " +
     "with a faulty one.";
+            // 
+            // toggleExcludeDrivers
+            // 
+            this.toggleExcludeDrivers.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.toggleExcludeDrivers.AutoSize = true;
+            this.toggleExcludeDrivers.Location = new System.Drawing.Point(1158, 22);
+            this.toggleExcludeDrivers.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleExcludeDrivers.Name = "toggleExcludeDrivers";
+            this.toggleExcludeDrivers.OffBackColor = System.Drawing.Color.Gray;
+            this.toggleExcludeDrivers.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.toggleExcludeDrivers.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.toggleExcludeDrivers.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.toggleExcludeDrivers.Size = new System.Drawing.Size(45, 22);
+            this.toggleExcludeDrivers.TabIndex = 19;
+            this.toggleExcludeDrivers.UseVisualStyleBackColor = true;
+            this.toggleExcludeDrivers.CheckedChanged += new System.EventHandler(this.ToggleExcludeDrivers_CheckedChanged);
             // 
             // pnlWinUpdates
             // 
@@ -337,6 +385,23 @@
             this.lblWinUpdateSum.Text = "Disable automatic downloading and installation of Windows updates. A notification" +
     " is shown when new updates are available. This will also disable the delivery op" +
     "timization service";
+            // 
+            // toggleWinUpdate
+            // 
+            this.toggleWinUpdate.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.toggleWinUpdate.AutoSize = true;
+            this.toggleWinUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.toggleWinUpdate.Location = new System.Drawing.Point(1158, 22);
+            this.toggleWinUpdate.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleWinUpdate.Name = "toggleWinUpdate";
+            this.toggleWinUpdate.OffBackColor = System.Drawing.Color.Gray;
+            this.toggleWinUpdate.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.toggleWinUpdate.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.toggleWinUpdate.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.toggleWinUpdate.Size = new System.Drawing.Size(45, 22);
+            this.toggleWinUpdate.TabIndex = 15;
+            this.toggleWinUpdate.UseVisualStyleBackColor = true;
+            this.toggleWinUpdate.CheckedChanged += new System.EventHandler(this.ToggleWinUpdate_CheckedChanged);
             // 
             // pnlBack
             // 
@@ -433,6 +498,22 @@
             this.lblOfficeTelemetrySum.Text = "Office telemetry sends periodically usage and performance data to Microsoft for f" +
     "uture improvements";
             // 
+            // toggleMsOfficeTelemetry
+            // 
+            this.toggleMsOfficeTelemetry.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.toggleMsOfficeTelemetry.AutoSize = true;
+            this.toggleMsOfficeTelemetry.Location = new System.Drawing.Point(1158, 22);
+            this.toggleMsOfficeTelemetry.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleMsOfficeTelemetry.Name = "toggleMsOfficeTelemetry";
+            this.toggleMsOfficeTelemetry.OffBackColor = System.Drawing.Color.Gray;
+            this.toggleMsOfficeTelemetry.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.toggleMsOfficeTelemetry.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.toggleMsOfficeTelemetry.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.toggleMsOfficeTelemetry.Size = new System.Drawing.Size(45, 22);
+            this.toggleMsOfficeTelemetry.TabIndex = 28;
+            this.toggleMsOfficeTelemetry.UseVisualStyleBackColor = true;
+            this.toggleMsOfficeTelemetry.CheckedChanged += new System.EventHandler(this.ToggleMsOfficeTelemetry_CheckedChanged);
+            // 
             // tableLayoutPanel15
             // 
             this.tableLayoutPanel15.AutoSize = true;
@@ -493,6 +574,22 @@
             this.lblNvidiaTelemetrySum.Size = new System.Drawing.Size(177, 13);
             this.lblNvidiaTelemetrySum.TabIndex = 13;
             this.lblNvidiaTelemetrySum.Text = "Disables Nvidia telemetry services";
+            // 
+            // toggleNvidiaTelemetry
+            // 
+            this.toggleNvidiaTelemetry.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.toggleNvidiaTelemetry.AutoSize = true;
+            this.toggleNvidiaTelemetry.Location = new System.Drawing.Point(1158, 22);
+            this.toggleNvidiaTelemetry.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleNvidiaTelemetry.Name = "toggleNvidiaTelemetry";
+            this.toggleNvidiaTelemetry.OffBackColor = System.Drawing.Color.Gray;
+            this.toggleNvidiaTelemetry.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.toggleNvidiaTelemetry.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.toggleNvidiaTelemetry.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.toggleNvidiaTelemetry.Size = new System.Drawing.Size(45, 22);
+            this.toggleNvidiaTelemetry.TabIndex = 19;
+            this.toggleNvidiaTelemetry.UseVisualStyleBackColor = true;
+            this.toggleNvidiaTelemetry.CheckedChanged += new System.EventHandler(this.ToggleNvidiaTelemetry_CheckedChanged);
             // 
             // tableLayoutPanel16
             // 
@@ -555,6 +652,23 @@
             this.lblCortanaSum.TabIndex = 13;
             this.lblCortanaSum.Text = "Cortana is a virtual AI-based assistant. Disabling Cortana, disables web search i" +
     "n the Start Menu, prevents from storing search history";
+            // 
+            // toggleCortana
+            // 
+            this.toggleCortana.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.toggleCortana.AutoSize = true;
+            this.toggleCortana.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.toggleCortana.Location = new System.Drawing.Point(1158, 22);
+            this.toggleCortana.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleCortana.Name = "toggleCortana";
+            this.toggleCortana.OffBackColor = System.Drawing.Color.Gray;
+            this.toggleCortana.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.toggleCortana.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.toggleCortana.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.toggleCortana.Size = new System.Drawing.Size(45, 22);
+            this.toggleCortana.TabIndex = 15;
+            this.toggleCortana.UseVisualStyleBackColor = true;
+            this.toggleCortana.CheckedChanged += new System.EventHandler(this.ToggleCortana_CheckedChanged);
             // 
             // tableLayoutPanel9
             // 
@@ -621,6 +735,22 @@
             this.lblHomegroupSum.Text = "Homegroup is a feature which allows to share files on a home network using Window" +
     "s Explorer";
             // 
+            // toggleHomeGroup
+            // 
+            this.toggleHomeGroup.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.toggleHomeGroup.AutoSize = true;
+            this.toggleHomeGroup.Location = new System.Drawing.Point(1158, 22);
+            this.toggleHomeGroup.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleHomeGroup.Name = "toggleHomeGroup";
+            this.toggleHomeGroup.OffBackColor = System.Drawing.Color.Gray;
+            this.toggleHomeGroup.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.toggleHomeGroup.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.toggleHomeGroup.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.toggleHomeGroup.Size = new System.Drawing.Size(45, 22);
+            this.toggleHomeGroup.TabIndex = 23;
+            this.toggleHomeGroup.UseVisualStyleBackColor = true;
+            this.toggleHomeGroup.CheckedChanged += new System.EventHandler(this.ToggleHomeGroup_CheckedChanged);
+            // 
             // tableLayoutPanel10
             // 
             this.tableLayoutPanel10.AutoSize = true;
@@ -681,6 +811,22 @@
             this.lblStartMenuAdsSum.Size = new System.Drawing.Size(295, 13);
             this.lblStartMenuAdsSum.TabIndex = 13;
             this.lblStartMenuAdsSum.Text = "Removes advertisement from showing in the Start Menu";
+            // 
+            // toggleStartMenuAds
+            // 
+            this.toggleStartMenuAds.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.toggleStartMenuAds.AutoSize = true;
+            this.toggleStartMenuAds.Location = new System.Drawing.Point(1158, 22);
+            this.toggleStartMenuAds.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleStartMenuAds.Name = "toggleStartMenuAds";
+            this.toggleStartMenuAds.OffBackColor = System.Drawing.Color.Gray;
+            this.toggleStartMenuAds.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.toggleStartMenuAds.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.toggleStartMenuAds.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.toggleStartMenuAds.Size = new System.Drawing.Size(45, 22);
+            this.toggleStartMenuAds.TabIndex = 28;
+            this.toggleStartMenuAds.UseVisualStyleBackColor = true;
+            this.toggleStartMenuAds.CheckedChanged += new System.EventHandler(this.ToggleStartMenuAds_CheckedChanged);
             // 
             // tableLayoutPanel11
             // 
@@ -744,6 +890,22 @@
             this.lblChromeTelemetrySum.Text = "Disable Google Chrome telemetry and the software reporting tool (known to cause h" +
     "igh CPU usage)";
             // 
+            // toggleChromeTelemetry
+            // 
+            this.toggleChromeTelemetry.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.toggleChromeTelemetry.AutoSize = true;
+            this.toggleChromeTelemetry.Location = new System.Drawing.Point(1158, 22);
+            this.toggleChromeTelemetry.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleChromeTelemetry.Name = "toggleChromeTelemetry";
+            this.toggleChromeTelemetry.OffBackColor = System.Drawing.Color.Gray;
+            this.toggleChromeTelemetry.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.toggleChromeTelemetry.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.toggleChromeTelemetry.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.toggleChromeTelemetry.Size = new System.Drawing.Size(45, 22);
+            this.toggleChromeTelemetry.TabIndex = 19;
+            this.toggleChromeTelemetry.UseVisualStyleBackColor = true;
+            this.toggleChromeTelemetry.CheckedChanged += new System.EventHandler(this.ToggleChromeTelemetry_CheckedChanged);
+            // 
             // tableLayoutPanel12
             // 
             this.tableLayoutPanel12.AutoSize = true;
@@ -804,6 +966,23 @@
             this.lblEdgeDiscoverSum.Size = new System.Drawing.Size(244, 13);
             this.lblEdgeDiscoverSum.TabIndex = 13;
             this.lblEdgeDiscoverSum.Text = "Removes the discover bar in the Edge browser";
+            // 
+            // toggleEdgeDiscover
+            // 
+            this.toggleEdgeDiscover.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.toggleEdgeDiscover.AutoSize = true;
+            this.toggleEdgeDiscover.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.toggleEdgeDiscover.Location = new System.Drawing.Point(1158, 22);
+            this.toggleEdgeDiscover.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleEdgeDiscover.Name = "toggleEdgeDiscover";
+            this.toggleEdgeDiscover.OffBackColor = System.Drawing.Color.Gray;
+            this.toggleEdgeDiscover.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.toggleEdgeDiscover.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.toggleEdgeDiscover.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.toggleEdgeDiscover.Size = new System.Drawing.Size(45, 22);
+            this.toggleEdgeDiscover.TabIndex = 15;
+            this.toggleEdgeDiscover.UseVisualStyleBackColor = true;
+            this.toggleEdgeDiscover.CheckedChanged += new System.EventHandler(this.ToggleEdgeDiscover_CheckedChanged);
             // 
             // tableLayoutPanel5
             // 
@@ -869,6 +1048,22 @@
             this.lblEdgeTelemetrySum.TabIndex = 13;
             this.lblEdgeTelemetrySum.Text = "Disables Smartscreen, Spotlight and telemetry services in the Edge browser";
             // 
+            // toggleEdgeTelemetry
+            // 
+            this.toggleEdgeTelemetry.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.toggleEdgeTelemetry.AutoSize = true;
+            this.toggleEdgeTelemetry.Location = new System.Drawing.Point(1158, 22);
+            this.toggleEdgeTelemetry.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleEdgeTelemetry.Name = "toggleEdgeTelemetry";
+            this.toggleEdgeTelemetry.OffBackColor = System.Drawing.Color.Gray;
+            this.toggleEdgeTelemetry.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.toggleEdgeTelemetry.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.toggleEdgeTelemetry.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.toggleEdgeTelemetry.Size = new System.Drawing.Size(45, 22);
+            this.toggleEdgeTelemetry.TabIndex = 23;
+            this.toggleEdgeTelemetry.UseVisualStyleBackColor = true;
+            this.toggleEdgeTelemetry.CheckedChanged += new System.EventHandler(this.ToggleEdgeTelemetry_CheckedChanged);
+            // 
             // tableLayoutPanel6
             // 
             this.tableLayoutPanel6.AutoSize = true;
@@ -931,6 +1126,22 @@
             this.lblEnhancedPrivacySum.Text = "Enhanced Privacy tweaks disables: Biometrics, Geolocation, Share apps across devi" +
     "ces, Text logger, Diagnostics";
             // 
+            // toggleEnhancePrivacy
+            // 
+            this.toggleEnhancePrivacy.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.toggleEnhancePrivacy.AutoSize = true;
+            this.toggleEnhancePrivacy.Location = new System.Drawing.Point(1158, 22);
+            this.toggleEnhancePrivacy.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleEnhancePrivacy.Name = "toggleEnhancePrivacy";
+            this.toggleEnhancePrivacy.OffBackColor = System.Drawing.Color.Gray;
+            this.toggleEnhancePrivacy.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.toggleEnhancePrivacy.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.toggleEnhancePrivacy.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.toggleEnhancePrivacy.Size = new System.Drawing.Size(45, 22);
+            this.toggleEnhancePrivacy.TabIndex = 28;
+            this.toggleEnhancePrivacy.UseVisualStyleBackColor = true;
+            this.toggleEnhancePrivacy.CheckedChanged += new System.EventHandler(this.ToggleEnhancePrivacy_CheckedChanged);
+            // 
             // tableLayoutPanel7
             // 
             this.tableLayoutPanel7.AutoSize = true;
@@ -991,6 +1202,22 @@
             this.lblTelemetryTasksSum.Size = new System.Drawing.Size(421, 13);
             this.lblTelemetryTasksSum.TabIndex = 13;
             this.lblTelemetryTasksSum.Text = "Telemetry tasks periodically sends usage data and performance data to Microsoft";
+            // 
+            // toggleDisableTelemetryTasks
+            // 
+            this.toggleDisableTelemetryTasks.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.toggleDisableTelemetryTasks.AutoSize = true;
+            this.toggleDisableTelemetryTasks.Location = new System.Drawing.Point(1158, 22);
+            this.toggleDisableTelemetryTasks.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleDisableTelemetryTasks.Name = "toggleDisableTelemetryTasks";
+            this.toggleDisableTelemetryTasks.OffBackColor = System.Drawing.Color.Gray;
+            this.toggleDisableTelemetryTasks.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.toggleDisableTelemetryTasks.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.toggleDisableTelemetryTasks.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.toggleDisableTelemetryTasks.Size = new System.Drawing.Size(45, 22);
+            this.toggleDisableTelemetryTasks.TabIndex = 19;
+            this.toggleDisableTelemetryTasks.UseVisualStyleBackColor = true;
+            this.toggleDisableTelemetryTasks.CheckedChanged += new System.EventHandler(this.ToggleDisableTelemetryTasks_CheckedChanged);
             // 
             // tableLayoutPanel8
             // 
@@ -1053,6 +1280,23 @@
             this.lblTelemetryServicesSum.TabIndex = 13;
             this.lblTelemetryServicesSum.Text = "Telemetry services track and log usage data and sending this feedback for analysi" +
     "s to Microsoft";
+            // 
+            // toggleDisableTelemetryServ
+            // 
+            this.toggleDisableTelemetryServ.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.toggleDisableTelemetryServ.AutoSize = true;
+            this.toggleDisableTelemetryServ.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.toggleDisableTelemetryServ.Location = new System.Drawing.Point(1158, 22);
+            this.toggleDisableTelemetryServ.MinimumSize = new System.Drawing.Size(45, 22);
+            this.toggleDisableTelemetryServ.Name = "toggleDisableTelemetryServ";
+            this.toggleDisableTelemetryServ.OffBackColor = System.Drawing.Color.Gray;
+            this.toggleDisableTelemetryServ.OffToggleColor = System.Drawing.Color.Gainsboro;
+            this.toggleDisableTelemetryServ.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.toggleDisableTelemetryServ.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.toggleDisableTelemetryServ.Size = new System.Drawing.Size(45, 22);
+            this.toggleDisableTelemetryServ.TabIndex = 15;
+            this.toggleDisableTelemetryServ.UseVisualStyleBackColor = true;
+            this.toggleDisableTelemetryServ.CheckedChanged += new System.EventHandler(this.ToggleDisableTelemetryServ_CheckedChanged);
             // 
             // lblPrivacyHeader
             // 
@@ -1174,250 +1418,6 @@
             this.scrollBarBackPanel.Size = new System.Drawing.Size(18, 679);
             this.scrollBarBackPanel.SmallChange = 5;
             this.scrollBarBackPanel.TabIndex = 20;
-            // 
-            // toggleMsOfficeTelemetry
-            // 
-            this.toggleMsOfficeTelemetry.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.toggleMsOfficeTelemetry.AutoSize = true;
-            this.toggleMsOfficeTelemetry.Location = new System.Drawing.Point(1158, 22);
-            this.toggleMsOfficeTelemetry.MinimumSize = new System.Drawing.Size(45, 22);
-            this.toggleMsOfficeTelemetry.Name = "toggleMsOfficeTelemetry";
-            this.toggleMsOfficeTelemetry.OffBackColor = System.Drawing.Color.Gray;
-            this.toggleMsOfficeTelemetry.OffToggleColor = System.Drawing.Color.Gainsboro;
-            this.toggleMsOfficeTelemetry.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.toggleMsOfficeTelemetry.OnToggleColor = System.Drawing.Color.WhiteSmoke;
-            this.toggleMsOfficeTelemetry.Size = new System.Drawing.Size(45, 22);
-            this.toggleMsOfficeTelemetry.TabIndex = 28;
-            this.toggleMsOfficeTelemetry.UseVisualStyleBackColor = true;
-            this.toggleMsOfficeTelemetry.CheckedChanged += new System.EventHandler(this.ToggleMsOfficeTelemetry_CheckedChanged);
-            // 
-            // toggleNvidiaTelemetry
-            // 
-            this.toggleNvidiaTelemetry.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.toggleNvidiaTelemetry.AutoSize = true;
-            this.toggleNvidiaTelemetry.Location = new System.Drawing.Point(1158, 22);
-            this.toggleNvidiaTelemetry.MinimumSize = new System.Drawing.Size(45, 22);
-            this.toggleNvidiaTelemetry.Name = "toggleNvidiaTelemetry";
-            this.toggleNvidiaTelemetry.OffBackColor = System.Drawing.Color.Gray;
-            this.toggleNvidiaTelemetry.OffToggleColor = System.Drawing.Color.Gainsboro;
-            this.toggleNvidiaTelemetry.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.toggleNvidiaTelemetry.OnToggleColor = System.Drawing.Color.WhiteSmoke;
-            this.toggleNvidiaTelemetry.Size = new System.Drawing.Size(45, 22);
-            this.toggleNvidiaTelemetry.TabIndex = 19;
-            this.toggleNvidiaTelemetry.UseVisualStyleBackColor = true;
-            this.toggleNvidiaTelemetry.CheckedChanged += new System.EventHandler(this.ToggleNvidiaTelemetry_CheckedChanged);
-            // 
-            // toggleCortana
-            // 
-            this.toggleCortana.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.toggleCortana.AutoSize = true;
-            this.toggleCortana.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.toggleCortana.Location = new System.Drawing.Point(1158, 22);
-            this.toggleCortana.MinimumSize = new System.Drawing.Size(45, 22);
-            this.toggleCortana.Name = "toggleCortana";
-            this.toggleCortana.OffBackColor = System.Drawing.Color.Gray;
-            this.toggleCortana.OffToggleColor = System.Drawing.Color.Gainsboro;
-            this.toggleCortana.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.toggleCortana.OnToggleColor = System.Drawing.Color.WhiteSmoke;
-            this.toggleCortana.Size = new System.Drawing.Size(45, 22);
-            this.toggleCortana.TabIndex = 15;
-            this.toggleCortana.UseVisualStyleBackColor = true;
-            this.toggleCortana.CheckedChanged += new System.EventHandler(this.ToggleCortana_CheckedChanged);
-            // 
-            // toggleHomeGroup
-            // 
-            this.toggleHomeGroup.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.toggleHomeGroup.AutoSize = true;
-            this.toggleHomeGroup.Location = new System.Drawing.Point(1158, 22);
-            this.toggleHomeGroup.MinimumSize = new System.Drawing.Size(45, 22);
-            this.toggleHomeGroup.Name = "toggleHomeGroup";
-            this.toggleHomeGroup.OffBackColor = System.Drawing.Color.Gray;
-            this.toggleHomeGroup.OffToggleColor = System.Drawing.Color.Gainsboro;
-            this.toggleHomeGroup.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.toggleHomeGroup.OnToggleColor = System.Drawing.Color.WhiteSmoke;
-            this.toggleHomeGroup.Size = new System.Drawing.Size(45, 22);
-            this.toggleHomeGroup.TabIndex = 23;
-            this.toggleHomeGroup.UseVisualStyleBackColor = true;
-            this.toggleHomeGroup.CheckedChanged += new System.EventHandler(this.ToggleHomeGroup_CheckedChanged);
-            // 
-            // toggleStartMenuAds
-            // 
-            this.toggleStartMenuAds.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.toggleStartMenuAds.AutoSize = true;
-            this.toggleStartMenuAds.Location = new System.Drawing.Point(1158, 22);
-            this.toggleStartMenuAds.MinimumSize = new System.Drawing.Size(45, 22);
-            this.toggleStartMenuAds.Name = "toggleStartMenuAds";
-            this.toggleStartMenuAds.OffBackColor = System.Drawing.Color.Gray;
-            this.toggleStartMenuAds.OffToggleColor = System.Drawing.Color.Gainsboro;
-            this.toggleStartMenuAds.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.toggleStartMenuAds.OnToggleColor = System.Drawing.Color.WhiteSmoke;
-            this.toggleStartMenuAds.Size = new System.Drawing.Size(45, 22);
-            this.toggleStartMenuAds.TabIndex = 28;
-            this.toggleStartMenuAds.UseVisualStyleBackColor = true;
-            this.toggleStartMenuAds.CheckedChanged += new System.EventHandler(this.ToggleStartMenuAds_CheckedChanged);
-            // 
-            // toggleChromeTelemetry
-            // 
-            this.toggleChromeTelemetry.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.toggleChromeTelemetry.AutoSize = true;
-            this.toggleChromeTelemetry.Location = new System.Drawing.Point(1158, 22);
-            this.toggleChromeTelemetry.MinimumSize = new System.Drawing.Size(45, 22);
-            this.toggleChromeTelemetry.Name = "toggleChromeTelemetry";
-            this.toggleChromeTelemetry.OffBackColor = System.Drawing.Color.Gray;
-            this.toggleChromeTelemetry.OffToggleColor = System.Drawing.Color.Gainsboro;
-            this.toggleChromeTelemetry.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.toggleChromeTelemetry.OnToggleColor = System.Drawing.Color.WhiteSmoke;
-            this.toggleChromeTelemetry.Size = new System.Drawing.Size(45, 22);
-            this.toggleChromeTelemetry.TabIndex = 19;
-            this.toggleChromeTelemetry.UseVisualStyleBackColor = true;
-            this.toggleChromeTelemetry.CheckedChanged += new System.EventHandler(this.ToggleChromeTelemetry_CheckedChanged);
-            // 
-            // toggleEdgeDiscover
-            // 
-            this.toggleEdgeDiscover.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.toggleEdgeDiscover.AutoSize = true;
-            this.toggleEdgeDiscover.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.toggleEdgeDiscover.Location = new System.Drawing.Point(1158, 22);
-            this.toggleEdgeDiscover.MinimumSize = new System.Drawing.Size(45, 22);
-            this.toggleEdgeDiscover.Name = "toggleEdgeDiscover";
-            this.toggleEdgeDiscover.OffBackColor = System.Drawing.Color.Gray;
-            this.toggleEdgeDiscover.OffToggleColor = System.Drawing.Color.Gainsboro;
-            this.toggleEdgeDiscover.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.toggleEdgeDiscover.OnToggleColor = System.Drawing.Color.WhiteSmoke;
-            this.toggleEdgeDiscover.Size = new System.Drawing.Size(45, 22);
-            this.toggleEdgeDiscover.TabIndex = 15;
-            this.toggleEdgeDiscover.UseVisualStyleBackColor = true;
-            this.toggleEdgeDiscover.CheckedChanged += new System.EventHandler(this.ToggleEdgeDiscover_CheckedChanged);
-            // 
-            // toggleEdgeTelemetry
-            // 
-            this.toggleEdgeTelemetry.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.toggleEdgeTelemetry.AutoSize = true;
-            this.toggleEdgeTelemetry.Location = new System.Drawing.Point(1158, 22);
-            this.toggleEdgeTelemetry.MinimumSize = new System.Drawing.Size(45, 22);
-            this.toggleEdgeTelemetry.Name = "toggleEdgeTelemetry";
-            this.toggleEdgeTelemetry.OffBackColor = System.Drawing.Color.Gray;
-            this.toggleEdgeTelemetry.OffToggleColor = System.Drawing.Color.Gainsboro;
-            this.toggleEdgeTelemetry.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.toggleEdgeTelemetry.OnToggleColor = System.Drawing.Color.WhiteSmoke;
-            this.toggleEdgeTelemetry.Size = new System.Drawing.Size(45, 22);
-            this.toggleEdgeTelemetry.TabIndex = 23;
-            this.toggleEdgeTelemetry.UseVisualStyleBackColor = true;
-            this.toggleEdgeTelemetry.CheckedChanged += new System.EventHandler(this.ToggleEdgeTelemetry_CheckedChanged);
-            // 
-            // toggleEnhancePrivacy
-            // 
-            this.toggleEnhancePrivacy.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.toggleEnhancePrivacy.AutoSize = true;
-            this.toggleEnhancePrivacy.Location = new System.Drawing.Point(1158, 22);
-            this.toggleEnhancePrivacy.MinimumSize = new System.Drawing.Size(45, 22);
-            this.toggleEnhancePrivacy.Name = "toggleEnhancePrivacy";
-            this.toggleEnhancePrivacy.OffBackColor = System.Drawing.Color.Gray;
-            this.toggleEnhancePrivacy.OffToggleColor = System.Drawing.Color.Gainsboro;
-            this.toggleEnhancePrivacy.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.toggleEnhancePrivacy.OnToggleColor = System.Drawing.Color.WhiteSmoke;
-            this.toggleEnhancePrivacy.Size = new System.Drawing.Size(45, 22);
-            this.toggleEnhancePrivacy.TabIndex = 28;
-            this.toggleEnhancePrivacy.UseVisualStyleBackColor = true;
-            this.toggleEnhancePrivacy.CheckedChanged += new System.EventHandler(this.ToggleEnhancePrivacy_CheckedChanged);
-            // 
-            // toggleDisableTelemetryTasks
-            // 
-            this.toggleDisableTelemetryTasks.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.toggleDisableTelemetryTasks.AutoSize = true;
-            this.toggleDisableTelemetryTasks.Location = new System.Drawing.Point(1158, 22);
-            this.toggleDisableTelemetryTasks.MinimumSize = new System.Drawing.Size(45, 22);
-            this.toggleDisableTelemetryTasks.Name = "toggleDisableTelemetryTasks";
-            this.toggleDisableTelemetryTasks.OffBackColor = System.Drawing.Color.Gray;
-            this.toggleDisableTelemetryTasks.OffToggleColor = System.Drawing.Color.Gainsboro;
-            this.toggleDisableTelemetryTasks.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.toggleDisableTelemetryTasks.OnToggleColor = System.Drawing.Color.WhiteSmoke;
-            this.toggleDisableTelemetryTasks.Size = new System.Drawing.Size(45, 22);
-            this.toggleDisableTelemetryTasks.TabIndex = 19;
-            this.toggleDisableTelemetryTasks.UseVisualStyleBackColor = true;
-            this.toggleDisableTelemetryTasks.CheckedChanged += new System.EventHandler(this.ToggleDisableTelemetryTasks_CheckedChanged);
-            // 
-            // toggleDisableTelemetryServ
-            // 
-            this.toggleDisableTelemetryServ.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.toggleDisableTelemetryServ.AutoSize = true;
-            this.toggleDisableTelemetryServ.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.toggleDisableTelemetryServ.Location = new System.Drawing.Point(1158, 22);
-            this.toggleDisableTelemetryServ.MinimumSize = new System.Drawing.Size(45, 22);
-            this.toggleDisableTelemetryServ.Name = "toggleDisableTelemetryServ";
-            this.toggleDisableTelemetryServ.OffBackColor = System.Drawing.Color.Gray;
-            this.toggleDisableTelemetryServ.OffToggleColor = System.Drawing.Color.Gainsboro;
-            this.toggleDisableTelemetryServ.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.toggleDisableTelemetryServ.OnToggleColor = System.Drawing.Color.WhiteSmoke;
-            this.toggleDisableTelemetryServ.Size = new System.Drawing.Size(45, 22);
-            this.toggleDisableTelemetryServ.TabIndex = 15;
-            this.toggleDisableTelemetryServ.UseVisualStyleBackColor = true;
-            this.toggleDisableTelemetryServ.CheckedChanged += new System.EventHandler(this.ToggleDisableTelemetryServ_CheckedChanged);
-            // 
-            // toggleMsStoreUpdate
-            // 
-            this.toggleMsStoreUpdate.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.toggleMsStoreUpdate.AutoSize = true;
-            this.toggleMsStoreUpdate.Location = new System.Drawing.Point(1158, 22);
-            this.toggleMsStoreUpdate.MinimumSize = new System.Drawing.Size(45, 22);
-            this.toggleMsStoreUpdate.Name = "toggleMsStoreUpdate";
-            this.toggleMsStoreUpdate.OffBackColor = System.Drawing.Color.Gray;
-            this.toggleMsStoreUpdate.OffToggleColor = System.Drawing.Color.Gainsboro;
-            this.toggleMsStoreUpdate.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.toggleMsStoreUpdate.OnToggleColor = System.Drawing.Color.WhiteSmoke;
-            this.toggleMsStoreUpdate.Size = new System.Drawing.Size(45, 22);
-            this.toggleMsStoreUpdate.TabIndex = 23;
-            this.toggleMsStoreUpdate.UseVisualStyleBackColor = true;
-            this.toggleMsStoreUpdate.CheckedChanged += new System.EventHandler(this.ToggleMsStoreUpdate_CheckedChanged);
-            // 
-            // toggleInsiderService
-            // 
-            this.toggleInsiderService.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.toggleInsiderService.AutoSize = true;
-            this.toggleInsiderService.Location = new System.Drawing.Point(1158, 22);
-            this.toggleInsiderService.MinimumSize = new System.Drawing.Size(45, 22);
-            this.toggleInsiderService.Name = "toggleInsiderService";
-            this.toggleInsiderService.OffBackColor = System.Drawing.Color.Gray;
-            this.toggleInsiderService.OffToggleColor = System.Drawing.Color.Gainsboro;
-            this.toggleInsiderService.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.toggleInsiderService.OnToggleColor = System.Drawing.Color.WhiteSmoke;
-            this.toggleInsiderService.Size = new System.Drawing.Size(45, 22);
-            this.toggleInsiderService.TabIndex = 28;
-            this.toggleInsiderService.UseVisualStyleBackColor = true;
-            this.toggleInsiderService.CheckedChanged += new System.EventHandler(this.ToggleInsiderService_CheckedChanged);
-            // 
-            // toggleExcludeDrivers
-            // 
-            this.toggleExcludeDrivers.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.toggleExcludeDrivers.AutoSize = true;
-            this.toggleExcludeDrivers.Location = new System.Drawing.Point(1158, 22);
-            this.toggleExcludeDrivers.MinimumSize = new System.Drawing.Size(45, 22);
-            this.toggleExcludeDrivers.Name = "toggleExcludeDrivers";
-            this.toggleExcludeDrivers.OffBackColor = System.Drawing.Color.Gray;
-            this.toggleExcludeDrivers.OffToggleColor = System.Drawing.Color.Gainsboro;
-            this.toggleExcludeDrivers.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.toggleExcludeDrivers.OnToggleColor = System.Drawing.Color.WhiteSmoke;
-            this.toggleExcludeDrivers.Size = new System.Drawing.Size(45, 22);
-            this.toggleExcludeDrivers.TabIndex = 19;
-            this.toggleExcludeDrivers.UseVisualStyleBackColor = true;
-            this.toggleExcludeDrivers.CheckedChanged += new System.EventHandler(this.ToggleExcludeDrivers_CheckedChanged);
-            // 
-            // toggleWinUpdate
-            // 
-            this.toggleWinUpdate.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.toggleWinUpdate.AutoSize = true;
-            this.toggleWinUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.toggleWinUpdate.Location = new System.Drawing.Point(1158, 22);
-            this.toggleWinUpdate.MinimumSize = new System.Drawing.Size(45, 22);
-            this.toggleWinUpdate.Name = "toggleWinUpdate";
-            this.toggleWinUpdate.OffBackColor = System.Drawing.Color.Gray;
-            this.toggleWinUpdate.OffToggleColor = System.Drawing.Color.Gainsboro;
-            this.toggleWinUpdate.OnBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.toggleWinUpdate.OnToggleColor = System.Drawing.Color.WhiteSmoke;
-            this.toggleWinUpdate.Size = new System.Drawing.Size(45, 22);
-            this.toggleWinUpdate.TabIndex = 15;
-            this.toggleWinUpdate.UseVisualStyleBackColor = true;
-            this.toggleWinUpdate.CheckedChanged += new System.EventHandler(this.ToggleWinUpdate_CheckedChanged);
             // 
             // PrivacyAndServicesForm
             // 

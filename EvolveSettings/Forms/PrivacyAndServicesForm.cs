@@ -71,24 +71,24 @@ namespace EvolveSettings.Forms
                 {
                     this.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
                     pnlHeader.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
-                    pnlBack.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
+                    pnlBack.FillColor = Color.Transparent;
                 }
                 scrollBarBackPanel.ThumbColor = ColorTranslator.FromHtml("#FF1F1F20");
-                pnlWinUpdates.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
-                pnlExcludeDriverUpdates.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
-                pnlInsiderService.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
-                pnlMsStore.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
-                pnlPrivacyPanel1.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
-                pnlPrivacyPanel2.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
-                pnlPrivacyPanel3.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
-                pnlPrivacyPanel4.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
-                pnlPrivacyPanel5.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
-                pnlPrivacyPanel6.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
-                pnlPrivacyPanel7.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
-                pnlPrivacyPanel8.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
-                pnlPrivacyPanel9.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
-                pnlPrivacyPanel10.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
-                pnlPrivacyPanel11.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
+                pnlWinUpdates.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
+                pnlExcludeDriverUpdates.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
+                pnlInsiderService.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
+                pnlMsStore.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
+                pnlPrivacyPanel1.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
+                pnlPrivacyPanel2.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
+                pnlPrivacyPanel3.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
+                pnlPrivacyPanel4.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
+                pnlPrivacyPanel5.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
+                pnlPrivacyPanel6.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
+                pnlPrivacyPanel7.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
+                pnlPrivacyPanel8.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
+                pnlPrivacyPanel9.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
+                pnlPrivacyPanel10.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
+                pnlPrivacyPanel11.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
                 //Labels
                 lblTitle.ForeColor = Color.White;
                 lblWinUpdate.ForeColor = Color.White;
@@ -127,77 +127,77 @@ namespace EvolveSettings.Forms
             foreach (EvolveToggleButton button in this.pnlWinUpdates.Controls.OfType<EvolveToggleButton>())
             {
                 button.OnBackColor = themeColor;
-                button.OffBackColor = ColorTranslator.FromHtml("#FF2D2D30");
+                button.OffBackColor = ColorTranslator.FromHtml("#FF1F1F20");
             }
             foreach (EvolveToggleButton button in this.pnlExcludeDriverUpdates.Controls.OfType<EvolveToggleButton>())
             {
                 button.OnBackColor = themeColor;
-                button.OffBackColor = ColorTranslator.FromHtml("#FF2D2D30");
+                button.OffBackColor = ColorTranslator.FromHtml("#FF1F1F20");
             }
             foreach (EvolveToggleButton button in this.pnlInsiderService.Controls.OfType<EvolveToggleButton>())
             {
                 button.OnBackColor = themeColor;
-                button.OffBackColor = ColorTranslator.FromHtml("#FF2D2D30");
+                button.OffBackColor = ColorTranslator.FromHtml("#FF1F1F20");
             }
             foreach (EvolveToggleButton button in this.pnlMsStore.Controls.OfType<EvolveToggleButton>())
             {
                 button.OnBackColor = themeColor;
-                button.OffBackColor = ColorTranslator.FromHtml("#FF2D2D30");
+                button.OffBackColor = ColorTranslator.FromHtml("#FF1F1F20");
             }
             foreach (EvolveToggleButton button in this.pnlPrivacyPanel1.Controls.OfType<EvolveToggleButton>())
             {
                 button.OnBackColor = themeColor;
-                button.OffBackColor = ColorTranslator.FromHtml("#FF2D2D30");
+                button.OffBackColor = ColorTranslator.FromHtml("#FF1F1F20");
             }
             foreach (EvolveToggleButton button in this.pnlPrivacyPanel2.Controls.OfType<EvolveToggleButton>())
             {
                 button.OnBackColor = themeColor;
-                button.OffBackColor = ColorTranslator.FromHtml("#FF2D2D30");
+                button.OffBackColor = ColorTranslator.FromHtml("#FF1F1F20");
             }
             foreach (EvolveToggleButton button in this.pnlPrivacyPanel3.Controls.OfType<EvolveToggleButton>())
             {
                 button.OnBackColor = themeColor;
-                button.OffBackColor = ColorTranslator.FromHtml("#FF2D2D30");
+                button.OffBackColor = ColorTranslator.FromHtml("#FF1F1F20");
             }
             foreach (EvolveToggleButton button in this.pnlPrivacyPanel4.Controls.OfType<EvolveToggleButton>())
             {
                 button.OnBackColor = themeColor;
-                button.OffBackColor = ColorTranslator.FromHtml("#FF2D2D30");
+                button.OffBackColor = ColorTranslator.FromHtml("#FF1F1F20");
             }
             foreach (EvolveToggleButton button in this.pnlPrivacyPanel5.Controls.OfType<EvolveToggleButton>())
             {
                 button.OnBackColor = themeColor;
-                button.OffBackColor = ColorTranslator.FromHtml("#FF2D2D30");
+                button.OffBackColor = ColorTranslator.FromHtml("#FF1F1F20");
             }
             foreach (EvolveToggleButton button in this.pnlPrivacyPanel6.Controls.OfType<EvolveToggleButton>())
             {
                 button.OnBackColor = themeColor;
-                button.OffBackColor = ColorTranslator.FromHtml("#FF2D2D30");
+                button.OffBackColor = ColorTranslator.FromHtml("#FF1F1F20");
             }
             foreach (EvolveToggleButton button in this.pnlPrivacyPanel7.Controls.OfType<EvolveToggleButton>())
             {
                 button.OnBackColor = themeColor;
-                button.OffBackColor = ColorTranslator.FromHtml("#FF2D2D30");
+                button.OffBackColor = ColorTranslator.FromHtml("#FF1F1F20");
             }
             foreach (EvolveToggleButton button in this.pnlPrivacyPanel8.Controls.OfType<EvolveToggleButton>())
             {
                 button.OnBackColor = themeColor;
-                button.OffBackColor = ColorTranslator.FromHtml("#FF2D2D30");
+                button.OffBackColor = ColorTranslator.FromHtml("#FF1F1F20");
             }
             foreach (EvolveToggleButton button in this.pnlPrivacyPanel9.Controls.OfType<EvolveToggleButton>())
             {
                 button.OnBackColor = themeColor;
-                button.OffBackColor = ColorTranslator.FromHtml("#FF2D2D30");
+                button.OffBackColor = ColorTranslator.FromHtml("#FF1F1F20");
             }
             foreach (EvolveToggleButton button in this.pnlPrivacyPanel10.Controls.OfType<EvolveToggleButton>())
             {
                 button.OnBackColor = themeColor;
-                button.OffBackColor = ColorTranslator.FromHtml("#FF2D2D30");
+                button.OffBackColor = ColorTranslator.FromHtml("#FF1F1F20");
             }
             foreach (EvolveToggleButton button in this.pnlPrivacyPanel11.Controls.OfType<EvolveToggleButton>())
             {
                 button.OnBackColor = themeColor;
-                button.OffBackColor = ColorTranslator.FromHtml("#FF2D2D30");
+                button.OffBackColor = ColorTranslator.FromHtml("#FF1F1F20");
             }
         }
 
