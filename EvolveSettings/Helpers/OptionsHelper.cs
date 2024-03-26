@@ -51,6 +51,7 @@ namespace EvolveSettings
                 CurrentOptions.ExcludeWinDriverUpdates = false;
                 CurrentOptions.InsiderService = false;
                 CurrentOptions.MsStoreUpdates = false;
+                CurrentOptions.BlurEffect = false;
 
                 using (FileStream fs = File.Open(SettingsFile, FileMode.CreateNew))
                 using (StreamWriter sw = new StreamWriter(fs))

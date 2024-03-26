@@ -61,9 +61,17 @@ namespace EvolveSettings.Forms
             else
             {
                 //dark
-                this.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
+                if (OptionsHelper.CurrentOptions.BlurEffect == true)
+                {
+                    this.BackColor = Color.Black;
+                    pnlHeader.BackColor = Color.Black;
+                }
+                else
+                {
+                    this.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
+                    pnlHeader.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
+                }
                 pnlBack.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
-                pnlHeader.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
                 pnlWinUpdates.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
                 pnlExcludeDriverUpdates.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
                 pnlInsiderService.FillColor = ColorTranslator.FromHtml("#FF1F1F20");

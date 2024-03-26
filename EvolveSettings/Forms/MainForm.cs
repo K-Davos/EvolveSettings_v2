@@ -1,4 +1,5 @@
-﻿using EvolveSettings.Forms;
+﻿using EvolveSettings.Controls;
+using EvolveSettings.Forms;
 using Guna.UI2.WinForms;
 using Microsoft.Win32;
 using System;
@@ -7,6 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
+using static EvolveSettings.EffectBlur;
 
 namespace EvolveSettings
 {
@@ -28,6 +30,8 @@ namespace EvolveSettings
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        [DllImport("user32.dll")]
+        internal static extern int SetWindowCompositionAttribute(IntPtr hwnd, ref WindowCompositionAttributeData data);
 
         public MainForm()
         {
@@ -97,6 +101,7 @@ namespace EvolveSettings
                 LoadTheme();
             }
             OptionsHelper.SaveSettings();
+            LoadOptions();
             openChildForm(new HomeForm());
         }
 
@@ -104,6 +109,9 @@ namespace EvolveSettings
         {
             //resize form
             formSize = this.ClientSize;
+            lblBlurEffect.Visible = false;
+            pnlFlyOut.Visible = false;
+            trackBarBlur.Enabled = false;
         }
 
         #region resize form
@@ -212,6 +220,34 @@ namespace EvolveSettings
             childForm.Show();
         }
 
+        # region acryl/blur
+        private uint _blurOpacity;
+
+        public double BlurOpacity
+        {
+            get { return _blurOpacity; }
+            set { _blurOpacity = (uint)value; EnableBlur(); }
+        }
+
+        private uint _blurBackgroundColor = 0x990000;
+
+        internal void EnableBlur()
+        {
+            var accent = new AccentPolicy();
+            accent.AccentState = AccentState.ACCENT_ENABLE_ACRYLICBLURBEHIND;
+            accent.GradientColor = (_blurOpacity << 24) | (_blurBackgroundColor & 0xFFFFFF);
+            var accentStructSize = Marshal.SizeOf(accent);
+            var accentPtr = Marshal.AllocHGlobal(accentStructSize);
+            Marshal.StructureToPtr(accent, accentPtr, false);
+            var data = new WindowCompositionAttributeData();
+            data.Attribute = WindowCompositionAttribute.WCA_ACCENT_POLICY;
+            data.SizeOfData = accentStructSize;
+            data.Data = accentPtr;
+            SetWindowCompositionAttribute(this.Handle, ref data);
+            Marshal.FreeHGlobal(accentPtr);
+        }
+        #endregion acryl/blur
+
         #region wintheme
         public bool IsDarkTheme()
         {
@@ -237,6 +273,8 @@ namespace EvolveSettings
                 //light
                 this.BackColor = themeColor;//Border color
                 pnlHeader.BackColor = SystemColors.Control;
+                pnlFlyOut.FillColor = Color.White;
+                lblLength.ForeColor = Color.Black;
                 btnCloseApp.Image = EvolveSettings.Properties.Resources.quit_black;
                 btnMaximize.Image = EvolveSettings.Properties.Resources.maximize_black;
                 btnMinimize.Image = EvolveSettings.Properties.Resources.minimize_black;
@@ -245,15 +283,31 @@ namespace EvolveSettings
             {
                 //dark
                 this.BackColor = themeColor;//Border color
-                pnlHeader.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
+                if (OptionsHelper.CurrentOptions.BlurEffect = true)
+                {
+                    pnlHeader.BackColor = Color.Black;
+                }
+                else
+                {
+                    pnlHeader.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
+                }
+                pnlFlyOut.FillColor = ColorTranslator.FromHtml("#FF1F1F20");
+                lblLength.ForeColor = Color.White;
                 btnCloseApp.Image = EvolveSettings.Properties.Resources.quit;
                 btnMaximize.Image = EvolveSettings.Properties.Resources.maximize;
                 btnMinimize.Image = EvolveSettings.Properties.Resources.minimize;
             }
             pnlNav.BackColor = themeColor;
+            trackBarBlur.ThumbColor = themeColor;
             foreach (Guna2Button button in this.pnlNav.Controls.OfType<Guna2Button>())
             {
                 button.FillColor = themeColor;
+                button.BackColor = Color.Transparent;
+            }
+            foreach (EvolveToggleButton evolvebutton in this.pnlFlyOut.Controls.OfType<EvolveToggleButton>())
+            {
+                evolvebutton.OnBackColor = themeColor;
+                evolvebutton.OffBackColor = Color.Gray;
             }
         }
 
@@ -268,46 +322,69 @@ namespace EvolveSettings
         private void Form_Disposed(object sender, EventArgs e)
         {
             SystemEvents.UserPreferenceChanged -= UserPreferenceChanged;
+            OptionsHelper.SaveSettings();
         }
         #endregion wintheme
+
+        private void LoadOptions()
+        {
+            //Load saved settings
+            toggleBlurEffect.Checked = OptionsHelper.CurrentOptions.BlurEffect;
+        }
 
         private void BtnHome_Click(object sender, EventArgs e)
         {
             openChildForm(new HomeForm());
+            btnFlyOutPanel.Image = EvolveSettings.Properties.Resources.expand;
+            pnlFlyOut.Visible = false;
         }
 
         private void btnWin11Tweaks_Click(object sender, EventArgs e)
         {
             openChildForm(new PrivacyAndServicesForm());
+            btnFlyOutPanel.Image = EvolveSettings.Properties.Resources.expand;
+            pnlFlyOut.Visible = false;
         }
         private void btnNetwork_Click(object sender, EventArgs e)
         {
             openChildForm(new NetworkForm());
+            btnFlyOutPanel.Image = EvolveSettings.Properties.Resources.expand;
+            pnlFlyOut.Visible = false;
         }
 
         private void btnPcCleaner_Click(object sender, EventArgs e)
         {
             openChildForm(new PcCleanerForm());
+            btnFlyOutPanel.Image = EvolveSettings.Properties.Resources.expand;
+            pnlFlyOut.Visible = false;
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
             openChildForm(new SettingsForm());
+            btnFlyOutPanel.Image = EvolveSettings.Properties.Resources.expand;
+            pnlFlyOut.Visible = false;
         }
 
         private void btnFileEncryptor_Click(object sender, EventArgs e)
         {
             openChildForm(new UserSecurityForm());
+            btnFlyOutPanel.Image = EvolveSettings.Properties.Resources.expand;
+            pnlFlyOut.Visible = false;
         }
 
         private void btnPassManager_Click(object sender, EventArgs e)
         {
             openChildForm(new PasswordManagerForm());
+            btnFlyOutPanel.Image = EvolveSettings.Properties.Resources.expand;
+            pnlFlyOut.Visible = false;
         }
 
         private void btnUserManagement_Click(object sender, EventArgs e)
         {
             openChildForm(new UserForm());
+            btnFlyOutPanel.Image = EvolveSettings.Properties.Resources.expand;
+            pnlFlyOut.Visible = false;
         }
 
         private void btnCloseApp_Click(object sender, EventArgs e)
@@ -401,8 +478,6 @@ namespace EvolveSettings
                 lblversion.Visible = false;
                 txtAppVersion.Visible = false;
                 lblUserMode.Visible = false;
-                circleProgressBar1.Visible = false;
-                circleProgressBar2.Visible = false;
                 //btnLogout.Location = new Point(15, 681);
                 btnMenu.Location = new Point(25, 19);
                 foreach (Guna2Button menuButton in pnlNav.Controls.OfType<Guna2Button>())
@@ -423,8 +498,6 @@ namespace EvolveSettings
                 lblversion.Visible = true;
                 txtAppVersion.Visible = true;
                 lblUserMode.Visible = true;
-                circleProgressBar1.Visible = true;
-                circleProgressBar2.Visible = true;
                 //btnLogout.Location = new Point(144, 681);
                 btnMenu.Location = new Point(155, 19);
                 foreach (Guna2Button menuButton in pnlNav.Controls.OfType<Guna2Button>())
@@ -442,6 +515,64 @@ namespace EvolveSettings
             this.Hide();
             sysmon.ShowDialog();
             this.Show();
+        }
+
+        private void trackBarBlur_Scroll(object sender, ScrollEventArgs e)
+        {
+            lblLength.Text = trackBarBlur.Value.ToString();
+            BlurOpacity = (int)e.NewValue;
+        }
+
+        private void toggleBlurEffect_CheckedChanged(object sender, EventArgs e)
+        {
+            if (toggleBlurEffect.Checked)
+            {
+                EnableBlur();
+                trackBarBlur.Enabled = true;
+                pictureBoxProfile.BackColor = Color.Transparent;
+                this.BackColor = Color.Black; //Border Color
+                foreach (Guna2Button button in this.pnlNav.Controls.OfType<Guna2Button>())
+                {
+                    button.FillColor = Color.Transparent;
+                    button.BackColor = Color.Transparent;
+                }
+            }
+            else
+            {
+                LoadTheme();
+                trackBarBlur.Enabled = false;
+                Login login = new Login();
+                login.Show();
+                this.Dispose();
+            }
+            OptionsHelper.CurrentOptions.BlurEffect = toggleBlurEffect.Checked;
+        }
+
+        private void btnFlyOutPanel_Click(object sender, EventArgs e)
+        {
+                FlyOutPanel();
+        }
+
+        private void FlyOutPanel()
+        {
+            if (lblBlurEffect.Visible == false)
+            {
+                //guna2Transition1.Show(pnlFlyOut);
+                if (OptionsHelper.CurrentOptions.BlurEffect == true)
+                {
+                    trackBarBlur.Enabled = true;
+                }
+                pnlFlyOut.Visible = true;
+                pnlFlyOut.BringToFront();
+                lblBlurEffect.Visible = true;
+                btnFlyOutPanel.Image = EvolveSettings.Properties.Resources.collapse;
+            }
+            else
+            {
+                pnlFlyOut.Visible = false;
+                lblBlurEffect.Visible = false;
+                btnFlyOutPanel.Image = EvolveSettings.Properties.Resources.expand;
+            }
         }
     }
 }

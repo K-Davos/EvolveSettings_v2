@@ -18,6 +18,7 @@ namespace EvolveSettings.Models
         public bool ExcludeWinDriverUpdates { get; set; }
         public bool InsiderService { get; set; }
         public bool MsStoreUpdates { get; set; }
+        public bool BlurEffect { get; set; }
     }
     public class GenerateConfig
     {

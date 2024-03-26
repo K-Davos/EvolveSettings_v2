@@ -511,10 +511,14 @@
     <None Include="Resources\information.png" />
     <Content Include="Resources\checkmark_invalid.png" />
     <Content Include="Resources\checkmark_valid.png" />
+    <Content Include="Resources\collapse.png" />
+    <Content Include="Resources\collapse_black.png" />
     <Content Include="Resources\delete.png" />
     <Content Include="Resources\edit.png" />
     <Content Include="Resources\encrypted_file.png" />
     <Content Include="Resources\encryptor.png" />
+    <Content Include="Resources\expand.png" />
+    <Content Include="Resources\expand_black.png" />
     <Content Include="Resources\logout.png" />
     <Content Include="Resources\maintenance.png" />
     <Content Include="Resources\maximize_black.png" />
