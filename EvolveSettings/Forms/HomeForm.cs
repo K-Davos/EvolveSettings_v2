@@ -220,5 +220,11 @@ namespace EvolveSettings.Forms
             OSForm osfrm = new OSForm();
             osfrm.ShowDialog();
         }
+
+        private void btnNICinfo_Click(object sender, EventArgs e)
+        {
+            NicForm nicfrm = new NicForm();
+            nicfrm.ShowDialog();
+        }
     }
 }

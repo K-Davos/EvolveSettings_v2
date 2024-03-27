@@ -64,6 +64,7 @@
             this.btnCpuInfo = new Guna.UI2.WinForms.Guna2Button();
             this.btnGpuInfo = new Guna.UI2.WinForms.Guna2Button();
             this.btnOSInfo = new Guna.UI2.WinForms.Guna2Button();
+            this.btnNICinfo = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -488,12 +489,33 @@
             this.btnOSInfo.Text = "OS Info";
             this.btnOSInfo.Click += new System.EventHandler(this.btnOSInfo_Click);
             // 
+            // btnNICinfo
+            // 
+            this.btnNICinfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNICinfo.Animated = true;
+            this.btnNICinfo.BackColor = System.Drawing.Color.Transparent;
+            this.btnNICinfo.BorderRadius = 15;
+            this.btnNICinfo.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnNICinfo.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnNICinfo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnNICinfo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnNICinfo.FillColor = System.Drawing.Color.MidnightBlue;
+            this.btnNICinfo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnNICinfo.ForeColor = System.Drawing.Color.White;
+            this.btnNICinfo.Location = new System.Drawing.Point(460, 518);
+            this.btnNICinfo.Name = "btnNICinfo";
+            this.btnNICinfo.Size = new System.Drawing.Size(96, 32);
+            this.btnNICinfo.TabIndex = 1008;
+            this.btnNICinfo.Text = "Network Info";
+            this.btnNICinfo.Click += new System.EventHandler(this.btnNICinfo_Click);
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(853, 574);
+            this.Controls.Add(this.btnNICinfo);
             this.Controls.Add(this.btnOSInfo);
             this.Controls.Add(this.btnGpuInfo);
             this.Controls.Add(this.btnCpuInfo);
@@ -571,5 +593,6 @@
         private Guna.UI2.WinForms.Guna2Button btnCpuInfo;
         private Guna.UI2.WinForms.Guna2Button btnGpuInfo;
         private Guna.UI2.WinForms.Guna2Button btnOSInfo;
+        private Guna.UI2.WinForms.Guna2Button btnNICinfo;
     }
 }
