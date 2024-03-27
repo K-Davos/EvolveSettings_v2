@@ -411,6 +411,7 @@
       <DependentUpon>Signup.cs</DependentUpon>
     </Compile>
     <Compile Include="Helpers\SqlConnectionHelper.cs" />
+    <Compile Include="SystemInfoMonitorLib.cs" />
     <Compile Include="WinTheme.cs" />
     <EmbeddedResource Include="Forms\EncryptorModuleForm.resx">
       <DependentUpon>EncryptorModuleForm.cs</DependentUpon>

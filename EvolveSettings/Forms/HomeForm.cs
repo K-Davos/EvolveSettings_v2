@@ -1,8 +1,12 @@
 ﻿using EvolveSettings.Controls;
+using Guna.UI2.Native;
 using Microsoft.Win32;
 using System;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Management;
 using System.Windows.Forms;
 
 namespace EvolveSettings.Forms
@@ -11,6 +15,8 @@ namespace EvolveSettings.Forms
     {
         //WinTheme
         private UserPreferenceChangedEventHandler UserPreferenceChanged;
+
+        bool update = false;
 
         public HomeForm()
         {
@@ -59,7 +65,7 @@ namespace EvolveSettings.Forms
             else
             {
                 //dark
-                this.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
+                this.BackColor = Color.Black;
                 lblTitle.ForeColor = Color.White;
                 foreach (EvolvePanel panel in this.Controls.OfType<EvolvePanel>())
                 {
@@ -83,9 +89,118 @@ namespace EvolveSettings.Forms
         }
         #endregion wintheme
 
+        WinAPI WinAPI = new WinAPI();
+
+        private void HomeForm_Load(object sender, EventArgs e)
+        {
+            WinAPI.AnimateWindow(this.Handle, 150, WinAPI.CENTER);
+
+            timer1.Start();
+        }
+
         private void LoadOptions()
         {
             //Load saved settings
+        }
+
+        #region diagnostics
+        PerformanceCounter cpu = new PerformanceCounter("Processor Information", "% Processor Utility", "_Total", true);
+        ManagementObjectSearcher myProcessorObject = new ManagementObjectSearcher("select * from Win32_Processor");
+
+        private void UpdateUiElements()
+        {
+            //lblCPU.Text = ((int)Math.Round(cpu.NextValue(), 2)).ToString() + " %";
+
+            //Cpu
+            progressBarCPU.Value = (int)Math.Round(cpu.NextValue(), 2);
+
+            // --------------------------------------------------------------------------------------------------------
+            //Memory
+            float totalMemory = 0;
+            float freeMemory = 0;
+
+            ObjectQuery wql = new ObjectQuery("SELECT * FROM Win32_OperatingSystem");
+            ManagementObjectSearcher searcher = new ManagementObjectSearcher(wql);
+            ManagementObjectCollection results = searcher.Get();
+
+            foreach (ManagementObject result in results)
+            {
+                totalMemory = (float.Parse(result["TotalVisibleMemorySize"].ToString()) / 1024);
+                freeMemory = (float.Parse(result["FreePhysicalMemory"].ToString()) / 1024);
+            }
+
+            var RamVal = 100 - ((freeMemory / totalMemory) * 100);
+            progressBarRAM.Value = (int)RamVal;
+
+            lblRamTotalData.Text = ((int)totalMemory).ToString() + " Megabytes";
+            lblRamUsedData.Text = ((int)totalMemory - (int)freeMemory).ToString() + " Megabytes";
+            lblRamAvailableData.Text = ((int)freeMemory).ToString() + " Megabytes";
+
+            if (!update)
+            {
+                UpdateDiskAndCPUInfo();
+                update = true;
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            UpdateUiElements();
+        }
+
+        private void UpdateDiskAndCPUInfo()
+        {
+            //Cpu Elements
+            foreach (ManagementObject obj in myProcessorObject.Get())
+            {
+                lblCpuSpeedData.Text = float.Parse(obj["CurrentClockSpeed"].ToString()) / 1000 + " GHz";
+                lblCpuCoresData.Text = obj["NumberOfCores"].ToString();
+                lblCpuThreadsData.Text = obj["NumberOfLogicalProcessors"].ToString();
+            }
+
+            // --------------------------------------------------------------------------------------------------------
+            //Disk Space
+            double totalFreeSpace = 0;
+            double totalSpace = 0;
+            double usedSpace = 0;
+
+            DriveInfo[] allDrives = DriveInfo.GetDrives();
+
+            foreach (DriveInfo d in allDrives)
+            {
+                if (d.IsReady == true)
+                {
+                    totalFreeSpace += d.AvailableFreeSpace;
+                    totalSpace += d.TotalSize;
+                }
+            }
+
+            usedSpace = 100 - (totalFreeSpace / totalSpace) * 100;
+            var u_s = totalSpace - totalFreeSpace;
+            progressBarStorage.Value = (int)usedSpace;
+            lblStorageTotalData.Text = ((int)Math.Round((totalSpace / 1024d / 1024d / 1024d), 2)).ToString() + " Gigabytes";
+            lblStorageUsedData.Text = ((int)Math.Round((u_s / 1024d / 1024d / 1024d), 2)).ToString() + " Gigabytes";
+            lblStorageAvailableData.Text = ((int)Math.Round((totalFreeSpace / 1024d / 1024d / 1024d), 2)).ToString() + " Gigabytes";
+        }
+        #endregion diagnostics
+
+        private void lblTitle_Click(object sender, EventArgs e)
+        {
+            timer2.Start();
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            if (this.Opacity <= 0)
+            {
+                timer1.Stop();
+                timer2.Stop();
+                this.Close();
+            }
+            else
+            {
+                this.Opacity -= 0.1;
+            }
         }
     }
 }
