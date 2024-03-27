@@ -62,6 +62,8 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.btnCpuInfo = new Guna.UI2.WinForms.Guna2Button();
+            this.btnGpuInfo = new Guna.UI2.WinForms.Guna2Button();
+            this.btnOSInfo = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -439,12 +441,52 @@
             this.btnCpuInfo.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnCpuInfo.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnCpuInfo.ForeColor = System.Drawing.Color.White;
-            this.btnCpuInfo.Location = new System.Drawing.Point(174, 485);
+            this.btnCpuInfo.Location = new System.Drawing.Point(125, 518);
             this.btnCpuInfo.Name = "btnCpuInfo";
             this.btnCpuInfo.Size = new System.Drawing.Size(96, 32);
             this.btnCpuInfo.TabIndex = 1005;
             this.btnCpuInfo.Text = "Cpu Info";
             this.btnCpuInfo.Click += new System.EventHandler(this.btnCpuInfo_Click);
+            // 
+            // btnGpuInfo
+            // 
+            this.btnGpuInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGpuInfo.Animated = true;
+            this.btnGpuInfo.BackColor = System.Drawing.Color.Transparent;
+            this.btnGpuInfo.BorderRadius = 15;
+            this.btnGpuInfo.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnGpuInfo.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnGpuInfo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnGpuInfo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnGpuInfo.FillColor = System.Drawing.Color.MidnightBlue;
+            this.btnGpuInfo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnGpuInfo.ForeColor = System.Drawing.Color.White;
+            this.btnGpuInfo.Location = new System.Drawing.Point(236, 518);
+            this.btnGpuInfo.Name = "btnGpuInfo";
+            this.btnGpuInfo.Size = new System.Drawing.Size(96, 32);
+            this.btnGpuInfo.TabIndex = 1006;
+            this.btnGpuInfo.Text = "Gpu Info";
+            this.btnGpuInfo.Click += new System.EventHandler(this.btnGpuInfo_Click);
+            // 
+            // btnOSInfo
+            // 
+            this.btnOSInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnOSInfo.Animated = true;
+            this.btnOSInfo.BackColor = System.Drawing.Color.Transparent;
+            this.btnOSInfo.BorderRadius = 15;
+            this.btnOSInfo.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnOSInfo.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnOSInfo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnOSInfo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnOSInfo.FillColor = System.Drawing.Color.MidnightBlue;
+            this.btnOSInfo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnOSInfo.ForeColor = System.Drawing.Color.White;
+            this.btnOSInfo.Location = new System.Drawing.Point(347, 518);
+            this.btnOSInfo.Name = "btnOSInfo";
+            this.btnOSInfo.Size = new System.Drawing.Size(96, 32);
+            this.btnOSInfo.TabIndex = 1007;
+            this.btnOSInfo.Text = "OS Info";
+            this.btnOSInfo.Click += new System.EventHandler(this.btnOSInfo_Click);
             // 
             // HomeForm
             // 
@@ -452,6 +494,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(853, 574);
+            this.Controls.Add(this.btnOSInfo);
+            this.Controls.Add(this.btnGpuInfo);
             this.Controls.Add(this.btnCpuInfo);
             this.Controls.Add(this.progressBarRAM);
             this.Controls.Add(this.progressBarStorage);
@@ -525,5 +569,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
         private Guna.UI2.WinForms.Guna2Button btnCpuInfo;
+        private Guna.UI2.WinForms.Guna2Button btnGpuInfo;
+        private Guna.UI2.WinForms.Guna2Button btnOSInfo;
     }
 }

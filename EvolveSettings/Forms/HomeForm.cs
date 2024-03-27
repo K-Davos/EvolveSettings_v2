@@ -208,5 +208,17 @@ namespace EvolveSettings.Forms
             CpuInformationForm cpufrm = new CpuInformationForm();
             cpufrm.ShowDialog();
         }
+
+        private void btnGpuInfo_Click(object sender, EventArgs e)
+        {
+            GraficsForm gpufrm = new GraficsForm();
+            gpufrm.ShowDialog();
+        }
+
+        private void btnOSInfo_Click(object sender, EventArgs e)
+        {
+            OSForm osfrm = new OSForm();
+            osfrm.ShowDialog();
+        }
     }
 }
