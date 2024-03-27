@@ -2,9 +2,13 @@
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace EvolveSettings.Forms
 {
@@ -16,9 +20,17 @@ namespace EvolveSettings.Forms
         bool _cleanSelectAll = true;
         List<string> _cleanPreviewList;
 
+        private System.Timers.Timer _timer;
+
         public PcCleanerForm()
         {
             InitializeComponent();
+
+            _timer = new System.Timers.Timer();
+            _timer.Interval = 1200;
+            _timer.Elapsed += OntimedEvent;
+            _timer.AutoReset = true;
+            _timer.Enabled = true;
 
             //WinTheme
             if (OptionsHelper.CurrentOptions.WinTheme == true)
@@ -31,10 +43,20 @@ namespace EvolveSettings.Forms
 
             cleanDriveB.Enabled = false;
             btnSelectAll.Enabled = false;
+
+            //Gets C:\ drive info
+            DriveInfo[] allDrives = DriveInfo.GetDrives();
+            foreach (DriveInfo drive in allDrives)
+            {
+                lbl_FreeDriveSpace.Text = "Free space: " + drive.TotalFreeSpace / 1073741824 + "GB / " + drive.TotalSize / 1073741824 + "GB";
+                float driveFull = drive.TotalSize / 1073741824;
+                float driveUsed = driveFull - drive.TotalFreeSpace / 1073741824;
+                break;
+            }
         }
 
         #region wintheme
-        public bool IsDarkTheme()
+    public bool IsDarkTheme()
         {
             bool is_light_mode = true;
             try
@@ -59,7 +81,6 @@ namespace EvolveSettings.Forms
                 this.BackColor = SystemColors.Control;
                 pnlHeader.BackColor = SystemColors.Control;
                 pnlSelectionControl.FillColor = Color.White;
-                pnlListCleanPreview.FillColor = Color.White;
                 pnlAnalyzeClean.FillColor = Color.White;
                 listCleanPreview.BackColor = Color.White;
                 listCleanPreview.ForeColor = ColorTranslator.FromHtml("#A2A4A5");
@@ -85,12 +106,36 @@ namespace EvolveSettings.Forms
             else
             {
                 //dark
-                this.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
-                pnlHeader.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
+                if (OptionsHelper.CurrentOptions.BlurEffect == true)
+                {
+                    this.BackColor = Color.Black;
+                    pnlHeader.BackColor = Color.Black;
+                    listCleanPreview.BackColor = Color.Black;
+                    scrollBarlistCleanPreview.ThumbColor = themeColor;
+                    scrollBarlistCleanPreview.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
+                    progressBar1.BackColor = ColorTranslator.FromHtml("#FF2D2D30");
+                    progressBar1.InnerColor = ColorTranslator.FromHtml("#FF2D2D30");
+                    progressFreeDiskSpace.BackColor = ColorTranslator.FromHtml("#FF2D2D30");
+                    progressFreeDiskSpace.InnerColor = ColorTranslator.FromHtml("#FF2D2D30");
+                    progressFreeDiskSpaceC.BackColor = ColorTranslator.FromHtml("#FF2D2D30");
+                    progressFreeDiskSpaceC.InnerColor = ColorTranslator.FromHtml("#FF2D2D30");
+                }
+                else
+                {
+                    this.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
+                    pnlHeader.BackColor = ColorTranslator.FromHtml("#FF1F1F20");
+                    listCleanPreview.BackColor = ColorTranslator.FromHtml("#FF2D2D30");
+                    scrollBarlistCleanPreview.ThumbColor = ColorTranslator.FromHtml("#FF1F1F20");
+                    scrollBarlistCleanPreview.FillColor = ColorTranslator.FromHtml("#A2A4A5");
+                    progressBar1.BackColor = ColorTranslator.FromHtml("#FF2D2D30");
+                    progressBar1.InnerColor = ColorTranslator.FromHtml("#FF2D2D30");
+                    progressFreeDiskSpace.BackColor = ColorTranslator.FromHtml("#FF2D2D30");
+                    progressFreeDiskSpace.InnerColor = ColorTranslator.FromHtml("#FF2D2D30");
+                    progressFreeDiskSpaceC.BackColor = ColorTranslator.FromHtml("#FF2D2D30");
+                    progressFreeDiskSpaceC.InnerColor = ColorTranslator.FromHtml("#FF2D2D30");
+                }
                 pnlSelectionControl.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
-                pnlListCleanPreview.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
                 pnlAnalyzeClean.FillColor = ColorTranslator.FromHtml("#FF2D2D30");
-                listCleanPreview.BackColor = ColorTranslator.FromHtml("#FF2D2D30");
                 listCleanPreview.ForeColor = ColorTranslator.FromHtml("#A2A4A5");
                 foreach (Guna2CheckBox chkbox in this.pnlSelectionControl.Controls.OfType<Guna2CheckBox>())
                 {
@@ -100,6 +145,8 @@ namespace EvolveSettings.Forms
                 {
                     label.ForeColor = ColorTranslator.FromHtml("#A2A4A5");
                 }
+                lblDriveC.ForeColor = Color.White;
+                lblDiskUsage.ForeColor = Color.White;
                 lblWindows.ForeColor = Color.White;
                 lblEdge.ForeColor = Color.White;
                 lblChrome.ForeColor = Color.White;
@@ -154,9 +201,9 @@ namespace EvolveSettings.Forms
             CleanHelper.PreviewSizeToBeFreed = new ByteSize(0);
             CleanHelper.PreviewCleanList.Clear();
             listCleanPreview.Items.Clear();
-            PreviewCleanPC();
+            PreviewCleanPC("Mb's");
         }
-        private void PreviewCleanPC()
+        private void PreviewCleanPC(string v)
         {
             try
             {
@@ -182,6 +229,7 @@ namespace EvolveSettings.Forms
                 for (int i = 0; i < listCleanPreview.Items.Count; i++)
                 {
                     listCleanPreview.SetItemChecked(i, true);
+                    progressBar1.Value = i;
                 }
 
                 GetFootprint();
@@ -224,6 +272,52 @@ namespace EvolveSettings.Forms
             {
                 listCleanPreview.SetItemChecked(i, _cleanSelectAll);
             }
+        }
+
+        private void OntimedEvent(Object source, System.Timers.ElapsedEventArgs e)
+        {
+            CheckForIllegalCrossThreadCalls = false;
+
+            int freeDiskSpaceValue = GetFreeDiskSpaceValue();
+            int freeDiskSpaceCTotal = GetFreeDiskSpaceCTotal();
+            int freeSpaceDiskCValue = GetFreeSpaceDiskCValue();
+
+            if (progressFreeDiskSpace.InvokeRequired)
+            {
+                progressFreeDiskSpace.Invoke(new Action(() => progressFreeDiskSpace.Value = freeDiskSpaceValue));
+            }
+            else
+            {
+                progressFreeDiskSpace.Value = freeDiskSpaceValue;
+            }
+            if (progressFreeDiskSpaceC.InvokeRequired)
+            {
+                progressFreeDiskSpaceC.Invoke(new Action(() => progressFreeDiskSpaceC.Value = freeSpaceDiskCValue));
+            }
+            else
+            {
+                progressFreeDiskSpaceC.Value = freeSpaceDiskCValue;
+            }
+        }
+
+        private int GetFreeDiskSpaceValue()
+        {
+            var FreeDiskSpaceCounter = new PerformanceCounter("LogicalDisk", "% Free Space", "_Total");
+            System.Threading.Thread.Sleep(200);
+            int returnvalue = (int)FreeDiskSpaceCounter.NextValue();
+            return returnvalue;
+        }
+        private int GetFreeSpaceDiskCValue()
+        {
+            var FreeDiskSpaceCCounter = new PerformanceCounter("LogicalDisk", "% Free Space", "C:");
+            int returnvalue = (int)FreeDiskSpaceCCounter.NextValue();
+            return returnvalue;
+        }
+        private int GetFreeDiskSpaceCTotal()
+        {
+            var FreeDiskSpaceTotal = new PerformanceCounter("LogicalDisk", "% Free Space", "C:");
+            int returnvalue = (int)FreeDiskSpaceTotal.NextValue() * 447 / 100;
+            return returnvalue;
         }
     }
 }

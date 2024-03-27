@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.pnlListCleanPreview = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.listCleanPreview = new System.Windows.Forms.CheckedListBox();
+            this.components = new System.ComponentModel.Container();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.pnlAnalyzeClean = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.cleanDriveB = new Guna.UI2.WinForms.Guna2Button();
@@ -82,70 +80,27 @@
             this.checkBoxTemp = new Guna.UI2.WinForms.Guna2CheckBox();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.pnlListCleanPreview.SuspendLayout();
+            this.listCleanPreview = new System.Windows.Forms.CheckedListBox();
+            this.scrollBarlistCleanPreview = new Guna.UI2.WinForms.Guna2VScrollBar();
+            this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.progressBar1 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            this.lbl_FreeDriveSpace = new System.Windows.Forms.Label();
+            this.progressFreeDiskSpace = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            this.progressFreeDiskSpaceC = new Guna.UI2.WinForms.Guna2CircleProgressBar();
+            this.lblDiskUsage = new System.Windows.Forms.Label();
+            this.lblDriveC = new System.Windows.Forms.Label();
             this.tableLayoutPanel2.SuspendLayout();
             this.pnlAnalyzeClean.SuspendLayout();
             this.pnlSelectionControl.SuspendLayout();
             this.pnlHeader.SuspendLayout();
+            this.progressBar1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.pnlListCleanPreview, 0, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 344);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1385, 418);
-            this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // pnlListCleanPreview
-            // 
-            this.pnlListCleanPreview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlListCleanPreview.BackColor = System.Drawing.Color.Transparent;
-            this.pnlListCleanPreview.Controls.Add(this.listCleanPreview);
-            this.pnlListCleanPreview.FillColor = System.Drawing.Color.White;
-            this.pnlListCleanPreview.Location = new System.Drawing.Point(28, 3);
-            this.pnlListCleanPreview.Margin = new System.Windows.Forms.Padding(28, 3, 28, 25);
-            this.pnlListCleanPreview.Name = "pnlListCleanPreview";
-            this.pnlListCleanPreview.Radius = 5;
-            this.pnlListCleanPreview.ShadowColor = System.Drawing.Color.Black;
-            this.pnlListCleanPreview.ShadowDepth = 250;
-            this.pnlListCleanPreview.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
-            this.pnlListCleanPreview.Size = new System.Drawing.Size(1329, 390);
-            this.pnlListCleanPreview.TabIndex = 0;
-            // 
-            // listCleanPreview
-            // 
-            this.listCleanPreview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listCleanPreview.BackColor = System.Drawing.Color.White;
-            this.listCleanPreview.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listCleanPreview.CheckOnClick = true;
-            this.listCleanPreview.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listCleanPreview.ForeColor = System.Drawing.Color.Black;
-            this.listCleanPreview.FormattingEnabled = true;
-            this.listCleanPreview.Location = new System.Drawing.Point(3, 26);
-            this.listCleanPreview.Name = "listCleanPreview";
-            this.listCleanPreview.Size = new System.Drawing.Size(1323, 340);
-            this.listCleanPreview.TabIndex = 21;
             // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.62848F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.37152F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 54.87365F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.12635F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 219F));
             this.tableLayoutPanel2.Controls.Add(this.pnlAnalyzeClean, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.pnlSelectionControl, 0, 0);
@@ -161,21 +116,26 @@
             // pnlAnalyzeClean
             // 
             this.pnlAnalyzeClean.BackColor = System.Drawing.Color.Transparent;
+            this.pnlAnalyzeClean.Controls.Add(this.lbl_FreeDriveSpace);
+            this.pnlAnalyzeClean.Controls.Add(this.progressFreeDiskSpace);
+            this.pnlAnalyzeClean.Controls.Add(this.progressFreeDiskSpaceC);
+            this.pnlAnalyzeClean.Controls.Add(this.lblDiskUsage);
+            this.pnlAnalyzeClean.Controls.Add(this.lblDriveC);
+            this.pnlAnalyzeClean.Controls.Add(this.progressBar1);
             this.pnlAnalyzeClean.Controls.Add(this.cleanDriveB);
             this.pnlAnalyzeClean.Controls.Add(this.btnSelectAll);
             this.pnlAnalyzeClean.Controls.Add(this.analyzeDriveB);
             this.pnlAnalyzeClean.Controls.Add(this.label24);
-            this.pnlAnalyzeClean.Controls.Add(this.lblFootprint);
             this.pnlAnalyzeClean.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlAnalyzeClean.FillColor = System.Drawing.Color.White;
-            this.pnlAnalyzeClean.Location = new System.Drawing.Point(787, 3);
+            this.pnlAnalyzeClean.Location = new System.Drawing.Point(763, 3);
             this.pnlAnalyzeClean.Margin = new System.Windows.Forms.Padding(3, 3, 28, 3);
             this.pnlAnalyzeClean.Name = "pnlAnalyzeClean";
             this.pnlAnalyzeClean.Radius = 5;
             this.pnlAnalyzeClean.ShadowColor = System.Drawing.Color.Black;
             this.pnlAnalyzeClean.ShadowDepth = 250;
             this.pnlAnalyzeClean.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
-            this.pnlAnalyzeClean.Size = new System.Drawing.Size(570, 286);
+            this.pnlAnalyzeClean.Size = new System.Drawing.Size(594, 286);
             this.pnlAnalyzeClean.TabIndex = 1;
             // 
             // cleanDriveB
@@ -191,7 +151,7 @@
             this.cleanDriveB.FillColor = System.Drawing.Color.MidnightBlue;
             this.cleanDriveB.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cleanDriveB.ForeColor = System.Drawing.Color.White;
-            this.cleanDriveB.Location = new System.Drawing.Point(430, 237);
+            this.cleanDriveB.Location = new System.Drawing.Point(454, 237);
             this.cleanDriveB.Name = "cleanDriveB";
             this.cleanDriveB.Size = new System.Drawing.Size(96, 32);
             this.cleanDriveB.TabIndex = 166;
@@ -231,7 +191,7 @@
             this.analyzeDriveB.FillColor = System.Drawing.Color.MidnightBlue;
             this.analyzeDriveB.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.analyzeDriveB.ForeColor = System.Drawing.Color.White;
-            this.analyzeDriveB.Location = new System.Drawing.Point(234, 237);
+            this.analyzeDriveB.Location = new System.Drawing.Point(247, 237);
             this.analyzeDriveB.Name = "analyzeDriveB";
             this.analyzeDriveB.Size = new System.Drawing.Size(96, 32);
             this.analyzeDriveB.TabIndex = 164;
@@ -243,7 +203,7 @@
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.Color.Black;
-            this.label24.Location = new System.Drawing.Point(36, 51);
+            this.label24.Location = new System.Drawing.Point(79, 45);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(62, 21);
             this.label24.TabIndex = 162;
@@ -253,11 +213,12 @@
             // 
             this.lblFootprint.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFootprint.ForeColor = System.Drawing.Color.Black;
-            this.lblFootprint.Location = new System.Drawing.Point(99, 51);
+            this.lblFootprint.Location = new System.Drawing.Point(19, 58);
             this.lblFootprint.Name = "lblFootprint";
-            this.lblFootprint.Size = new System.Drawing.Size(98, 21);
+            this.lblFootprint.Size = new System.Drawing.Size(95, 21);
             this.lblFootprint.TabIndex = 163;
             this.lblFootprint.Text = "Mb\'s";
+            this.lblFootprint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlSelectionControl
             // 
@@ -312,7 +273,7 @@
             this.pnlSelectionControl.ShadowColor = System.Drawing.Color.Black;
             this.pnlSelectionControl.ShadowDepth = 250;
             this.pnlSelectionControl.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.Dropped;
-            this.pnlSelectionControl.Size = new System.Drawing.Size(746, 286);
+            this.pnlSelectionControl.Size = new System.Drawing.Size(722, 286);
             this.pnlSelectionControl.TabIndex = 0;
             // 
             // lblSystem
@@ -336,7 +297,7 @@
             this.firefoxCookies.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.firefoxCookies.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firefoxCookies.ForeColor = System.Drawing.Color.Black;
-            this.firefoxCookies.Location = new System.Drawing.Point(625, 141);
+            this.firefoxCookies.Location = new System.Drawing.Point(502, 141);
             this.firefoxCookies.Name = "firefoxCookies";
             this.firefoxCookies.Size = new System.Drawing.Size(15, 15);
             this.firefoxCookies.TabIndex = 201;
@@ -355,7 +316,7 @@
             this.firefoxHistory.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.firefoxHistory.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firefoxHistory.ForeColor = System.Drawing.Color.Black;
-            this.firefoxHistory.Location = new System.Drawing.Point(625, 170);
+            this.firefoxHistory.Location = new System.Drawing.Point(502, 170);
             this.firefoxHistory.Name = "firefoxHistory";
             this.firefoxHistory.Size = new System.Drawing.Size(15, 15);
             this.firefoxHistory.TabIndex = 200;
@@ -374,7 +335,7 @@
             this.IECache.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.IECache.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IECache.ForeColor = System.Drawing.Color.Black;
-            this.IECache.Location = new System.Drawing.Point(625, 226);
+            this.IECache.Location = new System.Drawing.Point(615, 112);
             this.IECache.Name = "IECache";
             this.IECache.Size = new System.Drawing.Size(15, 15);
             this.IECache.TabIndex = 199;
@@ -393,7 +354,7 @@
             this.chromeHistory.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.chromeHistory.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chromeHistory.ForeColor = System.Drawing.Color.Black;
-            this.chromeHistory.Location = new System.Drawing.Point(485, 170);
+            this.chromeHistory.Location = new System.Drawing.Point(373, 170);
             this.chromeHistory.Name = "chromeHistory";
             this.chromeHistory.Size = new System.Drawing.Size(15, 15);
             this.chromeHistory.TabIndex = 198;
@@ -412,7 +373,7 @@
             this.chromeSession.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.chromeSession.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chromeSession.ForeColor = System.Drawing.Color.Black;
-            this.chromeSession.Location = new System.Drawing.Point(485, 198);
+            this.chromeSession.Location = new System.Drawing.Point(373, 198);
             this.chromeSession.Name = "chromeSession";
             this.chromeSession.Size = new System.Drawing.Size(15, 15);
             this.chromeSession.TabIndex = 197;
@@ -431,7 +392,7 @@
             this.chromePws.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.chromePws.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chromePws.ForeColor = System.Drawing.Color.Black;
-            this.chromePws.Location = new System.Drawing.Point(485, 226);
+            this.chromePws.Location = new System.Drawing.Point(373, 226);
             this.chromePws.Name = "chromePws";
             this.chromePws.Size = new System.Drawing.Size(15, 15);
             this.chromePws.TabIndex = 196;
@@ -446,7 +407,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Black;
-            this.label11.Location = new System.Drawing.Point(506, 113);
+            this.label11.Location = new System.Drawing.Point(394, 113);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(38, 13);
             this.label11.TabIndex = 180;
@@ -462,7 +423,7 @@
             this.firefoxCache.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.firefoxCache.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.firefoxCache.ForeColor = System.Drawing.Color.Black;
-            this.firefoxCache.Location = new System.Drawing.Point(625, 110);
+            this.firefoxCache.Location = new System.Drawing.Point(502, 110);
             this.firefoxCache.Name = "firefoxCache";
             this.firefoxCache.Size = new System.Drawing.Size(15, 15);
             this.firefoxCache.TabIndex = 195;
@@ -477,7 +438,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(506, 141);
+            this.label10.Location = new System.Drawing.Point(394, 141);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(48, 13);
             this.label10.TabIndex = 181;
@@ -489,7 +450,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(506, 170);
+            this.label8.Location = new System.Drawing.Point(394, 170);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(43, 13);
             this.label8.TabIndex = 182;
@@ -501,7 +462,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(506, 199);
+            this.label5.Location = new System.Drawing.Point(394, 199);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(46, 13);
             this.label5.TabIndex = 183;
@@ -513,7 +474,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(506, 227);
+            this.label12.Location = new System.Drawing.Point(394, 227);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(61, 13);
             this.label12.TabIndex = 184;
@@ -529,7 +490,7 @@
             this.chromeCache.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.chromeCache.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chromeCache.ForeColor = System.Drawing.Color.Black;
-            this.chromeCache.Location = new System.Drawing.Point(485, 113);
+            this.chromeCache.Location = new System.Drawing.Point(373, 113);
             this.chromeCache.Name = "chromeCache";
             this.chromeCache.Size = new System.Drawing.Size(15, 15);
             this.chromeCache.TabIndex = 194;
@@ -548,7 +509,7 @@
             this.chromeCookies.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.chromeCookies.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chromeCookies.ForeColor = System.Drawing.Color.Black;
-            this.chromeCookies.Location = new System.Drawing.Point(485, 141);
+            this.chromeCookies.Location = new System.Drawing.Point(373, 141);
             this.chromeCookies.Name = "chromeCookies";
             this.chromeCookies.Size = new System.Drawing.Size(15, 15);
             this.chromeCookies.TabIndex = 193;
@@ -563,7 +524,7 @@
             this.lblChrome.AutoSize = true;
             this.lblChrome.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChrome.ForeColor = System.Drawing.Color.DimGray;
-            this.lblChrome.Location = new System.Drawing.Point(481, 83);
+            this.lblChrome.Location = new System.Drawing.Point(369, 83);
             this.lblChrome.Name = "lblChrome";
             this.lblChrome.Size = new System.Drawing.Size(56, 17);
             this.lblChrome.TabIndex = 185;
@@ -575,7 +536,7 @@
             this.lblFireFox.AutoSize = true;
             this.lblFireFox.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFireFox.ForeColor = System.Drawing.Color.DimGray;
-            this.lblFireFox.Location = new System.Drawing.Point(621, 83);
+            this.lblFireFox.Location = new System.Drawing.Point(498, 83);
             this.lblFireFox.Name = "lblFireFox";
             this.lblFireFox.Size = new System.Drawing.Size(53, 17);
             this.lblFireFox.TabIndex = 186;
@@ -587,7 +548,7 @@
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.Color.Black;
-            this.label25.Location = new System.Drawing.Point(480, 47);
+            this.label25.Location = new System.Drawing.Point(368, 47);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(93, 25);
             this.label25.TabIndex = 192;
@@ -599,7 +560,7 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.Black;
-            this.label20.Location = new System.Drawing.Point(646, 113);
+            this.label20.Location = new System.Drawing.Point(523, 113);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(38, 13);
             this.label20.TabIndex = 187;
@@ -611,7 +572,7 @@
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.Black;
-            this.label23.Location = new System.Drawing.Point(646, 227);
+            this.label23.Location = new System.Drawing.Point(636, 113);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(38, 13);
             this.label23.TabIndex = 191;
@@ -623,7 +584,7 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(646, 141);
+            this.label19.Location = new System.Drawing.Point(523, 141);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(48, 13);
             this.label19.TabIndex = 188;
@@ -635,7 +596,7 @@
             this.lblExplorer.AutoSize = true;
             this.lblExplorer.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblExplorer.ForeColor = System.Drawing.Color.DimGray;
-            this.lblExplorer.Location = new System.Drawing.Point(621, 197);
+            this.lblExplorer.Location = new System.Drawing.Point(611, 83);
             this.lblExplorer.Name = "lblExplorer";
             this.lblExplorer.Size = new System.Drawing.Size(59, 17);
             this.lblExplorer.TabIndex = 190;
@@ -647,7 +608,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(646, 170);
+            this.label3.Location = new System.Drawing.Point(523, 170);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 13);
             this.label3.TabIndex = 189;
@@ -717,7 +678,7 @@
             this.edgeCookies.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.edgeCookies.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edgeCookies.ForeColor = System.Drawing.Color.Black;
-            this.edgeCookies.Location = new System.Drawing.Point(180, 141);
+            this.edgeCookies.Location = new System.Drawing.Point(210, 141);
             this.edgeCookies.Name = "edgeCookies";
             this.edgeCookies.Size = new System.Drawing.Size(15, 15);
             this.edgeCookies.TabIndex = 179;
@@ -735,7 +696,7 @@
             this.edgeHistory.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.edgeHistory.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edgeHistory.ForeColor = System.Drawing.Color.Black;
-            this.edgeHistory.Location = new System.Drawing.Point(180, 170);
+            this.edgeHistory.Location = new System.Drawing.Point(210, 170);
             this.edgeHistory.Name = "edgeHistory";
             this.edgeHistory.Size = new System.Drawing.Size(15, 15);
             this.edgeHistory.TabIndex = 178;
@@ -753,7 +714,7 @@
             this.edgeSession.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.edgeSession.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edgeSession.ForeColor = System.Drawing.Color.Black;
-            this.edgeSession.Location = new System.Drawing.Point(179, 199);
+            this.edgeSession.Location = new System.Drawing.Point(209, 199);
             this.edgeSession.Name = "edgeSession";
             this.edgeSession.Size = new System.Drawing.Size(15, 15);
             this.edgeSession.TabIndex = 177;
@@ -767,7 +728,7 @@
             this.lblEdge.AutoSize = true;
             this.lblEdge.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEdge.ForeColor = System.Drawing.Color.DimGray;
-            this.lblEdge.Location = new System.Drawing.Point(177, 83);
+            this.lblEdge.Location = new System.Drawing.Point(207, 83);
             this.lblEdge.Name = "lblEdge";
             this.lblEdge.Size = new System.Drawing.Size(38, 17);
             this.lblEdge.TabIndex = 167;
@@ -778,7 +739,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(201, 114);
+            this.label16.Location = new System.Drawing.Point(231, 114);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(38, 13);
             this.label16.TabIndex = 168;
@@ -807,7 +768,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(201, 142);
+            this.label15.Location = new System.Drawing.Point(231, 142);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(48, 13);
             this.label15.TabIndex = 169;
@@ -836,7 +797,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(201, 171);
+            this.label14.Location = new System.Drawing.Point(231, 171);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(43, 13);
             this.label14.TabIndex = 170;
@@ -865,7 +826,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Black;
-            this.label13.Location = new System.Drawing.Point(201, 200);
+            this.label13.Location = new System.Drawing.Point(231, 200);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(46, 13);
             this.label13.TabIndex = 171;
@@ -880,7 +841,7 @@
             this.edgeCache.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.edgeCache.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.edgeCache.ForeColor = System.Drawing.Color.Black;
-            this.edgeCache.Location = new System.Drawing.Point(180, 113);
+            this.edgeCache.Location = new System.Drawing.Point(210, 113);
             this.edgeCache.Name = "edgeCache";
             this.edgeCache.Size = new System.Drawing.Size(15, 15);
             this.edgeCache.TabIndex = 173;
@@ -929,19 +890,154 @@
             this.lblTitle.Text = "Pc Cleaner";
             this.lblTitle.UseCompatibleTextRendering = true;
             // 
+            // listCleanPreview
+            // 
+            this.listCleanPreview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listCleanPreview.BackColor = System.Drawing.Color.White;
+            this.listCleanPreview.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listCleanPreview.CheckOnClick = true;
+            this.listCleanPreview.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listCleanPreview.ForeColor = System.Drawing.Color.Black;
+            this.listCleanPreview.FormattingEnabled = true;
+            this.listCleanPreview.Location = new System.Drawing.Point(28, 354);
+            this.listCleanPreview.Margin = new System.Windows.Forms.Padding(28, 10, 28, 20);
+            this.listCleanPreview.Name = "listCleanPreview";
+            this.listCleanPreview.Size = new System.Drawing.Size(1329, 380);
+            this.listCleanPreview.TabIndex = 21;
+            // 
+            // scrollBarlistCleanPreview
+            // 
+            this.scrollBarlistCleanPreview.BindingContainer = this.listCleanPreview;
+            this.scrollBarlistCleanPreview.BorderRadius = 5;
+            this.scrollBarlistCleanPreview.InUpdate = false;
+            this.scrollBarlistCleanPreview.LargeChange = 10;
+            this.scrollBarlistCleanPreview.Location = new System.Drawing.Point(1339, 354);
+            this.scrollBarlistCleanPreview.Name = "scrollBarlistCleanPreview";
+            this.scrollBarlistCleanPreview.ScrollbarSize = 18;
+            this.scrollBarlistCleanPreview.Size = new System.Drawing.Size(18, 380);
+            this.scrollBarlistCleanPreview.TabIndex = 22;
+            // 
+            // guna2Elipse1
+            // 
+            this.guna2Elipse1.BorderRadius = 5;
+            this.guna2Elipse1.TargetControl = this.listCleanPreview;
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.BackColor = System.Drawing.Color.Transparent;
+            this.progressBar1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.progressBar1.Backwards = true;
+            this.progressBar1.Controls.Add(this.lblFootprint);
+            this.progressBar1.FillColor = System.Drawing.Color.DimGray;
+            this.progressBar1.FillThickness = 15;
+            this.progressBar1.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.progressBar1.ForeColor = System.Drawing.Color.Silver;
+            this.progressBar1.ImageSize = new System.Drawing.Size(95, 95);
+            this.progressBar1.InnerColor = System.Drawing.Color.Transparent;
+            this.progressBar1.Location = new System.Drawing.Point(129, 47);
+            this.progressBar1.Maximum = 100000;
+            this.progressBar1.Minimum = 0;
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.ProgressColor = System.Drawing.Color.Red;
+            this.progressBar1.ProgressColor2 = System.Drawing.Color.Blue;
+            this.progressBar1.ProgressThickness = 15;
+            this.progressBar1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.progressBar1.Size = new System.Drawing.Size(135, 135);
+            this.progressBar1.TabIndex = 172;
+            this.progressBar1.TextMode = Guna.UI2.WinForms.Enums.ProgressBarTextMode.Value;
+            this.progressBar1.UseTransparentBackground = true;
+            // 
+            // lbl_FreeDriveSpace
+            // 
+            this.lbl_FreeDriveSpace.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_FreeDriveSpace.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(151)))), ((int)(((byte)(176)))));
+            this.lbl_FreeDriveSpace.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.lbl_FreeDriveSpace.Location = new System.Drawing.Point(481, 155);
+            this.lbl_FreeDriveSpace.Name = "lbl_FreeDriveSpace";
+            this.lbl_FreeDriveSpace.Size = new System.Drawing.Size(97, 39);
+            this.lbl_FreeDriveSpace.TabIndex = 215;
+            this.lbl_FreeDriveSpace.Text = "0GB";
+            // 
+            // progressFreeDiskSpace
+            // 
+            this.progressFreeDiskSpace.BackColor = System.Drawing.Color.Transparent;
+            this.progressFreeDiskSpace.Backwards = true;
+            this.progressFreeDiskSpace.FillColor = System.Drawing.Color.DimGray;
+            this.progressFreeDiskSpace.FillThickness = 10;
+            this.progressFreeDiskSpace.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.progressFreeDiskSpace.ForeColor = System.Drawing.Color.Silver;
+            this.progressFreeDiskSpace.Location = new System.Drawing.Point(345, 69);
+            this.progressFreeDiskSpace.Minimum = 0;
+            this.progressFreeDiskSpace.Name = "progressFreeDiskSpace";
+            this.progressFreeDiskSpace.ProgressColor = System.Drawing.Color.Red;
+            this.progressFreeDiskSpace.ProgressColor2 = System.Drawing.Color.Blue;
+            this.progressFreeDiskSpace.ProgressThickness = 10;
+            this.progressFreeDiskSpace.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.progressFreeDiskSpace.ShowText = true;
+            this.progressFreeDiskSpace.Size = new System.Drawing.Size(94, 94);
+            this.progressFreeDiskSpace.TabIndex = 210;
+            this.progressFreeDiskSpace.Text = "CircleProgressBar";
+            this.progressFreeDiskSpace.UseTransparentBackground = true;
+            // 
+            // progressFreeDiskSpaceC
+            // 
+            this.progressFreeDiskSpaceC.BackColor = System.Drawing.Color.Transparent;
+            this.progressFreeDiskSpaceC.Backwards = true;
+            this.progressFreeDiskSpaceC.FillColor = System.Drawing.Color.DimGray;
+            this.progressFreeDiskSpaceC.FillThickness = 8;
+            this.progressFreeDiskSpaceC.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.progressFreeDiskSpaceC.ForeColor = System.Drawing.Color.Silver;
+            this.progressFreeDiskSpaceC.Location = new System.Drawing.Point(488, 87);
+            this.progressFreeDiskSpaceC.Minimum = 0;
+            this.progressFreeDiskSpaceC.Name = "progressFreeDiskSpaceC";
+            this.progressFreeDiskSpaceC.ProgressColor = System.Drawing.Color.Red;
+            this.progressFreeDiskSpaceC.ProgressColor2 = System.Drawing.Color.Blue;
+            this.progressFreeDiskSpaceC.ProgressThickness = 8;
+            this.progressFreeDiskSpaceC.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.progressFreeDiskSpaceC.ShowText = true;
+            this.progressFreeDiskSpaceC.Size = new System.Drawing.Size(62, 62);
+            this.progressFreeDiskSpaceC.TabIndex = 211;
+            this.progressFreeDiskSpaceC.Text = "CircleProgressBar";
+            this.progressFreeDiskSpaceC.UseTransparentBackground = true;
+            // 
+            // lblDiskUsage
+            // 
+            this.lblDiskUsage.AutoSize = true;
+            this.lblDiskUsage.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
+            this.lblDiskUsage.ForeColor = System.Drawing.Color.Black;
+            this.lblDiskUsage.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.lblDiskUsage.Location = new System.Drawing.Point(276, 49);
+            this.lblDiskUsage.Name = "lblDiskUsage";
+            this.lblDiskUsage.Size = new System.Drawing.Size(128, 17);
+            this.lblDiskUsage.TabIndex = 212;
+            this.lblDiskUsage.Text = "Total free disk space";
+            // 
+            // lblDriveC
+            // 
+            this.lblDriveC.AutoSize = true;
+            this.lblDriveC.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDriveC.ForeColor = System.Drawing.Color.Black;
+            this.lblDriveC.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.lblDriveC.Location = new System.Drawing.Point(481, 65);
+            this.lblDriveC.Name = "lblDriveC";
+            this.lblDriveC.Size = new System.Drawing.Size(50, 17);
+            this.lblDriveC.TabIndex = 214;
+            this.lblDriveC.Text = "Drive C";
+            // 
             // PcCleanerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1385, 762);
+            this.Controls.Add(this.scrollBarlistCleanPreview);
+            this.Controls.Add(this.listCleanPreview);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.pnlHeader);
-            this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PcCleanerForm";
             this.Text = "PcCleanerForm";
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.pnlListCleanPreview.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.pnlAnalyzeClean.ResumeLayout(false);
             this.pnlAnalyzeClean.PerformLayout();
@@ -949,15 +1045,12 @@
             this.pnlSelectionControl.PerformLayout();
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
+            this.progressBar1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private Guna.UI2.WinForms.Guna2ShadowPanel pnlListCleanPreview;
-        private System.Windows.Forms.CheckedListBox listCleanPreview;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private Guna.UI2.WinForms.Guna2ShadowPanel pnlSelectionControl;
         private Guna.UI2.WinForms.Guna2ShadowPanel pnlAnalyzeClean;
@@ -1009,5 +1102,14 @@
         private System.Windows.Forms.Label label13;
         private Guna.UI2.WinForms.Guna2CheckBox edgeCache;
         private Guna.UI2.WinForms.Guna2CheckBox checkBoxTemp;
+        private System.Windows.Forms.CheckedListBox listCleanPreview;
+        private Guna.UI2.WinForms.Guna2VScrollBar scrollBarlistCleanPreview;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private Guna.UI2.WinForms.Guna2CircleProgressBar progressBar1;
+        private System.Windows.Forms.Label lbl_FreeDriveSpace;
+        private Guna.UI2.WinForms.Guna2CircleProgressBar progressFreeDiskSpace;
+        private Guna.UI2.WinForms.Guna2CircleProgressBar progressFreeDiskSpaceC;
+        private System.Windows.Forms.Label lblDiskUsage;
+        private System.Windows.Forms.Label lblDriveC;
     }
 }
