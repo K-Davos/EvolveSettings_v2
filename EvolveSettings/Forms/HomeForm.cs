@@ -226,5 +226,11 @@ namespace EvolveSettings.Forms
             NicForm nicfrm = new NicForm();
             nicfrm.ShowDialog();
         }
+
+        private void btnStorage_Click(object sender, EventArgs e)
+        {
+            StorageForm storagefrm = new StorageForm();
+            storagefrm.ShowDialog();
+        }
     }
 }

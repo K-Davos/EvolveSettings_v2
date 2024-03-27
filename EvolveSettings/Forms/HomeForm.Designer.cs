@@ -65,6 +65,7 @@
             this.btnGpuInfo = new Guna.UI2.WinForms.Guna2Button();
             this.btnOSInfo = new Guna.UI2.WinForms.Guna2Button();
             this.btnNICinfo = new Guna.UI2.WinForms.Guna2Button();
+            this.btnStorage = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -509,12 +510,33 @@
             this.btnNICinfo.Text = "Network Info";
             this.btnNICinfo.Click += new System.EventHandler(this.btnNICinfo_Click);
             // 
+            // btnStorage
+            // 
+            this.btnStorage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnStorage.Animated = true;
+            this.btnStorage.BackColor = System.Drawing.Color.Transparent;
+            this.btnStorage.BorderRadius = 15;
+            this.btnStorage.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnStorage.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnStorage.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnStorage.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnStorage.FillColor = System.Drawing.Color.MidnightBlue;
+            this.btnStorage.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnStorage.ForeColor = System.Drawing.Color.White;
+            this.btnStorage.Location = new System.Drawing.Point(574, 518);
+            this.btnStorage.Name = "btnStorage";
+            this.btnStorage.Size = new System.Drawing.Size(96, 32);
+            this.btnStorage.TabIndex = 1009;
+            this.btnStorage.Text = "Network Info";
+            this.btnStorage.Click += new System.EventHandler(this.btnStorage_Click);
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(853, 574);
+            this.Controls.Add(this.btnStorage);
             this.Controls.Add(this.btnNICinfo);
             this.Controls.Add(this.btnOSInfo);
             this.Controls.Add(this.btnGpuInfo);
@@ -594,5 +616,6 @@
         private Guna.UI2.WinForms.Guna2Button btnGpuInfo;
         private Guna.UI2.WinForms.Guna2Button btnOSInfo;
         private Guna.UI2.WinForms.Guna2Button btnNICinfo;
+        private Guna.UI2.WinForms.Guna2Button btnStorage;
     }
 }
