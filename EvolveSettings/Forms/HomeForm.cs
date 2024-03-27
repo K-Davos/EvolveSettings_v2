@@ -202,5 +202,11 @@ namespace EvolveSettings.Forms
                 this.Opacity -= 0.1;
             }
         }
+
+        private void btnCpuInfo_Click(object sender, EventArgs e)
+        {
+            CpuInformationForm cpufrm = new CpuInformationForm();
+            cpufrm.ShowDialog();
+        }
     }
 }

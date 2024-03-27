@@ -61,6 +61,7 @@
             this.progressBarStorage = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.btnCpuInfo = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -425,12 +426,33 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // btnCpuInfo
+            // 
+            this.btnCpuInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCpuInfo.Animated = true;
+            this.btnCpuInfo.BackColor = System.Drawing.Color.Transparent;
+            this.btnCpuInfo.BorderRadius = 15;
+            this.btnCpuInfo.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCpuInfo.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCpuInfo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCpuInfo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCpuInfo.FillColor = System.Drawing.Color.MidnightBlue;
+            this.btnCpuInfo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCpuInfo.ForeColor = System.Drawing.Color.White;
+            this.btnCpuInfo.Location = new System.Drawing.Point(174, 485);
+            this.btnCpuInfo.Name = "btnCpuInfo";
+            this.btnCpuInfo.Size = new System.Drawing.Size(96, 32);
+            this.btnCpuInfo.TabIndex = 1005;
+            this.btnCpuInfo.Text = "Cpu Info";
+            this.btnCpuInfo.Click += new System.EventHandler(this.btnCpuInfo_Click);
+            // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(853, 574);
+            this.Controls.Add(this.btnCpuInfo);
             this.Controls.Add(this.progressBarRAM);
             this.Controls.Add(this.progressBarStorage);
             this.Controls.Add(this.progressBarCPU);
@@ -502,5 +524,6 @@
         private Guna.UI2.WinForms.Guna2CircleProgressBar progressBarStorage;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Timer timer2;
+        private Guna.UI2.WinForms.Guna2Button btnCpuInfo;
     }
 }

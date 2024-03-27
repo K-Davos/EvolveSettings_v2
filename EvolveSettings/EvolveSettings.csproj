@@ -75,6 +75,9 @@
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="OpenHardwareMonitorLib, Version=0.9.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\OpenHardwareMonitor.0.9.6\lib\net45\OpenHardwareMonitorLib.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.AppContext, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.AppContext.4.3.0\lib\net463\System.AppContext.dll</HintPath>
@@ -266,6 +269,12 @@
     <Compile Include="ErrorLogger.cs" />
     <Compile Include="EvolveMessageBox.cs" />
     <Compile Include="EvolveUtilities.cs" />
+    <Compile Include="Forms\CpuInformationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CpuInformationForm.Designer.cs">
+      <DependentUpon>CpuInformationForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\EncryptorModuleForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -413,6 +422,9 @@
     <Compile Include="Helpers\SqlConnectionHelper.cs" />
     <Compile Include="SystemInfoMonitorLib.cs" />
     <Compile Include="WinTheme.cs" />
+    <EmbeddedResource Include="Forms\CpuInformationForm.resx">
+      <DependentUpon>CpuInformationForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\EncryptorModuleForm.resx">
       <DependentUpon>EncryptorModuleForm.cs</DependentUpon>
     </EmbeddedResource>
