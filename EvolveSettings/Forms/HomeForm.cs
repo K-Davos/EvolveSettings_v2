@@ -18,6 +18,8 @@ namespace EvolveSettings.Forms
 
         bool update = false;
 
+        PerformanceCounter upTime = new PerformanceCounter("System", "System Up Time");
+
         public HomeForm()
         {
             InitializeComponent();
@@ -132,6 +134,11 @@ namespace EvolveSettings.Forms
             var RamVal = 100 - ((freeMemory / totalMemory) * 100);
             progressBarRAM.Value = (int)RamVal;
 
+
+            upTime.NextValue();
+            TimeSpan ts = TimeSpan.FromSeconds(upTime.NextValue());
+            lblGetSysUpTime.Text = string.Format("{0} Days {1} Hours {2} Minutes {3} Seconds", ts.Days, ts.Hours, ts.Minutes, ts.Seconds);
+            lblCurrentDate.Text = DateTime.Now.ToShortDateString();
             lblRamTotalData.Text = ((int)totalMemory).ToString() + " Megabytes";
             lblRamUsedData.Text = ((int)totalMemory - (int)freeMemory).ToString() + " Megabytes";
             lblRamAvailableData.Text = ((int)freeMemory).ToString() + " Megabytes";

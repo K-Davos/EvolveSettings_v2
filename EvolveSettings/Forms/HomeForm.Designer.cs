@@ -66,6 +66,8 @@
             this.btnOSInfo = new Guna.UI2.WinForms.Guna2Button();
             this.btnNICinfo = new Guna.UI2.WinForms.Guna2Button();
             this.btnStorage = new Guna.UI2.WinForms.Guna2Button();
+            this.lblCurrentDate = new System.Windows.Forms.Label();
+            this.lblGetSysUpTime = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblTitle
@@ -75,9 +77,9 @@
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(179)))));
             this.lblTitle.Location = new System.Drawing.Point(20, 17);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(92, 44);
+            this.lblTitle.Size = new System.Drawing.Size(216, 44);
             this.lblTitle.TabIndex = 23;
-            this.lblTitle.Text = "Home";
+            this.lblTitle.Text = "System Uptime";
             this.lblTitle.UseCompatibleTextRendering = true;
             this.lblTitle.Click += new System.EventHandler(this.lblTitle_Click);
             // 
@@ -86,7 +88,7 @@
             this.lblCpuSpeedData.AutoSize = true;
             this.lblCpuSpeedData.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCpuSpeedData.ForeColor = System.Drawing.Color.White;
-            this.lblCpuSpeedData.Location = new System.Drawing.Point(243, 405);
+            this.lblCpuSpeedData.Location = new System.Drawing.Point(786, 603);
             this.lblCpuSpeedData.Name = "lblCpuSpeedData";
             this.lblCpuSpeedData.Size = new System.Drawing.Size(80, 17);
             this.lblCpuSpeedData.TabIndex = 55;
@@ -97,7 +99,7 @@
             this.lblCpuThreadsData.AutoSize = true;
             this.lblCpuThreadsData.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCpuThreadsData.ForeColor = System.Drawing.Color.White;
-            this.lblCpuThreadsData.Location = new System.Drawing.Point(243, 447);
+            this.lblCpuThreadsData.Location = new System.Drawing.Point(786, 645);
             this.lblCpuThreadsData.Name = "lblCpuThreadsData";
             this.lblCpuThreadsData.Size = new System.Drawing.Size(80, 17);
             this.lblCpuThreadsData.TabIndex = 53;
@@ -108,7 +110,7 @@
             this.lblStorageAvailableData.AutoSize = true;
             this.lblStorageAvailableData.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStorageAvailableData.ForeColor = System.Drawing.Color.White;
-            this.lblStorageAvailableData.Location = new System.Drawing.Point(616, 447);
+            this.lblStorageAvailableData.Location = new System.Drawing.Point(1159, 645);
             this.lblStorageAvailableData.Name = "lblStorageAvailableData";
             this.lblStorageAvailableData.Size = new System.Drawing.Size(80, 17);
             this.lblStorageAvailableData.TabIndex = 52;
@@ -119,7 +121,7 @@
             this.lblRamAvailableData.AutoSize = true;
             this.lblRamAvailableData.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRamAvailableData.ForeColor = System.Drawing.Color.White;
-            this.lblRamAvailableData.Location = new System.Drawing.Point(415, 447);
+            this.lblRamAvailableData.Location = new System.Drawing.Point(958, 645);
             this.lblRamAvailableData.Name = "lblRamAvailableData";
             this.lblRamAvailableData.Size = new System.Drawing.Size(80, 17);
             this.lblRamAvailableData.TabIndex = 51;
@@ -130,7 +132,7 @@
             this.lblCpuCoresData.AutoSize = true;
             this.lblCpuCoresData.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCpuCoresData.ForeColor = System.Drawing.Color.White;
-            this.lblCpuCoresData.Location = new System.Drawing.Point(243, 426);
+            this.lblCpuCoresData.Location = new System.Drawing.Point(786, 624);
             this.lblCpuCoresData.Name = "lblCpuCoresData";
             this.lblCpuCoresData.Size = new System.Drawing.Size(80, 17);
             this.lblCpuCoresData.TabIndex = 50;
@@ -141,7 +143,7 @@
             this.lblStorageUsedData.AutoSize = true;
             this.lblStorageUsedData.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStorageUsedData.ForeColor = System.Drawing.Color.White;
-            this.lblStorageUsedData.Location = new System.Drawing.Point(616, 426);
+            this.lblStorageUsedData.Location = new System.Drawing.Point(1159, 624);
             this.lblStorageUsedData.Name = "lblStorageUsedData";
             this.lblStorageUsedData.Size = new System.Drawing.Size(80, 17);
             this.lblStorageUsedData.TabIndex = 49;
@@ -152,7 +154,7 @@
             this.lblRamUsedData.AutoSize = true;
             this.lblRamUsedData.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRamUsedData.ForeColor = System.Drawing.Color.White;
-            this.lblRamUsedData.Location = new System.Drawing.Point(415, 426);
+            this.lblRamUsedData.Location = new System.Drawing.Point(958, 624);
             this.lblRamUsedData.Name = "lblRamUsedData";
             this.lblRamUsedData.Size = new System.Drawing.Size(80, 17);
             this.lblRamUsedData.TabIndex = 48;
@@ -163,7 +165,7 @@
             this.lblCpuThreads.AutoSize = true;
             this.lblCpuThreads.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCpuThreads.ForeColor = System.Drawing.Color.White;
-            this.lblCpuThreads.Location = new System.Drawing.Point(144, 447);
+            this.lblCpuThreads.Location = new System.Drawing.Point(687, 645);
             this.lblCpuThreads.Name = "lblCpuThreads";
             this.lblCpuThreads.Size = new System.Drawing.Size(61, 17);
             this.lblCpuThreads.TabIndex = 47;
@@ -174,7 +176,7 @@
             this.lblStorageAvailable.AutoSize = true;
             this.lblStorageAvailable.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStorageAvailable.ForeColor = System.Drawing.Color.White;
-            this.lblStorageAvailable.Location = new System.Drawing.Point(545, 447);
+            this.lblStorageAvailable.Location = new System.Drawing.Point(1088, 645);
             this.lblStorageAvailable.Name = "lblStorageAvailable";
             this.lblStorageAvailable.Size = new System.Drawing.Size(69, 17);
             this.lblStorageAvailable.TabIndex = 46;
@@ -185,7 +187,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(544, 447);
+            this.label13.Location = new System.Drawing.Point(1087, 645);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(69, 17);
             this.label13.TabIndex = 45;
@@ -196,7 +198,7 @@
             this.lblRamAvailable.AutoSize = true;
             this.lblRamAvailable.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRamAvailable.ForeColor = System.Drawing.Color.White;
-            this.lblRamAvailable.Location = new System.Drawing.Point(344, 447);
+            this.lblRamAvailable.Location = new System.Drawing.Point(887, 645);
             this.lblRamAvailable.Name = "lblRamAvailable";
             this.lblRamAvailable.Size = new System.Drawing.Size(69, 17);
             this.lblRamAvailable.TabIndex = 44;
@@ -207,7 +209,7 @@
             this.lblStorageTotalData.AutoSize = true;
             this.lblStorageTotalData.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStorageTotalData.ForeColor = System.Drawing.Color.White;
-            this.lblStorageTotalData.Location = new System.Drawing.Point(616, 405);
+            this.lblStorageTotalData.Location = new System.Drawing.Point(1159, 603);
             this.lblStorageTotalData.Name = "lblStorageTotalData";
             this.lblStorageTotalData.Size = new System.Drawing.Size(80, 17);
             this.lblStorageTotalData.TabIndex = 43;
@@ -218,7 +220,7 @@
             this.lblRamTotalData.AutoSize = true;
             this.lblRamTotalData.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRamTotalData.ForeColor = System.Drawing.Color.White;
-            this.lblRamTotalData.Location = new System.Drawing.Point(415, 405);
+            this.lblRamTotalData.Location = new System.Drawing.Point(958, 603);
             this.lblRamTotalData.Name = "lblRamTotalData";
             this.lblRamTotalData.Size = new System.Drawing.Size(80, 17);
             this.lblRamTotalData.TabIndex = 54;
@@ -229,7 +231,7 @@
             this.lblCpuCores.AutoSize = true;
             this.lblCpuCores.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCpuCores.ForeColor = System.Drawing.Color.White;
-            this.lblCpuCores.Location = new System.Drawing.Point(144, 426);
+            this.lblCpuCores.Location = new System.Drawing.Point(687, 624);
             this.lblCpuCores.Name = "lblCpuCores";
             this.lblCpuCores.Size = new System.Drawing.Size(46, 17);
             this.lblCpuCores.TabIndex = 42;
@@ -240,7 +242,7 @@
             this.lblStorageUsed.AutoSize = true;
             this.lblStorageUsed.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStorageUsed.ForeColor = System.Drawing.Color.White;
-            this.lblStorageUsed.Location = new System.Drawing.Point(545, 426);
+            this.lblStorageUsed.Location = new System.Drawing.Point(1088, 624);
             this.lblStorageUsed.Name = "lblStorageUsed";
             this.lblStorageUsed.Size = new System.Drawing.Size(42, 17);
             this.lblStorageUsed.TabIndex = 41;
@@ -251,7 +253,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(544, 426);
+            this.label11.Location = new System.Drawing.Point(1087, 624);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(42, 17);
             this.label11.TabIndex = 40;
@@ -262,7 +264,7 @@
             this.lblRamUsed.AutoSize = true;
             this.lblRamUsed.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRamUsed.ForeColor = System.Drawing.Color.White;
-            this.lblRamUsed.Location = new System.Drawing.Point(344, 426);
+            this.lblRamUsed.Location = new System.Drawing.Point(887, 624);
             this.lblRamUsed.Name = "lblRamUsed";
             this.lblRamUsed.Size = new System.Drawing.Size(42, 17);
             this.lblRamUsed.TabIndex = 39;
@@ -273,7 +275,7 @@
             this.lblCpuSpeed.AutoSize = true;
             this.lblCpuSpeed.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCpuSpeed.ForeColor = System.Drawing.Color.White;
-            this.lblCpuSpeed.Location = new System.Drawing.Point(144, 405);
+            this.lblCpuSpeed.Location = new System.Drawing.Point(687, 603);
             this.lblCpuSpeed.Name = "lblCpuSpeed";
             this.lblCpuSpeed.Size = new System.Drawing.Size(95, 17);
             this.lblCpuSpeed.TabIndex = 38;
@@ -284,7 +286,7 @@
             this.lblStorageTotal.AutoSize = true;
             this.lblStorageTotal.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStorageTotal.ForeColor = System.Drawing.Color.White;
-            this.lblStorageTotal.Location = new System.Drawing.Point(545, 405);
+            this.lblStorageTotal.Location = new System.Drawing.Point(1088, 603);
             this.lblStorageTotal.Name = "lblStorageTotal";
             this.lblStorageTotal.Size = new System.Drawing.Size(43, 17);
             this.lblStorageTotal.TabIndex = 37;
@@ -295,7 +297,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(544, 405);
+            this.label10.Location = new System.Drawing.Point(1087, 603);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(43, 17);
             this.label10.TabIndex = 36;
@@ -306,7 +308,7 @@
             this.lblRamTotal.AutoSize = true;
             this.lblRamTotal.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRamTotal.ForeColor = System.Drawing.Color.White;
-            this.lblRamTotal.Location = new System.Drawing.Point(344, 405);
+            this.lblRamTotal.Location = new System.Drawing.Point(887, 603);
             this.lblRamTotal.Name = "lblRamTotal";
             this.lblRamTotal.Size = new System.Drawing.Size(43, 17);
             this.lblRamTotal.TabIndex = 35;
@@ -317,7 +319,7 @@
             this.lblStorage.AutoSize = true;
             this.lblStorage.Font = new System.Drawing.Font("Nirmala UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStorage.ForeColor = System.Drawing.Color.White;
-            this.lblStorage.Location = new System.Drawing.Point(579, 362);
+            this.lblStorage.Location = new System.Drawing.Point(1122, 560);
             this.lblStorage.Name = "lblStorage";
             this.lblStorage.Size = new System.Drawing.Size(96, 31);
             this.lblStorage.TabIndex = 34;
@@ -329,7 +331,7 @@
             this.lblRAM.AutoSize = true;
             this.lblRAM.Font = new System.Drawing.Font("Nirmala UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRAM.ForeColor = System.Drawing.Color.White;
-            this.lblRAM.Location = new System.Drawing.Point(399, 362);
+            this.lblRAM.Location = new System.Drawing.Point(942, 560);
             this.lblRAM.Name = "lblRAM";
             this.lblRAM.Size = new System.Drawing.Size(67, 31);
             this.lblRAM.TabIndex = 33;
@@ -341,7 +343,7 @@
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Nirmala UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.White;
-            this.label22.Location = new System.Drawing.Point(245, 108);
+            this.label22.Location = new System.Drawing.Point(788, 306);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(365, 45);
             this.label22.TabIndex = 32;
@@ -353,7 +355,7 @@
             this.lblCPU.AutoSize = true;
             this.lblCPU.Font = new System.Drawing.Font("Nirmala UI", 17.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCPU.ForeColor = System.Drawing.Color.White;
-            this.lblCPU.Location = new System.Drawing.Point(195, 362);
+            this.lblCPU.Location = new System.Drawing.Point(738, 560);
             this.lblCPU.Name = "lblCPU";
             this.lblCPU.Size = new System.Drawing.Size(59, 31);
             this.lblCPU.TabIndex = 31;
@@ -370,7 +372,7 @@
             this.progressBarCPU.ForeColor = System.Drawing.Color.Silver;
             this.progressBarCPU.ImageSize = new System.Drawing.Size(95, 95);
             this.progressBarCPU.InnerColor = System.Drawing.Color.Transparent;
-            this.progressBarCPU.Location = new System.Drawing.Point(161, 194);
+            this.progressBarCPU.Location = new System.Drawing.Point(704, 392);
             this.progressBarCPU.Minimum = 0;
             this.progressBarCPU.Name = "progressBarCPU";
             this.progressBarCPU.ProgressColor = System.Drawing.Color.Red;
@@ -392,7 +394,7 @@
             this.progressBarRAM.ForeColor = System.Drawing.Color.Silver;
             this.progressBarRAM.ImageSize = new System.Drawing.Size(95, 95);
             this.progressBarRAM.InnerColor = System.Drawing.Color.Transparent;
-            this.progressBarRAM.Location = new System.Drawing.Point(370, 194);
+            this.progressBarRAM.Location = new System.Drawing.Point(913, 392);
             this.progressBarRAM.Minimum = 0;
             this.progressBarRAM.Name = "progressBarRAM";
             this.progressBarRAM.ProgressColor = System.Drawing.Color.Red;
@@ -414,7 +416,7 @@
             this.progressBarStorage.ForeColor = System.Drawing.Color.Silver;
             this.progressBarStorage.ImageSize = new System.Drawing.Size(95, 95);
             this.progressBarStorage.InnerColor = System.Drawing.Color.Transparent;
-            this.progressBarStorage.Location = new System.Drawing.Point(571, 194);
+            this.progressBarStorage.Location = new System.Drawing.Point(1114, 392);
             this.progressBarStorage.Minimum = 0;
             this.progressBarStorage.Name = "progressBarStorage";
             this.progressBarStorage.ProgressColor = System.Drawing.Color.Red;
@@ -443,7 +445,7 @@
             this.btnCpuInfo.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnCpuInfo.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnCpuInfo.ForeColor = System.Drawing.Color.White;
-            this.btnCpuInfo.Location = new System.Drawing.Point(125, 518);
+            this.btnCpuInfo.Location = new System.Drawing.Point(690, 692);
             this.btnCpuInfo.Name = "btnCpuInfo";
             this.btnCpuInfo.Size = new System.Drawing.Size(96, 32);
             this.btnCpuInfo.TabIndex = 1005;
@@ -463,7 +465,7 @@
             this.btnGpuInfo.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnGpuInfo.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnGpuInfo.ForeColor = System.Drawing.Color.White;
-            this.btnGpuInfo.Location = new System.Drawing.Point(236, 518);
+            this.btnGpuInfo.Location = new System.Drawing.Point(801, 692);
             this.btnGpuInfo.Name = "btnGpuInfo";
             this.btnGpuInfo.Size = new System.Drawing.Size(96, 32);
             this.btnGpuInfo.TabIndex = 1006;
@@ -483,7 +485,7 @@
             this.btnOSInfo.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnOSInfo.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnOSInfo.ForeColor = System.Drawing.Color.White;
-            this.btnOSInfo.Location = new System.Drawing.Point(347, 518);
+            this.btnOSInfo.Location = new System.Drawing.Point(912, 692);
             this.btnOSInfo.Name = "btnOSInfo";
             this.btnOSInfo.Size = new System.Drawing.Size(96, 32);
             this.btnOSInfo.TabIndex = 1007;
@@ -503,7 +505,7 @@
             this.btnNICinfo.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnNICinfo.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnNICinfo.ForeColor = System.Drawing.Color.White;
-            this.btnNICinfo.Location = new System.Drawing.Point(460, 518);
+            this.btnNICinfo.Location = new System.Drawing.Point(1025, 692);
             this.btnNICinfo.Name = "btnNICinfo";
             this.btnNICinfo.Size = new System.Drawing.Size(96, 32);
             this.btnNICinfo.TabIndex = 1008;
@@ -523,19 +525,47 @@
             this.btnStorage.FillColor = System.Drawing.Color.MidnightBlue;
             this.btnStorage.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnStorage.ForeColor = System.Drawing.Color.White;
-            this.btnStorage.Location = new System.Drawing.Point(574, 518);
+            this.btnStorage.Location = new System.Drawing.Point(1139, 692);
             this.btnStorage.Name = "btnStorage";
             this.btnStorage.Size = new System.Drawing.Size(96, 32);
             this.btnStorage.TabIndex = 1009;
-            this.btnStorage.Text = "Network Info";
+            this.btnStorage.Text = "Storage Info";
             this.btnStorage.Click += new System.EventHandler(this.btnStorage_Click);
+            // 
+            // lblCurrentDate
+            // 
+            this.lblCurrentDate.AutoSize = true;
+            this.lblCurrentDate.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrentDate.ForeColor = System.Drawing.Color.White;
+            this.lblCurrentDate.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.lblCurrentDate.Location = new System.Drawing.Point(51, 103);
+            this.lblCurrentDate.Name = "lblCurrentDate";
+            this.lblCurrentDate.Size = new System.Drawing.Size(56, 30);
+            this.lblCurrentDate.TabIndex = 1011;
+            this.lblCurrentDate.Text = "date";
+            this.lblCurrentDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lblGetSysUpTime
+            // 
+            this.lblGetSysUpTime.AutoSize = true;
+            this.lblGetSysUpTime.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGetSysUpTime.ForeColor = System.Drawing.Color.White;
+            this.lblGetSysUpTime.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.lblGetSysUpTime.Location = new System.Drawing.Point(51, 73);
+            this.lblGetSysUpTime.Name = "lblGetSysUpTime";
+            this.lblGetSysUpTime.Size = new System.Drawing.Size(75, 30);
+            this.lblGetSysUpTime.TabIndex = 1010;
+            this.lblGetSysUpTime.Text = "0 days";
+            this.lblGetSysUpTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // HomeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(853, 574);
+            this.ClientSize = new System.Drawing.Size(1322, 762);
+            this.Controls.Add(this.lblCurrentDate);
+            this.Controls.Add(this.lblGetSysUpTime);
             this.Controls.Add(this.btnStorage);
             this.Controls.Add(this.btnNICinfo);
             this.Controls.Add(this.btnOSInfo);
@@ -617,5 +647,7 @@
         private Guna.UI2.WinForms.Guna2Button btnOSInfo;
         private Guna.UI2.WinForms.Guna2Button btnNICinfo;
         private Guna.UI2.WinForms.Guna2Button btnStorage;
+        private System.Windows.Forms.Label lblCurrentDate;
+        private System.Windows.Forms.Label lblGetSysUpTime;
     }
 }

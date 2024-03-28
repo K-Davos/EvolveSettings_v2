@@ -69,9 +69,10 @@
             this.lblDeviceID = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.label1 = new System.Windows.Forms.Label();
+            this.guna2VScrollBar1 = new Guna.UI2.WinForms.Guna2VScrollBar();
             this.dataGridViewThermals = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Cores = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Temperature = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewThermals)).BeginInit();
             this.SuspendLayout();
@@ -130,7 +131,6 @@
             this.lblThermals.Size = new System.Drawing.Size(92, 21);
             this.lblThermals.TabIndex = 23;
             this.lblThermals.Text = "THERMALS";
-            this.lblThermals.Visible = false;
             // 
             // lblProcType
             // 
@@ -441,6 +441,20 @@
             this.label1.TabIndex = 24;
             this.label1.Text = "Getting Values...";
             // 
+            // guna2VScrollBar1
+            // 
+            this.guna2VScrollBar1.BindingContainer = this.dataGridViewThermals;
+            this.guna2VScrollBar1.BorderRadius = 5;
+            this.guna2VScrollBar1.InUpdate = false;
+            this.guna2VScrollBar1.LargeChange = 10;
+            this.guna2VScrollBar1.Location = new System.Drawing.Point(756, 155);
+            this.guna2VScrollBar1.Minimum = 1;
+            this.guna2VScrollBar1.Name = "guna2VScrollBar1";
+            this.guna2VScrollBar1.ScrollbarSize = 18;
+            this.guna2VScrollBar1.Size = new System.Drawing.Size(18, 264);
+            this.guna2VScrollBar1.TabIndex = 53;
+            this.guna2VScrollBar1.Value = 1;
+            // 
             // dataGridViewThermals
             // 
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -458,8 +472,8 @@
             this.dataGridViewThermals.ColumnHeadersHeight = 50;
             this.dataGridViewThermals.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.dataGridViewThermals.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Cores,
-            this.Temperature});
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2});
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -469,12 +483,12 @@
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewThermals.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewThermals.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dataGridViewThermals.Location = new System.Drawing.Point(539, 213);
+            this.dataGridViewThermals.Location = new System.Drawing.Point(364, 155);
             this.dataGridViewThermals.Name = "dataGridViewThermals";
             this.dataGridViewThermals.RowHeadersVisible = false;
             this.dataGridViewThermals.RowHeadersWidth = 50;
-            this.dataGridViewThermals.Size = new System.Drawing.Size(248, 264);
-            this.dataGridViewThermals.TabIndex = 49;
+            this.dataGridViewThermals.Size = new System.Drawing.Size(410, 264);
+            this.dataGridViewThermals.TabIndex = 52;
             this.dataGridViewThermals.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dataGridViewThermals.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.dataGridViewThermals.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
@@ -496,21 +510,19 @@
             this.dataGridViewThermals.ThemeStyle.RowsStyle.Height = 22;
             this.dataGridViewThermals.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dataGridViewThermals.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.dataGridViewThermals.Visible = false;
-            this.dataGridViewThermals.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewThermals_CellContentClick);
             // 
-            // Cores
+            // dataGridViewTextBoxColumn1
             // 
-            this.Cores.FillWeight = 80.38084F;
-            this.Cores.HeaderText = "Cores";
-            this.Cores.MinimumWidth = 6;
-            this.Cores.Name = "Cores";
+            this.dataGridViewTextBoxColumn1.FillWeight = 80.38084F;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Keys";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
-            // Temperature
+            // dataGridViewTextBoxColumn2
             // 
-            this.Temperature.HeaderText = "Temperature";
-            this.Temperature.MinimumWidth = 6;
-            this.Temperature.Name = "Temperature";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Values";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // CpuInformationForm
             // 
@@ -518,6 +530,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(853, 574);
+            this.Controls.Add(this.guna2VScrollBar1);
             this.Controls.Add(this.dataGridViewThermals);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.lblProcTypeData);
@@ -595,8 +608,9 @@
         private System.Windows.Forms.Label lblDeviceID;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2VScrollBar guna2VScrollBar1;
         private Guna.UI2.WinForms.Guna2DataGridView dataGridViewThermals;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cores;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Temperature;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
     }
 }
