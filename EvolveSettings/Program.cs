@@ -1,5 +1,6 @@
 ﻿using EvolveSettings.Forms;
 using System;
+using System.IO;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -43,6 +44,9 @@ namespace EvolveSettings
         [STAThread]
         static void Main()
         {
+            if (!AllRequiredFilesAvailable())
+            Environment.Exit(0);
+
             AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
             AppDomain.CurrentDomain.AssemblyResolve += CurrentDomain_AssemblyResolve;
             EmbeddedAssembly.Load(_jsonAssembly, _jsonAssembly.Replace("EvolveSettings.", string.Empty));
@@ -79,6 +83,33 @@ namespace EvolveSettings
                 KeepRunning = false;
                 Application.Run(new SplashForm());
             }
+        }
+
+        private static bool IsFileAvailable(string fileName)
+        {
+            string path = Path.GetDirectoryName(Application.ExecutablePath) + Path.DirectorySeparatorChar;
+            if (!File.Exists(path + fileName))
+            {
+                EvolveMessageBox.Show("The following file could not be found: " + fileName +
+                                "\nPlease re-install the application.", "Error",
+                                MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
+        }
+
+        private static bool AllRequiredFilesAvailable()
+        {
+            if (!IsFileAvailable("EvolveSettingsDb.mdf"))
+                return false;
+
+            if (!IsFileAvailable("EvolveSettingsDb_log.ldf"))
+                return false;
+
+            if (!IsFileAvailable("passdatabase.db"))
+                return false;
+
+            return true;
         }
 
         private static void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)
